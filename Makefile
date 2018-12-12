@@ -22,7 +22,7 @@ test: lint
 		pytest -v tests.py
 
 lint:
-		pycodestyle stpmex setup.py
+		pycodestyle stpmex/ tests.py setup.py
 
 
 .PHONY: all clean install-dev test lint
