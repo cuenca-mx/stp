@@ -66,7 +66,7 @@ def test_empty_concepto(initialize_stpmex, get_order):
     orden.conceptoPago = ''
     resp = orden.registra()
     assert resp.descripcionError is not None
-    
+
 
 @vcr.use_cassette()
 def test_bad_benefit(initialize_stpmex, get_order):
