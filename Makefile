@@ -24,5 +24,8 @@ test: lint
 lint:
 		pycodestyle stpmex/ tests.py setup.py
 
+release: clean
+		python setup.py sdist bdist_wheel
+		twine upload dist/* --verbose
 
 .PHONY: all clean install-dev test lint
