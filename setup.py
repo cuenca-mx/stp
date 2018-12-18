@@ -20,6 +20,8 @@ setuptools.setup(
     url='https://github.com/cuenca-mx/stpmex-python',
     packages=setuptools.find_packages(),
     install_requires=requirements,
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest', 'vcrpy'],
     extras_require={
         'dev': [
             'pytest>=3',
