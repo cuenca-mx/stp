@@ -32,7 +32,7 @@ def _validate(field, field_value, validation, validation_value):
     :param validation_value: Valor a validar
     :return:
     """
-    if validation == 'required' and validation_value and field_value is None:
+    if validation == 'required' and validation_value and not field_value:
         return 'Field {} is required'.format(field)
     if validation == 'maxLength' and validation_value < len(str(field_value)):
         return 'Length of field {} must be lower than {}'\
