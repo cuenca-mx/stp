@@ -22,7 +22,7 @@ test: lint
 		python setup.py test
 
 lint:
-		pycodestyle stpmex/ test_stpmex.py setup.py
+		pycodestyle stpmex/ tests/ setup.py
 
 release: clean
 		python setup.py sdist bdist_wheel

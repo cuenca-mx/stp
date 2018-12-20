@@ -11,7 +11,7 @@ WRONG_BENEFIT = "asdfghjklñasdfghjklñasdfghjklñasdfghjklñ"
 WRONG_REFERENCE = "12345678"
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_join_fields(initialize_stpmex):
     orden = Orden(
         institucionContraparte='846',
@@ -50,7 +50,7 @@ def get_order():
         nombreBeneficiario='Ricardo Sanchez')
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_create_orden(initialize_stpmex, get_order):
     orden = get_order
     resp = orden.registra()
@@ -60,7 +60,7 @@ def test_create_orden(initialize_stpmex, get_order):
     assert orden._id == resp.id
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_empty_concepto(initialize_stpmex, get_order):
     orden = get_order
     orden.conceptoPago = ''
@@ -68,7 +68,7 @@ def test_empty_concepto(initialize_stpmex, get_order):
         orden.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_bad_benefit(initialize_stpmex, get_order):
     order = get_order
     order.nombreBeneficiario = WRONG_BENEFIT
@@ -76,7 +76,7 @@ def test_bad_benefit(initialize_stpmex, get_order):
         order.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_null_benefit(initialize_stpmex, get_order):
     order = get_order
     order.nombreBeneficiario = None
@@ -84,7 +84,7 @@ def test_null_benefit(initialize_stpmex, get_order):
         order.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_null_clave(initialize_stpmex, get_order):
     order = get_order
     order.claveRastreo = None
@@ -92,7 +92,7 @@ def test_null_clave(initialize_stpmex, get_order):
         order.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_null_concepto(initialize_stpmex, get_order):
     order = get_order
     order.conceptoPago = None
@@ -100,7 +100,7 @@ def test_null_concepto(initialize_stpmex, get_order):
         order.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_wrong_reference(initialize_stpmex, get_order):
     order = get_order
     order.referenciaNumerica = WRONG_REFERENCE
@@ -108,7 +108,7 @@ def test_wrong_reference(initialize_stpmex, get_order):
         order.registra()
 
 
-@vcr.use_cassette()
+@vcr.use_cassette(cassette_library_dir='tests/cassettes')
 def test_null_reference(initialize_stpmex, get_order):
     order = get_order
     order.referenciaNumerica = None
