@@ -138,3 +138,10 @@ def test_valid_stp_bank():
     stp_bank = 40002
     spei_code = stp_to_spei_bank_code(stp_bank)
     assert spei_code == BankCode.BANAMEX.value
+
+
+def test_max_length(initialize_stpmex, get_order):
+    order = get_order
+    order.claveRastreo = '1234567891234567891234567891234'
+    with pytest.raises(ValueError):
+        order.registra()

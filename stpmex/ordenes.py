@@ -58,7 +58,8 @@ VALIDATIONS = dict(
         maxLength=39
     ),
     claveRastreo=dict(
-        required=True
+        required=True,
+        maxLength=30
     ),
     conceptoPago=dict(
         required=True
