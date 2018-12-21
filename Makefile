@@ -18,7 +18,7 @@ clean:
 install-dev:
 		pip install -q -e .[dev]
 
-test: lint
+test: clean install-dev lint
 		python setup.py test
 
 lint:

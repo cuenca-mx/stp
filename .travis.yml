@@ -1,12 +1,38 @@
+notifications:
+  slack: cuencafinance:6N0IaVciA0KyNylSTq5ZzW4I
+
 language: python
-python:
-- '3.6'
-install: pip install -q -e .[dev]
+
 script: make test
-deploy:
-  provider: pypi
-  user: cuenca
-  password:
-    secure: Hkq4irMkiBaIrJCp6cL46Q3maBX5gMmCtfMINJAVm1vGG5aPMVzCqfqu1gYUvl8XoUg35yzPdtlsl4DFBiRGIu4QVNw3BlFXwvJQGLvWXv7RPFSxcbmLf/nQW69oRygaKgRK2ALxgUHbenarTSh8ty4rf40NRdrzmxp8mFkx1Igui95LNinX4UcapOjtE9x7AH0De72jtJeEI5XxTUoTlv/GtlRxtjXIt0FPYo98lI7i6+/9KUcc6i8K4DA/ZiaXXxM4x7zEon2ZUASYjdva0CT3vpO54D3Vp6aAb8zq/hc9kUfRqFg0kMaXKZoatiRAkuf6bgSkducR5ChSAcHDaCllpG4c79M8qr0l21hcMf5aH0ubIiRVl90Ki+Xegs8S9OyhMQshdxRFYRJkTzBTmG+vquPeg1sO41S/0w3phTG8y+ONxlIeFs2oGKNNmxGuEGsH75WvYCZ2hOj+z5bxK+kpAA2RKgGdvzzsJk8YXoKKGjK7VyB/CHI4nWlMKkIoRwgMVBAWrsaGV43tKITfo24eKBnp0o+nBTMq5jUpNoTRdCbX3d+XA3b7KgS4ig1IqNtWnzabYQ/6fn2seNdddoYLAqEIRortkfiMxfAS+xnEXmIi4+S4L70ycvybyWdB/19MPdyLPiL6PhXTvDTBwjLz/sONTGcuOVpSwm09r74=
-  on:
-    tags: true
+
+jobs:
+  include:
+
+    - stage: test
+      python: 3.6
+    - stage: test
+      python: 3.7
+      dist: xenial
+      sudo: true
+    - stage: code coverage
+      python: 3.7
+      dist: xenial
+      sudo: true
+      install: pip install coveralls
+      script:
+      - coverage run --source=stpmex setup.py test
+      - coveralls
+    - stage: PyPI Upload
+      python: 3.7
+      dist: xenial
+      sudo: true
+      script: echo "Uploading packages to PyPI"
+      deploy:
+        provider: pypi
+        user: JessicaShalomG
+        password:
+            secure: "W99WixhxbtzmZN9k220c5kpicILgAagmEiWdmp817608waNi3TVtgt7j1uF8iaSAZZWyUGD3ppsYH0YHkyFgXugFQ6dcQ7aUvHfuFVSzTFObCeYBzimpaYuB56o9PTc5UaaF7se1DemsUFeqoFS9yevtDyTruj+QqkN+3grdLpgqfAPzhKTZOGqHF0KC+xgraU9lGq+w1Zz/Rx7Y3G0td9kA06+CupMAfs8Q2bMxOiT7UMe4wizRKYsgDGdVWsnNjDdeVkf6LY1SiLHtg2qo/56eBFfbcFzkvSozmvwJoEwlF0q13IMoTSi2SIf38SJ2asUzGprLdbB4mYupGM1b0C67cG8Sfs6j0ugKTzqWyaejBtI/Poj8lPkNe795j2NqzIgjlVMipbIn9mbkqQIzCawpB5rCavcbCo5orNukKz70UlShUZSGNP+ji+BUDJ2/mRXMr4jt2kQRJAe/bYrd6tXjybv0XyJnp5Hvci8u4C6E14FnfvHJaebZgdk47nVXu1LAcVcFVUeFWOtIVgxE1oPBKsdnPqG5IbXOnwkVbndViE7YotSlzISFzTMKFtpcHzNpnIOh1D25XDbDetVm1dxoK1h5dN75dm2F/Kwy6n/zdRny5aIM/eON+cvBzYQXKZuxDdcWTmz/CIkBMx/NwGHDjxnXy0ExZnfvs3C6wVs="
+
+        on:
+          tags: true
+        distributions: sdist bdist_wheel
