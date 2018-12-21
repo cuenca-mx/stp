@@ -11,7 +11,7 @@ with open('README.md', 'r') as f:
 
 setuptools.setup(
     name='stpmex',
-    version='0.0.8',
+    version='1.0',
     author='Cuenca',
     author_email='dev@cuenca.io',
     description='Integration to stpmex.com',

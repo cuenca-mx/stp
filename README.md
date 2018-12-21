@@ -1,8 +1,10 @@
-## STP client python3 client library 
+## STP client python3 client library
 
 [![Build Status](https://travis-ci.com/cuenca-mx/stpmex-python.svg?branch=master)](https://travis-ci.com/cuenca-mx/stpmex-python)
+[![Coverage Status](https://coveralls.io/repos/github/cuenca-mx/stpmex-python/badge.svg?branch=master)](https://coveralls.io/github/cuenca-mx/stpmex-python?branch=master)
+[![PyPI](https://img.shields.io/pypi/v/stpmex.svg)](https://pypi.org/project/stpmex/)
 
-Cliente para el servicio SOAP de STP 
+Cliente para el servicio SOAP de STP
 
 Demo wsdl: https://demo.stpmex.com:7024/speidemo/webservices/SpeiActualizaServices?wsdl
 
@@ -55,3 +57,12 @@ Para crear una nueva orden, crear una instancia de Orden y llamar registra()
 orden = stpmex.Orden(conceptoPago='Prueba', institucionOperante=stpmex.types.Institucion.STP.value, cuentaBeneficiario='846180000400000001', institucionContraparte=846, monto=1234, nombreBeneficiario='Benito Juárez')
 orden.registra()
 ```
+
+**Subir a PyPi**
+
+1. Actualizar version en `setup.py`
+1. Commit cambios a `setup.py` y empujarlos a `origin/master`
+1. `git tag -a <version> -m <release message>`
+1. `git push origin --tags`
+
+TravisCI subirà la version actualizada a PyPi despues de verificar que las pruevas pasen.
