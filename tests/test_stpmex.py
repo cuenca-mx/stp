@@ -41,10 +41,10 @@ def get_order():
     return Orden(
         conceptoPago='Prueba',
         institucionOperante=list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('STP')],
+            list(BANK_NAMES.values()).index('STP')],
         cuentaBeneficiario='072691004495711499',
         institucionContraparte=list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('BANORTE')],
+            list(BANK_NAMES.values()).index('BANORTE')],
         monto=1.2,
         nombreBeneficiario='Ricardo Sanchez')
 
@@ -53,19 +53,19 @@ def test_create_order_leading_trailing_spaces(initialize_stpmex):
     order = Orden(
         conceptoPago='    Prueba    ',
         institucionOperante=list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('STP')],
+            list(BANK_NAMES.values()).index('STP')],
         cuentaBeneficiario='    072691004495711499    ',
         institucionContraparte=list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('BANORTE')],
+            list(BANK_NAMES.values()).index('BANORTE')],
         monto=1.2,
         nombreBeneficiario='    Ricardo Sanchez    '
     )
     assert order.conceptoPago == 'Prueba'
     assert order.institucionOperante == list(BANK_NAMES.keys())[
-    list(BANK_NAMES.values()).index('STP')]
+        list(BANK_NAMES.values()).index('STP')]
     assert order.cuentaBeneficiario == '072691004495711499'
     assert order.institucionContraparte == list(BANK_NAMES.keys())[
-    list(BANK_NAMES.values()).index('BANORTE')]
+        list(BANK_NAMES.values()).index('BANORTE')]
     assert order.monto == 1.2
     assert order.nombreBeneficiario == 'Ricardo Sanchez'
 

@@ -70,7 +70,7 @@ def order():
 
     order = Orden()
     order.institucionOperante = list(BANK_NAMES.keys())[
-    list(BANK_NAMES.values()).index('STP')]
+        list(BANK_NAMES.values()).index('STP')]
     order.nombreBeneficiario = input('Nombre del beneficiario: ')
     order.cuentaBeneficiario = input('CLABE del beneficiario: ')
     order.institucionContraparte = input('Institución de contraparte: ')
