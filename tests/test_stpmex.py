@@ -1,8 +1,5 @@
-from clabe import BankCode
-
+from clabe import BANK_NAMES
 from stpmex import Orden
-from stpmex.helpers import spei_to_stp_bank_code, stp_to_spei_bank_code
-from stpmex.types import Institucion
 import pytest
 import vcr
 
@@ -43,9 +40,11 @@ def test_join_fields(initialize_stpmex):
 def get_order():
     return Orden(
         conceptoPago='Prueba',
-        institucionOperante=Institucion.STP.value,
+        institucionOperante=list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('STP')],
         cuentaBeneficiario='072691004495711499',
-        institucionContraparte=Institucion.BANORTE.value,
+        institucionContraparte=list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('BANORTE')],
         monto=1.2,
         nombreBeneficiario='Ricardo Sanchez')
 
@@ -53,16 +52,20 @@ def get_order():
 def test_create_order_leading_trailing_spaces(initialize_stpmex):
     order = Orden(
         conceptoPago='    Prueba    ',
-        institucionOperante=Institucion.STP.value,
+        institucionOperante=list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('STP')],
         cuentaBeneficiario='    072691004495711499    ',
-        institucionContraparte=Institucion.BANORTE.value,
+        institucionContraparte=list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('BANORTE')],
         monto=1.2,
         nombreBeneficiario='    Ricardo Sanchez    '
     )
     assert order.conceptoPago == 'Prueba'
-    assert order.institucionOperante == Institucion.STP.value
+    assert order.institucionOperante == list(BANK_NAMES.keys())[
+    list(BANK_NAMES.values()).index('STP')]
     assert order.cuentaBeneficiario == '072691004495711499'
-    assert order.institucionContraparte == Institucion.BANORTE.value
+    assert order.institucionContraparte == list(BANK_NAMES.keys())[
+    list(BANK_NAMES.values()).index('BANORTE')]
     assert order.monto == 1.2
     assert order.nombreBeneficiario == 'Ricardo Sanchez'
 
@@ -131,30 +134,6 @@ def test_null_reference(initialize_stpmex, get_order):
     order.referenciaNumerica = None
     with pytest.raises(ValueError):
         order.registra()
-
-
-def test_invalid_spei_bank():
-    spei_bank = '001'
-    stp_code = spei_to_stp_bank_code(spei_bank)
-    assert stp_code is None
-
-
-def test_valid_spei_bank():
-    spei_bank = '002'
-    stp_code = spei_to_stp_bank_code(spei_bank)
-    assert stp_code == Institucion.BANAMEX
-
-
-def test_invalid_stp_bank():
-    stp_bank = 9999999
-    spei_code = stp_to_spei_bank_code(stp_bank)
-    assert spei_code is None
-
-
-def test_valid_stp_bank():
-    stp_bank = 40002
-    spei_code = stp_to_spei_bank_code(stp_bank)
-    assert spei_code == BankCode.BANAMEX.value
 
 
 def test_max_length(initialize_stpmex, get_order):

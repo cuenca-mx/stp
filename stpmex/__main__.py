@@ -2,10 +2,10 @@
 CLI para enviar órdenes a STP.
 """
 import argparse
+from clabe.banks import BANKS, BANK_NAMES
 import json
 import stpmex
 from stpmex import Orden
-from stpmex.types import Institucion
 
 DEFAULT_FILE_NAME = 'stp.config'
 
@@ -69,7 +69,8 @@ def order():
     print("Connection established")
 
     order = Orden()
-    order.institucionOperante = Institucion.STP.value
+    order.institucionOperante = list(BANK_NAMES.keys())[
+    list(BANK_NAMES.values()).index('STP')]
     order.nombreBeneficiario = input('Nombre del beneficiario: ')
     order.cuentaBeneficiario = input('CLABE del beneficiario: ')
     order.institucionContraparte = input('Institución de contraparte: ')
