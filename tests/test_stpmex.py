@@ -1,4 +1,4 @@
-from clabe import BANK_NAMES
+from clabe import BANKS
 from stpmex import Orden
 import pytest
 import vcr
@@ -40,11 +40,9 @@ def test_join_fields(initialize_stpmex):
 def get_order():
     return Orden(
         conceptoPago='Prueba',
-        institucionOperante=list(BANK_NAMES.keys())[
-            list(BANK_NAMES.values()).index('STP')],
+        institucionOperante='90646',
         cuentaBeneficiario='072691004495711499',
-        institucionContraparte=list(BANK_NAMES.keys())[
-            list(BANK_NAMES.values()).index('HSBC')],
+        institucionContraparte=BANKS['072'],
         monto=1.2,
         nombreBeneficiario='Ricardo Sanchez')
 
@@ -52,20 +50,16 @@ def get_order():
 def test_create_order_leading_trailing_spaces(initialize_stpmex):
     order = Orden(
         conceptoPago='    Prueba    ',
-        institucionOperante=list(BANK_NAMES.keys())[
-            list(BANK_NAMES.values()).index('STP')],
+        institucionOperante='90646',
         cuentaBeneficiario='    072691004495711499    ',
-        institucionContraparte=list(BANK_NAMES.keys())[
-            list(BANK_NAMES.values()).index('HSBC')],
+        institucionContraparte=BANKS['072'],
         monto=1.2,
         nombreBeneficiario='    Ricardo Sanchez    '
     )
     assert order.conceptoPago == 'Prueba'
-    assert order.institucionOperante == list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('STP')]
+    assert order.institucionOperante == '90646'
     assert order.cuentaBeneficiario == '072691004495711499'
-    assert order.institucionContraparte == list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('HSBC')]
+    assert order.institucionContraparte == BANKS['072']
     assert order.monto == 1.2
     assert order.nombreBeneficiario == 'Ricardo Sanchez'
 
