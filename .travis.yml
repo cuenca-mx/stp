@@ -1,5 +1,5 @@
 notifications:
-  slack: cuencafinance:6N0IaVciA0KyNylSTq5ZzW4I
+  slack: cuencafinance:MhbCtL2eiOoZVXXunKxeyZzm
 
 language: python
 
@@ -29,9 +29,9 @@ jobs:
       script: echo "Uploading packages to PyPI"
       deploy:
         provider: pypi
-        user: JessicaShalomG
+        user: cuenca
         password:
-            secure: "W99WixhxbtzmZN9k220c5kpicILgAagmEiWdmp817608waNi3TVtgt7j1uF8iaSAZZWyUGD3ppsYH0YHkyFgXugFQ6dcQ7aUvHfuFVSzTFObCeYBzimpaYuB56o9PTc5UaaF7se1DemsUFeqoFS9yevtDyTruj+QqkN+3grdLpgqfAPzhKTZOGqHF0KC+xgraU9lGq+w1Zz/Rx7Y3G0td9kA06+CupMAfs8Q2bMxOiT7UMe4wizRKYsgDGdVWsnNjDdeVkf6LY1SiLHtg2qo/56eBFfbcFzkvSozmvwJoEwlF0q13IMoTSi2SIf38SJ2asUzGprLdbB4mYupGM1b0C67cG8Sfs6j0ugKTzqWyaejBtI/Poj8lPkNe795j2NqzIgjlVMipbIn9mbkqQIzCawpB5rCavcbCo5orNukKz70UlShUZSGNP+ji+BUDJ2/mRXMr4jt2kQRJAe/bYrd6tXjybv0XyJnp5Hvci8u4C6E14FnfvHJaebZgdk47nVXu1LAcVcFVUeFWOtIVgxE1oPBKsdnPqG5IbXOnwkVbndViE7YotSlzISFzTMKFtpcHzNpnIOh1D25XDbDetVm1dxoK1h5dN75dm2F/Kwy6n/zdRny5aIM/eON+cvBzYQXKZuxDdcWTmz/CIkBMx/NwGHDjxnXy0ExZnfvs3C6wVs="
+          secure: "I5xOa610g2M0rG6I+lm3V0ROyDdfb9738OnY+Z3IZzUDo4KvTO3aIBZatMw58rW4hNAAvAyjWE0Je0ABybmcBKLf42CbR+XgRnYoKhYECVgpdWuZsIWAKGf1dmbOo/AE+LEjSSaLNuLea7+x+586uECOFB5YYyKnC5QnLj19481SdS27l4UcUOQ8JFNEMKmPhZgAAXfptsC52/pxkoMC9xdk8sVf/WHOavnB4vzcrlLIYsbOdbU2HXaUxR42TUs7k5ETEnwG3pU1Ic9EPHkFVsh/2DJEHN8fCTnEig84xopZwnlnSYI2FqBB6xp8by5D5rpfTrFY6GZ4oUYwH9u8sOVs0SVTCBDQMht2qKuKA367wQcAvHRQ60OlL6UaOKu4G4sBrEEdNMpm9XewdrMeymkJMXP1+3Rlq+qbv0QxXe12NpK53Svvm7laMC1uGZ7Qgxcwk05dTibaHlUfCzrP79m1DZ0aqyN5IgrOXEpmyJzdDa0TX7dG4OqPCLckHKmlhkAMCq2CQALd5DZ2iBKE1rECrdbsPokB9hFEIjSI9lTe4wbyFN4kUUfdDi9dtIsljVIZkDJjM1Ned2uez0jtL83mfwXXcqMdWHDcFwxQXXc+H2gjdS4MbbmiEypDmuGAlBN3XqycwnkKc/LldK0oOD9QsKle3MCS3hb7885LhVc="
 
         on:
           tags: true
