@@ -1,9 +1,9 @@
 from clabe import BankCode
 
-from stpmex import Orden
 from stpmex.helpers import spei_to_stp_bank_code, stp_to_spei_bank_code
-from stpmex.types import Institucion
 import pytest
+from stpmex.types import Institucion
+from stpmex import Orden
 
 
 WRONG_NAME = "asdfghjklñasdfghjklñasdfghjklñasdfghjklñk"
@@ -44,17 +44,6 @@ def test_join_fields(initialize_stpmex):
               'pago prueba||||||123123||T||3|0|||').encode('utf-8')
 
     assert orden._joined_fields == joined
-
-
-@pytest.fixture
-def get_order():
-    return Orden(
-        conceptoPago='Prueba',
-        institucionOperante=Institucion.STP.value,
-        cuentaBeneficiario='072691004495711499',
-        institucionContraparte=Institucion.BANORTE.value,
-        monto=1.2,
-        nombreBeneficiario='Ricardo Sanchez')
 
 
 def test_create_order_leading_trailing_spaces(initialize_stpmex):
