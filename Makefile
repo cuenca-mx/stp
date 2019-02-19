@@ -8,7 +8,7 @@ all: test
 venv:
 		$(PYTHON) -m venv --prompt stpmex venv
 		source venv/bin/activate
-		pip install --quiet --upgrade pip
+		pip install -qU pip
 
 clean:
 		find . -name '__pycache__' -exec rm -r "{}" +
