@@ -5,7 +5,7 @@ from stpmex import Orden
 
 
 @pytest.fixture
-def get_order():
+def orden():
     return Orden(
         conceptoPago='Prueba',
         institucionOperante=Institucion.STP.value,

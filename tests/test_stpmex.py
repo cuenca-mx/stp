@@ -46,26 +46,17 @@ def test_join_fields(initialize_stpmex):
     assert orden._joined_fields == joined
 
 
-def test_create_order_leading_trailing_spaces(initialize_stpmex):
-    order = Orden(
-        conceptoPago='    Prueba    ',
-        institucionOperante=Institucion.STP.value,
-        cuentaBeneficiario='    072691004495711499    ',
-        institucionContraparte=Institucion.BANORTE.value,
-        monto=1.2,
-        nombreBeneficiario='    Ricardo Sanchez    '
-    )
-    assert order.conceptoPago == 'Prueba'
-    assert order.institucionOperante == Institucion.STP.value
-    assert order.cuentaBeneficiario == '072691004495711499'
-    assert order.institucionContraparte == Institucion.BANORTE.value
-    assert order.monto == 1.2
-    assert order.nombreBeneficiario == 'Ricardo Sanchez'
+def test_create_order_leading_trailing_spaces(orden):
+    assert orden.conceptoPago == 'Prueba'
+    assert orden.institucionOperante == Institucion.STP.value
+    assert orden.cuentaBeneficiario == '072691004495711499'
+    assert orden.institucionContraparte == Institucion.BANORTE.value
+    assert orden.monto == 1.2
+    assert orden.nombreBeneficiario == 'Ricardo Sanchez'
 
 
 @pytest.mark.vcr
-def test_create_orden(get_order):
-    orden = get_order
+def test_create_orden(orden):
     resp = orden.registra()
     assert resp.descripcionError is None
     assert type(resp.id) is int
@@ -74,223 +65,195 @@ def test_create_orden(get_order):
 
 
 @pytest.mark.vcr
-def test_empty_monto(get_order):
-    orden = get_order
+def test_empty_monto(orden):
     orden.monto = ''
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_monto(get_order):
-    order = get_order
-    order.monto = None
+def test_null_monto(orden):
+    orden.monto = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_is_numeric_monto(get_order):
-    orden = get_order
+def test_is_numeric_monto(orden):
     orden.monto = "dh238d7gd"
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_monto_one(get_order):
-    orden = get_order
+def test_max_length_monto_one(orden):
     orden.monto = WRONG_MONTO_ONE
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_monto_two(get_order):
-    orden = get_order
+def test_max_length_monto_two(orden):
     orden.monto = WRONG_MONTO_TWO
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_empty_concepto(get_order):
-    orden = get_order
+def test_empty_concepto(orden):
     orden.conceptoPago = ''
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_concepto(get_order):
-    order = get_order
-    order.conceptoPago = None
+def test_null_concepto(orden):
+    orden.conceptoPago = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_concepto(get_order):
-    orden = get_order
+def test_max_length_concepto(orden):
     orden.conceptoPago = WRONG_CONCEPTO
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_bad_N_benefit(get_order):
-    order = get_order
-    order.nombreBeneficiario = WRONG_NAME
+def test_bad_N_benefit(orden):
+    orden.nombreBeneficiario = WRONG_NAME
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_N_benefit(get_order):
-    order = get_order
-    order.nombreBeneficiario = None
+def test_null_N_benefit(orden):
+    orden.nombreBeneficiario = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
-def test_bad_N_ordenante(get_order):
-    orden = get_order
+def test_bad_N_ordenante(orden):
     orden.nombreOrdenante = WRONG_NAME
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_emply_clave(get_order):
-    order = get_order
-    order.claveRastreo = ''
+def test_emply_clave(orden):
+    orden.claveRastreo = ''
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_clave(get_order):
-    order = get_order
-    order.claveRastreo = None
+def test_null_clave(orden):
+    orden.claveRastreo = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_clave(get_order):
-    order = get_order
-    order.claveRastreo = WRONG_CLAVE
+def test_max_length_clave(orden):
+    orden.claveRastreo = WRONG_CLAVE
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_wrong_reference(get_order):
-    order = get_order
-    order.referenciaNumerica = WRONG_REFERENCE
+def test_wrong_reference(orden):
+    orden.referenciaNumerica = WRONG_REFERENCE
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_reference(get_order):
-    order = get_order
-    order.referenciaNumerica = None
+def test_null_reference(orden):
+    orden.referenciaNumerica = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_empty_C_beneficiario(get_order):
-    orden = get_order
+def test_empty_C_beneficiario(orden):
     orden.cuentaBeneficiario = ''
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_null_C_beneficiario(get_order):
-    order = get_order
-    order.cuentaBeneficiario = None
+def test_null_C_beneficiario(orden):
+    orden.cuentaBeneficiario = None
     with pytest.raises(ValueError):
-        order.registra()
+        orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_beneficiario(get_order):
-    orden = get_order
+def test_max_length_beneficiario(orden):
     orden.cuentaBeneficiario = WRONG_ACCOUNT
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_ordenante(get_order):
-    orden = get_order
+def test_max_length_ordenante(orden):
     orden.cuentaOrdenante = WRONG_ACCOUNT
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_folio(get_order):
-    orden = get_order
+def test_max_length_folio(orden):
     orden.folioOrigen = WRONG_FOLIO
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_contraparte(get_order):
-    orden = get_order
+def test_max_length_contraparte(orden):
     orden.institucionContraparte = WRONG_INSTITUCION
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_operante(get_order):
-    orden = get_order
+def test_max_length_operante(orden):
     orden.institucionOperante = WRONG_INSTITUCION
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_rfcBeneficiario(get_order):
-    orden = get_order
+def test_max_length_rfcBeneficiario(orden):
     orden.rfcCurpBeneficiario = WRONG_RFC
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_rfcOrdenante(get_order):
-    orden = get_order
+def test_max_length_rfcOrdenante(orden):
     orden.rfcCurpOrdenante = WRONG_RFC
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_tipoBeneficiario(get_order):
-    orden = get_order
+def test_max_length_tipoBeneficiario(orden):
     orden.tipoCuentaBeneficiario = 322
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_tipoOrdenante(get_order):
-    orden = get_order
+def test_max_length_tipoOrdenante(orden):
     orden.tipoCuentaOrdenante = 345
     with pytest.raises(ValueError):
         orden.registra()
 
 
 @pytest.mark.vcr
-def test_max_length_tipoPago(get_order):
-    orden = get_order
+def test_max_length_tipoPago(orden):
     orden.tipoPago = 345
     with pytest.raises(ValueError):
         orden.registra()
