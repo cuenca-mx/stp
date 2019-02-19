@@ -22,7 +22,7 @@ setuptools.setup(
     install_requires=requirements,
     setup_requires=['pytest-runner'],
     tests_require=[
-        'pytest==4.2.1',
+        'pytest>=4.2.1,<4.3.0',
         'vcrpy==2.0.1'
     ],
     extras_require={
@@ -33,7 +33,7 @@ setuptools.setup(
             'pycodestyle',
             'pytest',
             'vcrpy',
-            'pytest-vcr==1.0.1'
+            'pytest-vcr>=1.0.1'
         ]
     },
     classifiers=[
