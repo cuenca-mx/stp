@@ -2,9 +2,7 @@
 Configuraciones iniciales para utilizar el cliente posteriormente
 """
 from zeep import Client
-from zeep.transports import Transport
 from OpenSSL import crypto
-from requests import Session
 from .ordenes import Orden
 from .base import STP_EMPRESA, STP_PREFIJO, STP_PRIVKEY, STP_PRIVKEY_PASSPHRASE
 
@@ -35,13 +33,9 @@ def configure(empresa: str, priv_key: str, priv_key_passphrase: str,
     base.STP_PREFIJO = prefijo
     base.WSDL_PATH = wsdl_path
 
+    base.ACTUALIZA_CLIENT = Client(wsdl_path)
     if proxy is not None:
-        session = Session()
-        session.proxies = {
-            'https': f"https://{proxy_user}:{proxy_password}@{proxy}",
-            'http':  f"http://{proxy_user}:{proxy_password}@{proxy}"
+        base.ACTUALIZA_CLIENT.transport.session.proxies = {
+            'http': "http://{proxy_user}:{proxy_password}@{proxy}",
+            'https':  "https://{proxy_user}:{proxy_password}@{proxy}"
         }
-        base.ACTUALIZA_CLIENT = Client(wsdl_path,
-                                       transport=Transport(session=session))
-    else:
-        base.ACTUALIZA_CLIENT = Client(wsdl_path)

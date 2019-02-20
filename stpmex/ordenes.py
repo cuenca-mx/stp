@@ -80,8 +80,7 @@ VALIDATIONS = dict(
         maxLength=20
     ),
     monto=dict(
-        required=True,
-        formatPrice=19.2
+        required=True
     ),
     folioOrigen=dict(
         maxLength=50

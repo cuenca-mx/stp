@@ -14,8 +14,6 @@ WRONG_ACCOUNT = "123456789123456789123"
 WRONG_CLAVE = "1234567891234567891234567891234"
 WRONG_FOLIO = "aHleRDMCqwLQEXfsqFnkdbEbyCZkfqpIAAMrFawVwhnCHVUXAJP"
 WRONG_INSTITUCION = 123456
-WRONG_MONTO_ONE = 12345678912345678912
-WRONG_MONTO_TWO = 234.3443
 WRONG_RFC = "GAvmqfKjSvCqvOVIQRJ"
 
 
@@ -105,22 +103,6 @@ def test_null_monto(initialize_stpmex, get_order):
 def test_is_numeric_monto(initialize_stpmex, get_order):
     orden = get_order
     orden.monto = "dh238d7gd"
-    with pytest.raises(ValueError):
-        orden.registra()
-
-
-@vcr.use_cassette(cassette_library_dir='tests/cassettes')
-def test_max_length_monto_one(initialize_stpmex, get_order):
-    orden = get_order
-    orden.monto = WRONG_MONTO_ONE
-    with pytest.raises(ValueError):
-        orden.registra()
-
-
-@vcr.use_cassette(cassette_library_dir='tests/cassettes')
-def test_max_length_monto_two(initialize_stpmex, get_order):
-    orden = get_order
-    orden.monto = WRONG_MONTO_TWO
     with pytest.raises(ValueError):
         orden.registra()
 

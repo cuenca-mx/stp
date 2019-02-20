@@ -38,22 +38,6 @@ def _validate(field, field_value, validation, validation_value):
        field_value and validation_value < len(str(field_value)):
         return 'Length of field {} must be lower than {}'\
             .format(field, len(str(field_value)))
-    if validation == 'formatPrice' and validation_value and field_value:
-        integer = int(str(validation_value).split(".")[0])
-        if len(str(validation_value).split(".")) != 1:
-            decimal = int(str(validation_value).split(".")[1])
-        else:
-            decimal = 2
-        try:
-            split_value = str(float(field_value)).split(".")
-            if len(split_value[0]) > integer:
-                return 'Length of field {} must be lower than {}.{}'\
-                    .format(field, integer, decimal)
-            elif len(split_value) != 1 and len(split_value[1]) > decimal:
-                return 'Length of field {} must be lower than {}.{}'\
-                    .format(field, integer, decimal)
-        except ValueError:
-            return "Field is not a valid number"
     return None
 
 
@@ -78,31 +62,31 @@ class Resource:
         self.empresa = STP_EMPRESA
         self.firma = None
 
-    def __dir__(self):
-        return dir(super(Resource, self)) + dir(self.__object__)
+    #def __dir__(self):
+    #    return dir(super(Resource, self)) + dir(self.__object__)
 
-    def __dict__(self):
-        return {r: self.__getattr__(r) for r in self.__fieldnames__}
+    #def __dict__(self):
+    #    return {r: self.__getattr__(r) for r in self.__fieldnames__}
 
-    def __eq__(self, other):
-        return all(getattr(self, name) ==
-                   getattr(other, name) for name in self.__fieldnames__)
+    #def __eq__(self, other):
+    #    return all(getattr(self, name) ==
+    #               getattr(other, name) for name in self.__fieldnames__)
 
     def __getattr__(self, item):
         if item.startswith('_'):
-            return self.__getattribute__(item)
+            return self.__getattr__(item)
         return getattr(self.__object__, item)
 
-    def __ne__(self, other):
-        return not self == other
+    #def __ne__(self, other):
+    #    return not self == other
 
-    def __repr__(self):
-        indent = ' ' * 4
-        rv = f'{self.__class__.__name__}(\n'
-        for name in self.__fieldnames__:
-            rv += f'{indent}{name}={repr(getattr(self, name))},\n'
-        rv += ')'
-        return rv
+    #def __repr__(self):
+    #    indent = ' ' * 4
+    #    rv = f'{self.__class__.__name__}(\n'
+    #    for name in self.__fieldnames__:
+    #        rv += f'{indent}{name}={repr(getattr(self, name))},\n'
+    #    rv += ')'
+    #    return rv
 
     def __setattr__(self, key, value):
         if key.startswith('_'):
@@ -110,8 +94,8 @@ class Resource:
         else:
             setattr(self.__object__, key, value)
 
-    def __str__(self):
-        return self.__object__.__str__()
+    #def __str__(self):
+    #    return self.__object__.__str__()
 
     @property
     def _joined_fields(self):
