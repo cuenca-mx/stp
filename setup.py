@@ -3,7 +3,7 @@ import setuptools
 requirements = [
     'zeep>=3.1.0,<3.2.0',
     'pyopenssl>=18.0.0,<18.1.0',
-    'clabe>=0.1.1,<0.2.0'
+    'clabe>=0.2.1,<0.3.0'
 ]
 
 with open('README.md', 'r') as f:
