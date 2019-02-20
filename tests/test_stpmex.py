@@ -1,4 +1,4 @@
-from clabe import BANK_NAMES
+from clabe import BANKS
 import pytest
 from stpmex import Orden
 
@@ -45,11 +45,9 @@ def test_join_fields(initialize_stpmex):
 
 def test_create_order_leading_trailing_spaces(orden):
     assert orden.conceptoPago == 'Prueba'
-    assert orden.institucionOperante == list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('STP')]
+    assert orden.institucionOperante == '40072'
     assert orden.cuentaBeneficiario == '072691004495711499'
-    assert orden.institucionContraparte == list(BANK_NAMES.keys())[
-        list(BANK_NAMES.values()).index('Banorte/Ixe')]
+    assert orden.institucionContraparte == BANKS['072']
     assert orden.monto == 1.2
     assert orden.nombreBeneficiario == 'Ricardo Sanchez'
 
