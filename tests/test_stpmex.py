@@ -1,8 +1,5 @@
-from clabe import BankCode
-
-from stpmex.helpers import spei_to_stp_bank_code, stp_to_spei_bank_code
+from clabe import BANK_NAMES
 import pytest
-from stpmex.types import Institucion
 from stpmex import Orden
 
 
@@ -48,9 +45,11 @@ def test_join_fields(initialize_stpmex):
 
 def test_create_order_leading_trailing_spaces(orden):
     assert orden.conceptoPago == 'Prueba'
-    assert orden.institucionOperante == Institucion.STP.value
+    assert orden.institucionOperante == list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('STP')]
     assert orden.cuentaBeneficiario == '072691004495711499'
-    assert orden.institucionContraparte == Institucion.BANORTE.value
+    assert orden.institucionContraparte == list(BANK_NAMES.keys())[
+        list(BANK_NAMES.values()).index('Banorte/Ixe')]
     assert orden.monto == 1.2
     assert orden.nombreBeneficiario == 'Ricardo Sanchez'
 
@@ -257,27 +256,3 @@ def test_max_length_tipoPago(orden):
     orden.tipoPago = 345
     with pytest.raises(ValueError):
         orden.registra()
-
-
-def test_invalid_spei_bank():
-    spei_bank = '001'
-    stp_code = spei_to_stp_bank_code(spei_bank)
-    assert stp_code is None
-
-
-def test_valid_spei_bank():
-    spei_bank = '002'
-    stp_code = spei_to_stp_bank_code(spei_bank)
-    assert stp_code == Institucion.BANAMEX
-
-
-def test_invalid_stp_bank():
-    stp_bank = 9999999
-    spei_code = stp_to_spei_bank_code(stp_bank)
-    assert spei_code is None
-
-
-def test_valid_stp_bank():
-    stp_bank = 40002
-    spei_code = stp_to_spei_bank_code(stp_bank)
-    assert spei_code == BankCode.BANAMEX.value
