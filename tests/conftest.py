@@ -8,7 +8,7 @@ from clabe import BANKS
 def orden():
     return Orden(
         conceptoPago='Prueba',
-        institucionOperante='40072',
+        institucionOperante='90646',
         cuentaBeneficiario='072691004495711499',
         institucionContraparte=BANKS['072'],
         monto=1.2,

@@ -45,7 +45,7 @@ def test_join_fields(initialize_stpmex):
 
 def test_create_order_leading_trailing_spaces(orden):
     assert orden.conceptoPago == 'Prueba'
-    assert orden.institucionOperante == '40072'
+    assert orden.institucionOperante == '90646'
     assert orden.cuentaBeneficiario == '072691004495711499'
     assert orden.institucionContraparte == BANKS['072']
     assert orden.monto == 1.2
