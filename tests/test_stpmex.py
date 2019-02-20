@@ -18,7 +18,7 @@ WRONG_RFC = "GAvmqfKjSvCqvOVIQRJ"
 @pytest.mark.vcr
 def test_join_fields(initialize_stpmex):
     orden = Orden(
-        institucionContraparte='846',
+        institucionContraparte='684',
         fechaOperacion='20160810',
         folioOrigen='1q2w33e',
         claveRastreo='1q2w33e',
@@ -27,7 +27,7 @@ def test_join_fields(initialize_stpmex):
         tipoCuentaOrdenante='40',
         tipoCuentaBeneficiario='40',
         nombreBeneficiario='eduardo',
-        cuentaBeneficiario='846180000300000004',
+        cuentaBeneficiario='684180000300000004',
         rfcCurpBeneficiario='ND',
         emailBeneficiario='fernanda.cedillo@stpmex.com',
         conceptoPago='pago prueba',
@@ -36,8 +36,8 @@ def test_join_fields(initialize_stpmex):
         medioEntrega='3',
         prioridad='0'
     )
-    joined = ('||846|TAMIZI|20160810|1q2w33e|1q2w33e||121.00|1|40||||40|'
-              'eduardo|846180000300000004|ND|fernanda.cedillo@stpmex.com|||||'
+    joined = ('||684|TAMIZI|20160810|1q2w33e|1q2w33e||121.00|1|40||||40|'
+              'eduardo|684180000300000004|ND|fernanda.cedillo@stpmex.com|||||'
               'pago prueba||||||123123||T||3|0|||').encode('utf-8')
 
     assert orden._joined_fields == joined
