@@ -62,40 +62,16 @@ class Resource:
         self.empresa = STP_EMPRESA
         self.firma = None
 
-    #def __dir__(self):
-    #    return dir(super(Resource, self)) + dir(self.__object__)
-
-    #def __dict__(self):
-    #    return {r: self.__getattr__(r) for r in self.__fieldnames__}
-
-    #def __eq__(self, other):
-    #    return all(getattr(self, name) ==
-    #               getattr(other, name) for name in self.__fieldnames__)
-
     def __getattr__(self, item):
         if item.startswith('_'):
             return self.__getattr__(item)
         return getattr(self.__object__, item)
-
-    #def __ne__(self, other):
-    #    return not self == other
-
-    #def __repr__(self):
-    #    indent = ' ' * 4
-    #    rv = f'{self.__class__.__name__}(\n'
-    #    for name in self.__fieldnames__:
-    #        rv += f'{indent}{name}={repr(getattr(self, name))},\n'
-    #    rv += ')'
-    #    return rv
 
     def __setattr__(self, key, value):
         if key.startswith('_'):
             super(Resource, self).__setattr__(key, value)
         else:
             setattr(self.__object__, key, value)
-
-    #def __str__(self):
-    #    return self.__object__.__str__()
 
     @property
     def _joined_fields(self):

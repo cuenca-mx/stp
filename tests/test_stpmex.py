@@ -83,9 +83,8 @@ def test_is_numeric_monto(orden):
         orden.registra()
 
 
-@vcr.use_cassette(cassette_library_dir='tests/cassettes')
-def test_empty_concepto(initialize_stpmex, get_order):
-    orden = get_order
+@pytest.mark.vcr
+def test_empty_concepto(orden):
     orden.conceptoPago = ''
     with pytest.raises(ValueError):
         orden.registra()
