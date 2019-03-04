@@ -254,3 +254,43 @@ def test_max_length_tipoPago(orden):
     orden.tipoPago = 345
     with pytest.raises(ValueError):
         orden.registra()
+
+
+@pytest.mark.vcr
+def test_method_dict(orden):
+    assert type(orden.__dict__()) == dict
+
+
+@pytest.mark.vcr
+def test_method_dir(orden):
+    assert type(orden.__dir__()) == list
+
+
+@pytest.mark.vcr
+def test_method_eq(orden):
+    assert orden.__eq__(orden)
+
+
+@pytest.mark.vcr
+def test_method_repr(orden):
+    assert type(orden.__repr__()) == str
+
+
+@pytest.mark.vcr
+def test_method_str(orden):
+    assert type(orden.__str__()) == str
+
+
+@pytest.mark.vcr
+def test_method_ne(orden):
+    assert not orden.__ne__(orden)
+
+
+@pytest.mark.vcr
+def test_method_getattr(orden):
+    assert orden.__getattr__("institucionContraparte") == "40072"
+
+
+@pytest.mark.vcr
+def test_method_getattr_object(orden):
+    assert orden.__getattribute__("__type__") == "ns0:ordenPagoWS"

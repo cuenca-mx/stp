@@ -35,13 +35,13 @@ def configure(empresa: str, priv_key: str, priv_key_passphrase: str,
     base.STP_PREFIJO = prefijo
     base.WSDL_PATH = wsdl_path
 
+    base.ACTUALIZA_CLIENT = Client(wsdl_path)
     if proxy is not None:
-        session = Session()
-        session.proxies = {
-            'https': f"https://{proxy_user}:{proxy_password}@{proxy}",
-            'http':  f"http://{proxy_user}:{proxy_password}@{proxy}"
-        }
-        base.ACTUALIZA_CLIENT = Client(wsdl_path,
-                                       transport=Transport(session=session))
-    else:
-        base.ACTUALIZA_CLIENT = Client(wsdl_path)
+        base.ACTUALIZA_CLIENT = Client(
+            wsdl_path,
+            transport=Transport(session=Session(proxies={
+                    'https': f"https://{proxy_user}:{proxy_password}@{proxy}",
+                    'http':  f"http://{proxy_user}:{proxy_password}@{proxy}"
+                })
+            )
+        )
