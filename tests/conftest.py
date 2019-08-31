@@ -26,7 +26,6 @@ uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 
 
 @pytest.fixture
-@pytest.mark.vcr
 def client():
     pkey_passphrase = '12345678'
     empresa = 'TAMIZI'

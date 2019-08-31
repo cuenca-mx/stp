@@ -121,7 +121,7 @@ def test_defaults():
     assert orden.referenciaNumerica
 
 
-def test_zero_referencia_numerica(client):
+def test_zero_referencia_numerica():
     with pytest.raises(ValidationError) as exc_info:
         create_orden(referenciaNumerica='00')
     errors = exc_info.value.errors()
@@ -131,7 +131,7 @@ def test_zero_referencia_numerica(client):
     assert error['type'] == 'value_error.number.not_gt'
 
 
-def test_referencia_numerica_too_high(client):
+def test_referencia_numerica_too_high():
     with pytest.raises(ValidationError) as exc_info:
         create_orden(referenciaNumerica=10 ** 7)
     errors = exc_info.value.errors()

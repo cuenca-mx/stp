@@ -11,7 +11,7 @@ interactions:
       User-Agent:
       - Zeep/3.1.0 (www.python-zeep.org)
     method: GET
-    uri: https://prod.stpmex.com/spei/webservices/SpeiActualizaServices?wsdl
+    uri: https://prod.stpmex.com/spei/webservices/SpeiActualizaServices?xsd=1
   response:
     body:
       string: "<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>403
@@ -24,7 +24,7 @@ interactions:
       Content-Type:
       - text/html
       Date:
-      - Mon, 05 Aug 2019 12:43:10 GMT
+      - Sat, 31 Aug 2019 02:08:12 GMT
       Server:
       - nginx/1.12.2
     status:

@@ -1,4 +1,5 @@
-from dataclasses import asdict
+import dataclasses
+import os
 
 from OpenSSL import crypto
 from zeep import Client as SoapClient
@@ -7,8 +8,9 @@ from .auth import compute_signature, join_fields
 from .exc import InvalidPassphrase, StpmexException
 from .orden import Orden
 
-DEMO_BASE_URL = 'demo.stpmex.com:7024/speidemo'
-PROD_BASE_URL = 'prod.stpmex.com/spei'
+here = os.path.abspath(os.path.dirname(__file__))
+DEMO_WSDL = os.path.join(here, 'demo.wsdl')
+PROD_WSDL = os.path.join(here, 'prod.wsdl')
 
 
 class Client:
@@ -29,15 +31,14 @@ class Client:
         except crypto.Error:
             raise InvalidPassphrase
         if demo:
-            base_url = DEMO_BASE_URL
+            wsdl = DEMO_WSDL
         else:
-            base_url = PROD_BASE_URL
-        wsdl = f'https://{base_url}/webservices/SpeiActualizaServices?wsdl'
+            wsdl = PROD_WSDL
         self.soap_client = SoapClient(wsdl)
 
     def soap_orden(self, orden: Orden) -> 'zeep.objects.ordenPagoWS':
         SoapOrden = self.soap_client.get_type('ns0:ordenPagoWS')
-        soap_orden = SoapOrden(**asdict(orden))
+        soap_orden = SoapOrden(**dataclasses.asdict(orden))
         soap_orden.empresa = self.empresa
         return soap_orden
 
