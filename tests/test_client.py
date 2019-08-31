@@ -27,7 +27,6 @@ uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 -----END ENCRYPTED PRIVATE KEY-----"""
 
 
-@pytest.mark.vcr
 def test_client():
     pkey_passphrase = '12345678'
     empresa = 'TAMIZI'

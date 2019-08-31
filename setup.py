@@ -35,7 +35,7 @@ setup(
     url='https://github.com/cuenca-mx/stpmex-python',
     packages=['stpmex'],
     include_package_data=True,
-    package_data=dict(stpmex=['py.typed', 'demo.wsdl', 'prod.wsdl']),
+    package_data=dict(stpmex=['py.typed', 'data/*']),
     python_requires='>=3.6',
     install_requires=install_requires,
     setup_requires=['pytest-runner'],

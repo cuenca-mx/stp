@@ -1,9 +1,6 @@
-import pytest
-
 from stpmex.auth import compute_signature, join_fields
 
 
-@pytest.mark.vcr
 def test_join_fields(soap_orden):
     joined = (
         b'||40072|TAMIZI|||CR1564969083|90646|1.20|1|||||40|Ricardo Sanchez|07'
@@ -12,7 +9,6 @@ def test_join_fields(soap_orden):
     assert join_fields(soap_orden) == joined
 
 
-@pytest.mark.vcr
 def test_compute_signature(client, soap_orden):
     firma = (
         'wheaue7DpL7ro+9GAR4pJAscGTT+UPD/aXiAchkQI/61QIJBcAzhecW7BG9bAVTG5fI8g'

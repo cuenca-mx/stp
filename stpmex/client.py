@@ -9,8 +9,8 @@ from .exc import InvalidPassphrase, StpmexException
 from .orden import Orden
 
 here = os.path.abspath(os.path.dirname(__file__))
-DEMO_WSDL = os.path.join(here, 'demo.wsdl')
-PROD_WSDL = os.path.join(here, 'prod.wsdl')
+DEMO_WSDL = os.path.join(here, 'data/demo.wsdl')
+PROD_WSDL = os.path.join(here, 'data/prod.wsdl')
 
 
 class Client:
