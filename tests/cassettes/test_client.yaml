@@ -1586,35 +1586,4 @@ interactions:
     status:
       code: 200
       message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - '*/*'
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - Zeep/3.1.0 (www.python-zeep.org)
-    method: GET
-    uri: https://prod.stpmex.com/spei/webservices/SpeiActualizaServices?wsdl
-  response:
-    body:
-      string: "<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>403
-        Forbidden</h1></center>\r\n<hr><center>nginx/1.12.2</center>\r\n</body>\r\n</html>\r\n"
-    headers:
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '169'
-      Content-Type:
-      - text/html
-      Date:
-      - Mon, 05 Aug 2019 12:37:51 GMT
-      Server:
-      - nginx/1.12.2
-    status:
-      code: 403
-      message: Forbidden
 version: 1
