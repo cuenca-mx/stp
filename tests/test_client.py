@@ -1,8 +1,8 @@
 import pytest
+from zeep.exceptions import TransportError
 
 from stpmex.client import Client
 from stpmex.exc import InvalidPassphrase, StpmexException
-from zeep.exceptions import TransportError
 
 PKEY = """Bag Attributes
     friendlyName: prueba
