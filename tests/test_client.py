@@ -1,8 +1,8 @@
 import pytest
-from requests import HTTPError
 
 from stpmex.client import Client
 from stpmex.exc import InvalidPassphrase, StpmexException
+from zeep.exceptions import TransportError
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -37,6 +37,18 @@ def test_client():
         demo=True,
     )
     assert client.soap_client.get_type('ns0:ordenPagoWS')
+
+
+@pytest.mark.vcr
+def test_forbidden_without_vpn(orden):
+    pkey_passphrase = '12345678'
+    empresa = 'TAMIZI'
+    client = Client(
+        empresa=empresa, priv_key=PKEY, priv_key_passphrase=pkey_passphrase
+    )
+    with pytest.raises(TransportError) as exc_info:
+        client.registrar_orden(orden)
+    assert exc_info.value.status_code == 403
 
 
 def test_incorrect_passphrase():
