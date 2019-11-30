@@ -5,10 +5,11 @@ from dataclasses import field
 from typing import Optional, Type
 
 import clabe
-from pydantic import PositiveFloat, conint, constr, validator
+from pydantic import PositiveFloat, conint, constr
 from pydantic.dataclasses import dataclass
 
 from .types import Prioridad, TipoCuenta
+from .validation import validator
 
 STP_BANK_CODE = '90646'
 
