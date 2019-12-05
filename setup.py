@@ -19,6 +19,7 @@ test_requires = [
     'pytest-cov',
     'black',
     'isort[pipfile]',
+    'flake8',
 ]
 
 with open('README.md', 'r') as f:
