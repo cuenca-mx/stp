@@ -36,7 +36,9 @@ class Client:
             wsdl = PROD_WSDL
         self.soap_client = SoapClient(wsdl)
 
-    def soap_orden(self, orden: Orden) -> 'zeep.objects.ordenPagoWS':
+    def soap_orden(
+        self, orden: Orden
+    ) -> 'zeep.objects.ordenPagoWS':  # noqa: F821
         SoapOrden = self.soap_client.get_type('ns0:ordenPagoWS')
         soap_orden = SoapOrden(**dataclasses.asdict(orden))
         soap_orden.empresa = self.empresa
@@ -44,7 +46,7 @@ class Client:
 
     def registrar_orden(
         self, orden: Orden
-    ) -> 'zeep.objects.speiServiceResponse':
+    ) -> 'zeep.objects.speiServiceResponse':  # noqa: F821
         soap_orden = self.soap_orden(orden)
         joined_fields = join_fields(soap_orden)
         soap_orden.firma = compute_signature(self._pkey, joined_fields)

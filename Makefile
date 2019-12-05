@@ -1,7 +1,9 @@
 SHELL := bash
 PATH := ./venv/bin:${PATH}
-PYTHON=python3.7
-PROJECT=stpmex
+PYTHON = python3.7
+PROJECT = stpmex
+isort = isort -rc -ac $(PROJECT) tests setup.py
+black = black -S -l 79 --target-version py37 $(PROJECT) tests setup.py
 
 
 all: test
@@ -16,12 +18,14 @@ install-test:
 test: clean install-test lint
 		python setup.py test
 
-polish:
-		black -S -l 79 setup.py $(PROJECT)/ tests/
-		isort -rc --atomic setup.py $(PROJECT)/ tests/
+format:
+		$(isort)
+		$(black)
 
 lint:
-		pycodestyle setup.py $(PROJECT)/ tests/
+		$(isort) --check-only
+		$(black) --check
+		flake8 $(PROJECT) tests setup.py
 
 clean:
 		find . -name '*.pyc' -exec rm -f {} +

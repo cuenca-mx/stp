@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class StpmexException(BaseException):
     def __init__(self, **kwargs):
         for attr, value in kwargs.items():
