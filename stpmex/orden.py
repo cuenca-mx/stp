@@ -88,7 +88,7 @@ class Orden:
             raise ValueError('tipoCuenta no es válido')
         return tipo
 
-    @validator('tipoCuentaBeneficiario', each_item=True)
+    @validator('tipoCuentaBeneficiario')
     def _validate_tipoCuentaBeneficiario(cls, v, values):
         return cls._validate_tipoCuenta('cuentaBeneficiario', v, values)
 
