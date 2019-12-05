@@ -96,7 +96,9 @@ class Orden:
     def _validate_tipoCuentaOrdenante(cls, v, values):
         return cls._validate_tipoCuenta('cuentaOrdenante', v, values)
 
-    @validator('nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True)
+    @validator(
+        'nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True
+    )
     def _unicode_to_ascii(cls, v):
         v = unicodedata.normalize('NFKD', v).encode('ascii', 'ignore')
         return v.decode('ascii')
