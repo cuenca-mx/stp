@@ -57,7 +57,7 @@ class Orden:
         if not isinstance(self.monto, float):
             raise ValueError('monto must be a float')
 
-    @validator('cuentaBeneficiario', 'cuentaOrdenante')
+    @validator('cuentaBeneficiario', 'cuentaOrdenante', each_item=True)
     def _validate_cuenta(cls, v):
         if len(v) == 18:
             if not clabe.validate_clabe(v):
@@ -66,7 +66,7 @@ class Orden:
             raise ValueError('cuenta no es válida')
         return v
 
-    @validator('institucionContraparte', 'institucionOperante')
+    @validator('institucionContraparte', 'institucionOperante', each_item=True)
     def _validate_institucion(cls, v):
         if v not in clabe.BANKS.values():
             raise ValueError(f'{v} no se corresponde a un banco')
@@ -88,15 +88,15 @@ class Orden:
             raise ValueError('tipoCuenta no es válido')
         return tipo
 
-    @validator('tipoCuentaBeneficiario')
+    @validator('tipoCuentaBeneficiario', each_item=True)
     def _validate_tipoCuentaBeneficiario(cls, v, values):
         return cls._validate_tipoCuenta('cuentaBeneficiario', v, values)
 
-    @validator('tipoCuentaOrdenante')
+    @validator('tipoCuentaOrdenante', each_item=True)
     def _validate_tipoCuentaOrdenante(cls, v, values):
         return cls._validate_tipoCuenta('cuentaOrdenante', v, values)
 
-    @validator('nombreBeneficiario', 'nombreOrdenante', 'conceptoPago')
+    @validator('nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True)
     def _unicode_to_ascii(cls, v):
         v = unicodedata.normalize('NFKD', v).encode('ascii', 'ignore')
         return v.decode('ascii')

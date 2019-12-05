@@ -8,7 +8,7 @@ install_requires = [
     'zeep>=3.1.0,<3.2.0',
     'pyopenssl>=18.0.0,<18.1.0',
     'clabe>=0.2.1,<0.3.0',
-    'pydantic>=0.31.1<0.32.0',
+    'pydantic>=1.2,<1.3',
     'dataclasses>=0.6;python_version<"3.7"',
 ]
 
