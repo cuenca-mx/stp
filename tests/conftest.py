@@ -1,6 +1,10 @@
-import pytest
+import datetime as dt
 
-from stpmex import Client, Orden
+import pytest
+from clabe import generate_new_clabes
+
+from stpmex import Client
+from stpmex.resources import Cuenta, Orden
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -27,28 +31,21 @@ uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 
 @pytest.fixture
 def client():
-    pkey_passphrase = '12345678'
     empresa = 'TAMIZI'
-    yield Client(
-        empresa=empresa,
-        priv_key=PKEY,
-        priv_key_passphrase=pkey_passphrase,
-        demo=True,
-    )
+    pkey_passphrase = '12345678'
+    yield Client(empresa, PKEY, pkey_passphrase, demo=True)
 
 
 @pytest.fixture
-def orden():
-    yield Orden(
+def orden_dict():
+    yield dict(
         institucionContraparte='40072',
         claveRastreo='CR1564969083',
         monto=1.2,
         tipoPago=1,
         nombreOrdenante=None,
-        cuentaOrdenante=None,
-        tipoCuentaOrdenante=None,
+        cuentaOrdenante='646180110400000007',
         rfcCurpOrdenante=None,
-        tipoCuentaBeneficiario=40,
         nombreBeneficiario='Ricardo Sanchez',
         cuentaBeneficiario='072691004495711499',
         rfcCurpBeneficiario='ND',
@@ -56,11 +53,39 @@ def orden():
         referenciaNumerica=5273144,
         topologia='T',
         medioEntrega=3,
-        prioridad=1,
         iva=None,
     )
 
 
 @pytest.fixture
-def soap_orden(client, orden):
-    yield client.soap_orden(orden)
+def orden(client, orden_dict):
+    yield Orden(**orden_dict)
+
+
+@pytest.fixture
+def cuenta_dict():
+    yield dict(
+        cuenta=generate_new_clabes(1, '6461801570')[0],
+        nombre='Eduardo',
+        apellidoPaterno='Salvador',
+        apellidoMaterno='Hernandez',
+        rfcCurp='SAHE800416HDFABC01',
+        fechaNacimiento=dt.date(1980, 4, 14),
+        genero='H',
+        entidadFederativa='1',
+        actividadEconomica='30',
+        calle='mi calle',
+        numeroExterior='2',
+        numeroInterior='1',
+        colonia='mi colonia',
+        alcaldiaMunicipio='mi alcaldia',
+        cp='12345',
+        pais='1',
+        email='asdasd@domain.com',
+        idIdentificacion='123123123',
+    )
+
+
+@pytest.fixture
+def cuenta(client, cuenta_dict):
+    yield Cuenta(**cuenta_dict)

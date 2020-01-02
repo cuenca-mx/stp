@@ -1,10 +1,6 @@
 interactions:
 - request:
-    body: '<?xml version=''1.0'' encoding=''utf-8''?>
-
-      <soap-env:Envelope xmlns:soap-env="http://schemas.xmlsoap.org/soap/envelope/"><soap-env:Body><ns0:registraOrden
-      xmlns:ns0="http://h2h.integration.spei.enlacefi.lgec.com/"><ordenPago><claveRastreo>CR1564969083</claveRastreo><conceptoPago>Prueba</conceptoPago><cuentaBeneficiario>072691004495711499</cuentaBeneficiario><empresa>TAMIZI</empresa><firma>wheaue7DpL7ro+9GAR4pJAscGTT+UPD/aXiAchkQI/61QIJBcAzhecW7BG9bAVTG5fI8gAh6CdTEQn9q1O7VClOLdRqjNVluOLtDhm4iq5R7ew9+tjjHMJAv7JtSX7W9v55NtR9/jZ7RhSUbvEvS06Tfxq5CX+Ct7ySDOOiaOpM=</firma><institucionContraparte>40072</institucionContraparte><institucionOperante>90646</institucionOperante><medioEntrega>3</medioEntrega><monto>1.2</monto><nombreBeneficiario>Ricardo
-      Sanchez</nombreBeneficiario><prioridad>1</prioridad><referenciaNumerica>5273144</referenciaNumerica><rfcCurpBeneficiario>ND</rfcCurpBeneficiario><tipoCuentaBeneficiario>40</tipoCuentaBeneficiario><tipoPago>1</tipoPago><topologia>T</topologia></ordenPago></ns0:registraOrden></soap-env:Body></soap-env:Envelope>'
+    body: '{}'
     headers:
       Accept:
       - '*/*'
@@ -13,30 +9,28 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '1056'
+      - '2'
       Content-Type:
-      - text/xml; charset=utf-8
-      SOAPAction:
-      - '""'
+      - application/json
       User-Agent:
-      - Zeep/3.1.0 (www.python-zeep.org)
-    method: POST
-    uri: https://prod.stpmex.com/spei/webservices/SpeiActualizaServices
+      - python-requests/2.22.0
+    method: GET
+    uri: https://prod.stpmex.com/speiws/rest/application.wadl
   response:
     body:
-      string: "<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>403
-        Forbidden</h1></center>\r\n<hr><center>nginx/1.12.2</center>\r\n</body>\r\n</html>\r\n"
+      string: "<html>\r\n<head><title>403 Forbidden</title></head>\r\n<body>\r\n<center><h1>403
+        Forbidden</h1></center>\r\n<hr><center>nginx/1.16.1</center>\r\n</body>\r\n</html>\r\n"
     headers:
       Connection:
       - keep-alive
       Content-Length:
-      - '169'
+      - '153'
       Content-Type:
       - text/html
       Date:
-      - Sat, 31 Aug 2019 03:38:49 GMT
+      - Thu, 26 Dec 2019 07:03:15 GMT
       Server:
-      - nginx/1.12.2
+      - nginx/1.16.1
     status:
       code: 403
       message: Forbidden

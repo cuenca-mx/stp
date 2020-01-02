@@ -1,15 +1,15 @@
 from importlib.machinery import SourceFileLoader
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'zeep>=3.1.0,<3.2.0',
     'pyopenssl>=18.0.0,<18.1.0',
     'clabe>=0.2.1,<0.3.0',
-    'pydantic>=0.31.1<0.32.0',
+    'pydantic>=1.2,<1.3',
     'dataclasses>=0.6;python_version<"3.7"',
+    'requests>=2.22.0,<3.0',
 ]
 
 test_requires = [
@@ -19,6 +19,8 @@ test_requires = [
     'pytest-cov',
     'black',
     'isort[pipfile]',
+    'flake8',
+    'mypy',
 ]
 
 with open('README.md', 'r') as f:
@@ -33,9 +35,9 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/cuenca-mx/stpmex-python',
-    packages=['stpmex'],
+    packages=find_packages(),
     include_package_data=True,
-    package_data=dict(stpmex=['py.typed', 'data/*']),
+    package_data=dict(stpmex=['py.typed']),
     python_requires='>=3.6',
     install_requires=install_requires,
     setup_requires=['pytest-runner'],

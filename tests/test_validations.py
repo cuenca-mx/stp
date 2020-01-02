@@ -2,14 +2,14 @@ import clabe
 import pytest
 from pydantic import ValidationError
 
-from stpmex import Orden
+from stpmex.resources import Orden
 
 ORDEN_KWARGS = dict(
     institucionContraparte='40072',
     claveRastreo='CR1564969083',
     monto=1.2,
     tipoPago=1,
-    tipoCuentaBeneficiario=40,
+    cuentaOrdenante='646180110400000007',
     nombreBeneficiario='Ricardo Sanchez',
     cuentaBeneficiario='072691004495711499',
     conceptoPago='Prueba',
@@ -53,20 +53,22 @@ def test_invalid_clabe():
     with pytest.raises(ValidationError) as exc_info:
         create_orden(cuentaBeneficiario=invalid_clabe)
     errors = exc_info.value.errors()
-    assert len(errors) == 1
+    assert len(errors) == 3
     error = errors[0]
-    assert error['loc'] == ('cuentaBeneficiario',)
-    assert error['type'] == 'value_error'
+    assert error['loc'][0] == 'cuentaBeneficiario'
+    assert error['type'] == 'value_error.clabe.control_digit'
 
 
 def test_wrong_length_cuentaBeneficiario():
     with pytest.raises(ValidationError) as exc_info:
         create_orden(cuentaBeneficiario='1' * 14)
     errors = exc_info.value.errors()
-    assert len(errors) == 1
-    error = errors[0]
-    assert error['loc'] == ('cuentaBeneficiario',)
-    assert error['type'] == 'value_error'
+    assert len(errors) == 3
+    assert errors[0]['type'] == 'value_error.any_str.min_length'
+    assert errors[1]['type'] == 'value_error.any_str.min_length'
+    assert errors[2]['type'] == 'value_error.any_str.max_length'
+    for error in errors:
+        assert error['loc'][0] == 'cuentaBeneficiario'
 
 
 def test_digits():
@@ -75,7 +77,7 @@ def test_digits():
     errors = exc_info.value.errors()
     assert len(errors) == 1
     error = errors[0]
-    assert error['loc'] == ('institucionContraparte',)
+    assert error['loc'][0] == 'institucionContraparte'
     assert error['type'] == 'value_error.str.regex'
 
 
@@ -87,21 +89,6 @@ def test_invalid_bank():
     error = errors[0]
     assert error['loc'] == ('institucionContraparte',)
     assert error['type'] == 'value_error'
-
-
-def test_tipo_cuenta():
-    with pytest.raises(ValidationError) as exc_info:
-        create_orden(
-            tipoCuentaBeneficiario=3,
-            tipoCuentaOrdenante=5,
-            cuentaOrdenante='646180157084947785',
-        )
-    errors = exc_info.value.errors()
-    assert len(errors) >= 2
-    assert errors[0]['loc'] == ('tipoCuentaBeneficiario',)
-    assert errors[0]['type'] == 'value_error'
-    assert errors[1]['loc'] == ('tipoCuentaOrdenante',)
-    assert errors[1]['type'] == 'value_error'
 
 
 def test_replace_unicode():

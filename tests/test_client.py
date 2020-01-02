@@ -1,5 +1,5 @@
 import pytest
-from zeep.exceptions import TransportError
+from requests import HTTPError
 
 from stpmex.client import Client
 from stpmex.exc import InvalidPassphrase, StpmexException
@@ -27,45 +27,31 @@ uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 -----END ENCRYPTED PRIVATE KEY-----"""
 
 
-def test_client():
-    pkey_passphrase = '12345678'
-    empresa = 'TAMIZI'
-    client = Client(
-        empresa=empresa,
-        priv_key=PKEY,
-        priv_key_passphrase=pkey_passphrase,
-        demo=True,
-    )
-    assert client.soap_client.get_type('ns0:ordenPagoWS')
-
-
 @pytest.mark.vcr
-def test_forbidden_without_vpn(orden):
-    pkey_passphrase = '12345678'
-    empresa = 'TAMIZI'
-    client = Client(
-        empresa=empresa, priv_key=PKEY, priv_key_passphrase=pkey_passphrase
-    )
-    with pytest.raises(TransportError) as exc_info:
-        client.registrar_orden(orden)
-    assert exc_info.value.status_code == 403
+def test_forbidden_without_vpn(client):
+    client = Client('TAMIZI', PKEY, '12345678', demo=False)
+    with pytest.raises(HTTPError) as exc_info:
+        client.request('get', '/application.wadl', {})
+    assert exc_info.value.response.status_code == 403
 
 
 def test_incorrect_passphrase():
-    pkey_passphrase = 'incorrect'
-    empresa = 'TAMIZI'
     with pytest.raises(InvalidPassphrase):
-        Client(
-            empresa=empresa, priv_key=PKEY, priv_key_passphrase=pkey_passphrase
-        )
+        Client('TAMIZI', PKEY, 'incorrect')
 
 
 @pytest.mark.vcr
-def test_response_error(client, orden):
-    orden.medioEntrega = 9999999
+def test_response_error(client):
     with pytest.raises(StpmexException) as exc_info:
-        client.registrar_orden(orden)
+        client.put('/ordenPago/registra', dict(firma=''))
     exc = exc_info.value
     assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/cuentaModule/fisica', dict(firma=''))
+    exc = exc_info.value
+    assert exc.descripcion
     assert repr(exc)
     assert str(exc)

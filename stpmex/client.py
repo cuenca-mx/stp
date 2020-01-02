@@ -1,19 +1,27 @@
-import dataclasses
-import os
+from typing import Any, ClassVar, Dict, List, Union
 
 from OpenSSL import crypto
-from zeep import Client as SoapClient
+from requests import Response, Session
 
-from .auth import compute_signature, join_fields
 from .exc import InvalidPassphrase, StpmexException
-from .orden import Orden
+from .resources import Cuenta, Orden, Resource
+from .version import __version__ as client_version
 
-here = os.path.abspath(os.path.dirname(__file__))
-DEMO_WSDL = os.path.join(here, 'data/demo.wsdl')
-PROD_WSDL = os.path.join(here, 'data/prod.wsdl')
+DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
+PROD_BASE_URL = 'https://prod.stpmex.com/speiws/rest'
 
 
 class Client:
+
+    base_url: str
+    demo: bool
+    headers: Dict[str, str]
+    session: Session
+
+    # resources
+    cuentas: ClassVar = Cuenta
+    ordenes: ClassVar = Orden
+
     def __init__(
         self,
         empresa: str,
@@ -21,34 +29,55 @@ class Client:
         priv_key_passphrase: str,
         demo: bool = False,
     ):
-        self.empresa = empresa
+        self.session = Session()
+        self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
+        if demo:
+            self.base_url = DEMO_BASE_URL
+        else:
+            self.base_url = PROD_BASE_URL
         try:
-            self._pkey = crypto.load_privatekey(
+            self.pkey = crypto.load_privatekey(
                 crypto.FILETYPE_PEM,
                 priv_key,
                 priv_key_passphrase.encode('ascii'),
             )
         except crypto.Error:
             raise InvalidPassphrase
-        if demo:
-            wsdl = DEMO_WSDL
-        else:
-            wsdl = PROD_WSDL
-        self.soap_client = SoapClient(wsdl)
+        Resource.empresa = empresa
+        Resource._client = self
 
-    def soap_orden(self, orden: Orden) -> 'zeep.objects.ordenPagoWS':
-        SoapOrden = self.soap_client.get_type('ns0:ordenPagoWS')
-        soap_orden = SoapOrden(**dataclasses.asdict(orden))
-        soap_orden.empresa = self.empresa
-        return soap_orden
+    def put(
+        self, endpoint: str, data: Dict[str, Any]
+    ) -> Union[Dict[str, Any], List[Any]]:
+        return self.request('put', endpoint, data)
 
-    def registrar_orden(
-        self, orden: Orden
-    ) -> 'zeep.objects.speiServiceResponse':
-        soap_orden = self.soap_orden(orden)
-        joined_fields = join_fields(soap_orden)
-        soap_orden.firma = compute_signature(self._pkey, joined_fields)
-        resp = self.soap_client.service['registraOrden'](soap_orden)
-        if 'descripcionError' in resp and resp.descripcionError:
-            raise StpmexException(**resp.__values__)
-        return resp
+    def delete(
+        self, endpoint: str, data: Dict[str, Any]
+    ) -> Union[Dict[str, Any], List[Any]]:
+        return self.request('delete', endpoint, data)
+
+    def request(
+        self, method: str, endpoint: str, data: Dict[str, Any], **kwargs: Any
+    ) -> Union[Dict[str, Any], List[Any]]:
+        url = self.base_url + endpoint
+        response = self.session.request(
+            method, url, json=data, headers=self.headers, **kwargs
+        )
+        self._check_response(response)
+        resultado = response.json()
+        if 'resultado' in resultado:  # Some responses are enveloped
+            resultado = resultado['resultado']
+        return resultado
+
+    @staticmethod
+    def _check_response(response: Response) -> None:
+        if response.ok:
+            resp = response.json()
+            if isinstance(resp, dict):
+                try:
+                    if 'descripcionError' in resp['resultado']:
+                        raise StpmexException(**resp['resultado'])
+                except KeyError:
+                    if 'descripcion' in resp and resp['descripcion']:
+                        raise StpmexException(**resp)
+        response.raise_for_status()
