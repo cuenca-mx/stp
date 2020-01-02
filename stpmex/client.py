@@ -28,6 +28,7 @@ class Client:
         priv_key: str,
         priv_key_passphrase: str,
         demo: bool = False,
+        base_url: str = None
     ):
         self.session = Session()
         self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
@@ -35,6 +36,8 @@ class Client:
             self.base_url = DEMO_BASE_URL
         else:
             self.base_url = PROD_BASE_URL
+        if base_url:
+            self.base_url = base_url
         try:
             self.pkey = crypto.load_privatekey(
                 crypto.FILETYPE_PEM,
