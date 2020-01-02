@@ -52,6 +52,7 @@ class Client:
         priv_key: str,
         priv_key_passphrase: str,
         demo: bool = False,
+        base_url: str = None
     ):
         self.session = Session()
         self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
@@ -61,8 +62,8 @@ class Client:
             self.session.verify = False
         else:
             self.base_url = PROD_BASE_URL
-            self.soap_url = PROD_SOAP_URL
-            self.session.verify = True
+        if base_url:
+            self.base_url = base_url
         try:
             self.pkey = serialization.load_pem_private_key(
                 priv_key.encode('utf-8'),
