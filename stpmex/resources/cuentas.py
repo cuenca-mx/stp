@@ -5,7 +5,7 @@ from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
-from ..auth import CUENTA_FIELDNAMES, compute_signature, join_fields
+from ..auth import CUENTA_FIELDNAMES
 from ..types import Clabe, Genero, digits, truncated_str
 from .base import Resource
 
@@ -20,6 +20,7 @@ class Cuenta(Resource):
     """
 
     _endpoint: ClassVar[str] = '/cuentaModule'
+    _firma_fieldnames: ClassVar[List[str]] = CUENTA_FIELDNAMES
 
     nombre: truncated_str(50)
     apellidoPaterno: truncated_str(50)
@@ -80,11 +81,6 @@ class Cuenta(Resource):
             firma=self.firma,
         )
         return self._client.delete(endpoint, data)
-
-    @property
-    def firma(self):
-        joined_fields = join_fields(self, CUENTA_FIELDNAMES)
-        return compute_signature(self._client.pkey, joined_fields)
 
     @validator('nombre', 'apellidoPaterno', 'apellidoMaterno', each_item=True)
     def _unicode_to_ascii(cls, v):

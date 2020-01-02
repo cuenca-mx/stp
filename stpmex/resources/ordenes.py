@@ -2,13 +2,13 @@ import random
 import time
 import unicodedata
 from dataclasses import field
-from typing import ClassVar, Optional, Union
+from typing import ClassVar, List, Optional, Union
 
 import clabe
 from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
-from ..auth import ORDEN_FIELDNAMES, compute_signature, join_fields
+from ..auth import ORDEN_FIELDNAMES
 from ..types import (
     Clabe,
     MXPhoneNumber,
@@ -31,6 +31,7 @@ class Orden(Resource):
     """
 
     _endpoint: ClassVar[str] = '/ordenPago'
+    _firma_fieldnames: ClassVar[List[str]] = ORDEN_FIELDNAMES
 
     monto: PositiveFloat
     conceptoPago: truncated_str(39)
@@ -77,15 +78,6 @@ class Orden(Resource):
         resp = orden._client.put(endpoint, orden.to_dict())
         orden.id = resp['id']
         return orden
-
-    @property
-    def firma(self) -> str:
-        """
-        Based on:
-        https://stpmex.zendesk.com/hc/es/articles/360002796012-Firmas-Electr%C3%B3nicas-
-        """
-        joined_fields = join_fields(self, ORDEN_FIELDNAMES)
-        return compute_signature(self._client.pkey, joined_fields)
 
     @staticmethod
     def get_tipo_cuenta(cuenta: str) -> Optional[TipoCuenta]:

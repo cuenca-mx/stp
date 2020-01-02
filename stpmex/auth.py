@@ -4,8 +4,6 @@ from typing import List
 
 from OpenSSL import crypto
 
-from .resources import Resource
-
 CUENTA_FIELDNAMES = """
     empresa
     cuenta
@@ -52,7 +50,7 @@ ORDEN_FIELDNAMES = """
 SIGN_DIGEST = 'RSA-SHA256'
 
 
-def join_fields(obj: Resource, fieldnames: List[str]) -> bytes:
+def join_fields(obj: 'Resource', fieldnames: List[str]) -> bytes:  # noqa: F821
     joined_fields = []
     for field in fieldnames:
         value = getattr(obj, field, None)
