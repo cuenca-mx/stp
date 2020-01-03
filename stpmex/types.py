@@ -56,7 +56,7 @@ class Rfc(StrictStr):
     max_length = 13
 
 
-class EntidadFederetiva(int, Enum):
+class EntidadFederativa(int, Enum):
     # NE = Nacido en el Extranjero. Aún STP no soporte
     AS = 1  # Aguascalientes
     BC = 2  # Baja California

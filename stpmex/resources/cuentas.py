@@ -9,7 +9,7 @@ from ..auth import CUENTA_FIELDNAMES
 from ..types import (
     Clabe,
     Curp,
-    EntidadFederetiva,
+    EntidadFederativa,
     Genero,
     MxPhoneNumber,
     Rfc,
@@ -40,7 +40,7 @@ class Cuenta(Resource):
     genero: Optional[Genero] = None
     fechaNacimiento: Optional[dt.date] = None
     # Esperando a que STP agregue Nacido en el Extranjero
-    entidadFederativa: Optional[EntidadFederetiva] = None
+    entidadFederativa: Optional[EntidadFederativa] = None
     actividadEconomica: Optional[conint(ge=28, le=74)] = None
     calle: Optional[truncated_str(60)] = None
     numeroExterior: Optional[digits(max_length=10)] = None
