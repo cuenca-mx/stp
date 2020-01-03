@@ -44,6 +44,42 @@ class Genero(str, Enum):
     hombre = 'H'
 
 
+class EntidadFederetiva(int, Enum):
+    # NE = Nacido en el Extranjero. Aún STP no soporte
+    AS = 1  # Aguascalientes
+    BC = 2  # Baja California
+    BS = 3  # Baja California Sur
+    CC = 4  # Campeche
+    CS = 5  # Chiapas
+    CH = 6  # Chihuahua
+    CL = 7  # Coahuila
+    CM = 8  # Colima
+    DF = 9  # CDMX
+    DG = 10  # Durango
+    MC = 11  # Estado de México
+    GT = 12  # Guanajuato
+    GR = 13  # Guerrero
+    HG = 14  # Hidalgo
+    JC = 15  # Jalisco
+    MN = 16  # Michoacan
+    MS = 17  # Morelos
+    NT = 18  # Nayarit
+    NL = 19  # Nuevo León
+    OC = 20  # Oaxaca
+    PL = 21  # Puebla
+    QT = 22  # Querétaro
+    QR = 23  # Quintana Roo
+    SP = 24  # San Luis Potosí
+    SL = 25  # Sinaloa
+    SR = 26  # Sonora
+    TC = 27  # Tabasco
+    TS = 28  # Tamualipas
+    TL = 29  # Tlaxcala
+    VZ = 30  # Veracruz
+    YN = 31  # Yucatán
+    ZS = 32  # Zacatecas
+
+
 def validate_digits(v: str) -> str:
     if not v.isdigit():
         raise NotDigitError

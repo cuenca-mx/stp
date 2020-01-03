@@ -72,7 +72,7 @@ def cuenta_dict():
         rfcCurp='SAHE800416HDFABC01',
         fechaNacimiento=dt.date(1980, 4, 14),
         genero='H',
-        entidadFederativa='1',
+        entidadFederativa=1,
         actividadEconomica='30',
         calle='mi calle',
         numeroExterior='2',
