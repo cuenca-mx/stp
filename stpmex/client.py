@@ -55,7 +55,8 @@ class Client:
         base_url: str = None
     ):
         self.session = Session()
-        self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
+        self.session.verify = False
+        self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
         if demo:
             self.base_url = DEMO_BASE_URL
             self.soap_url = DEMO_SOAP_URL
