@@ -1,6 +1,6 @@
 import datetime as dt
 import unicodedata
-from typing import Any, ClassVar, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List, Optional, Union
 
 from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
@@ -8,9 +8,11 @@ from pydantic.dataclasses import dataclass
 from ..auth import CUENTA_FIELDNAMES
 from ..types import (
     Clabe,
+    Curp,
     EntidadFederetiva,
     Genero,
-    MXPhoneNumber,
+    MxPhoneNumber,
+    Rfc,
     digits,
     truncated_str,
 )
@@ -32,7 +34,7 @@ class Cuenta(Resource):
     nombre: truncated_str(50)
     apellidoPaterno: truncated_str(50)
     cuenta: Clabe
-    rfcCurp: constr(max_length=18)
+    rfcCurp: Union[Curp, Rfc]
 
     apellidoMaterno: Optional[truncated_str(50)] = None
     genero: Optional[Genero] = None
@@ -49,7 +51,7 @@ class Cuenta(Resource):
     pais: Optional[conint(ge=1, le=242)] = None
     email: Optional[constr(max_length=150)] = None
     idIdentificacion: Optional[digits(max_length=20)] = None
-    telefono: Optional[MXPhoneNumber] = None
+    telefono: Optional[MxPhoneNumber] = None
 
     id: Optional[int] = None
 

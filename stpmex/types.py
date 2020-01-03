@@ -1,9 +1,10 @@
+import re
 from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
 import luhnmod10
 from clabe import BANK_NAMES, BANKS, compute_control_digit
-from pydantic import constr
+from pydantic import StrictStr, constr
 from pydantic.errors import LuhnValidationError, NotDigitError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
@@ -42,6 +43,17 @@ class TipoCuenta(int, Enum):
 class Genero(str, Enum):
     mujer = 'M'
     hombre = 'H'
+
+
+class Curp(StrictStr):
+    min_length = 18
+    max_length = 18
+    regex = re.compile(r'^[A-Z]{4}[0-9]{6}[A-Z]{6}[A-Z|0-9][0-9]$')
+
+
+class Rfc(StrictStr):
+    min_length = 13
+    max_length = 13
 
 
 class EntidadFederetiva(int, Enum):
@@ -123,7 +135,7 @@ class Clabe(str):
         return clabe
 
 
-class MXPhoneNumber(str):
+class MxPhoneNumber(str):
     strip_whitespace: ClassVar[bool] = True
     min_length: ClassVar[int] = 10
     max_length: ClassVar[int] = 10
