@@ -10,7 +10,7 @@ install_requires = [
     'pydantic>=1.2,<1.3',
     'dataclasses>=0.6;python_version<"3.7"',
     'requests>=2.22.0,<3.0',
-    'luhnmod10>=1.0.2,<1.1.0'
+    'luhnmod10>=1.0.2,<1.1.0',
 ]
 
 test_requires = [
