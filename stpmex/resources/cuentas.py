@@ -1,5 +1,4 @@
 import datetime as dt
-import unicodedata
 from typing import Any, ClassVar, Dict, List, Optional, Union
 
 from pydantic import conint, constr, validator
@@ -16,7 +15,7 @@ from ..types import (
     digits,
     truncated_str,
 )
-from .base import Resource
+from .base import Resource, unicode_to_ascii
 
 MAX_LOTE = 100
 
@@ -93,5 +92,4 @@ class Cuenta(Resource):
 
     @validator('nombre', 'apellidoPaterno', 'apellidoMaterno', each_item=True)
     def _unicode_to_ascii(cls, v):
-        v = unicodedata.normalize('NFKD', v).encode('ascii', 'ignore')
-        return v.decode('ascii')
+        return unicode_to_ascii(v)

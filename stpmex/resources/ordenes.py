@@ -1,6 +1,5 @@
 import random
 import time
-import unicodedata
 from dataclasses import field
 from typing import ClassVar, List, Optional, Union
 
@@ -18,7 +17,7 @@ from ..types import (
     digits,
     truncated_str,
 )
-from .base import Resource
+from .base import Resource, unicode_to_ascii
 
 STP_BANK_CODE = '90646'
 
@@ -102,5 +101,4 @@ class Orden(Resource):
         'nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True
     )
     def _unicode_to_ascii(cls, v):
-        v = unicodedata.normalize('NFKD', v).encode('ascii', 'ignore')
-        return v.decode('ascii')
+        return unicode_to_ascii(v)
