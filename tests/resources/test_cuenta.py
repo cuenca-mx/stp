@@ -1,13 +1,13 @@
 import pytest
 from clabe import generate_new_clabes
 
-from stpmex.resources import Cuenta
+from stpmex.resources import CuentaFisica
 
 
 @pytest.mark.vcr
 def test_alta_cuenta(client, cuenta_dict):
     cuenta = client.cuentas.alta(**cuenta_dict)
-    assert isinstance(cuenta.id, int)
+    assert cuenta
 
 
 @pytest.mark.vcr
@@ -23,7 +23,7 @@ def test_alta_lote(client, cuenta_dict, num_cuentas):
 
     lote = []
     for clabe in clabes:
-        cuenta = Cuenta(**cuenta_dict, cuenta=clabe)
+        cuenta = CuentaFisica(**cuenta_dict, cuenta=clabe)
         lote.append(cuenta)
     resp = client.cuentas.alta_lote(lote)
     assert list(resp.keys()) == clabes

@@ -4,7 +4,7 @@ from OpenSSL import crypto
 from requests import Response, Session
 
 from .exc import InvalidPassphrase, StpmexException
-from .resources import Cuenta, Orden, Resource
+from .resources import CuentaFisica, Orden, Resource
 from .version import __version__ as client_version
 
 DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
@@ -19,7 +19,7 @@ class Client:
     session: Session
 
     # resources
-    cuentas: ClassVar = Cuenta
+    cuentas: ClassVar = CuentaFisica
     ordenes: ClassVar = Orden
 
     def __init__(
