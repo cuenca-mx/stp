@@ -21,7 +21,8 @@ def test_update(client, cuenta_dict):
     old_curp = 'SAHE800416HDFABC01'
     new_curp = 'SAHE800416HDFABC02'
     client.cuentas.alta(**cuenta_dict, rfcCurp=old_curp)
-    CuentaFisica.update(old_curp, **cuenta_dict, rfcCurp=new_curp)
+    cuenta = CuentaFisica.update(old_curp, **cuenta_dict, rfcCurp=new_curp)
+    cuenta.baja()
 
 
 @pytest.mark.vcr
