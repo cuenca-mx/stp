@@ -109,4 +109,5 @@ class CuentaFisica(Cuenta):
             raise ValueError('No puedes usar el mismo rfcCurp del antes')
         old = Cuenta(cuenta=cuenta.cuenta, rfcCurp=old_rfc_curp)
         old.baja(cls._endpoint)
+        cuenta._alta()
         return cuenta
