@@ -5,6 +5,7 @@ from typing import TYPE_CHECKING, ClassVar, Optional, Type
 import luhnmod10
 from clabe import BANK_NAMES, BANKS, compute_control_digit
 from pydantic import StrictStr, constr
+from pydantic import constr
 from pydantic.errors import LuhnValidationError, NotDigitError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
