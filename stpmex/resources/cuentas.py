@@ -53,14 +53,15 @@ class Cuenta(Resource):
             )
         )
 
-    def baja(self) -> Dict[str, Any]:
+    def baja(self, endpoint: Optional[str] = None) -> Dict[str, Any]:
+        endpoint = endpoint or self._endpoint
         data = dict(
             cuenta=self.cuenta,
             empresa=self.empresa,
             rfcCurp=self.rfcCurp,
             firma=self.firma,
         )
-        return self._client.delete(self._endpoint, data)
+        return self._client.delete(endpoint, data)
 
 
 @dataclass
@@ -96,3 +97,16 @@ class CuentaFisica(Cuenta):
     @validator('nombre', 'apellidoPaterno', 'apellidoMaterno', each_item=True)
     def _unicode_to_ascii(cls, v):
         return unicode_to_ascii(v)
+
+    @classmethod
+    def update(cls, old_rfc_curp: str, **kwargs):
+        """
+        AVISA: Esta función no es atómica ni soporte rollback. Usa con mucha
+        precaución.
+        """
+        cuenta = cls(**kwargs)  # Validar campos
+        if cuenta.rfcCurp == old_rfc_curp:
+            raise ValueError('No puedes usar el mismo rfcCurp del antes')
+        old = Cuenta(cuenta=cuenta.cuenta, rfcCurp=old_rfc_curp)
+        old.baja(cls._endpoint)
+        cuenta._alta()

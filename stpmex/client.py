@@ -61,7 +61,7 @@ class Client:
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
         response = self.session.request(
-            method, url, json=data, headers=self.headers, **kwargs
+            method, url, json=data, headers=self.headers, verify=False, **kwargs
         )
         self._check_response(response)
         resultado = response.json()
