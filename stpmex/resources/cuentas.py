@@ -39,7 +39,7 @@ class Cuenta(Resource):
         self._client.put(self._endpoint, self.to_dict())
 
     @classmethod
-    def alta_lote(cls, lote: List['Cuenta']):
+    def alta_lote(cls, lote: List['Cuenta']) -> Dict[str, Dict[str, Any]]:
         if len(lote) > MAX_LOTE:
             return {
                 **cls.alta_lote(lote[:MAX_LOTE]),
