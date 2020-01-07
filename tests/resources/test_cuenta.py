@@ -26,6 +26,14 @@ def test_update(client, cuenta_dict):
 
 
 @pytest.mark.vcr
+def test_update_fail_same_curp(client, cuenta_dict):
+    cuenta = client.cuentas.alta(**cuenta_dict)
+    with pytest.raises(ValueError):
+        CuentaFisica.update(cuenta_dict['rfcCurp'], **cuenta_dict)
+    cuenta.baja()
+
+
+@pytest.mark.vcr
 @pytest.mark.parametrize('num_cuentas', [95, 450])
 def test_alta_lote(client, cuenta_dict, num_cuentas):
     del cuenta_dict['cuenta']
