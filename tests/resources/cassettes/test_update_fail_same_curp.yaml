@@ -1,0 +1,69 @@
+interactions:
+- request:
+    body: '{"cuenta": "646180157075889014", "rfcCurp": "SAHE800416HDFABC01", "nombre":
+      "Eduardo", "apellidoPaterno": "Salvador", "apellidoMaterno": "Hernandez", "genero":
+      "H", "fechaNacimiento": "19800414", "entidadFederativa": 1, "actividadEconomica":
+      30, "calle": "mi calle", "numeroExterior": "2", "numeroInterior": "1", "colonia":
+      "mi colonia", "alcaldiaMunicipio": "mi alcaldia", "cp": "12345", "pais": 1,
+      "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma": "IaDVqpzhEIkiQFOb+8EwwsK+ytpjgxoOIkO3yfeXJ9c49adhc+UjXvRvDGztu2CMNd9GyLE/GSlrMMNARNybw6TPtaNKuGV9GbaHqpiSHdOcZuNIZ+WA2tfWXl4U0LxENPE/fgAF3bVH+A5UHGKUiePrzRam7x9htjD+e+i7ycM=",
+      "empresa": "TAMIZI"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '668'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.2
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"descripcion":"","id":0}'
+    headers:
+      Content-Length:
+      - '25'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 07 Jan 2020 12:52:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157075889014", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "IaDVqpzhEIkiQFOb+8EwwsK+ytpjgxoOIkO3yfeXJ9c49adhc+UjXvRvDGztu2CMNd9GyLE/GSlrMMNARNybw6TPtaNKuGV9GbaHqpiSHdOcZuNIZ+WA2tfWXl4U0LxENPE/fgAF3bVH+A5UHGKUiePrzRam7x9htjD+e+i7ycM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.2
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"descripcion":"","id":0}'
+    headers:
+      Content-Length:
+      - '25'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 07 Jan 2020 12:52:11 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

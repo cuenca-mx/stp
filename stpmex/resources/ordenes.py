@@ -1,6 +1,5 @@
 import random
 import time
-import unicodedata
 from dataclasses import field
 from typing import ClassVar, List, Optional, Union
 
@@ -11,14 +10,14 @@ from pydantic.dataclasses import dataclass
 from ..auth import ORDEN_FIELDNAMES
 from ..types import (
     Clabe,
-    MXPhoneNumber,
+    MxPhoneNumber,
     PaymentCardNumber,
     Prioridad,
     TipoCuenta,
     digits,
     truncated_str,
 )
-from .base import Resource
+from .base import Resource, unicode_to_ascii
 
 STP_BANK_CODE = '90646'
 
@@ -36,7 +35,7 @@ class Orden(Resource):
     monto: PositiveFloat
     conceptoPago: truncated_str(39)
 
-    cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MXPhoneNumber]
+    cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MxPhoneNumber]
     nombreBeneficiario: truncated_str(39)
     institucionContraparte: digits(5, 5)
 
@@ -102,5 +101,4 @@ class Orden(Resource):
         'nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True
     )
     def _unicode_to_ascii(cls, v):
-        v = unicodedata.normalize('NFKD', v).encode('ascii', 'ignore')
-        return v.decode('ascii')
+        return unicode_to_ascii(v)
