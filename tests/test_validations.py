@@ -126,3 +126,28 @@ def test_referencia_numerica_too_high():
     error = errors[0]
     assert error['loc'] == ('referenciaNumerica',)
     assert error['type'] == 'value_error.number.not_lt'
+
+
+def test_valid_card_number_cuenta_beneficiario():
+    orden = create_orden(cuentaBeneficiario='5339220423090005')
+    assert orden.claveRastreo
+    assert orden.referenciaNumerica
+
+
+def test_invalid_card_number_cuenta_beneficiario():
+    with pytest.raises(ValidationError) as exc_info:
+        create_orden(cuentaBeneficiario='5339220423090006')
+    errors = exc_info.value.errors()
+    assert len(errors) == 3
+
+    error = errors[0]
+    assert error['loc'] == ('cuentaBeneficiario',)
+    assert error['type'] == 'value_error.any_str.min_length'
+
+    error = errors[1]
+    assert error['loc'] == ('cuentaBeneficiario',)
+    assert error['type'] == 'value_error.payment_card_number.luhn_check'
+
+    error = errors[2]
+    assert error['loc'] == ('cuentaBeneficiario',)
+    assert error['type'] == 'value_error.any_str.max_length'

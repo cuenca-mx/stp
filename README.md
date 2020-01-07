@@ -45,7 +45,7 @@ cuenta = client.cuentas.alta(
     nombre='Eduardo',
     apellidoPaterno='Salvador',
     apellidoMaterno='Hernández',
-    rfcCurp='rfcrfc',
+    rfcCurp='SAHE800416HDFABC01',
     cuenta='646180110400000007',
 )
 

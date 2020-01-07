@@ -1,7 +1,7 @@
 from pydantic.errors import PydanticValueError
 
 
-class StpmexException(BaseException):
+class StpmexException(Exception):
     def __init__(self, **kwargs):
         for attr, value in kwargs.items():
             setattr(self, attr, value)

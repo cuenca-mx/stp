@@ -4,7 +4,7 @@ import pytest
 from clabe import generate_new_clabes
 
 from stpmex import Client
-from stpmex.resources import Cuenta, Orden
+from stpmex.resources import CuentaFisica, Orden
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -72,7 +72,7 @@ def cuenta_dict():
         rfcCurp='SAHE800416HDFABC01',
         fechaNacimiento=dt.date(1980, 4, 14),
         genero='H',
-        entidadFederativa='1',
+        entidadFederativa=1,
         actividadEconomica='30',
         calle='mi calle',
         numeroExterior='2',
@@ -88,4 +88,4 @@ def cuenta_dict():
 
 @pytest.fixture
 def cuenta(client, cuenta_dict):
-    yield Cuenta(**cuenta_dict)
+    yield CuentaFisica(**cuenta_dict)
