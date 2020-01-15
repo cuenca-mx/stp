@@ -28,9 +28,11 @@ class Client:
         priv_key: str,
         priv_key_passphrase: str,
         demo: bool = False,
+        verify: bool = None,
     ):
         self.session = Session()
         self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
+        self.verify = verify
         if demo:
             self.base_url = DEMO_BASE_URL
         else:
@@ -47,7 +49,7 @@ class Client:
         Resource._client = self
 
     def put(
-        self, endpoint: str, data: Dict[str, Any]
+        self, endpoint: str, data: Dict[str, Any],
     ) -> Union[Dict[str, Any], List[Any]]:
         return self.request('put', endpoint, data)
 
@@ -61,7 +63,7 @@ class Client:
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
         response = self.session.request(
-            method, url, json=data, headers=self.headers, **kwargs
+            method, url, json=data, headers=self.headers, verify=self.verify, **kwargs
         )
         self._check_response(response)
         resultado = response.json()
