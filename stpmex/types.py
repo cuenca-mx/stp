@@ -1,10 +1,11 @@
 import re
+import unicodedata
 from enum import Enum
-from typing import TYPE_CHECKING, ClassVar, Optional, Type
+from typing import TYPE_CHECKING, ClassVar, Optional, Type, Union
 
 import luhnmod10
 from clabe import BANK_NAMES, BANKS, compute_control_digit
-from pydantic import StrictStr, constr
+from pydantic import ConstrainedStr, StrictStr, constr
 from pydantic.errors import LuhnValidationError, NotDigitError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
@@ -19,8 +20,23 @@ if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
 
 
-def truncated_str(length) -> Type[str]:
-    return constr(strip_whitespace=True, min_length=1, curtail_length=length)
+def unicode_to_ascii(unicode: str) -> str:
+    v = unicodedata.normalize('NFKD', unicode).encode('ascii', 'ignore')
+    return v.decode('ascii')
+
+
+class AsciiStr(ConstrainedStr):
+    @classmethod
+    def validate(cls, value: Union[str]) -> Union[str]:
+        value = unicode_to_ascii(value).strip()
+        return super().validate(value)
+
+
+def truncated_str(length: int) -> Type[str]:
+    namespace = dict(
+        strip_whitespace=True, min_length=1, curtail_length=length
+    )
+    return type('TruncatedStrValue', (AsciiStr,), namespace)
 
 
 def digits(

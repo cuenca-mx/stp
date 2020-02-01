@@ -17,7 +17,7 @@ from ..types import (
     digits,
     truncated_str,
 )
-from .base import Resource, unicode_to_ascii
+from .base import Resource
 
 STP_BANK_CODE = '90646'
 
@@ -96,9 +96,3 @@ class Orden(Resource):
         if v not in clabe.BANKS.values():
             raise ValueError(f'{v} no se corresponde a un banco')
         return v
-
-    @validator(
-        'nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True
-    )
-    def _unicode_to_ascii(cls, v):
-        return unicode_to_ascii(v).strip()
