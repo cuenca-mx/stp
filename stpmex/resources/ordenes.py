@@ -101,4 +101,4 @@ class Orden(Resource):
         'nombreBeneficiario', 'nombreOrdenante', 'conceptoPago', each_item=True
     )
     def _unicode_to_ascii(cls, v):
-        return unicode_to_ascii(v)
+        return unicode_to_ascii(v).strip()

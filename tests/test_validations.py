@@ -93,7 +93,7 @@ def test_invalid_bank():
 
 def test_replace_unicode():
     orden = create_orden(
-        nombreBeneficiario='Ricardo Sánchez', conceptoPago='está bien, güey'
+        nombreBeneficiario='Ricardo Sánchez', conceptoPago='está bien, güey 💙'
     )
     assert orden.nombreBeneficiario == 'Ricardo Sanchez'
     assert orden.conceptoPago == 'esta bien, guey'
