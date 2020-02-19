@@ -1,7 +1,7 @@
 import datetime as dt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 
-from pydantic import conint, constr, validator
+from pydantic import conint, constr
 from pydantic.dataclasses import dataclass
 
 from ..auth import CUENTA_FIELDNAMES
@@ -15,7 +15,7 @@ from ..types import (
     digits,
     truncated_str,
 )
-from .base import Resource, unicode_to_ascii
+from .base import Resource
 
 MAX_LOTE = 100
 
@@ -93,10 +93,6 @@ class CuentaFisica(Cuenta):
     email: Optional[constr(max_length=150)] = None
     idIdentificacion: Optional[digits(max_length=20)] = None
     telefono: Optional[MxPhoneNumber] = None
-
-    @validator('nombre', 'apellidoPaterno', 'apellidoMaterno', each_item=True)
-    def _unicode_to_ascii(cls, v):
-        return unicode_to_ascii(v)
 
     @classmethod
     def update(cls, old_rfc_curp: str, **kwargs):

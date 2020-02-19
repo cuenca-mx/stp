@@ -1,5 +1,4 @@
 import datetime as dt
-import unicodedata
 from dataclasses import asdict
 from typing import Any, ClassVar, Dict, List
 
@@ -29,8 +28,3 @@ class Resource:
             elif v:
                 base[k] = v
         return {**base, **dict(firma=self.firma, empresa=self.empresa)}
-
-
-def unicode_to_ascii(unicode: str) -> str:
-    v = unicodedata.normalize('NFKD', unicode).encode('ascii', 'ignore')
-    return v.decode('ascii')
