@@ -27,6 +27,36 @@ class InvalidPassphrase(StpmexException):
     """El passphrase es incorrecto"""
 
 
+class InvalidAccountType(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
+class SignatureValidationError(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
+class InvalidRfcOrCurp(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
+class ClaveRastreoAlreadyInUse(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
+class PldRejected(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
+class NoServiceResponse(StpmexException):
+    def __init__(self, **kwargs) -> None:
+        super().__init__(**kwargs)
+
+
 class BankCodeValidationError(PydanticValueError):
     code = 'clabe.bank_code'
     msg_template = 'código de banco no es válido'
