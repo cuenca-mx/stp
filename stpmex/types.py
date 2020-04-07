@@ -4,8 +4,9 @@ from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Optional, Type, Union
 
 import luhnmod10
+from clabe.types import validate_digits
 from pydantic import ConstrainedStr, StrictStr, constr
-from pydantic.errors import LuhnValidationError, NotDigitError
+from pydantic.errors import LuhnValidationError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
@@ -103,12 +104,6 @@ class EntidadFederativa(int, Enum):
     VZ = 30  # Veracruz
     YN = 31  # Yucatán
     ZS = 32  # Zacatecas
-
-
-def validate_digits(v: str) -> str:
-    if not v.isdigit():
-        raise NotDigitError
-    return v
 
 
 class MxPhoneNumber(str):
