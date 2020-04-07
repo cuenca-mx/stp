@@ -6,8 +6,8 @@ version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
     'pyopenssl>=18.0.0,<18.1.0',
-    'clabe>=0.2.1,<0.3.0',
-    'pydantic>=1.2,<2.0',
+    'clabe>=1.0.0,<1.1.0',
+    'pydantic>=1.4,<2.0',
     'dataclasses>=0.6;python_version<"3.7"',
     'requests>=2.22.0,<3.0',
     'luhnmod10>=1.0.2,<1.1.0',

@@ -4,7 +4,6 @@ from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Optional, Type, Union
 
 import luhnmod10
-from clabe import BANK_NAMES, BANKS, compute_control_digit
 from pydantic import ConstrainedStr, StrictStr, constr
 from pydantic.errors import LuhnValidationError, NotDigitError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
@@ -13,8 +12,6 @@ from pydantic.validators import (
     constr_strip_whitespace,
     str_validator,
 )
-
-from . import exc
 
 if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
@@ -112,43 +109,6 @@ def validate_digits(v: str) -> str:
     if not v.isdigit():
         raise NotDigitError
     return v
-
-
-class Clabe(str):
-    """
-    Based on: https://es.wikipedia.org/wiki/CLABE
-    """
-
-    strip_whitespace: ClassVar[bool] = True
-    min_length: ClassVar[int] = 18
-    max_length: ClassVar[int] = 18
-
-    def __init__(self, clabe: str):
-        self.bank_code_3_digits = clabe[:3]
-        self.bank_code_5_digits = BANKS[clabe[:3]]
-        self.bank_name = BANK_NAMES[self.bank_code_5_digits]
-
-    @classmethod
-    def __get_validators__(cls) -> 'CallableGenerator':
-        yield str_validator
-        yield constr_strip_whitespace
-        yield constr_length_validator
-        yield validate_digits
-        yield cls.validate_bank_code
-        yield cls.validate_control_digit
-        yield cls
-
-    @classmethod
-    def validate_bank_code(cls, clabe: str) -> str:
-        if clabe[:3] not in BANKS.keys():
-            raise exc.BankCodeValidationError
-        return clabe
-
-    @classmethod
-    def validate_control_digit(cls, clabe: str) -> str:
-        if clabe[-1] != compute_control_digit(clabe):
-            raise exc.ClabeControlDigitValidationError
-        return clabe
 
 
 class MxPhoneNumber(str):
