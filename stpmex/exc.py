@@ -48,8 +48,7 @@ class PldRejected(StpmexException):
 
 
 class NoServiceResponse(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """No se recibió respuesta del servicio"""
 
 
 class BankCodeValidationError(PydanticValueError):
