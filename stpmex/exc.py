@@ -28,28 +28,23 @@ class InvalidPassphrase(StpmexException):
 
 
 class InvalidAccountType(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """Tipo de cuenta inválida"""
 
 
 class SignatureValidationError(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """Error validando la firma"""
 
 
 class InvalidRfcOrCurp(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """RFC o CURP inválido"""
 
 
 class ClaveRastreoAlreadyInUse(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """La clave de rastreo es repetida"""
 
 
 class PldRejected(StpmexException):
-    def __init__(self, **kwargs) -> None:
-        super().__init__(**kwargs)
+    """'Orden sin cuenta ordenante. Se rechaza por PLD"""
 
 
 class NoServiceResponse(StpmexException):
