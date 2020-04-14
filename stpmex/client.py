@@ -3,7 +3,16 @@ from typing import Any, ClassVar, Dict, List, Union
 from OpenSSL import crypto
 from requests import Response, Session
 
-from .exc import InvalidPassphrase, StpmexException
+from .exc import (
+    ClaveRastreoAlreadyInUse,
+    InvalidAccountType,
+    InvalidPassphrase,
+    InvalidRfcOrCurp,
+    NoServiceResponse,
+    PldRejected,
+    SignatureValidationError,
+    StpmexException,
+)
 from .resources import CuentaFisica, Orden, Resource
 from .version import __version__ as client_version
 
@@ -12,7 +21,6 @@ PROD_BASE_URL = 'https://prod.stpmex.com/speiws/rest'
 
 
 class Client:
-
     base_url: str
     demo: bool
     headers: Dict[str, str]
@@ -76,8 +84,28 @@ class Client:
             if isinstance(resp, dict):
                 try:
                     if 'descripcionError' in resp['resultado']:
-                        raise StpmexException(**resp['resultado'])
+                        id = resp['resultado']['id']
+                        error = resp['resultado']['descripcionError']
+                        if id == -11:
+                            raise InvalidAccountType(**resp['resultado'])
+                        elif (
+                            id == 0
+                            and error == 'No se recibió respuesta del servicio'
+                        ):
+                            raise NoServiceResponse(**resp['resultado'])
+                        elif id == 0 and error == 'Error validando la firma':
+                            raise SignatureValidationError(**resp['resultado'])
+                        elif id == -1:
+                            raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+                        elif id == -200:
+                            raise PldRejected(**resp['resultado'])
+                        else:
+                            raise StpmexException(**resp['resultado'])
                 except KeyError:
                     if 'descripcion' in resp and resp['descripcion']:
-                        raise StpmexException(**resp)
+                        id = resp['id']
+                        if id == 1:
+                            raise InvalidRfcOrCurp(**resp)
+                        else:
+                            raise StpmexException(**resp)
         response.raise_for_status()
