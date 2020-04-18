@@ -1,7 +1,7 @@
 from typing import ClassVar, List
 
-from pydantic.dataclasses import dataclass
 from pydantic import PositiveFloat, PositiveInt
+from pydantic.dataclasses import dataclass
 
 from ..auth import compute_signature
 from ..types import TipoOperacion
