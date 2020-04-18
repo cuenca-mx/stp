@@ -25,7 +25,7 @@ STP_BANK_CODE = '90646'
 @dataclass
 class Orden(Resource):
     """
-    Base on:
+    Based on:
     https://stpmex.zendesk.com/hc/es/articles/360002682851-RegistraOrden-Dispersi%C3%B3n-
     """
 

@@ -106,6 +106,11 @@ class EntidadFederativa(int, Enum):
     ZS = 32  # Zacatecas
 
 
+class TipoOperacion(str, Enum):
+    enviadas = 'E'
+    recibidas = 'R'
+
+
 class MxPhoneNumber(str):
     strip_whitespace: ClassVar[bool] = True
     min_length: ClassVar[int] = 10

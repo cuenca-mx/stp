@@ -13,7 +13,7 @@ from .exc import (
     SignatureValidationError,
     StpmexException,
 )
-from .resources import CuentaFisica, Orden, Resource
+from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
@@ -41,8 +41,10 @@ class Client:
         self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
         if demo:
             self.base_url = DEMO_BASE_URL
+            self.verify_ssl = False
         else:
             self.base_url = PROD_BASE_URL
+            self.verify_ssl = True
         try:
             self.pkey = crypto.load_privatekey(
                 crypto.FILETYPE_PEM,
@@ -53,6 +55,14 @@ class Client:
             raise InvalidPassphrase
         Resource.empresa = empresa
         Resource._client = self
+
+    def consulta_saldos(self) -> List[Saldo]:
+        return Saldo.consulta()
+
+    def post(
+        self, endpoint: str, data: Dict[str, Any]
+    ) -> Union[Dict[str, Any], List[Any]]:
+        return self.request('post', endpoint, data)
 
     def put(
         self, endpoint: str, data: Dict[str, Any]
@@ -69,7 +79,8 @@ class Client:
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
         response = self.session.request(
-            method, url, json=data, headers=self.headers, **kwargs
+            method, url, json=data, headers=self.headers,
+            verify=self.verify_ssl, **kwargs
         )
         self._check_response(response)
         resultado = response.json()
