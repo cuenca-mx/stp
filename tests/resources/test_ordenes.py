@@ -42,8 +42,20 @@ def test_consulta_ordenes_recibidas(client):
     assert len(recibidas) > 0
 
 
-@pytest.mark.xfail(raises=StpmexException, reason="fails in demo but works in prod")
+@pytest.mark.xfail(
+    raises=StpmexException, reason="fails in demo but works in prod"
+)
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas_con_fecha(client):
     enviadas = client.ordenes.consulta_enviadas(dt.date(2020, 4, 20))
     assert len(enviadas) > 0
+
+
+@pytest.mark.xfail(
+    raises=StpmexException, reason="can't find the transaction in demo"
+)
+@pytest.mark.vcr
+def test_consulta_orden_por_clave_rastreo(client):
+    client.ordenes.consulta_clave_rastreo(
+        dt.date(2020, 4, 20), 'CR1564969083', 90646
+    )

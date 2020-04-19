@@ -103,20 +103,22 @@ class Orden(Resource):
     @classmethod
     def _consulta(
         cls,
-        tipo_operacion: TipoOperacion,
-        fecha_operacion: Optional[dt.date] = None,
+        tipo: Optional[TipoOperacion] = None,
+        fechaOperacion: Optional[dt.date] = None,
+        claveRastreo: Optional[str] = None,
+        institucionOperante: Optional[int] = None,
     ) -> List['OrdenConsultada']:  # noqa: F821
         endpoint = cls._endpoint + '/consOrdenesFech'
-        if fecha_operacion:
-            fecha = fecha_operacion.strftime('%Y%m%d')
-        else:
-            fecha = ''
-        data = dict(
-            empresa=cls.empresa,
-            firma=cls.firma_consulta(fecha),
-            estado=tipo_operacion,
-        )
-        resp = cls._client.post(endpoint, data)['lst']
+        consulta = dict(empresa=cls.empresa)
+        if tipo:
+            consulta['estado'] = tipo
+        if fechaOperacion:
+            consulta['fechaOperacion'] = fechaOperacion.strftime('%Y%m%d')
+            if claveRastreo and institucionOperante:
+                consulta['claveRastreo'] = claveRastreo
+                consulta['institucionOperante'] = institucionOperante
+        consulta['firma'] = cls._firma_consulta(consulta)
+        resp = cls._client.post(endpoint, consulta)['lst']
         sanitized = [cls._sanitize_consulta(orden) for orden in resp if orden]
         return sanitized
 
@@ -131,6 +133,19 @@ class Orden(Resource):
         cls, fecha_operacion: Optional[dt.date] = None
     ) -> List['OrdenConsultada']:  # noqa: F821
         return cls._consulta(TipoOperacion.enviada, fecha_operacion)
+
+    @classmethod
+    def consulta_clave_rastreo(
+        cls,
+        fechaOperacion: dt.date,
+        claveRastreo: str,
+        institucionOperante: int,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        return cls._consulta(
+            fechaOperacion=fechaOperacion,
+            claveRastreo=claveRastreo,
+            institucionOperante=institucionOperante,
+        )
 
     @staticmethod
     def _sanitize_consulta(

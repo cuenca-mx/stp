@@ -21,10 +21,14 @@ class Resource:
         return compute_signature(self._client.pkey, joined_fields)
 
     @classmethod
-    def firma_consulta(cls, fecha_operacion: str = ''):
+    def _firma_consulta(cls, consulta: Dict[str, Any]):
         joined = (
-            f'|||{cls.empresa}|{fecha_operacion}|||||||||||||||||||||||||||||'
-            f'||||'
+            f"|||"
+            f"{cls.empresa}|"
+            f"{consulta.get('fechaOperacion', '')}||"
+            f"{consulta.get('claveRastreo', '')}|"
+            f"{consulta.get('institucionOperante', '')}"
+            f"||||||||||||||||||||||||||||||"
         )
         return compute_signature(cls._client.pkey, joined.encode('ascii'))
 

@@ -17,7 +17,7 @@ class Saldo(Resource):
 
     @classmethod
     def consulta(cls) -> List['Saldo']:
-        data = dict(empresa=cls.empresa, firma=cls.firma_consulta())
+        data = dict(empresa=cls.empresa, firma=cls._firma_consulta({}))
         resp = cls._client.post(cls._endpoint, data)
         saldos = []
         for saldo in resp['saldos']:

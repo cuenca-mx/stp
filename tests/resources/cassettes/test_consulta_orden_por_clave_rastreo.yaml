@@ -1,0 +1,33 @@
+interactions:
+- request:
+    body: '{"empresa": "TAMIZI", "fechaOperacion": "20200420", "claveRastreo": "CR1564969083",
+      "institucionOperante": 90646, "firma": "pj3+C3iAwjXFsjBEeS0gSO0SMhV8T1PnmHEB4EmZHliKI/KY7TJ7DySj6JqkAVny1gddOiX8whBPutn/KpxR9kMf6FbNssRiy2ystppIKq7jcGZ0yEyCF8ZqWAMuEOWnF5sQ4Zb3tyAyMh0iEaaU/8nFf5yzs7UQiTgeinWWjvo="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '298'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.2.0
+    method: POST
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+  response:
+    body:
+      string: '{"resultado":{"descripcionError":"No se encontraron ordenes","id":-100}}'
+    headers:
+      Content-Length:
+      - '72'
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 19 Apr 2020 22:40:17 GMT
+    status:
+      code: 200
+      message: OK
+version: 1
