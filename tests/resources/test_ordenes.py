@@ -5,7 +5,7 @@ from typing import Any, Dict
 import pytest
 
 from stpmex import Client
-from stpmex.exc import StpmexException
+from stpmex.exc import NoOrdenesEncontradas
 from stpmex.resources import Orden
 from stpmex.types import TipoCuenta
 
@@ -43,7 +43,7 @@ def test_consulta_ordenes_recibidas(client):
 
 
 @pytest.mark.xfail(
-    raises=StpmexException, reason="fails in demo but works in prod"
+    raises=NoOrdenesEncontradas, reason="can't look up ordenes in the future"
 )
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas_con_fecha(client):
@@ -52,7 +52,7 @@ def test_consulta_ordenes_enviadas_con_fecha(client):
 
 
 @pytest.mark.xfail(
-    raises=StpmexException, reason="can't find the transaction in demo"
+    raises=NoOrdenesEncontradas, reason="can't look up ordenes in the future"
 )
 @pytest.mark.vcr
 def test_consulta_orden_por_clave_rastreo(client):

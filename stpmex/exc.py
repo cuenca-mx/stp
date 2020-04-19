@@ -46,3 +46,7 @@ class PldRejected(StpmexException):
 
 class NoServiceResponse(StpmexException):
     """No se recibió respuesta del servicio"""
+
+
+class NoOrdenesEncontradas(StpmexException):
+    """No se encontraron ordenes"""

@@ -10,6 +10,7 @@ from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
+from ..exc import NoOrdenesEncontradas, StpmexException
 from ..types import (
     Estado,
     MxPhoneNumber,
@@ -118,7 +119,13 @@ class Orden(Resource):
                 consulta['claveRastreo'] = claveRastreo
                 consulta['institucionOperante'] = institucionOperante
         consulta['firma'] = cls._firma_consulta(consulta)
-        resp = cls._client.post(endpoint, consulta)['lst']
+        try:
+            resp = cls._client.post(endpoint, consulta)['lst']
+        except StpmexException as e:
+            if e.id == -100:
+                raise NoOrdenesEncontradas
+            else:
+                raise  # pragma: no cover
         sanitized = [cls._sanitize_consulta(orden) for orden in resp if orden]
         return sanitized
 
@@ -126,6 +133,9 @@ class Orden(Resource):
     def consulta_recibidas(
         cls, fecha_operacion: Optional[dt.date] = None
     ) -> List['OrdenConsultada']:  # noqa: F821
+        """
+        Consultar
+        """
         return cls._consulta(TipoOperacion.recibida, fecha_operacion)
 
     @classmethod
@@ -141,6 +151,13 @@ class Orden(Resource):
         claveRastreo: str,
         institucionOperante: int,
     ) -> 'OrdenConsultada':  # noqa: F821
+        """
+        Consultar ordenes por clave rastreo. No puedes buscar ordenes que
+        tienen una fechaOperacion en el futuro como ordenes procesadas durante
+        el fin de semana.
+
+        Based on: https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
+        """
         return cls._consulta(
             fechaOperacion=fechaOperacion,
             claveRastreo=claveRastreo,
