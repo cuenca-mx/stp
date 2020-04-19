@@ -14,7 +14,14 @@ from .exc import (
     SignatureValidationError,
     StpmexException,
 )
-from .resources import CuentaFisica, Orden, OrdenEnviada, Resource, Saldo
+from .resources import (
+    CuentaFisica,
+    Orden,
+    OrdenEnviada,
+    OrdenRecibida,
+    Resource,
+    Saldo,
+)
 from .version import __version__ as client_version
 
 DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
@@ -64,6 +71,11 @@ class Client:
         self, fecha_operacion: Optional[dt.date] = None
     ) -> List[OrdenEnviada]:
         return OrdenEnviada.consulta(fecha_operacion)
+
+    def consulta_ordenes_recibidas(
+        self, fecha_operacion: Optional[dt.date] = None
+    ) -> List[OrdenRecibida]:
+        return OrdenRecibida.consulta(fecha_operacion)
 
     def post(
         self, endpoint: str, data: Dict[str, Any]
