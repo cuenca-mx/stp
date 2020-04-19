@@ -56,7 +56,10 @@ class Estado(str, Enum):
     enviada = 'E'
     liquidada = 'LQ'
     cancelada = 'CN'
-    traspaso_liquidado = 'TL'
+    traspaso_liberado = 'TL'
+    traspaso_capturado = 'TC'
+    traspaso_autorizado = 'TA'
+    traspaso_liquidado = 'TLQ'
     traspaso_cancelado = 'TCL'
     recibida = 'R'
     por_devolver = 'XD'
@@ -141,8 +144,8 @@ class EntidadFederativa(int, Enum):
 
 
 class TipoOperacion(str, Enum):
-    enviadas = 'E'
-    recibidas = 'R'
+    enviada = 'E'
+    recibida = 'R'
 
 
 class MxPhoneNumber(str):

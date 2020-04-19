@@ -1,13 +1,6 @@
-__all__ = [
-    'CuentaFisica',
-    'Orden',
-    'OrdenEnviada',
-    'OrdenRecibida',
-    'Resource',
-    'Saldo',
-]
+__all__ = ['CuentaFisica', 'Orden', 'Resource', 'Saldo']
 
 from .base import Resource
 from .cuentas import CuentaFisica
-from .ordenes import Orden, OrdenEnviada, OrdenRecibida
+from .ordenes import Orden
 from .saldos import Saldo

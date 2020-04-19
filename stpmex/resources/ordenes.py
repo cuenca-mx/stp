@@ -1,7 +1,7 @@
 import datetime as dt
 import random
 import time
-from dataclasses import field
+from dataclasses import field, make_dataclass
 from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
@@ -16,6 +16,7 @@ from ..types import (
     PaymentCardNumber,
     Prioridad,
     TipoCuenta,
+    TipoOperacion,
     digits,
     truncated_str,
 )
@@ -99,59 +100,13 @@ class Orden(Resource):
             raise ValueError(f'{v} no se corresponde a un banco')
         return v
 
-
-ORDEN_STRIP = """
-empresa
-clavePago
-cuentaBeneficiario2
-nombreBeneficiario2
-conceptoPago2
-rfcCurpBeneficiario2
-referenciaCobranza""".split()
-
-
-@dataclass
-class OrdenConsultada(Resource):
-    _endpoint: ClassVar[str] = '/ordenPago/consOrdenesFech'
-    _estado: ClassVar[Estado]
-
-    monto: float
-    claveRastreo: str
-    causaDevolucion: bool
-    cuentaBeneficiario: str
-    estado: Estado
-    fechaOperacion: dt.date
-    institucionContraparte: str
-    institucionOperante: str
-
-    medioEntrega: int
-    prioridad: int
-    tipoPago: int
-    topologia: str
-
-    tsCaptura: dt.datetime
-    tsLiquidacion: dt.datetime
-    tsDevolucion: Optional[float]  # segundos
-    tsDevolucionRecibida: Optional[dt.datetime]
-    claveRastreoDevolucion: Optional[str]
-
-    @staticmethod
-    def _sanitize_orden(orden: Dict[str, Union[str, int]]) -> Dict[str, Any]:
-        sanitized = {}
-        for k, v in orden.items():
-            if k in ORDEN_STRIP:
-                continue
-            if k.startswith('ts'):
-                v /= 10 ** 3  # convertir de milisegundos a segundos
-            elif k == 'fechaOperacion':
-                v = dt.datetime.strptime(str(v), '%Y%m%d')
-            sanitized[k] = v
-        return sanitized
-
     @classmethod
-    def consulta(
-        cls, fecha_operacion: Optional[dt.date] = None
-    ) -> List['OrdenConsultada']:
+    def _consulta(
+        cls,
+        tipo_operacion: TipoOperacion,
+        fecha_operacion: Optional[dt.date] = None,
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        endpoint = cls._endpoint + '/consOrdenesFech'
         if fecha_operacion:
             fecha = fecha_operacion.strftime('%Y%m%d')
         else:
@@ -159,39 +114,39 @@ class OrdenConsultada(Resource):
         data = dict(
             empresa=cls.empresa,
             firma=cls.firma_consulta(fecha),
-            estado=cls._estado,
+            estado=tipo_operacion,
         )
-        if fecha:
-            data['fechaOperacion'] = fecha
-        ordenes = cls._client.post(cls._endpoint, data)['lst']
-        sanitized = [cls._sanitize_orden(orden) for orden in ordenes if orden]
-        return [cls(**orden) for orden in sanitized]
+        resp = cls._client.post(endpoint, data)['lst']
+        sanitized = [cls._sanitize_consulta(orden) for orden in resp if orden]
+        return sanitized
 
+    @classmethod
+    def consulta_recibidas(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        return cls._consulta(TipoOperacion.recibida, fecha_operacion)
 
-@dataclass
-class OrdenEnviada(OrdenConsultada):
-    _estado: ClassVar[Estado] = Estado.enviada
+    @classmethod
+    def consulta_enviadas(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        return cls._consulta(TipoOperacion.enviada, fecha_operacion)
 
-    conceptoPago: str
-    nombreBeneficiario: str
-
-    cuentaOrdenante: str
-    nombreOrdenante: Optional[str]
-
-    tipoCuentaBeneficiario: TipoCuenta
-    tipoCuentaOrdenante: TipoCuenta
-
-    referenciaNumerica: str
-    rfcCurpBeneficiario: str
-    rfcCurpOrdenante: str
-
-    idCliente: str
-    folioOrigen: str
-    tsAcuseBanxico: dt.datetime
-    tsEntrega: float  # segundos
-    usuario: str
-
-
-@dataclass
-class OrdenRecibida(OrdenConsultada):
-    _estado: ClassVar[Estado] = Estado.recibida
+    @staticmethod
+    def _sanitize_consulta(
+        orden: Dict[str, Any]
+    ) -> 'OrdenConsultada':  # noqa: F821
+        sanitized = {}
+        for k, v in orden.items():
+            if k.startswith('ts'):
+                v /= 10 ** 3  # convertir de milisegundos a segundos
+                if v > 10 ** 9:
+                    v = dt.datetime.fromtimestamp(v)
+            elif k == 'fechaOperacion':
+                v = dt.datetime.strptime(str(v), '%Y%m%d').date()
+            elif k == 'estado':
+                v = Estado(v)
+            elif isinstance(v, str):
+                v = v.rstrip()
+            sanitized[k] = v
+        return make_dataclass('OrdenConsultada', sanitized.keys())(**sanitized)

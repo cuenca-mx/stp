@@ -5,7 +5,8 @@ from typing import Any, Dict
 import pytest
 
 from stpmex import Client
-from stpmex.resources import Orden, OrdenEnviada, OrdenRecibida
+from stpmex.exc import StpmexException
+from stpmex.resources import Orden
 from stpmex.types import TipoCuenta
 
 
@@ -31,21 +32,18 @@ def test_tipoCuentaBeneficiario(cuenta: str, tipo: TipoCuenta):
 
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas(client):
-    enviadas = client.consulta_ordenes_enviadas()
-    for orden in enviadas:
-        assert type(orden) is OrdenEnviada
+    enviadas = client.ordenes.consulta_enviadas()
+    assert len(enviadas) > 0
 
 
 @pytest.mark.vcr
 def test_consulta_ordenes_recibidas(client):
-    recibidas = client.consulta_ordenes_recibidas()
-    for orden in recibidas:
-        assert type(orden) is OrdenRecibida
+    recibidas = client.ordenes.consulta_recibidas()
+    assert len(recibidas) > 0
 
 
-@pytest.mark.xfail(reason="Looks like STP hasn't implemented this yet")
+@pytest.mark.xfail(raises=StpmexException, reason="fails in demo but works in prod")
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas_con_fecha(client):
-    enviadas = client.consulta_ordenes_enviadas(dt.date(2020, 4, 20))
-    for orden in enviadas:
-        assert type(orden) is OrdenEnviada
+    enviadas = client.ordenes.consulta_enviadas(dt.date(2020, 4, 20))
+    assert len(enviadas) > 0

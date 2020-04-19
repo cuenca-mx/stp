@@ -1,5 +1,4 @@
-import datetime as dt
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from typing import Any, ClassVar, Dict, List, Union
 
 from OpenSSL import crypto
 from requests import Response, Session
@@ -14,14 +13,7 @@ from .exc import (
     SignatureValidationError,
     StpmexException,
 )
-from .resources import (
-    CuentaFisica,
-    Orden,
-    OrdenEnviada,
-    OrdenRecibida,
-    Resource,
-    Saldo,
-)
+from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
@@ -30,9 +22,11 @@ PROD_BASE_URL = 'https://prod.stpmex.com/speiws/rest'
 
 class Client:
     base_url: str
+    empresa: str
     demo: bool
     headers: Dict[str, str]
     session: Session
+    verify_ssl: bool
 
     # resources
     cuentas: ClassVar = CuentaFisica
@@ -61,21 +55,12 @@ class Client:
             )
         except crypto.Error:
             raise InvalidPassphrase
+        self.empresa = empresa
         Resource.empresa = empresa
         Resource._client = self
 
     def consulta_saldos(self) -> List[Saldo]:
         return Saldo.consulta()
-
-    def consulta_ordenes_enviadas(
-        self, fecha_operacion: Optional[dt.date] = None
-    ) -> List[OrdenEnviada]:
-        return OrdenEnviada.consulta(fecha_operacion)
-
-    def consulta_ordenes_recibidas(
-        self, fecha_operacion: Optional[dt.date] = None
-    ) -> List[OrdenRecibida]:
-        return OrdenRecibida.consulta(fecha_operacion)
 
     def post(
         self, endpoint: str, data: Dict[str, Any]
