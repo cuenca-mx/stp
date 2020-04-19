@@ -13,7 +13,7 @@ from .exc import (
     SignatureValidationError,
     StpmexException,
 )
-from .resources import CuentaFisica, Orden, Resource, Saldo
+from .resources import CuentaFisica, Orden, OrdenEnviada, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
@@ -58,6 +58,9 @@ class Client:
 
     def consulta_saldos(self) -> List[Saldo]:
         return Saldo.consulta()
+
+    def consulta_ordenes_enviadas(self) -> List[OrdenEnviada]:
+        return OrdenEnviada.consulta()
 
     def post(
         self, endpoint: str, data: Dict[str, Any]

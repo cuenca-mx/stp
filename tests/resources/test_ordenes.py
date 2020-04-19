@@ -4,7 +4,7 @@ from typing import Any, Dict
 import pytest
 
 from stpmex import Client
-from stpmex.resources import Orden
+from stpmex.resources import Orden, OrdenEnviada
 from stpmex.types import TipoCuenta
 
 
@@ -28,6 +28,8 @@ def test_tipoCuentaBeneficiario(cuenta: str, tipo: TipoCuenta):
     assert Orden.get_tipo_cuenta(cuenta) == tipo
 
 
-# def test_invalid_cuentaBeneficiario(orden: Orden):
-#     with pytest.raises(ValueError):
-#         Orden.get_tipo_cuenta('123')
+@pytest.mark.vcr
+def test_consulta_ordenes_enviadas(client):
+    ordenes_enviadas = client.consulta_ordenes_enviadas()
+    for oe in ordenes_enviadas:
+        assert isinstance(oe, OrdenEnviada)

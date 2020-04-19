@@ -20,6 +20,11 @@ class Resource:
         joined_fields = join_fields(self, self._firma_fieldnames)
         return compute_signature(self._client.pkey, joined_fields)
 
+    @classmethod
+    def firma_consulta(cls):
+        joined = f'|||{cls.empresa}||||||||||||||||||||||||||||||||||'
+        return compute_signature(cls._client.pkey, joined.encode('ascii'))
+
     def to_dict(self) -> Dict[str, Any]:
         base = dict()
         for k, v in asdict(self).items():

@@ -1,7 +1,8 @@
+import datetime as dt
 import random
 import time
 from dataclasses import field
-from typing import ClassVar, List, Optional, Union
+from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
@@ -10,6 +11,7 @@ from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
 from ..types import (
+    Estado,
     MxPhoneNumber,
     PaymentCardNumber,
     Prioridad,
@@ -96,3 +98,81 @@ class Orden(Resource):
         if v not in clabe.BANKS.values():
             raise ValueError(f'{v} no se corresponde a un banco')
         return v
+
+
+ORDEN_ENVIADA_STRIP = """
+empresa
+clavePago
+cuentaBeneficiario2
+nombreBeneficiario2
+conceptoPago2
+rfcCurpBeneficiario2
+referenciaCobranza""".split()
+
+
+@dataclass
+class OrdenEnviada(Resource):
+    _endpoint: ClassVar[str] = '/ordenPago/consOrdenesFech'
+
+    monto: PositiveFloat
+    conceptoPago: truncated_str(39)
+
+    cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MxPhoneNumber]
+    nombreBeneficiario: truncated_str(39)
+    institucionContraparte: digits(5, 5)
+
+    cuentaOrdenante: Clabe
+    nombreOrdenante: Optional[truncated_str(39)]
+    institucionOperante: digits(5, 5)
+
+    tipoCuentaBeneficiario: TipoCuenta
+    tipoCuentaOrdenante: TipoCuenta
+
+    claveRastreo: truncated_str(29)
+    referenciaNumerica: conint(gt=0, lt=10 ** 7)
+    rfcCurpBeneficiario: constr(max_length=18)
+    rfcCurpOrdenante: constr(max_length=18)
+
+    medioEntrega: int
+    prioridad: int
+    tipoPago: int
+    topologia: str
+
+    idCliente: str
+    folioOrigen: str
+    fechaOperacion: dt.date
+    estado: Estado
+    causaDevolucion: bool
+    tsCaptura: dt.datetime
+    tsLiquidacion: dt.datetime
+    tsAcuseBanxico: dt.datetime
+    tsEntrega: float  # segundos
+    usuario: str
+
+    tsDevolucion: Optional[float] = None  # segundos
+    tsDevolucionRecibida: Optional[dt.datetime] = None
+    claveRastreoDevolucion: Optional[str] = None
+
+    @classmethod
+    def consulta(cls) -> List['OrdenEnviada']:
+        data = dict(
+            empresa=cls.empresa,
+            firma=cls.firma_consulta(),
+            estado=Estado.enviada,
+        )
+        ordenes = cls._client.post(cls._endpoint, data)['lst']
+        sanitized = [cls._sanitize_orden(orden) for orden in ordenes if orden]
+        return [cls(**orden) for orden in sanitized]
+
+    @staticmethod
+    def _sanitize_orden(orden: Dict[str, Union[str, int]]) -> Dict[str, Any]:
+        sanitized = {}
+        for k, v in orden.items():
+            if k in ORDEN_ENVIADA_STRIP:
+                continue
+            if k.startswith('ts'):
+                v /= 10 ** 3  # convertir de milisegundos a segundos
+            elif k == 'fechaOperacion':
+                v = dt.datetime.strptime(str(v), '%Y%m%d')
+            sanitized[k] = v
+        return sanitized

@@ -3,7 +3,6 @@ from typing import ClassVar, List
 from pydantic import PositiveFloat, PositiveInt
 from pydantic.dataclasses import dataclass
 
-from ..auth import compute_signature
 from ..types import TipoOperacion
 from .base import Resource
 
@@ -18,9 +17,7 @@ class Saldo(Resource):
 
     @classmethod
     def consulta(cls) -> List['Saldo']:
-        joined = f'|||{cls.empresa}||||||||||||||||||||||||||||||||||'
-        firma = compute_signature(cls._client.pkey, joined.encode('ascii'))
-        data = dict(empresa=cls.empresa, firma=firma)
+        data = dict(empresa=cls.empresa, firma=cls.firma_consulta())
         resp = cls._client.post(cls._endpoint, data)
         saldos = []
         for saldo in resp['saldos']:

@@ -43,6 +43,40 @@ def digits(
     return constr(regex=r'^\d+$', min_length=min_length, max_length=max_length)
 
 
+class Estado(str, Enum):
+    """
+    Based on: https://stpmex.zendesk.com/hc/es/articles/360040200791
+    """
+
+    capturada = 'C'
+    pendiente_liberar = 'PL'
+    liberada = 'L'
+    pendiente_autorizar = 'PA'
+    autorizada = 'A'
+    enviada = 'E'
+    liquidada = 'LQ'
+    cancelada = 'CN'
+    traspaso_liquidado = 'TL'
+    traspaso_cancelado = 'TCL'
+    recibida = 'R'
+    por_devolver = 'XD'
+    devuelta = 'D'
+    por_enviar_confirmacion = 'CXO'
+    confirmacion_enviada = 'CCE'
+    confirmada = 'CCO'
+    confirmacion_rechazada = 'CR'
+    rechazada_local = 'RL'
+    cancelada_adapter = 'CA'
+    rechazada_adapter = 'RA'
+    enviada_adapter = 'EA'
+    rechazada_banxico = 'RB'
+    eliminada = 'EL'
+    por_retornar = 'XR'
+    retornada = 'RE'
+    exportacion_poa = 'EP'
+    exportacion_cep = 'EC'
+
+
 class Prioridad(int, Enum):
     normal = 0
     alta = 1
