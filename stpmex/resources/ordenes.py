@@ -156,7 +156,8 @@ class Orden(Resource):
         tienen una fechaOperacion en el futuro como ordenes procesadas durante
         el fin de semana.
 
-        Based on: https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
+        Based on:
+        https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
         """
         return cls._consulta(
             fechaOperacion=fechaOperacion,
