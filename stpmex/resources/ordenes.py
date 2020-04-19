@@ -154,12 +154,20 @@ class OrdenEnviada(Resource):
     claveRastreoDevolucion: Optional[str] = None
 
     @classmethod
-    def consulta(cls) -> List['OrdenEnviada']:
+    def consulta(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenEnviada']:
+        if fecha_operacion:
+            fecha = fecha_operacion.strftime('%Y%m%d')
+        else:
+            fecha = ''
         data = dict(
             empresa=cls.empresa,
-            firma=cls.firma_consulta(),
-            estado=Estado.enviada,
+            firma=cls.firma_consulta(fecha),
+            estado=Estado.enviada
         )
+        if fecha:
+            data['fechaOperacion'] = fecha
         ordenes = cls._client.post(cls._endpoint, data)['lst']
         sanitized = [cls._sanitize_orden(orden) for orden in ordenes if orden]
         return [cls(**orden) for orden in sanitized]

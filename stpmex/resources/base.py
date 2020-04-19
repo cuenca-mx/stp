@@ -21,8 +21,11 @@ class Resource:
         return compute_signature(self._client.pkey, joined_fields)
 
     @classmethod
-    def firma_consulta(cls):
-        joined = f'|||{cls.empresa}||||||||||||||||||||||||||||||||||'
+    def firma_consulta(cls, fecha_operacion: str = ''):
+        joined = (
+            f'|||{cls.empresa}|{fecha_operacion}|||||||||||||||||||||||||||||'
+            f'||||'
+        )
         return compute_signature(cls._client.pkey, joined.encode('ascii'))
 
     def to_dict(self) -> Dict[str, Any]:

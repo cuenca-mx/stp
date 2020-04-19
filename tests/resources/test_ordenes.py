@@ -1,3 +1,4 @@
+import datetime as dt
 import time
 from typing import Any, Dict
 
@@ -31,5 +32,13 @@ def test_tipoCuentaBeneficiario(cuenta: str, tipo: TipoCuenta):
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas(client):
     ordenes_enviadas = client.consulta_ordenes_enviadas()
+    for oe in ordenes_enviadas:
+        assert isinstance(oe, OrdenEnviada)
+
+
+@pytest.mark.xfail(reason="Looks like STP hasn't implemented this yet")
+@pytest.mark.vcr
+def test_consulta_ordenes_enviadas_con_fecha(client):
+    ordenes_enviadas = client.consulta_ordenes_enviadas(dt.date(2020, 4, 20))
     for oe in ordenes_enviadas:
         assert isinstance(oe, OrdenEnviada)

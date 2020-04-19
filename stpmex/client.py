@@ -1,4 +1,5 @@
-from typing import Any, ClassVar, Dict, List, Union
+import datetime as dt
+from typing import Any, ClassVar, Dict, List, Optional, Union
 
 from OpenSSL import crypto
 from requests import Response, Session
@@ -59,8 +60,10 @@ class Client:
     def consulta_saldos(self) -> List[Saldo]:
         return Saldo.consulta()
 
-    def consulta_ordenes_enviadas(self) -> List[OrdenEnviada]:
-        return OrdenEnviada.consulta()
+    def consulta_ordenes_enviadas(
+        self, fecha_operacion: Optional[dt.date] = None
+    ) -> List[OrdenEnviada]:
+        return OrdenEnviada.consulta(fecha_operacion)
 
     def post(
         self, endpoint: str, data: Dict[str, Any]
