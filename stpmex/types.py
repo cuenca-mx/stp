@@ -1,7 +1,7 @@
 import re
 import unicodedata
 from enum import Enum
-from typing import TYPE_CHECKING, ClassVar, Optional, Type, Union
+from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
 import luhnmod10
 from clabe.types import validate_digits
