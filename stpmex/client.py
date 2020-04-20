@@ -8,6 +8,7 @@ from .exc import (
     InvalidAccountType,
     InvalidPassphrase,
     InvalidRfcOrCurp,
+    NoOrdenesEncontradas,
     NoServiceResponse,
     PldRejected,
     SignatureValidationError,
@@ -115,6 +116,8 @@ class Client:
                             raise SignatureValidationError(**resp['resultado'])
                         elif id == -1:
                             raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+                        elif id == -100:
+                            raise NoOrdenesEncontradas
                         elif id == -200:
                             raise PldRejected(**resp['resultado'])
                         else:

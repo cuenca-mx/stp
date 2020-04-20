@@ -43,7 +43,7 @@ def test_consulta_ordenes_recibidas(client):
 
 
 @pytest.mark.xfail(
-    raises=NoOrdenesEncontradas, reason="can't look up ordenes in the future"
+    raises=NoOrdenesEncontradas, reason="there's an unresolved issue"
 )
 @pytest.mark.vcr
 def test_consulta_ordenes_enviadas_con_fecha(client):
@@ -51,11 +51,17 @@ def test_consulta_ordenes_enviadas_con_fecha(client):
     assert len(enviadas) > 0
 
 
-@pytest.mark.xfail(
-    raises=NoOrdenesEncontradas, reason="can't look up ordenes in the future"
-)
 @pytest.mark.vcr
 def test_consulta_orden_por_clave_rastreo(client):
-    client.ordenes.consulta_clave_rastreo(
+    orden = client.ordenes.consulta_clave_rastreo(
         dt.date(2020, 4, 20), 'CR1564969083', 90646
     )
+    assert orden.claveRastreo == 'CR1564969083'
+
+
+@pytest.mark.vcr
+def test_consulta_orden_sin_resultado(client):
+    with pytest.raises(NoOrdenesEncontradas):
+        client.ordenes.consulta_clave_rastreo(
+            dt.date(2020, 4, 20), 'does not exist', 90646
+        )

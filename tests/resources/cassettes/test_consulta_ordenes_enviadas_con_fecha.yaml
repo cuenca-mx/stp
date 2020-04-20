@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"empresa": "TAMIZI", "firma": "MWqmcIak/f37rGEwPyV10GD7gL9SjNlSTY7/EJFq8zVO+EWbPUhz3eGUz/md3RwldosNSDBpWE3AtubbBMMp0FI/0vXmxkDaAnK2Oixvk9pCW1fIaPv/mufbvkPGqBUdveKjRl5fWwQjw0oTUtqj8kFSk8Ub6OLw2kRK4JDWrqw=",
-      "estado": "E", "fechaOperacion": "20200420"}'
+    body: '{"empresa": "TAMIZI", "estado": "E", "fechaOperacion": "20200420", "firma":
+      "MWqmcIak/f37rGEwPyV10GD7gL9SjNlSTY7/EJFq8zVO+EWbPUhz3eGUz/md3RwldosNSDBpWE3AtubbBMMp0FI/0vXmxkDaAnK2Oixvk9pCW1fIaPv/mufbvkPGqBUdveKjRl5fWwQjw0oTUtqj8kFSk8Ub6OLw2kRK4JDWrqw="}'
     headers:
       Accept:
       - '*/*'
@@ -14,7 +14,7 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.2.0
+      - stpmex-python/3.3.0.dev2
     method: POST
     uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
   response:
@@ -26,7 +26,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 Apr 2020 18:54:53 GMT
+      - Mon, 20 Apr 2020 16:27:37 GMT
     status:
       code: 200
       message: OK
