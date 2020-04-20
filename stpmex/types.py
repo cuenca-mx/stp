@@ -25,7 +25,7 @@ def unicode_to_ascii(unicode: str) -> str:
 
 class AsciiStr(ConstrainedStr):
     @classmethod
-    def validate(cls, value: Union[str]) -> Union[str]:
+    def validate(cls, value: str) -> str:
         value = unicode_to_ascii(value).strip()
         return super().validate(value)
 
