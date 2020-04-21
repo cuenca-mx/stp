@@ -1,12 +1,12 @@
 import datetime as dt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 
+from clabe.types import Clabe
 from pydantic import conint, constr
 from pydantic.dataclasses import dataclass
 
 from ..auth import CUENTA_FIELDNAMES
 from ..types import (
-    Clabe,
     Curp,
     EntidadFederativa,
     Genero,
