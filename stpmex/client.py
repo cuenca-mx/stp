@@ -29,7 +29,6 @@ PROD_SOAP_URL = f'{PROD_HOST}/spei/webservices/SpeiConsultaServices'
 class Client:
     base_url: str
     soap_url: str
-    demo: bool
     session: Session
 
     # resources
