@@ -1,8 +1,11 @@
 from typing import ClassVar, List
+from xml.etree import ElementTree
 
 from pydantic import PositiveFloat, PositiveInt
 from pydantic.dataclasses import dataclass
+import requests
 
+from ..auth import compute_signature
 from ..types import TipoOperacion
 from .base import Resource
 
@@ -16,7 +19,7 @@ class Saldo(Resource):
     totalOperaciones: PositiveInt
 
     @classmethod
-    def consulta(cls) -> List['Saldo']:
+    def consulta_saldo_env_rec(cls) -> List['Saldo']:
         data = dict(empresa=cls.empresa, firma=cls._firma_consulta({}))
         resp = cls._client.post(cls._endpoint, data)
         saldos = []
@@ -24,3 +27,25 @@ class Saldo(Resource):
             del saldo['empresa']
             saldos.append(cls(**saldo))
         return saldos
+
+    @classmethod
+    def consulta(cls, cuenta: str) -> float:
+        """cuenta es la CLABE de la empresa"""
+        client = cls._client
+        firma = compute_signature(client.pkey, cuenta.encode('ascii'))
+        data = f'''
+<soapenv:Envelope
+        xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:h2h="http://h2h.integration.spei.enlacefi.lgec.com/">
+    <soapenv:Body>
+        <h2h:consultaSaldoCuenta>
+            <cuenta>{cuenta}</cuenta>
+            <firma>{firma}</firma>
+        </h2h:consultaSaldoCuenta>
+    </soapenv:Body>
+</soapenv:Envelope>
+'''
+        resp = requests.post(client.soap_url, data, verify=client.verify_ssl)
+        root = ElementTree.fromstring(resp.text)
+        saldo = root.findtext('.//saldo')
+        return float(saldo)

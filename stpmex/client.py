@@ -17,20 +17,25 @@ from .exc import (
 from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
-DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
-PROD_BASE_URL = 'https://prod.stpmex.com/speiws/rest'
+DEMO_HOST = 'https://demo.stpmex.com:7024'
+DEMO_BASE_URL = f'{DEMO_HOST}/speidemows/rest'
+DEMO_SOAP_URL = f'{DEMO_HOST}/speidemo/webservices/SpeiConsultaServices'
+
+PROD_HOST = 'https://prod.stpmex.com'
+PROD_BASE_URL = f'{PROD_HOST}/speiws/rest'
+PROD_SOAP_URL = f'{PROD_HOST}/spei/webservices/SpeiConsultaServices'
 
 
 class Client:
     base_url: str
-    empresa: str
+    soap_url: str
     demo: bool
-    headers: Dict[str, str]
     session: Session
     verify_ssl: bool
 
     # resources
     cuentas: ClassVar = CuentaFisica
+    saldos: ClassVar = Saldo
     ordenes: ClassVar = Orden
 
     def __init__(
@@ -41,12 +46,14 @@ class Client:
         demo: bool = False,
     ):
         self.session = Session()
-        self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
+        self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
             self.base_url = DEMO_BASE_URL
+            self.soap_url = DEMO_SOAP_URL
             self.verify_ssl = False
         else:
             self.base_url = PROD_BASE_URL
+            self.soap_url = PROD_SOAP_URL
             self.verify_ssl = True
         try:
             self.pkey = crypto.load_privatekey(
@@ -56,12 +63,8 @@ class Client:
             )
         except crypto.Error:
             raise InvalidPassphrase
-        self.empresa = empresa
         Resource.empresa = empresa
         Resource._client = self
-
-    def consulta_saldos(self) -> List[Saldo]:
-        return Saldo.consulta()
 
     def post(
         self, endpoint: str, data: Dict[str, Any]
@@ -86,7 +89,6 @@ class Client:
             method,
             url,
             json=data,
-            headers=self.headers,
             verify=self.verify_ssl,
             **kwargs,
         )
