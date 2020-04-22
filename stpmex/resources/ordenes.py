@@ -4,12 +4,12 @@ from dataclasses import field
 from typing import ClassVar, List, Optional, Union
 
 import clabe
+from clabe.types import Clabe
 from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
 from ..types import (
-    Clabe,
     MxPhoneNumber,
     PaymentCardNumber,
     Prioridad,

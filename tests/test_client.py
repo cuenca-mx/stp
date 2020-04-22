@@ -2,7 +2,16 @@ import pytest
 from requests import HTTPError
 
 from stpmex.client import Client
-from stpmex.exc import InvalidPassphrase, StpmexException
+from stpmex.exc import (
+    ClaveRastreoAlreadyInUse,
+    InvalidAccountType,
+    InvalidPassphrase,
+    InvalidRfcOrCurp,
+    NoServiceResponse,
+    PldRejected,
+    SignatureValidationError,
+    StpmexException,
+)
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -43,8 +52,9 @@ def test_incorrect_passphrase():
 @pytest.mark.vcr
 def test_response_error(client):
     with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
+        client.put('/ordenPago/registra', dict(firma='{hola}'))
     exc = exc_info.value
+    assert type(exc) is NoServiceResponse
     assert exc.descripcionError
     assert repr(exc)
     assert str(exc)
@@ -52,6 +62,57 @@ def test_response_error(client):
     with pytest.raises(StpmexException) as exc_info:
         client.put('/cuentaModule/fisica', dict(firma=''))
     exc = exc_info.value
+    assert type(exc) is InvalidRfcOrCurp
+    assert exc.descripcion
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is InvalidAccountType
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is SignatureValidationError
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is ClaveRastreoAlreadyInUse
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is PldRejected
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    # Excepción genérica para códigos de error desconocidos
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is StpmexException
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    # Excepción genérica para códigos de error desconocidos
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/cuentaModule/fisica', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is StpmexException
     assert exc.descripcion
     assert repr(exc)
     assert str(exc)
