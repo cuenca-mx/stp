@@ -1,7 +1,6 @@
 from typing import ClassVar, List
 from xml.etree import ElementTree
 
-import requests
 from pydantic import PositiveFloat, PositiveInt
 from pydantic.dataclasses import dataclass
 
@@ -45,7 +44,9 @@ class Saldo(Resource):
     </soapenv:Body>
 </soapenv:Envelope>
 '''
-        resp = requests.post(client.soap_url, data, verify=client.verify_ssl)
+        resp = client.session.post(
+            client.soap_url, data, verify=client.verify_ssl
+        )
         root = ElementTree.fromstring(resp.text)
         saldo = root.findtext('.//saldo')
         return float(saldo)

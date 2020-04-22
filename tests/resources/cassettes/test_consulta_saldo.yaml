@@ -15,7 +15,7 @@ interactions:
       Content-Length:
       - '529'
       User-Agent:
-      - python-requests/2.23.0
+      - stpmex-python/3.3.0
     method: POST
     uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
   response:
@@ -32,13 +32,13 @@ interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Date:
-      - Wed, 22 Apr 2020 21:24:01 GMT
+      - Wed, 22 Apr 2020 21:41:33 GMT
       Expires:
       - '0'
       Pragma:
       - no-cache
       Set-Cookie:
-      - JSESSIONID=QvWjxrc86LfroDa7-NOHJZ5EBCGgd3_BACnjVF4lqXwXSnIQsC8t!1890083885;
+      - JSESSIONID=d42j1sRxLSjaZPooK-9znBTHgj99tIPitFIp3298sNjf2WGgH7PO!1890083885;
         path=/; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
