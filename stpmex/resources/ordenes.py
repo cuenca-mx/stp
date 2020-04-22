@@ -10,6 +10,7 @@ from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
+from ..exc import NoOrdenesEncontradas
 from ..types import (
     Estado,
     MxPhoneNumber,
@@ -102,18 +103,72 @@ class Orden(Resource):
         return v
 
     @classmethod
-    def _consulta_fecha(
-        cls, tipo: TipoOperacion, fechaOperacion: Optional[dt.date] = None
+    def consulta_recibidas(
+        cls, fecha_operacion: Optional[dt.date] = None
     ) -> List['OrdenConsultada']:  # noqa: F821
-        endpoint = cls._endpoint + '/consOrdenesFech'
-        consulta = dict(empresa=cls.empresa)
-        consulta['estado'] = tipo
+        """
+        Consultar
+        """
+        return cls._consulta_fecha(TipoOperacion.recibida, fecha_operacion)
+
+    @classmethod
+    def consulta_enviadas(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        return cls._consulta_fecha(TipoOperacion.enviada, fecha_operacion)
+
+    @classmethod
+    def consulta_clave_rastreo(
+        cls,
+        claveRastreo: str,
+        institucionOperante: int,
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        """
+        Consultar ordenes por clave rastreo. Exclude the fechaOperacion if
+        looking up transactions from the same day or when the fechaOperacion is
+        in the future, in the event of this function being called during
+        non-banking hours (9am – 6pm) / days.
+
+        Based on:
+        https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
+        """
+        endpoint = cls._endpoint + '/consOrdEnvRastreo'
+        consulta = dict(
+            empresa=cls.empresa,
+            claveRastreo=claveRastreo,
+            institucionOperante=institucionOperante,
+        )
         if fechaOperacion:
             consulta['fechaOperacion'] = strftime(fechaOperacion)
         consulta['firma'] = cls._firma_consulta(consulta)
-        resp = cls._client.post(endpoint, consulta)['lst']
-        sanitized = [cls._sanitize_consulta(orden) for orden in resp if orden]
-        return sanitized
+        resp = cls._client.post(endpoint, consulta)['ordenPago']
+        return cls._sanitize_consulta(resp)
+
+    @classmethod
+    def _consulta_fecha(
+        cls, tipo: TipoOperacion, fechaOperacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        """
+        Exclude the fechaOperacion if looking up transactions from the same
+        day or when the fechaOperacion is in the future, in the event of this
+        function being called during non-banking hours (9am – 6pm) / days.
+        """
+        endpoint = cls._endpoint + '/consOrdenesFech'
+        consulta = dict(empresa=cls.empresa, estado=tipo)
+        if fechaOperacion:
+            consulta['fechaOperacion'] = strftime(fechaOperacion)
+
+        consulta['firma'] = cls._firma_consulta(consulta)
+        try:
+            resp = cls._client.post(endpoint, consulta)['lst']
+        except NoOrdenesEncontradas:
+            ordenes = []
+        else:
+            ordenes = [
+                cls._sanitize_consulta(orden) for orden in resp if orden
+            ]
+        return ordenes
 
     @staticmethod
     def _sanitize_consulta(
@@ -133,44 +188,3 @@ class Orden(Resource):
                 v = v.rstrip()
             sanitized[k] = v
         return make_dataclass('OrdenConsultada', sanitized.keys())(**sanitized)
-
-    @classmethod
-    def consulta_recibidas(
-        cls, fecha_operacion: Optional[dt.date] = None
-    ) -> List['OrdenConsultada']:  # noqa: F821
-        """
-        Consultar
-        """
-        return cls._consulta_fecha(TipoOperacion.recibida, fecha_operacion)
-
-    @classmethod
-    def consulta_enviadas(
-        cls, fecha_operacion: Optional[dt.date] = None
-    ) -> List['OrdenConsultada']:  # noqa: F821
-        return cls._consulta_fecha(TipoOperacion.enviada, fecha_operacion)
-
-    @classmethod
-    def consulta_clave_rastreo(
-        cls,
-        fechaOperacion: dt.date,
-        claveRastreo: str,
-        institucionOperante: int,
-    ) -> 'OrdenConsultada':  # noqa: F821
-        """
-        Consultar ordenes por clave rastreo. No puedes buscar ordenes que
-        tienen una fechaOperacion en el futuro como ordenes procesadas durante
-        el fin de semana.
-
-        Based on:
-        https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
-        """
-        endpoint = cls._endpoint + '/consOrdEnvRastreo'
-        consulta = dict(
-            empresa=cls.empresa,
-            fechaOperacion=strftime(fechaOperacion),
-            claveRastreo=claveRastreo,
-            institucionOperante=institucionOperante,
-        )
-        consulta['firma'] = cls._firma_consulta(consulta)
-        resp = cls._client.post(endpoint, consulta)['ordenPago']
-        return cls._sanitize_consulta(resp)

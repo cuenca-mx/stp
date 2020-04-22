@@ -1,12 +1,6 @@
 import datetime as dt
 
-from stpmex.utils import strftime, strptime, today_mexico_city
-
-
-def test_today_mexico_city(mocker):
-    mock_datetime = mocker.patch('stpmex.utils.dt')
-    mock_datetime.datetime.utcnow.return_value = dt.datetime(2020, 4, 20, 1)
-    assert today_mexico_city() == dt.date(2020, 4, 19)
+from stpmex.utils import strftime, strptime
 
 
 def test_strftime():
