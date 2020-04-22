@@ -29,7 +29,12 @@ class Saldo(Resource):
 
     @classmethod
     def consulta(cls, cuenta: str) -> float:
-        """cuenta es la CLABE de la empresa"""
+        """
+        cuenta es la CLABE de la empresa
+
+        Based on:
+        https://stpmex.zendesk.com/hc/es/articles/360002812571-consultaSaldoCuenta
+        """
         client = cls._client
         firma = compute_signature(client.pkey, cuenta)
         data = f'''
