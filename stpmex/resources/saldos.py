@@ -1,9 +1,9 @@
 from typing import ClassVar, List
 from xml.etree import ElementTree
 
+import requests
 from pydantic import PositiveFloat, PositiveInt
 from pydantic.dataclasses import dataclass
-import requests
 
 from ..auth import compute_signature
 from ..types import TipoOperacion
@@ -32,7 +32,7 @@ class Saldo(Resource):
     def consulta(cls, cuenta: str) -> float:
         """cuenta es la CLABE de la empresa"""
         client = cls._client
-        firma = compute_signature(client.pkey, cuenta.encode('ascii'))
+        firma = compute_signature(client.pkey, cuenta)
         data = f'''
 <soapenv:Envelope
         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"

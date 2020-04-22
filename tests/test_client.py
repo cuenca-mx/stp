@@ -12,7 +12,6 @@ from stpmex.exc import (
     SignatureValidationError,
     StpmexException,
 )
-from stpmex.resources import Saldo
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -117,11 +116,3 @@ def test_response_error(client):
     assert exc.descripcion
     assert repr(exc)
     assert str(exc)
-
-
-@pytest.mark.vcr
-def test_consulta_saldo(client):
-    saldos = client.consulta_saldos()
-    assert len(saldos) == 2
-    for saldo in saldos:
-        assert isinstance(saldo, Saldo)

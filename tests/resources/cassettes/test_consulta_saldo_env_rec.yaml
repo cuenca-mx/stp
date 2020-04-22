@@ -13,7 +13,7 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.2.0
+      - stpmex-python/3.3.0.dev3
     method: POST
     uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consSaldoEnvRec
   response:
