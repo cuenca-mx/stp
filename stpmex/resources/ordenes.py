@@ -20,6 +20,7 @@ from ..types import (
     digits,
     truncated_str,
 )
+from ..utils import strftime, strptime
 from .base import Resource
 
 STP_BANK_CODE = '90646'
@@ -108,7 +109,7 @@ class Orden(Resource):
         consulta = dict(empresa=cls.empresa)
         consulta['estado'] = tipo
         if fechaOperacion:
-            consulta['fechaOperacion'] = fechaOperacion.strftime('%Y%m%d')
+            consulta['fechaOperacion'] = strftime(fechaOperacion)
         consulta['firma'] = cls._firma_consulta(consulta)
         resp = cls._client.post(endpoint, consulta)['lst']
         sanitized = [cls._sanitize_consulta(orden) for orden in resp if orden]
@@ -125,7 +126,7 @@ class Orden(Resource):
                 if v > 10 ** 9:
                     v = dt.datetime.fromtimestamp(v)
             elif k == 'fechaOperacion':
-                v = dt.datetime.strptime(str(v), '%Y%m%d').date()
+                v = strptime(v)
             elif k == 'estado':
                 v = Estado(v)
             elif isinstance(v, str):
@@ -166,7 +167,7 @@ class Orden(Resource):
         endpoint = cls._endpoint + '/consOrdEnvRastreo'
         consulta = dict(
             empresa=cls.empresa,
-            fechaOperacion=fechaOperacion.strftime('%Y%m%d'),
+            fechaOperacion=strftime(fechaOperacion),
             claveRastreo=claveRastreo,
             institucionOperante=institucionOperante,
         )

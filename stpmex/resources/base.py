@@ -3,6 +3,7 @@ from dataclasses import asdict
 from typing import Any, ClassVar, Dict, List
 
 from ..auth import compute_signature, join_fields
+from ..utils import strftime
 
 
 class Resource:
@@ -36,7 +37,7 @@ class Resource:
         base = dict()
         for k, v in asdict(self).items():
             if isinstance(v, dt.date):
-                base[k] = v.strftime('%Y%m%d')
+                base[k] = strftime(v)
             elif v:
                 base[k] = v
         return {**base, **dict(firma=self.firma, empresa=self.empresa)}

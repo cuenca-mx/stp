@@ -18,6 +18,7 @@ test_requires = [
     'pytest-vcr',
     'pycodestyle',
     'pytest-cov',
+    'pytest-mock',
     'black',
     'isort[pipfile]',
     'flake8',
