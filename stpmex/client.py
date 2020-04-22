@@ -31,12 +31,11 @@ class Client:
     soap_url: str
     demo: bool
     session: Session
-    verify_ssl: bool
 
     # resources
     cuentas: ClassVar = CuentaFisica
-    saldos: ClassVar = Saldo
     ordenes: ClassVar = Orden
+    saldos: ClassVar = Saldo
 
     def __init__(
         self,
@@ -50,11 +49,11 @@ class Client:
         if demo:
             self.base_url = DEMO_BASE_URL
             self.soap_url = DEMO_SOAP_URL
-            self.verify_ssl = False
+            self.session.verify = False
         else:
             self.base_url = PROD_BASE_URL
             self.soap_url = PROD_SOAP_URL
-            self.verify_ssl = True
+            self.session.verify = True
         try:
             self.pkey = crypto.load_privatekey(
                 crypto.FILETYPE_PEM,
@@ -85,9 +84,7 @@ class Client:
         self, method: str, endpoint: str, data: Dict[str, Any], **kwargs: Any
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
-        response = self.session.request(
-            method, url, json=data, verify=self.verify_ssl, **kwargs,
-        )
+        response = self.session.request(method, url, json=data, **kwargs,)
         self._check_response(response)
         resultado = response.json()
         if 'resultado' in resultado:  # Some responses are enveloped
