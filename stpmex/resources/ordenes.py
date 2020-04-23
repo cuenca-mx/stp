@@ -24,7 +24,7 @@ from ..types import (
 from ..utils import strftime, strptime
 from .base import Resource
 
-STP_BANK_CODE = '90646'
+STP_BANK_CODE = 90646
 
 
 @dataclass
@@ -121,7 +121,7 @@ class Orden(Resource):
     def consulta_clave_rastreo(
         cls,
         claveRastreo: str,
-        institucionOperante: int,
+        institucionOperante: Union[int, str],
         fechaOperacion: Optional[dt.date] = None,
     ) -> 'OrdenConsultada':  # noqa: F821
         """
@@ -133,17 +133,15 @@ class Orden(Resource):
         Based on:
         https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
         """
-        endpoint = cls._endpoint + '/consOrdEnvRastreo'
-        consulta = dict(
-            empresa=cls.empresa,
-            claveRastreo=claveRastreo,
-            institucionOperante=institucionOperante,
+        institucionOperante = int(institucionOperante)
+        if institucionOperante == STP_BANK_CODE:  # enviada
+            consulta_method = cls._consulta_clave_rastreo_enviada
+
+        else:  # recibida
+            consulta_method = cls._consulta_clave_rastreo_recibida
+        return consulta_method(
+            claveRastreo, institucionOperante, fechaOperacion
         )
-        if fechaOperacion:
-            consulta['fechaOperacion'] = strftime(fechaOperacion)
-        consulta['firma'] = cls._firma_consulta(consulta)
-        resp = cls._client.post(endpoint, consulta)['ordenPago']
-        return cls._sanitize_consulta(resp)
 
     @classmethod
     def _consulta_fecha(
@@ -158,7 +156,6 @@ class Orden(Resource):
         consulta = dict(empresa=cls.empresa, estado=tipo)
         if fechaOperacion:
             consulta['fechaOperacion'] = strftime(fechaOperacion)
-
         consulta['firma'] = cls._firma_consulta(consulta)
         try:
             resp = cls._client.post(endpoint, consulta)['lst']
@@ -169,6 +166,45 @@ class Orden(Resource):
                 cls._sanitize_consulta(orden) for orden in resp if orden
             ]
         return ordenes
+
+    @classmethod
+    def _consulta_clave_rastreo_enviada(
+        cls,
+        claveRastreo: str,
+        institucionOperante: int,
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        endpoint = cls._endpoint + '/consOrdEnvRastreo'
+        consulta = dict(
+            empresa=cls.empresa,
+            claveRastreo=claveRastreo,
+            institucionOperante=institucionOperante,
+        )
+        if fechaOperacion:
+            consulta['fechaOperacion'] = strftime(fechaOperacion)
+        consulta['firma'] = cls._firma_consulta(consulta)
+        resp = cls._client.post(endpoint, consulta)['ordenPago']
+        return cls._sanitize_consulta(resp)
+
+    @classmethod
+    def _consulta_clave_rastreo_recibida(
+        cls,
+        claveRastreo: str,
+        institucionOperante: int,
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        recibidas = cls.consulta_recibidas(fechaOperacion)
+        try:
+            orden = [
+                o
+                for o in recibidas
+                if o.claveRastreo == claveRastreo
+                and institucionOperante
+                in (o.institucionOperante, o.institucionContraparte)
+            ][0]
+        except KeyError:
+            raise NoOrdenesEncontradas
+        return orden
 
     @staticmethod
     def _sanitize_consulta(
