@@ -3,10 +3,8 @@ import unicodedata
 from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
-import luhnmod10
 from clabe.types import validate_digits
 from pydantic import ConstrainedStr, StrictStr, constr
-from pydantic.errors import LuhnValidationError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
@@ -167,9 +165,3 @@ class MxPhoneNumber(str):
 class PaymentCardNumber(PydanticPaymentCardNumber):
     min_length: ClassVar[int] = 15
     max_length: ClassVar[int] = 16
-
-    @classmethod
-    def validate_luhn_check_digit(cls, card_number: str) -> str:
-        if not luhnmod10.valid(card_number):
-            raise LuhnValidationError
-        return card_number
