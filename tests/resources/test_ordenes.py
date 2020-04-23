@@ -63,8 +63,24 @@ def test_consulta_orden_por_clave_rastreo(client):
 
 
 @pytest.mark.vcr
+def test_consulta_orden_por_clave_rastreo_recibida(client):
+    orden = client.ordenes.consulta_clave_rastreo(
+        'CR1564969083', 40072, dt.date(2020, 4, 20)
+    )
+    assert orden.claveRastreo == 'CR1564969083'
+
+
+@pytest.mark.vcr
 def test_consulta_orden_sin_resultado(client):
     with pytest.raises(NoOrdenesEncontradas):
         client.ordenes.consulta_clave_rastreo(
             'does not exist', 90646, dt.date(2020, 4, 20)
+        )
+
+
+@pytest.mark.vcr
+def test_consulta_orden_sin_resultado_recibida(client):
+    with pytest.raises(NoOrdenesEncontradas):
+        client.ordenes.consulta_clave_rastreo(
+            'does not exist', 40072, dt.date(2020, 4, 20)
         )
