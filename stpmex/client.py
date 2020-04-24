@@ -110,7 +110,7 @@ class Client:
                             raise SignatureValidationError(**resp['resultado'])
                         elif id == -1:
                             raise ClaveRastreoAlreadyInUse(**resp['resultado'])
-                        elif id == -100:
+                        elif id == -100 and error.startswith('No se encontr'):
                             raise NoOrdenesEncontradas
                         elif id == -200:
                             raise PldRejected(**resp['resultado'])
