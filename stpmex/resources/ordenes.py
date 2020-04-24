@@ -202,7 +202,7 @@ class Orden(Resource):
                 and institucionOperante
                 in (o.institucionOperante, o.institucionContraparte)
             ][0]
-        except KeyError:
+        except IndexError:
             raise NoOrdenesEncontradas
         return orden
 
