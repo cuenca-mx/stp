@@ -1,0 +1,61 @@
+interactions:
+- request:
+    body: "\n<soapenv:Envelope\n        xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n
+      \       xmlns:h2h=\"http://h2h.integration.spei.enlacefi.lgec.com/\">\n    <soapenv:Body>\n
+      \       <h2h:consultaSaldoCuenta>\n            <cuenta>123456789012345678</cuenta>\n
+      \           <firma>tHocosX6wc9iErPu6eTyjWk+dqY5jqEckCitO8QC7g7jgnuCO2b4wwpNtd3BYLiXxA5tmr0r9j3qRwBGV3yIvGAfXJg+GdBibx7QA3k/GKKBLGevv6c/J6KS6rxBnoCrXuN/iPFKNsWpnGkoi/Yc8HNm3SvFXjWCz6pEqDMo8V0=</firma>\n
+      \       </h2h:consultaSaldoCuenta>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '529'
+      User-Agent:
+      - stpmex-python/3.3.0
+    method: POST
+    uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
+  response:
+    body:
+      string: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns0:Fault
+        xmlns:ns0="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://www.w3.org/2003/05/soap-envelope"><faultcode>ns0:Server</faultcode><faultstring>Cuenta
+        {123456789012345678} - {No encontrada}</faultstring></ns0:Fault></S:Body></S:Envelope>
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0,
+        s-maxage=0
+      Content-Security-Policy:
+      - default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'
+        'unsafe-eval'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Fri, 24 Apr 2020 14:33:09 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=u_usm0VZe28MuAKn081K8Tcc7Jvw3CF4Ev7NdL8JlJGZw7MA901r!311456585;
+        path=/; secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-ORACLE-DMS-ECID:
+      - 5d173cc1-4978-426d-9d58-0dc36f91111b-000001f5
+      X-ORACLE-DMS-RID:
+      - '0'
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 500
+      message: Internal Server Error
+version: 1

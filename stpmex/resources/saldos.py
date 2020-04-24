@@ -50,6 +50,8 @@ class Saldo(Resource):
 </soapenv:Envelope>
 '''
         resp = client.session.post(client.soap_url, data)
+        if not resp.ok:
+            resp.raise_for_status()
         root = ElementTree.fromstring(resp.text)
         saldo = root.findtext('.//saldo')
         return float(saldo)
