@@ -194,15 +194,15 @@ class Orden(Resource):
         fechaOperacion: Optional[dt.date] = None,
     ) -> 'OrdenConsultada':  # noqa: F821
         recibidas = cls.consulta_recibidas(fechaOperacion)
-        try:
-            orden = [
-                o
-                for o in recibidas
-                if o.claveRastreo == claveRastreo
-                and institucionOperante
-                in (o.institucionOperante, o.institucionContraparte)
-            ][0]
-        except IndexError:
+        orden = None
+        for o in recibidas:
+            if o.claveRastreo == claveRastreo and institucionOperante in (
+                o.institucionOperante,
+                o.institucionContraparte,
+            ):
+                orden = o
+                break
+        if not orden:
             raise NoOrdenesEncontradas
         return orden
 
