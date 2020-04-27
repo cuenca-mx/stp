@@ -59,7 +59,7 @@ orden = client.ordenes.registra(
 )
 
 # Saldo
-saldo = client.saldos.consulta(cuenta='646180157000000004')
+saldo = client.saldos.consulta(cuenta='646456789123456789')
 
 # Ordenes - enviadas
 enviadas = client.ordenes.consulta_enviadas() # fecha_operacion es día de hoy
