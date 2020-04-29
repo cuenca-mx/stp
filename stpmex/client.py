@@ -52,7 +52,8 @@ class Client:
         priv_key: str,
         priv_key_passphrase: str,
         demo: bool = False,
-        base_url: str = None
+        base_url: str = None,
+        soap_url: str = None,
     ):
         self.session = Session()
         self.session.verify = False
@@ -63,8 +64,12 @@ class Client:
             self.session.verify = False
         else:
             self.base_url = PROD_BASE_URL
+            self.soap_url = PROD_SOAP_URL
+            self.session.verify = True
         if base_url:
             self.base_url = base_url
+        if soap_url:
+            self.soap_url = soap_url
         try:
             self.pkey = serialization.load_pem_private_key(
                 priv_key.encode('utf-8'),
