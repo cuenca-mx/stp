@@ -1,12 +1,10 @@
 import re
 import unicodedata
 from enum import Enum
-from typing import TYPE_CHECKING, ClassVar, Optional, Type, Union
+from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
-import luhnmod10
 from clabe.types import validate_digits
 from pydantic import ConstrainedStr, StrictStr, constr
-from pydantic.errors import LuhnValidationError
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
@@ -25,7 +23,7 @@ def unicode_to_ascii(unicode: str) -> str:
 
 class AsciiStr(ConstrainedStr):
     @classmethod
-    def validate(cls, value: Union[str]) -> Union[str]:
+    def validate(cls, value: str) -> str:
         value = unicode_to_ascii(value).strip()
         return super().validate(value)
 
@@ -41,6 +39,46 @@ def digits(
     min_length: Optional[int] = None, max_length: Optional[int] = None
 ) -> Type[str]:
     return constr(regex=r'^\d+$', min_length=min_length, max_length=max_length)
+
+
+class Estado(str, Enum):
+    """
+    Based on: https://stpmex.zendesk.com/hc/es/articles/360040200791
+    """
+
+    capturada = 'C'
+    pendiente_liberar = 'PL'
+    liberada = 'L'
+    pendiente_autorizar = 'PA'
+    autorizada = 'A'
+    enviada = 'E'
+    liquidada = 'LQ'
+    cancelada = 'CN'
+    traspaso_liberado = 'TL'
+    traspaso_capturado = 'TC'
+    traspaso_autorizado = 'TA'
+    traspaso_liquidado = 'TLQ'
+    traspaso_cancelado = 'TCL'
+    recibida = 'R'
+    por_devolver = 'XD'
+    devuelta = 'D'
+    por_enviar_confirmacion = 'CXO'
+    confirmacion_enviada = 'CCE'
+    confirmada = 'CCO'
+    confirmacion_rechazada = 'CCR'
+    por_cancelar = 'XC'
+    cancelada_local = 'CL'
+    cancelada_rechazada = 'CR'
+    rechazada_local = 'RL'
+    cancelada_adapter = 'CA'
+    rechazada_adapter = 'RA'
+    enviada_adapter = 'EA'
+    rechazada_banxico = 'RB'
+    eliminada = 'EL'
+    por_retornar = 'XR'
+    retornada = 'RE'
+    exportacion_poa = 'EP'
+    exportacion_cep = 'EC'
 
 
 class Prioridad(int, Enum):
@@ -106,6 +144,11 @@ class EntidadFederativa(int, Enum):
     ZS = 32  # Zacatecas
 
 
+class TipoOperacion(str, Enum):
+    enviada = 'E'
+    recibida = 'R'
+
+
 class MxPhoneNumber(str):
     strip_whitespace: ClassVar[bool] = True
     min_length: ClassVar[int] = 10
@@ -122,9 +165,3 @@ class MxPhoneNumber(str):
 class PaymentCardNumber(PydanticPaymentCardNumber):
     min_length: ClassVar[int] = 15
     max_length: ClassVar[int] = 16
-
-    @classmethod
-    def validate_luhn_check_digit(cls, card_number: str) -> str:
-        if not luhnmod10.valid(card_number):
-            raise LuhnValidationError
-        return card_number

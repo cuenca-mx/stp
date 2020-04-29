@@ -1,0 +1,35 @@
+interactions:
+- request:
+    body: '{"empresa": "TAMIZI", "estado": "E", "fechaOperacion": "20200420", "firma":
+      "MWqmcIak/f37rGEwPyV10GD7gL9SjNlSTY7/EJFq8zVO+EWbPUhz3eGUz/md3RwldosNSDBpWE3AtubbBMMp0FI/0vXmxkDaAnK2Oixvk9pCW1fIaPv/mufbvkPGqBUdveKjRl5fWwQjw0oTUtqj8kFSk8Ub6OLw2kRK4JDWrqw="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '251'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.3.0.dev3
+    method: POST
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+  response:
+    body:
+      string: '{"resultado":{"id":1,"lst":[{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
+        Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197043942,"tsCaptura":1587197039698,"tsDevolucion":4524,"tsDevolucionRecibida":1587197049464,"tsEntrega":5242,"tsLiquidacion":1587197044940,"usuario":"tamizi"},{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969084","claveRastreoDevolucion":"19013551","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
+        Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197113935,"tsCaptura":1587197110061,"tsDevolucion":2287,"tsDevolucionRecibida":1587197118452,"tsEntrega":6104,"tsLiquidacion":1587197116165,"usuario":"tamizi"},null]}}'
+    headers:
+      Content-Length:
+      - '1899'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 22 Apr 2020 18:27:30 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

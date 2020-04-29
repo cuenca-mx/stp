@@ -1,0 +1,32 @@
+interactions:
+- request:
+    body: '{"empresa": "TAMIZI", "firma": "fRcllVARrFz+4XNhgKAGMKqTeHYdErcTmTiUC9IM6Nb3tASEl9xcfeUGohu6/CCDurP8/jHeWYwa3cKWNcRNsngDjoPdt/YZfpgcFYsdveYrpy8XGgGY+AEUtdwDdC3BBfZMysRxRNVtnZO0wYCcPsOf9u2sPSeVGWU4CbtAEKs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '206'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.3.0.dev3
+    method: POST
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consSaldoEnvRec
+  response:
+    body:
+      string: '{"resultado":{"id":1,"saldos":[{"empresa":"TAMIZI","montoTotal":"2.40","tipoOperacion":"E","totalOperaciones":2},{"empresa":"TAMIZI","montoTotal":"2.40","tipoOperacion":"R","totalOperaciones":2}]}}'
+    headers:
+      Content-Length:
+      - '197'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 18 Apr 2020 08:35:39 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

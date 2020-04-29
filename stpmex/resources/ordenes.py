@@ -1,7 +1,8 @@
+import datetime as dt
 import random
 import time
-from dataclasses import field
-from typing import ClassVar, List, Optional, Union
+from dataclasses import field, make_dataclass
+from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
@@ -9,23 +10,27 @@ from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
+from ..exc import NoOrdenesEncontradas
 from ..types import (
+    Estado,
     MxPhoneNumber,
     PaymentCardNumber,
     Prioridad,
     TipoCuenta,
+    TipoOperacion,
     digits,
     truncated_str,
 )
+from ..utils import strftime, strptime
 from .base import Resource
 
-STP_BANK_CODE = '90646'
+STP_BANK_CODE = 90646
 
 
 @dataclass
 class Orden(Resource):
     """
-    Base on:
+    Based on:
     https://stpmex.zendesk.com/hc/es/articles/360002682851-RegistraOrden-Dispersi%C3%B3n-
     """
 
@@ -96,3 +101,126 @@ class Orden(Resource):
         if v not in clabe.BANKS.values():
             raise ValueError(f'{v} no se corresponde a un banco')
         return v
+
+    @classmethod
+    def consulta_recibidas(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        """
+        Consultar
+        """
+        return cls._consulta_fecha(TipoOperacion.recibida, fecha_operacion)
+
+    @classmethod
+    def consulta_enviadas(
+        cls, fecha_operacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        return cls._consulta_fecha(TipoOperacion.enviada, fecha_operacion)
+
+    @classmethod
+    def consulta_clave_rastreo(
+        cls,
+        claveRastreo: str,
+        institucionOperante: Union[int, str],
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        """
+        Consultar ordenes por clave rastreo. Exclude the fechaOperacion if
+        looking up transactions from the same day or when the fechaOperacion is
+        in the future, in the event of this function being called during
+        non-banking hours (9am – 6pm) / days.
+
+        Based on:
+        https://stpmex.zendesk.com/hc/es/articles/360039782292-Consulta-Orden-Enviada-Por-Rastreo
+        """
+        institucionOperante = int(institucionOperante)
+        if institucionOperante == STP_BANK_CODE:  # enviada
+            consulta_method = cls._consulta_clave_rastreo_enviada
+
+        else:  # recibida
+            consulta_method = cls._consulta_clave_rastreo_recibida
+        return consulta_method(
+            claveRastreo, institucionOperante, fechaOperacion
+        )
+
+    @classmethod
+    def _consulta_fecha(
+        cls, tipo: TipoOperacion, fechaOperacion: Optional[dt.date] = None
+    ) -> List['OrdenConsultada']:  # noqa: F821
+        """
+        Exclude the fechaOperacion if looking up transactions from the same
+        day or when the fechaOperacion is in the future, in the event of this
+        function being called during non-banking hours (9am – 6pm) / days.
+        """
+        endpoint = cls._endpoint + '/consOrdenesFech'
+        consulta = dict(empresa=cls.empresa, estado=tipo)
+        if fechaOperacion:
+            consulta['fechaOperacion'] = strftime(fechaOperacion)
+        consulta['firma'] = cls._firma_consulta(consulta)
+        try:
+            resp = cls._client.post(endpoint, consulta)['lst']
+        except NoOrdenesEncontradas:
+            ordenes = []
+        else:
+            ordenes = [
+                cls._sanitize_consulta(orden) for orden in resp if orden
+            ]
+        return ordenes
+
+    @classmethod
+    def _consulta_clave_rastreo_enviada(
+        cls,
+        claveRastreo: str,
+        institucionOperante: int,
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        endpoint = cls._endpoint + '/consOrdEnvRastreo'
+        consulta = dict(
+            empresa=cls.empresa,
+            claveRastreo=claveRastreo,
+            institucionOperante=institucionOperante,
+        )
+        if fechaOperacion:
+            consulta['fechaOperacion'] = strftime(fechaOperacion)
+        consulta['firma'] = cls._firma_consulta(consulta)
+        resp = cls._client.post(endpoint, consulta)['ordenPago']
+        return cls._sanitize_consulta(resp)
+
+    @classmethod
+    def _consulta_clave_rastreo_recibida(
+        cls,
+        claveRastreo: str,
+        institucionOperante: int,
+        fechaOperacion: Optional[dt.date] = None,
+    ) -> 'OrdenConsultada':  # noqa: F821
+        recibidas = cls.consulta_recibidas(fechaOperacion)
+        orden = None
+        for o in recibidas:
+            if o.claveRastreo == claveRastreo and institucionOperante in (
+                o.institucionOperante,
+                o.institucionContraparte,
+            ):
+                orden = o
+                break
+        if not orden:
+            raise NoOrdenesEncontradas
+        return orden
+
+    @staticmethod
+    def _sanitize_consulta(
+        orden: Dict[str, Any]
+    ) -> 'OrdenConsultada':  # noqa: F821
+        sanitized = {}
+        for k, v in orden.items():
+            if k.startswith('ts'):
+                v /= 10 ** 3  # convertir de milisegundos a segundos
+                if v > 10 ** 9:
+                    v = dt.datetime.fromtimestamp(v)
+            elif k == 'fechaOperacion':
+                v = strptime(v)
+            elif k == 'estado':
+                v = Estado(v)
+            elif isinstance(v, str):
+                v = v.rstrip()
+            sanitized[k] = v
+        return make_dataclass('OrdenConsultada', sanitized.keys())(**sanitized)

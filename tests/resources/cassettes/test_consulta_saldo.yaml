@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: "\n<soapenv:Envelope\n        xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n
+      \       xmlns:h2h=\"http://h2h.integration.spei.enlacefi.lgec.com/\">\n    <soapenv:Body>\n
+      \       <h2h:consultaSaldoCuenta>\n            <cuenta>646180157000000004</cuenta>\n
+      \           <firma>Cz/mqIQLCtUeNYtw3XYL7zXeqbpNpa5cyfUEleQmpfAu8nreVsaa9wMErg89qUCZRF0vpjxszHZ1L5foMcTa9ft2/4BgvU+EFyqFl7tbVRIn/Gp5Ermq76HrQdK5j7DDawvtPpboFSEC4Bubb42n3VwlYFLIGHYpTrCgw+I2GfE=</firma>\n
+      \       </h2h:consultaSaldoCuenta>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '529'
+      User-Agent:
+      - stpmex-python/3.3.0
+    method: POST
+    uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
+  response:
+    body:
+      string: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns0:consultaSaldoCuentaResponse
+        xmlns:ns0="http://h2h.integration.spei.enlacefi.lgec.com/"><return><cargosPendientes>0.00</cargosPendientes><saldo>20479.69</saldo></return></ns0:consultaSaldoCuentaResponse></S:Body></S:Envelope>
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0,
+        s-maxage=0
+      Content-Security-Policy:
+      - default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'
+        'unsafe-eval'
+      Content-Type:
+      - text/xml; charset=utf-8
+      Date:
+      - Wed, 22 Apr 2020 21:41:33 GMT
+      Expires:
+      - '0'
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - JSESSIONID=d42j1sRxLSjaZPooK-9znBTHgj99tIPitFIp3298sNjf2WGgH7PO!1890083885;
+        path=/; secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      Transfer-Encoding:
+      - chunked
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+version: 1
