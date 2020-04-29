@@ -8,27 +8,33 @@ from .exc import (
     InvalidAccountType,
     InvalidPassphrase,
     InvalidRfcOrCurp,
+    NoOrdenesEncontradas,
     NoServiceResponse,
     PldRejected,
     SignatureValidationError,
     StpmexException,
 )
-from .resources import CuentaFisica, Orden, Resource
+from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
-DEMO_BASE_URL = 'https://demo.stpmex.com:7024/speidemows/rest'
-PROD_BASE_URL = 'https://prod.stpmex.com/speiws/rest'
+DEMO_HOST = 'https://demo.stpmex.com:7024'
+DEMO_BASE_URL = f'{DEMO_HOST}/speidemows/rest'
+DEMO_SOAP_URL = f'{DEMO_HOST}/speidemo/webservices/SpeiConsultaServices'
+
+PROD_HOST = 'https://prod.stpmex.com'
+PROD_BASE_URL = f'{PROD_HOST}/speiws/rest'
+PROD_SOAP_URL = f'{PROD_HOST}/spei/webservices/SpeiConsultaServices'
 
 
 class Client:
     base_url: str
-    demo: bool
-    headers: Dict[str, str]
+    soap_url: str
     session: Session
 
     # resources
     cuentas: ClassVar = CuentaFisica
     ordenes: ClassVar = Orden
+    saldos: ClassVar = Saldo
 
     def __init__(
         self,
@@ -36,17 +42,17 @@ class Client:
         priv_key: str,
         priv_key_passphrase: str,
         demo: bool = False,
-        base_url: str = None
     ):
         self.session = Session()
-        self.session.verify = False
-        self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
+        self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
             self.base_url = DEMO_BASE_URL
+            self.soap_url = DEMO_SOAP_URL
+            self.session.verify = False
         else:
             self.base_url = PROD_BASE_URL
-        if base_url:
-            self.base_url = base_url
+            self.soap_url = PROD_SOAP_URL
+            self.session.verify = True
         try:
             self.pkey = crypto.load_privatekey(
                 crypto.FILETYPE_PEM,
@@ -57,6 +63,11 @@ class Client:
             raise InvalidPassphrase
         Resource.empresa = empresa
         Resource._client = self
+
+    def post(
+        self, endpoint: str, data: Dict[str, Any]
+    ) -> Union[Dict[str, Any], List[Any]]:
+        return self.request('post', endpoint, data)
 
     def put(
         self, endpoint: str, data: Dict[str, Any]
@@ -72,9 +83,7 @@ class Client:
         self, method: str, endpoint: str, data: Dict[str, Any], **kwargs: Any
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
-        response = self.session.request(
-            method, url, json=data, headers=self.headers, **kwargs
-        )
+        response = self.session.request(method, url, json=data, **kwargs,)
         self._check_response(response)
         resultado = response.json()
         if 'resultado' in resultado:  # Some responses are enveloped
@@ -101,6 +110,8 @@ class Client:
                             raise SignatureValidationError(**resp['resultado'])
                         elif id == -1:
                             raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+                        elif id == -100 and error.startswith('No se encontr'):
+                            raise NoOrdenesEncontradas
                         elif id == -200:
                             raise PldRejected(**resp['resultado'])
                         else:

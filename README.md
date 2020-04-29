@@ -58,5 +58,23 @@ orden = client.ordenes.registra(
     conceptoPago='Prueba',
 )
 
+# Saldo
+saldo = client.saldos.consulta(cuenta='646456789123456789')
+
+# Ordenes - enviadas
+enviadas = client.ordenes.consulta_enviadas() # fecha_operacion es día de hoy
+
+# Ordenes - recibidas
+recibidas = client.ordenes.consulta_recibidas(
+    fecha_operacion=datetime.date(2020, 4, 20)
+)
+
+# Orden - consulta por clave rastreo
+orden = client.ordenes.consulta_clave_rastreo(
+    claveRastreo='CR1234567890',
+    institucionOperante=90646,
+    fechaOperacion=datetime.date(2020, 4, 20)
+)
+
 cuenta.baja()
 ```
