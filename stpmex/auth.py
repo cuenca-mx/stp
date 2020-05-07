@@ -59,9 +59,9 @@ def join_fields(obj: 'Resource', fieldnames: List[str]) -> bytes:  # noqa: F821
         elif isinstance(value, Enum) and value:
             value = value.value
         joined_fields.append(str(value or ''))
-    return ('||' + '|'.join(joined_fields) + '||').encode('utf-8')
+    return '||' + '|'.join(joined_fields) + '||'
 
 
-def compute_signature(pkey: crypto.PKey, text: bytes) -> str:
-    signature = crypto.sign(pkey, text, SIGN_DIGEST)
+def compute_signature(pkey: crypto.PKey, text: str) -> str:
+    signature = crypto.sign(pkey, text.encode('utf-8'), SIGN_DIGEST)
     return b64encode(signature).decode('ascii')

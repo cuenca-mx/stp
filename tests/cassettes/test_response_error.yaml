@@ -60,4 +60,189 @@ interactions:
     status:
       code: 200
       message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"El tipo de cuenta 3 es invalido\",\"id\":-11}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"Error validando la firma\",\"id\": 0}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"La clave de rastreo {foo123} para la fecha {20200314} de la institucion {123} ya fue utilizada\",\"id\": -1}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"Orden sin cuenta ordenante. Se rechaza por PLD\",\"id\": -200}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"unknown code\",\"id\": 9999999}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"descripcion":"unknown code","id":999999}'
+    headers:
+      Content-Length:
+      - '53'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
 version: 1

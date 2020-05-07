@@ -1,9 +1,11 @@
+import datetime as dt
 import time
 from typing import Any, Dict
 
 import pytest
 
 from stpmex import Client
+from stpmex.exc import NoOrdenesEncontradas
 from stpmex.resources import Orden
 from stpmex.types import TipoCuenta
 
@@ -28,6 +30,57 @@ def test_tipoCuentaBeneficiario(cuenta: str, tipo: TipoCuenta):
     assert Orden.get_tipo_cuenta(cuenta) == tipo
 
 
-# def test_invalid_cuentaBeneficiario(orden: Orden):
-#     with pytest.raises(ValueError):
-#         Orden.get_tipo_cuenta('123')
+@pytest.mark.vcr
+def test_consulta_ordenes_enviadas(client):
+    enviadas = client.ordenes.consulta_enviadas()
+    assert len(enviadas) > 0
+
+
+@pytest.mark.vcr
+def test_consulta_ordenes_recibidas(client):
+    recibidas = client.ordenes.consulta_recibidas()
+    assert len(recibidas) > 0
+
+
+@pytest.mark.vcr
+def test_consulta_ordenes_enviadas_con_fecha(client):
+    enviadas = client.ordenes.consulta_enviadas(dt.date(2020, 4, 20))
+    assert len(enviadas) > 0
+
+
+@pytest.mark.vcr
+def test_consulta_ordenes_enviadas_con_fecha_sin_resultados(client):
+    enviadas = client.ordenes.consulta_enviadas(dt.date(2021, 4, 20))
+    assert len(enviadas) == 0
+
+
+@pytest.mark.vcr
+def test_consulta_orden_por_clave_rastreo(client):
+    orden = client.ordenes.consulta_clave_rastreo(
+        'CR1564969083', 90646, dt.date(2020, 4, 20)
+    )
+    assert orden.claveRastreo == 'CR1564969083'
+
+
+@pytest.mark.vcr
+def test_consulta_orden_por_clave_rastreo_recibida(client):
+    orden = client.ordenes.consulta_clave_rastreo(
+        'CR1564969083', 40072, dt.date(2020, 4, 20)
+    )
+    assert orden.claveRastreo == 'CR1564969083'
+
+
+@pytest.mark.vcr
+def test_consulta_orden_sin_resultado(client):
+    with pytest.raises(NoOrdenesEncontradas):
+        client.ordenes.consulta_clave_rastreo(
+            'does not exist', 90646, dt.date(2020, 4, 20)
+        )
+
+
+@pytest.mark.vcr
+def test_consulta_orden_sin_resultado_recibida(client):
+    with pytest.raises(NoOrdenesEncontradas):
+        client.ordenes.consulta_clave_rastreo(
+            'does not exist', 40072, dt.date(2020, 4, 20)
+        )

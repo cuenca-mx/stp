@@ -1,6 +1,3 @@
-from pydantic.errors import PydanticValueError
-
-
 class StpmexException(Exception):
     def __init__(self, **kwargs):
         for attr, value in kwargs.items():
@@ -27,11 +24,29 @@ class InvalidPassphrase(StpmexException):
     """El passphrase es incorrecto"""
 
 
-class BankCodeValidationError(PydanticValueError):
-    code = 'clabe.bank_code'
-    msg_template = 'código de banco no es válido'
+class InvalidAccountType(StpmexException):
+    """Tipo de cuenta inválida"""
 
 
-class ClabeControlDigitValidationError(PydanticValueError):
-    code = 'clabe.control_digit'
-    msg_template = 'clabe dígito de control no es válido'
+class SignatureValidationError(StpmexException):
+    """Error validando la firma"""
+
+
+class InvalidRfcOrCurp(StpmexException):
+    """RFC o CURP inválido"""
+
+
+class ClaveRastreoAlreadyInUse(StpmexException):
+    """La clave de rastreo es repetida"""
+
+
+class PldRejected(StpmexException):
+    """'Orden sin cuenta ordenante. Se rechaza por PLD"""
+
+
+class NoServiceResponse(StpmexException):
+    """No se recibió respuesta del servicio"""
+
+
+class NoOrdenesEncontradas(StpmexException):
+    """No se encontraron ordenes"""

@@ -1,11 +1,10 @@
 import re
+import unicodedata
 from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
-import luhnmod10
-from clabe import BANK_NAMES, BANKS, compute_control_digit
-from pydantic import StrictStr, constr
-from pydantic.errors import LuhnValidationError, NotDigitError
+from clabe.types import validate_digits
+from pydantic import ConstrainedStr, StrictStr, constr
 from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
@@ -13,20 +12,73 @@ from pydantic.validators import (
     str_validator,
 )
 
-from . import exc
-
 if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
 
 
-def truncated_str(length) -> Type[str]:
-    return constr(strip_whitespace=True, min_length=1, curtail_length=length)
+def unicode_to_ascii(unicode: str) -> str:
+    v = unicodedata.normalize('NFKD', unicode).encode('ascii', 'ignore')
+    return v.decode('ascii')
+
+
+class AsciiStr(ConstrainedStr):
+    @classmethod
+    def validate(cls, value: str) -> str:
+        value = unicode_to_ascii(value).strip()
+        return super().validate(value)
+
+
+def truncated_str(length: int) -> Type[str]:
+    namespace = dict(
+        strip_whitespace=True, min_length=1, curtail_length=length
+    )
+    return type('TruncatedStrValue', (AsciiStr,), namespace)
 
 
 def digits(
     min_length: Optional[int] = None, max_length: Optional[int] = None
 ) -> Type[str]:
     return constr(regex=r'^\d+$', min_length=min_length, max_length=max_length)
+
+
+class Estado(str, Enum):
+    """
+    Based on: https://stpmex.zendesk.com/hc/es/articles/360040200791
+    """
+
+    capturada = 'C'
+    pendiente_liberar = 'PL'
+    liberada = 'L'
+    pendiente_autorizar = 'PA'
+    autorizada = 'A'
+    enviada = 'E'
+    liquidada = 'LQ'
+    cancelada = 'CN'
+    traspaso_liberado = 'TL'
+    traspaso_capturado = 'TC'
+    traspaso_autorizado = 'TA'
+    traspaso_liquidado = 'TLQ'
+    traspaso_cancelado = 'TCL'
+    recibida = 'R'
+    por_devolver = 'XD'
+    devuelta = 'D'
+    por_enviar_confirmacion = 'CXO'
+    confirmacion_enviada = 'CCE'
+    confirmada = 'CCO'
+    confirmacion_rechazada = 'CCR'
+    por_cancelar = 'XC'
+    cancelada_local = 'CL'
+    cancelada_rechazada = 'CR'
+    rechazada_local = 'RL'
+    cancelada_adapter = 'CA'
+    rechazada_adapter = 'RA'
+    enviada_adapter = 'EA'
+    rechazada_banxico = 'RB'
+    eliminada = 'EL'
+    por_retornar = 'XR'
+    retornada = 'RE'
+    exportacion_poa = 'EP'
+    exportacion_cep = 'EC'
 
 
 class Prioridad(int, Enum):
@@ -92,47 +144,9 @@ class EntidadFederativa(int, Enum):
     ZS = 32  # Zacatecas
 
 
-def validate_digits(v: str) -> str:
-    if not v.isdigit():
-        raise NotDigitError
-    return v
-
-
-class Clabe(str):
-    """
-    Based on: https://es.wikipedia.org/wiki/CLABE
-    """
-
-    strip_whitespace: ClassVar[bool] = True
-    min_length: ClassVar[int] = 18
-    max_length: ClassVar[int] = 18
-
-    def __init__(self, clabe: str):
-        self.bank_code_3_digits = clabe[:3]
-        self.bank_code_5_digits = BANKS[clabe[:3]]
-        self.bank_name = BANK_NAMES[self.bank_code_5_digits]
-
-    @classmethod
-    def __get_validators__(cls) -> 'CallableGenerator':
-        yield str_validator
-        yield constr_strip_whitespace
-        yield constr_length_validator
-        yield validate_digits
-        yield cls.validate_bank_code
-        yield cls.validate_control_digit
-        yield cls
-
-    @classmethod
-    def validate_bank_code(cls, clabe: str) -> str:
-        if clabe[:3] not in BANKS.keys():
-            raise exc.BankCodeValidationError
-        return clabe
-
-    @classmethod
-    def validate_control_digit(cls, clabe: str) -> str:
-        if clabe[-1] != compute_control_digit(clabe):
-            raise exc.ClabeControlDigitValidationError
-        return clabe
+class TipoOperacion(str, Enum):
+    enviada = 'E'
+    recibida = 'R'
 
 
 class MxPhoneNumber(str):
@@ -151,9 +165,3 @@ class MxPhoneNumber(str):
 class PaymentCardNumber(PydanticPaymentCardNumber):
     min_length: ClassVar[int] = 15
     max_length: ClassVar[int] = 16
-
-    @classmethod
-    def validate_luhn_check_digit(cls, card_number: str) -> str:
-        if not luhnmod10.valid(card_number):
-            raise LuhnValidationError
-        return card_number
