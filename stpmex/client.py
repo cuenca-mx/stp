@@ -44,7 +44,9 @@ class Client:
         demo: bool = False,
         base_url: str = None,
         soap_url: str = None,
+        timeout: tuple = None,
     ):
+        self.timeout = timeout
         self.session = Session()
         self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
@@ -89,7 +91,9 @@ class Client:
         self, method: str, endpoint: str, data: Dict[str, Any], **kwargs: Any
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
-        response = self.session.request(method, url, json=data, **kwargs,)
+        response = self.session.request(
+            method, url, json=data, timeout=self.timeout, **kwargs
+        )
         self._check_response(response)
         resultado = response.json()
         if 'resultado' in resultado:  # Some responses are enveloped
