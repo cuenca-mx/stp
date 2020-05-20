@@ -47,6 +47,12 @@ def test_truncate_nombre_beneficiario():
     assert len(orden.nombreBeneficiario) == 39
 
 
+def test_leading_and_trailing_spaces_nombre_beneficiario():
+    nombre = f' {"x" * 38} {"x" * 30} '
+    orden = create_orden(nombreOrdenante=nombre)
+    assert orden.nombreOrdenante == "x" * 38
+
+
 def test_invalid_clabe():
     invalid_clabe = '072691004495711490'
     assert not clabe.validate_clabe(invalid_clabe)
