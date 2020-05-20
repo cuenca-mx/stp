@@ -1,1 +1,1 @@
-__version__ = '3.4.0'  # pragma: no cover
+__version__ = '3.4.1'  # pragma: no cover
