@@ -305,7 +305,6 @@ interactions:
     status:
       code: 200
       message: OK
-#####################################################################
 - request:
     body: '{"firma": ""}'
     headers:
