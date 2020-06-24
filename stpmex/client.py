@@ -119,19 +119,21 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         raise NoServiceResponse(**resp['resultado'])
     elif id == 0 and error == 'Error validando la firma':
         raise SignatureValidationError(**resp['resultado'])
-    elif id == -1:
+    elif id == -1 and re.match(
+        r'La clave de rastreo .* ya fue utilizada', error
+    ):
         raise ClaveRastreoAlreadyInUse(**resp['resultado'])
-    elif id == -11:
+    elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):
         raise InvalidAccountType(**resp['resultado'])
-    elif id == -22:
+    elif id == -22 and 'no coincide para la institucion operante' in error:
         raise BankCodeClabeMismatch(**resp['resultado'])
-    elif id == -24:
+    elif id == -24 and re.match(r'Cuenta {\d+} - {MISMA_CUENTA}', error):
         raise SameAccount(**resp['resultado'])
-    elif id == -34:
+    elif id == -34 and 'Clave rastreo invalida' in error:
         raise InvalidTrackingKey(**resp['resultado'])
     elif id == -100 and error.startswith('No se encontr'):
         raise NoOrdenesEncontradas
-    elif id == -200:
+    elif id == -200 and 'Se rechaza por PLD' in error:
         raise PldRejected(**resp['resultado'])
     else:
         raise StpmexException(**resp['resultado'])

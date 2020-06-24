@@ -357,7 +357,7 @@ interactions:
   response:
     body:
       string: "{\"resultado\":{\"descripcionError\":
-      \"Cuenta {6461801570XXXXXXXX} - {MISMA_CUENTA}\",\"id\": -24}}"
+      \"Cuenta {646180157000000000} - {MISMA_CUENTA}\",\"id\": -24}}"
     headers:
       Content-Length:
       - '81'
