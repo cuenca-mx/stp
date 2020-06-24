@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'pyopenssl==19.1.0',
+    'cryptography==2.9.2',
     'clabe==1.2.0',
     'pydantic==1.5.1',
     'dataclasses>=0.6;python_version<"3.7"',
