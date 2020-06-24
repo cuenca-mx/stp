@@ -5,21 +5,21 @@ from setuptools import find_packages, setup
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'pyopenssl>=18.0.0,<18.1.0',
-    'clabe>=1.0.0,<1.1.0',
-    'pydantic>=1.4,<2.0',
+    'pyopenssl==19.1.0',
+    'clabe==1.2.0',
+    'pydantic==1.5.1',
     'dataclasses>=0.6;python_version<"3.7"',
-    'requests>=2.22.0,<3.0',
+    'requests==2.24.0',
 ]
 
 test_requires = [
-    'pytest',
-    'pytest-vcr',
-    'pytest-cov',
-    'black>=19.10b0,<20.0',
-    'isort>=4.3.21,<4.4',
-    'flake8<3.8.0',
-    'mypy>=0.770',
+    'pytest==5.4.3',
+    'pytest-vcr==1.0.2',
+    'pytest-cov==2.10.0',
+    'black==19.10b0',
+    'isort[pipfile]==4.3.21',
+    'flake8==3.8.3',
+    'mypy==0.782',
 ]
 
 with open('README.md', 'r') as f:
