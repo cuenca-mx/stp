@@ -1,6 +1,8 @@
 from typing import Any, ClassVar, Dict, List, Union
 
-from OpenSSL import crypto
+from cryptography.exceptions import InvalidSignature
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import serialization
 from requests import Response, Session
 
 from .exc import (
@@ -54,12 +56,12 @@ class Client:
             self.soap_url = PROD_SOAP_URL
             self.session.verify = True
         try:
-            self.pkey = crypto.load_privatekey(
-                crypto.FILETYPE_PEM,
-                priv_key,
+            self.pkey = serialization.load_pem_private_key(
+                priv_key.encode('utf-8'),
                 priv_key_passphrase.encode('ascii'),
+                default_backend()
             )
-        except crypto.Error:
+        except InvalidSignature:
             raise InvalidPassphrase
         Resource.empresa = empresa
         Resource._client = self
