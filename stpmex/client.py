@@ -1,16 +1,22 @@
+import re
 from typing import Any, ClassVar, Dict, List, Union
 
 from OpenSSL import crypto
 from requests import Response, Session
 
 from .exc import (
+    BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
+    DuplicatedAccount,
     InvalidAccountType,
+    InvalidField,
     InvalidPassphrase,
     InvalidRfcOrCurp,
+    InvalidTrackingKey,
     NoOrdenesEncontradas,
     NoServiceResponse,
     PldRejected,
+    SameAccount,
     SignatureValidationError,
     StpmexException,
 )
@@ -99,9 +105,8 @@ class Client:
                     if 'descripcionError' in resp['resultado']:
                         id = resp['resultado']['id']
                         error = resp['resultado']['descripcionError']
-                        if id == -11:
-                            raise InvalidAccountType(**resp['resultado'])
-                        elif (
+
+                        if (
                             id == 0
                             and error == 'No se recibió respuesta del servicio'
                         ):
@@ -110,6 +115,14 @@ class Client:
                             raise SignatureValidationError(**resp['resultado'])
                         elif id == -1:
                             raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+                        elif id == -11:
+                            raise InvalidAccountType(**resp['resultado'])
+                        elif id == -22:
+                            raise BankCodeClabeMismatch(**resp['resultado'])
+                        elif id == -24:
+                            raise SameAccount(**resp['resultado'])
+                        elif id == -34:
+                            raise InvalidTrackingKey(**resp['resultado'])
                         elif id == -100 and error.startswith('No se encontr'):
                             raise NoOrdenesEncontradas
                         elif id == -200:
@@ -119,8 +132,15 @@ class Client:
                 except KeyError:
                     if 'descripcion' in resp and resp['descripcion']:
                         id = resp['id']
-                        if id == 1:
+                        desc = resp['descripcion']
+                        if id == 1 and desc == 'Cuenta Duplicada':
+                            raise DuplicatedAccount(**resp)
+                        elif id == 1 and desc == 'rfc/curp invalido':
                             raise InvalidRfcOrCurp(**resp)
+                        elif id == 1 and re.match(
+                            r'El campo \w+ es invalido', desc
+                        ):
+                            raise InvalidField(**resp)
                         else:
                             raise StpmexException(**resp)
         response.raise_for_status()
