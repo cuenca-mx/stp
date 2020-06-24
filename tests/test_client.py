@@ -3,12 +3,17 @@ from requests import HTTPError
 
 from stpmex.client import Client
 from stpmex.exc import (
+    BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
+    DuplicatedAccount,
     InvalidAccountType,
+    InvalidField,
     InvalidPassphrase,
     InvalidRfcOrCurp,
+    InvalidTrackingKey,
     NoServiceResponse,
     PldRejected,
+    SameAccount,
     SignatureValidationError,
     StpmexException,
 )
@@ -114,5 +119,45 @@ def test_response_error(client):
     exc = exc_info.value
     assert type(exc) is StpmexException
     assert exc.descripcion
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/cuentaModule/fisica', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is InvalidField
+    assert exc.descripcion
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/cuentaModule/fisica', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is DuplicatedAccount
+    assert exc.descripcion
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is BankCodeClabeMismatch
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is SameAccount
+    assert exc.descripcionError
+    assert repr(exc)
+    assert str(exc)
+
+    with pytest.raises(StpmexException) as exc_info:
+        client.put('/ordenPago/registra', dict(firma=''))
+    exc = exc_info.value
+    assert type(exc) is InvalidTrackingKey
+    assert exc.descripcionError
     assert repr(exc)
     assert str(exc)

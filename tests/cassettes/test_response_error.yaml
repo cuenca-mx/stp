@@ -49,7 +49,7 @@ interactions:
     uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
   response:
     body:
-      string: '{"descripcion":"Firma Invalida, cuenta: null","id":1}'
+      string: '{"descripcion":"rfc/curp invalido","id":1}'
     headers:
       Content-Length:
       - '53'
@@ -238,6 +238,160 @@ interactions:
     headers:
       Content-Length:
       - '53'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"descripcion":"El campo NOMBRE es invalido","id":1}'
+    headers:
+      Content-Length:
+      - '53'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"descripcion":"Cuenta Duplicada","id":1}'
+    headers:
+      Content-Length:
+      - '53'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+#####################################################################
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"La cuenta CLABE {6461801570...} no coincide para la institucion operante {40072}\",\"id\": -22}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"Cuenta {6461801570XXXXXXXX} - {MISMA_CUENTA}\",\"id\": -24}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"firma": ""}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '13'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.0.0.dev1
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"Clave rastreo invalida : ABC123\",\"id\": -34}}"
+    headers:
+      Content-Length:
+      - '81'
       Content-Type:
       - application/json
       Date:
