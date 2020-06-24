@@ -59,7 +59,7 @@ class Client:
             self.pkey = serialization.load_pem_private_key(
                 priv_key.encode('utf-8'),
                 priv_key_passphrase.encode('ascii'),
-                default_backend()
+                default_backend(),
             )
         except InvalidSignature:
             raise InvalidPassphrase
