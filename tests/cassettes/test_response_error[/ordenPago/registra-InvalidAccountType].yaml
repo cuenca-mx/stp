@@ -1,0 +1,33 @@
+interactions:
+- request:
+    body: '{"firma": "{hola}"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '19'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.4.3
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+  response:
+    body:
+      string: "{\"resultado\":{\"descripcionError\":
+      \"El tipo de cuenta 3 es invalido\",\"id\":-11}}"
+    headers:
+      Content-Length:
+      - '81'
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 Dec 2019 03:05:21 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -54,110 +54,137 @@ def test_incorrect_passphrase():
         Client('TAMIZI', PKEY, 'incorrect')
 
 
+@pytest.mark.parametrize(
+    'endpoint,expected_exc',
+    [
+        ('/ordenPago/registra', NoServiceResponse),
+        ('/ordenPago/registra', InvalidAccountType),
+        ('/ordenPago/registra', SignatureValidationError),
+        ('/ordenPago/registra', ClaveRastreoAlreadyInUse),
+        ('/ordenPago/registra', PldRejected),
+        ('/ordenPago/registra', BankCodeClabeMismatch),
+        ('/ordenPago/registra', SameAccount),
+        ('/ordenPago/registra', InvalidTrackingKey),
+        ('/ordenPago/registra', StpmexException),
+        ('/cuentaModule/fisica', InvalidRfcOrCurp),
+        ('/cuentaModule/fisica', InvalidField),
+        ('/cuentaModule/fisica', DuplicatedAccount),
+        ('/cuentaModule/fisica', StpmexException),
+    ],
+)
 @pytest.mark.vcr
-def test_response_error(client):
+def test_response_error(client, endpoint: str, expected_exc: type):
     with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma='{hola}'))
+        client.put(endpoint, dict(firma='{hola}'))
     exc = exc_info.value
-    assert type(exc) is NoServiceResponse
-    assert exc.descripcionError
+    assert type(exc) is expected_exc
     assert repr(exc)
     assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidRfcOrCurp
-    assert exc.descripcion
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidAccountType
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is SignatureValidationError
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is ClaveRastreoAlreadyInUse
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is PldRejected
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    # Excepción genérica para códigos de error desconocidos
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is StpmexException
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    # Excepción genérica para códigos de error desconocidos
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is StpmexException
-    assert exc.descripcion
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidField
-    assert exc.descripcion
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is DuplicatedAccount
-    assert exc.descripcion
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is BankCodeClabeMismatch
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is SameAccount
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidTrackingKey
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
+    #
+    #
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma='{hola}'))
+    # exc = exc_info.value
+    # assert type(exc) is NoServiceResponse
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/cuentaModule/fisica', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is InvalidRfcOrCurp
+    # assert exc.descripcion
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is InvalidAccountType
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is SignatureValidationError
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is ClaveRastreoAlreadyInUse
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is PldRejected
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # # Excepción genérica para códigos de error desconocidos
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is StpmexException
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # # Excepción genérica para códigos de error desconocidos
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/cuentaModule/fisica', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is StpmexException
+    # assert exc.descripcion
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/cuentaModule/fisica', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is InvalidField
+    # assert exc.descripcion
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/cuentaModule/fisica', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is DuplicatedAccount
+    # assert exc.descripcion
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is BankCodeClabeMismatch
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is SameAccount
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
+    #
+    # with pytest.raises(StpmexException) as exc_info:
+    #     client.put('/ordenPago/registra', dict(firma=''))
+    # exc = exc_info.value
+    # assert type(exc) is InvalidTrackingKey
+    # assert exc.descripcionError
+    # assert repr(exc)
+    # assert str(exc)
