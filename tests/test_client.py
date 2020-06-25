@@ -11,6 +11,7 @@ from stpmex.exc import (
     InvalidPassphrase,
     InvalidRfcOrCurp,
     InvalidTrackingKey,
+    MandatoryField,
     NoServiceResponse,
     PldRejected,
     SameAccount,
@@ -40,9 +41,8 @@ W4Zo1Aj8G7FaoDm7XhkLGDwVjf0Ua1O4YHRpSgVSkrXeBgW7P4Tc+53nFns3rwxs
 uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 -----END ENCRYPTED PRIVATE KEY-----"""
 
-
-REGISTRA = '/ordenPago/registra'
-FISICA = '/cuentaModule/fisica'
+ORDEN_PAGO_ENDPOINT = '/ordenPago/registra'
+CUENTA_ENDPOINT = '/cuentaModule/fisica'
 
 
 def _desc_error(desc, id):
@@ -63,103 +63,96 @@ def test_incorrect_passphrase():
 
 
 @pytest.mark.parametrize(
-    'client_exc,endpoint,expected_exc',
+    'client_mock,endpoint,expected_exc',
     [
         (
-            (REGISTRA, _desc_error('No se recibió respuesta del servicio', 0)),
-            REGISTRA,
+            _desc_error('No se recibió respuesta del servicio', 0),
+            ORDEN_PAGO_ENDPOINT,
             NoServiceResponse,
         ),
         (
-            (FISICA, _desc_error('El tipo de cuenta 3 es invalido', -11)),
-            FISICA,
-            InvalidAccountType,
-        ),
-        (
-            (FISICA, _desc_error('Error validando la firma', 0)),
-            FISICA,
+            _desc_error('Error validando la firma', 0),
+            ORDEN_PAGO_ENDPOINT,
             SignatureValidationError,
         ),
         (
-            (
-                FISICA,
-                _desc_error(
-                    'La clave de rastreo {foo123} para la fecha {20200314} de '
-                    'la institucion {123} ya fue utilizada',
-                    -1,
-                ),
+            _desc_error('El campo &lt;CONCEPTO PAGO> es obligatorio', 0),
+            ORDEN_PAGO_ENDPOINT,
+            MandatoryField,
+        ),
+        (
+            _desc_error(
+                'La clave de rastreo {foo123} para la fecha {20200314} de '
+                'la institucion {123} ya fue utilizada',
+                -1,
             ),
-            FISICA,
+            ORDEN_PAGO_ENDPOINT,
             ClaveRastreoAlreadyInUse,
         ),
         (
-            (
-                FISICA,
-                _desc_error(
-                    'Orden sin cuenta ordenante. Se rechaza por PLD', -200
-                ),
-            ),
-            FISICA,
-            PldRejected,
+            _desc_error('El tipo de cuenta 3 es invalido', -11),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidAccountType,
         ),
         (
-            (
-                FISICA,
-                _desc_error(
-                    'La cuenta CLABE {6461801570} no coincide para la '
-                    'institucion operante {40072}',
-                    -22,
-                ),
+            _desc_error(
+                'La cuenta CLABE {6461801570} no coincide para la '
+                'institucion operante {40072}',
+                -22,
             ),
-            FISICA,
+            ORDEN_PAGO_ENDPOINT,
             BankCodeClabeMismatch,
         ),
         (
-            (
-                FISICA,
-                _desc_error(
-                    'Cuenta {646180157000000000} - {MISMA_CUENTA}', -24
-                ),
-            ),
-            FISICA,
+            _desc_error('Cuenta {646180157000000000} - {MISMA_CUENTA}', -24),
+            ORDEN_PAGO_ENDPOINT,
             SameAccount,
         ),
         (
-            (FISICA, _desc_error('Clave rastreo invalida : ABC123', -34)),
-            FISICA,
+            _desc_error('Clave rastreo invalida : ABC123', -34),
+            ORDEN_PAGO_ENDPOINT,
             InvalidTrackingKey,
         ),
         (
-            (FISICA, _desc_error('unknown code', 9999999)),
-            FISICA,
+            _desc_error(
+                'Orden sin cuenta ordenante. Se rechaza por PLD', -200
+            ),
+            ORDEN_PAGO_ENDPOINT,
+            PldRejected,
+        ),
+        (
+            _desc_error('unknown code', 9999999),
+            ORDEN_PAGO_ENDPOINT,
             StpmexException,
         ),
         (
-            (REGISTRA, dict(descripcion='Cuenta Duplicada', id=1)),
-            REGISTRA,
+            dict(descripcion='Cuenta Duplicada', id=1),
+            CUENTA_ENDPOINT,
             DuplicatedAccount,
         ),
         (
-            (REGISTRA, dict(descripcion='El campo NOMBRE es invalido', id=1)),
-            REGISTRA,
+            dict(descripcion='El campo NOMBRE es invalido', id=1),
+            CUENTA_ENDPOINT,
             InvalidField,
         ),
         (
-            (REGISTRA, dict(descripcion='rfc/curp invalido', id=1)),
-            REGISTRA,
+            dict(descripcion='rfc/curp invalido', id=1),
+            CUENTA_ENDPOINT,
             InvalidRfcOrCurp,
         ),
         (
-            (REGISTRA, dict(descripcion='unknown code', id=999999)),
-            REGISTRA,
+            dict(descripcion='unknown code', id=999999),
+            CUENTA_ENDPOINT,
             StpmexException,
         ),
     ],
-    indirect=['client_exc'],
+    indirect=['client_mock'],
 )
-def test_errors(client_exc: Client, endpoint: str, expected_exc: type) -> None:
+def test_errors(
+    client_mock: Client, endpoint: str, expected_exc: type
+) -> None:
     with pytest.raises(StpmexException) as exc_info:
-        client_exc.put(endpoint, dict(firma='{hola}'))
+        client_mock.put(endpoint, dict(firma='{hola}'))
     exc = exc_info.value
     assert type(exc) is expected_exc
     assert repr(exc)

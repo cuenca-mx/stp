@@ -70,3 +70,7 @@ class DuplicatedAccount(StpmexException):
 
 class InvalidField(StpmexException):
     """Campo inválido"""
+
+
+class MandatoryField(StpmexException):
+    """El campo X es obligatorio"""

@@ -38,17 +38,14 @@ def client():
 
 
 @pytest.fixture
-def client_exc(request):
+def client_mock(request):
     empresa = 'TAMIZI'
     pkey_passphrase = '12345678'
 
-    endpoint, resp_json = request.param
+    resp_json = request.param
 
     with requests_mock.mock() as m:
-        m.put(
-            'https://demo.stpmex.com:7024/speidemows/rest' + endpoint,
-            json=resp_json,
-        )
+        m.put(requests_mock.ANY, json=resp_json)
         yield Client(empresa, PKEY, pkey_passphrase, demo=True)
 
 

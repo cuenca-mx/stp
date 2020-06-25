@@ -13,6 +13,7 @@ from .exc import (
     InvalidPassphrase,
     InvalidRfcOrCurp,
     InvalidTrackingKey,
+    MandatoryField,
     NoOrdenesEncontradas,
     NoServiceResponse,
     PldRejected,
@@ -119,8 +120,10 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         raise NoServiceResponse(**resp['resultado'])
     elif id == 0 and error == 'Error validando la firma':
         raise SignatureValidationError(**resp['resultado'])
+    elif id == 0 and re.match(r'El campo .+ es obligatorio', error):
+        raise MandatoryField(**resp['resultado'])
     elif id == -1 and re.match(
-        r'La clave de rastreo .* ya fue utilizada', error
+        r'La clave de rastreo .+ ya fue utilizada', error
     ):
         raise ClaveRastreoAlreadyInUse(**resp['resultado'])
     elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):
