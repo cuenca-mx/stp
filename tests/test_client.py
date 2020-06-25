@@ -41,6 +41,14 @@ uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 -----END ENCRYPTED PRIVATE KEY-----"""
 
 
+REGISTRA = '/ordenPago/registra'
+FISICA = '/cuentaModule/fisica'
+
+
+def _desc_error(desc, id):
+    return dict(resultado=dict(descripcionError=desc, id=id))
+
+
 @pytest.mark.vcr
 def test_forbidden_without_vpn(client):
     client = Client('TAMIZI', PKEY, '12345678', demo=False)
@@ -54,62 +62,31 @@ def test_incorrect_passphrase():
         Client('TAMIZI', PKEY, 'incorrect')
 
 
-REGISTRA = '/ordenPago/registra'
-FISICA = '/cuentaModule/fisica'
-
-
 @pytest.mark.parametrize(
     'client_exc,endpoint,expected_exc',
     [
         (
-            (
-                REGISTRA,
-                dict(
-                    resultado=dict(
-                        descripcionError='No se recibió respuesta '
-                        'del servicio',
-                        id=0,
-                    )
-                ),
-            ),
+            (REGISTRA, _desc_error('No se recibió respuesta del servicio', 0)),
             REGISTRA,
             NoServiceResponse,
         ),
         (
-            (
-                FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='El tipo de cuenta 3 es invalido',
-                        id=-11,
-                    )
-                ),
-            ),
+            (FISICA, _desc_error('El tipo de cuenta 3 es invalido', -11)),
             FISICA,
             InvalidAccountType,
         ),
         (
-            (
-                FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='Error validando la firma', id=0,
-                    )
-                ),
-            ),
+            (FISICA, _desc_error('Error validando la firma', 0)),
             FISICA,
             SignatureValidationError,
         ),
         (
             (
                 FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='La clave de rastreo {foo123} '
-                        'para la fecha {20200314} de la '
-                        'institucion {123} ya fue utilizada',
-                        id=-1,
-                    )
+                _desc_error(
+                    'La clave de rastreo {foo123} para la fecha {20200314} de '
+                    'la institucion {123} ya fue utilizada',
+                    -1,
                 ),
             ),
             FISICA,
@@ -118,12 +95,8 @@ FISICA = '/cuentaModule/fisica'
         (
             (
                 FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='Orden sin cuenta ordenante. '
-                        'Se rechaza por PLD',
-                        id=-200,
-                    )
+                _desc_error(
+                    'Orden sin cuenta ordenante. Se rechaza por PLD', -200
                 ),
             ),
             FISICA,
@@ -132,13 +105,10 @@ FISICA = '/cuentaModule/fisica'
         (
             (
                 FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='La cuenta CLABE {6461801570} '
-                        'no coincide para la institucion '
-                        'operante {40072}',
-                        id=-22,
-                    )
+                _desc_error(
+                    'La cuenta CLABE {6461801570} no coincide para la '
+                    'institucion operante {40072}',
+                    -22,
                 ),
             ),
             FISICA,
@@ -147,39 +117,20 @@ FISICA = '/cuentaModule/fisica'
         (
             (
                 FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='Cuenta {646180157000000000} - '
-                        '{MISMA_CUENTA}',
-                        id=-24,
-                    )
+                _desc_error(
+                    'Cuenta {646180157000000000} - {MISMA_CUENTA}', -24
                 ),
             ),
             FISICA,
             SameAccount,
         ),
         (
-            (
-                FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='Clave rastreo invalida : ABC123',
-                        id=-34,
-                    )
-                ),
-            ),
+            (FISICA, _desc_error('Clave rastreo invalida : ABC123', -34)),
             FISICA,
             InvalidTrackingKey,
         ),
         (
-            (
-                FISICA,
-                dict(
-                    resultado=dict(
-                        descripcionError='unknown code', id=9999999,
-                    )
-                ),
-            ),
+            (FISICA, _desc_error('unknown code', 9999999)),
             FISICA,
             StpmexException,
         ),
