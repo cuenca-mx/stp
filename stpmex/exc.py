@@ -74,3 +74,7 @@ class InvalidField(StpmexException):
 
 class MandatoryField(StpmexException):
     """El campo X es obligatorio"""
+
+
+class InvalidInstitution(StpmexException):
+    """La Institucion no es valida"""

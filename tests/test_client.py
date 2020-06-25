@@ -8,6 +8,7 @@ from stpmex.exc import (
     DuplicatedAccount,
     InvalidAccountType,
     InvalidField,
+    InvalidInstitution,
     InvalidPassphrase,
     InvalidRfcOrCurp,
     InvalidTrackingKey,
@@ -79,6 +80,11 @@ def test_incorrect_passphrase():
             _desc_error('El campo &lt;CONCEPTO PAGO> es obligatorio', 0),
             ORDEN_PAGO_ENDPOINT,
             MandatoryField,
+        ),
+        (
+            _desc_error('La Institucion 90679 no es valida', -9),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidInstitution,
         ),
         (
             _desc_error(

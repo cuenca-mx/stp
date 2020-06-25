@@ -10,6 +10,7 @@ from .exc import (
     DuplicatedAccount,
     InvalidAccountType,
     InvalidField,
+    InvalidInstitution,
     InvalidPassphrase,
     InvalidRfcOrCurp,
     InvalidTrackingKey,
@@ -126,6 +127,8 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         r'La clave de rastreo .+ ya fue utilizada', error
     ):
         raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+    elif id == -9 and re.match(r'La Institucion \d+ no es valida', error):
+        raise InvalidInstitution(**resp['resultado'])
     elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):
         raise InvalidAccountType(**resp['resultado'])
     elif id == -22 and 'no coincide para la institucion operante' in error:
