@@ -1,5 +1,6 @@
 from typing import Any, ClassVar, Dict, List, Union
 
+from cryptography.exceptions import UnsupportedAlgorithm
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import serialization
 from requests import Response, Session
@@ -60,7 +61,7 @@ class Client:
                 priv_key_passphrase.encode('ascii'),
                 default_backend(),
             )
-        except ValueError:
+        except (ValueError, TypeError, UnsupportedAlgorithm):
             raise InvalidPassphrase
         Resource.empresa = empresa
         Resource._client = self
