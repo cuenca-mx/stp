@@ -41,11 +41,9 @@ def client():
 def client_mock(request):
     empresa = 'TAMIZI'
     pkey_passphrase = '12345678'
-
-    resp_json = request.param
-
+    
     with requests_mock.mock() as m:
-        m.put(requests_mock.ANY, json=resp_json)
+        m.put(requests_mock.ANY, json=request.param)
         yield Client(empresa, PKEY, pkey_passphrase, demo=True)
 
 
