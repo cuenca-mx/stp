@@ -5,21 +5,21 @@ from setuptools import find_packages, setup
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'pyopenssl==19.1.0',
     'clabe==1.2.0',
-    'pydantic==1.5.1',
     'dataclasses>=0.6;python_version<"3.7"',
+    'pydantic==1.5.1',
+    'pyopenssl==19.1.0',
     'requests==2.24.0',
 ]
 
 test_requires = [
-    'pytest==5.4.3',
-    'pytest-vcr==1.0.2',
-    'pytest-cov==2.10.0',
     'black==19.10b0',
     'isort[pipfile]==4.3.21',
     'flake8==3.8.3',
     'mypy==0.782',
+    'pytest==5.4.3',
+    'pytest-vcr==1.0.2',
+    'pytest-cov==2.10.0',
     'requests-mock==1.8.0',
 ]
 
