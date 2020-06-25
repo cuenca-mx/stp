@@ -1,6 +1,7 @@
 import datetime as dt
 
 import pytest
+import requests_mock
 from clabe import generate_new_clabes
 
 from stpmex import Client
@@ -34,6 +35,21 @@ def client():
     empresa = 'TAMIZI'
     pkey_passphrase = '12345678'
     yield Client(empresa, PKEY, pkey_passphrase, demo=True)
+
+
+@pytest.fixture
+def client_exc(request):
+    empresa = 'TAMIZI'
+    pkey_passphrase = '12345678'
+
+    endpoint, resp_json = request.param
+
+    with requests_mock.mock() as m:
+        m.put(
+            'https://demo.stpmex.com:7024/speidemows/rest' + endpoint,
+            json=resp_json,
+        )
+        yield Client(empresa, PKEY, pkey_passphrase, demo=True)
 
 
 @pytest.fixture

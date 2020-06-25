@@ -54,28 +54,161 @@ def test_incorrect_passphrase():
         Client('TAMIZI', PKEY, 'incorrect')
 
 
+REGISTRA = '/ordenPago/registra'
+FISICA = '/cuentaModule/fisica'
+
+
 @pytest.mark.parametrize(
-    'endpoint,expected_exc',
+    'client_exc,endpoint,expected_exc',
     [
-        ('/ordenPago/registra', NoServiceResponse),
-        ('/ordenPago/registra', InvalidAccountType),
-        ('/ordenPago/registra', SignatureValidationError),
-        ('/ordenPago/registra', ClaveRastreoAlreadyInUse),
-        ('/ordenPago/registra', PldRejected),
-        ('/ordenPago/registra', BankCodeClabeMismatch),
-        ('/ordenPago/registra', SameAccount),
-        ('/ordenPago/registra', InvalidTrackingKey),
-        ('/ordenPago/registra', StpmexException),
-        ('/cuentaModule/fisica', InvalidRfcOrCurp),
-        ('/cuentaModule/fisica', InvalidField),
-        ('/cuentaModule/fisica', DuplicatedAccount),
-        ('/cuentaModule/fisica', StpmexException),
+        (
+            (
+                REGISTRA,
+                dict(
+                    resultado=dict(
+                        descripcionError='No se recibió respuesta '
+                        'del servicio',
+                        id=0,
+                    )
+                ),
+            ),
+            REGISTRA,
+            NoServiceResponse,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='El tipo de cuenta 3 es invalido',
+                        id=-11,
+                    )
+                ),
+            ),
+            FISICA,
+            InvalidAccountType,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='Error validando la firma', id=0,
+                    )
+                ),
+            ),
+            FISICA,
+            SignatureValidationError,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='La clave de rastreo {foo123} '
+                        'para la fecha {20200314} de la '
+                        'institucion {123} ya fue utilizada',
+                        id=-1,
+                    )
+                ),
+            ),
+            FISICA,
+            ClaveRastreoAlreadyInUse,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='Orden sin cuenta ordenante. '
+                        'Se rechaza por PLD',
+                        id=-200,
+                    )
+                ),
+            ),
+            FISICA,
+            PldRejected,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='La cuenta CLABE {6461801570} '
+                        'no coincide para la institucion '
+                        'operante {40072}',
+                        id=-22,
+                    )
+                ),
+            ),
+            FISICA,
+            BankCodeClabeMismatch,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='Cuenta {646180157000000000} - '
+                        '{MISMA_CUENTA}',
+                        id=-24,
+                    )
+                ),
+            ),
+            FISICA,
+            SameAccount,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='Clave rastreo invalida : ABC123',
+                        id=-34,
+                    )
+                ),
+            ),
+            FISICA,
+            InvalidTrackingKey,
+        ),
+        (
+            (
+                FISICA,
+                dict(
+                    resultado=dict(
+                        descripcionError='unknown code', id=9999999,
+                    )
+                ),
+            ),
+            FISICA,
+            StpmexException,
+        ),
+        (
+            (REGISTRA, dict(descripcion='Cuenta Duplicada', id=1)),
+            REGISTRA,
+            DuplicatedAccount,
+        ),
+        (
+            (REGISTRA, dict(descripcion='El campo NOMBRE es invalido', id=1)),
+            REGISTRA,
+            InvalidField,
+        ),
+        (
+            (REGISTRA, dict(descripcion='rfc/curp invalido', id=1)),
+            REGISTRA,
+            InvalidRfcOrCurp,
+        ),
+        (
+            (REGISTRA, dict(descripcion='unknown code', id=999999)),
+            REGISTRA,
+            StpmexException,
+        ),
     ],
+    indirect=['client_exc'],
 )
-@pytest.mark.vcr
-def test_response_error(client, endpoint: str, expected_exc: type):
+def test_errors(client_exc: Client, endpoint: str, expected_exc: type) -> None:
     with pytest.raises(StpmexException) as exc_info:
-        client.put(endpoint, dict(firma='{hola}'))
+        client_exc.put(endpoint, dict(firma='{hola}'))
     exc = exc_info.value
     assert type(exc) is expected_exc
     assert repr(exc)
