@@ -5,7 +5,6 @@ from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
 from clabe.types import validate_digits
 from pydantic import ConstrainedStr, StrictStr, constr
-from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
     constr_strip_whitespace,
@@ -160,8 +159,3 @@ class MxPhoneNumber(str):
         yield constr_strip_whitespace
         yield constr_length_validator
         yield validate_digits
-
-
-class PaymentCardNumber(PydanticPaymentCardNumber):
-    min_length: ClassVar[int] = 15
-    max_length: ClassVar[int] = 16
