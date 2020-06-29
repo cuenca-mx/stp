@@ -6,7 +6,7 @@ version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
     'cryptography==2.9.2',
-    'clabe==1.2.0',
+    'clabe==1.2.1',
     'dataclasses>=0.6;python_version<"3.7"',
     'pydantic==1.5.1',
     'requests==2.24.0',
