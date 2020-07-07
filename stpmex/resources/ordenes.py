@@ -6,7 +6,7 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
-from cuenca_validations import PaymentCardNumber
+from cuenca_validations.types import PaymentCardNumber
 from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
