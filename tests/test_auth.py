@@ -10,7 +10,7 @@ def test_join_fields_for_orden(orden):
     joined = (
         '||40072|TAMIZI|||CR1564969083|90646|1.20|1|40||646180110400000007|'
         '|40|Ricardo Sanchez|072691004495711499|ND||||||Prueba||||||5273144|'
-        '|T||3|1|||'
+        '|T||3|0|||'
     )
     assert join_fields(orden, ORDEN_FIELDNAMES) == joined
 
