@@ -23,9 +23,9 @@ def test_join_fields_for_cuenta(cuenta):
 
 def test_compute_signature(client, orden):
     firma = (
-        'QSESEqJTcn8hhK2QaA/z9VnIZDktwgPS1VWJxOooZt3vNEi2IKrIoPI+/O/SDo/lZAMAm'
-        'xg6De7Sg/OALjibLPpLlONd0VLIa81xsF0FmP+22mT9MtPgf3/kGuZvgSKpzzzNbhxEM+'
-        '/j4sgWw9ucbD0Oh+ajsN1MgKjIBaTC7SI='
+        'KDNKDVVuyNt9oTXPAlofGXGH5L5IH9PAzOsx0JZFtmGlU+10QRf2RHSg0OVCnYYpu5sC3'
+        'DJ6vlXuYM40+uNw0tMc0y8Dv26uO8Vv2GhOhMqaGk72LwgwgmqVg17xzjgGbJHzAzMav3'
+        'fx4/3No+mSnf7vxpe4ePf6yK1yU5U28L4='
     )
     sig = compute_signature(client.pkey, join_fields(orden, ORDEN_FIELDNAMES))
     assert sig == firma
