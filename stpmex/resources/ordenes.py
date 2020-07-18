@@ -60,7 +60,7 @@ class Orden(Resource):
     rfcCurpBeneficiario: constr(max_length=18) = 'ND'
     rfcCurpOrdenante: Optional[constr(max_length=18)] = None
 
-    prioridad: int = Prioridad.alta.value
+    prioridad: int = Prioridad.normal.value
     medioEntrega: int = 3
     tipoPago: int = 1
     topologia: str = 'T'
