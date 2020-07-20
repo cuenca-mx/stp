@@ -5,7 +5,6 @@ from typing import TYPE_CHECKING, ClassVar, Optional, Type
 
 from clabe.types import validate_digits
 from pydantic import ConstrainedStr, StrictStr, constr
-from pydantic.types import PaymentCardNumber as PydanticPaymentCardNumber
 from pydantic.validators import (
     constr_length_validator,
     constr_strip_whitespace,
@@ -24,8 +23,8 @@ def unicode_to_ascii(unicode: str) -> str:
 class AsciiStr(ConstrainedStr):
     @classmethod
     def validate(cls, value: str) -> str:
-        value = unicode_to_ascii(value).strip()
-        return super().validate(value)
+        value = super().validate(value)
+        return unicode_to_ascii(value).strip()
 
 
 def truncated_str(length: int) -> Type[str]:
@@ -104,7 +103,7 @@ class Curp(StrictStr):
 
 
 class Rfc(StrictStr):
-    min_length = 13
+    min_length = 12
     max_length = 13
 
 
@@ -160,8 +159,3 @@ class MxPhoneNumber(str):
         yield constr_strip_whitespace
         yield constr_length_validator
         yield validate_digits
-
-
-class PaymentCardNumber(PydanticPaymentCardNumber):
-    min_length: ClassVar[int] = 15
-    max_length: ClassVar[int] = 16

@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"nombre": "Eduardo", "apellidoPaterno": "Salvador", "cuenta": "646180157017318462",
-      "rfcCurp": "SAHE800416HDFABC01", "apellidoMaterno": "Hernandez", "genero": "H",
+    body: '{"nombre": "EDUARDO", "apellidoPaterno": "SALVADOR", "cuenta": "646180157017318462",
+      "rfcCurp": "SAHE800416HDFABC01", "apellidoMaterno": "HERNANDEZ", "genero": "H",
       "fechaNacimiento": "19800414", "entidadFederativa": 1, "actividadEconomica":
       30, "calle": "mi calle", "numeroExterior": "2", "numeroInterior": "1", "colonia":
       "mi colonia", "alcaldiaMunicipio": "mi alcaldia", "cp": "12345", "pais": 1,

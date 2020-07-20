@@ -1,8 +1,10 @@
 # STP python3.6+ client library
 
-[![Build Status](https://travis-ci.com/cuenca-mx/stpmex-python.svg?branch=master)](https://travis-ci.com/cuenca-mx/stpmex-python)
-[![Coverage Status](https://coveralls.io/repos/github/cuenca-mx/stpmex-python/badge.svg?branch=master)](https://coveralls.io/github/cuenca-mx/stpmex-python?branch=master)
+
+[![test](https://github.com/cuenca-mx/stpmex-python/workflows/test/badge.svg)](https://github.com/cuenca-mx/stpmex-python/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/cuenca-mx/stpmex-python/branch/master/graph/badge.svg)](https://codecov.io/gh/cuenca-mx/stpmex-python)
 [![PyPI](https://img.shields.io/pypi/v/stpmex.svg)](https://pypi.org/project/stpmex/)
+[![Downloads](https://pepy.tech/badge/stpmex)](https://pepy.tech/project/stpmex)
 
 Cliente para el servicio REST de STP
 
@@ -62,7 +64,7 @@ orden = client.ordenes.registra(
 saldo = client.saldos.consulta(cuenta='646456789123456789')
 
 # Ordenes - enviadas
-enviadas = client.ordenes.consulta_enviadas() # fecha_operacion es día de hoy
+enviadas = client.ordenes.consulta_enviadas() # fecha_operacion es el día de hoy
 
 # Ordenes - recibidas
 recibidas = client.ordenes.consulta_recibidas(
@@ -75,6 +77,4 @@ orden = client.ordenes.consulta_clave_rastreo(
     institucionOperante=90646,
     fechaOperacion=datetime.date(2020, 4, 20)
 )
-
-cuenta.baja()
 ```

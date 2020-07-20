@@ -2,7 +2,9 @@ from base64 import b64encode
 from enum import Enum
 from typing import List
 
-from OpenSSL import crypto
+from cryptography.hazmat.primitives.asymmetric import padding
+from cryptography.hazmat.primitives.asymmetric.rsa import RSAPrivateKey
+from cryptography.hazmat.primitives.hashes import SHA256
 
 CUENTA_FIELDNAMES = """
     empresa
@@ -58,10 +60,12 @@ def join_fields(obj: 'Resource', fieldnames: List[str]) -> bytes:  # noqa: F821
             value = f'{value:.2f}'
         elif isinstance(value, Enum) and value:
             value = value.value
-        joined_fields.append(str(value or ''))
+        elif value is None:
+            value = ''
+        joined_fields.append(str(value))
     return '||' + '|'.join(joined_fields) + '||'
 
 
-def compute_signature(pkey: crypto.PKey, text: str) -> str:
-    signature = crypto.sign(pkey, text.encode('utf-8'), SIGN_DIGEST)
+def compute_signature(pkey: RSAPrivateKey, text: str) -> str:
+    signature = pkey.sign(text.encode('utf-8'), padding.PKCS1v15(), SHA256(),)
     return b64encode(signature).decode('ascii')

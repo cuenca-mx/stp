@@ -50,3 +50,31 @@ class NoServiceResponse(StpmexException):
 
 class NoOrdenesEncontradas(StpmexException):
     """No se encontraron ordenes"""
+
+
+class InvalidTrackingKey(StpmexException):
+    """Clave de rastreeo inválida"""
+
+
+class BankCodeClabeMismatch(StpmexException):
+    """La cuenta clabe no coincide para la institución operante"""
+
+
+class SameAccount(StpmexException):
+    """Transferencia a la misma cuenta"""
+
+
+class DuplicatedAccount(StpmexException):
+    """Cuenta duplicada"""
+
+
+class InvalidField(StpmexException):
+    """Campo inválido"""
+
+
+class MandatoryField(StpmexException):
+    """El campo X es obligatorio"""
+
+
+class InvalidInstitution(StpmexException):
+    """La Institucion no es valida"""

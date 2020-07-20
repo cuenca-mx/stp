@@ -6,6 +6,7 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
+from cuenca_validations.types import PaymentCardNumber
 from pydantic import PositiveFloat, conint, constr, validator
 from pydantic.dataclasses import dataclass
 
@@ -14,7 +15,6 @@ from ..exc import NoOrdenesEncontradas
 from ..types import (
     Estado,
     MxPhoneNumber,
-    PaymentCardNumber,
     Prioridad,
     TipoCuenta,
     TipoOperacion,
@@ -60,7 +60,7 @@ class Orden(Resource):
     rfcCurpBeneficiario: constr(max_length=18) = 'ND'
     rfcCurpOrdenante: Optional[constr(max_length=18)] = None
 
-    prioridad: int = Prioridad.alta.value
+    prioridad: int = Prioridad.normal.value
     medioEntrega: int = 3
     tipoPago: int = 1
     topologia: str = 'T'
@@ -158,12 +158,12 @@ class Orden(Resource):
             consulta['fechaOperacion'] = strftime(fechaOperacion)
         consulta['firma'] = cls._firma_consulta(consulta)
         try:
-            resp = cls._client.post(endpoint, consulta)['lst']
+            resp = cls._client.post(endpoint, consulta)
         except NoOrdenesEncontradas:
             ordenes = []
         else:
             ordenes = [
-                cls._sanitize_consulta(orden) for orden in resp if orden
+                cls._sanitize_consulta(orden) for orden in resp['lst'] if orden
             ]
         return ordenes
 

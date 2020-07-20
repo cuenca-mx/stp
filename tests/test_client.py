@@ -3,12 +3,19 @@ from requests import HTTPError
 
 from stpmex.client import Client
 from stpmex.exc import (
+    BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
+    DuplicatedAccount,
     InvalidAccountType,
+    InvalidField,
+    InvalidInstitution,
     InvalidPassphrase,
     InvalidRfcOrCurp,
+    InvalidTrackingKey,
+    MandatoryField,
     NoServiceResponse,
     PldRejected,
+    SameAccount,
     SignatureValidationError,
     StpmexException,
 )
@@ -35,6 +42,13 @@ W4Zo1Aj8G7FaoDm7XhkLGDwVjf0Ua1O4YHRpSgVSkrXeBgW7P4Tc+53nFns3rwxs
 uzF/x9tl2+BdiDjPOhSRuoa1ypilODdpOGKNKuf0vu2jAbbzDILBYOfw
 -----END ENCRYPTED PRIVATE KEY-----"""
 
+ORDEN_PAGO_ENDPOINT = '/ordenPago/registra'
+CUENTA_ENDPOINT = '/cuentaModule/fisica'
+
+
+def _desc_error(desc, id):
+    return dict(resultado=dict(descripcionError=desc, id=id))
+
 
 @pytest.mark.vcr
 def test_forbidden_without_vpn(client):
@@ -49,70 +63,103 @@ def test_incorrect_passphrase():
         Client('TAMIZI', PKEY, 'incorrect')
 
 
-@pytest.mark.vcr
-def test_response_error(client):
+@pytest.mark.parametrize(
+    'client_mock,endpoint,expected_exc',
+    [
+        (
+            _desc_error('No se recibió respuesta del servicio', 0),
+            ORDEN_PAGO_ENDPOINT,
+            NoServiceResponse,
+        ),
+        (
+            _desc_error('Error validando la firma', 0),
+            ORDEN_PAGO_ENDPOINT,
+            SignatureValidationError,
+        ),
+        (
+            _desc_error('El campo &lt;CONCEPTO PAGO> es obligatorio', 0),
+            ORDEN_PAGO_ENDPOINT,
+            MandatoryField,
+        ),
+        (
+            _desc_error('La Institucion 90679 no es valida', -9),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidInstitution,
+        ),
+        (
+            _desc_error(
+                'La clave de rastreo {foo123} para la fecha {20200314} de '
+                'la institucion {123} ya fue utilizada',
+                -1,
+            ),
+            ORDEN_PAGO_ENDPOINT,
+            ClaveRastreoAlreadyInUse,
+        ),
+        (
+            _desc_error('El tipo de cuenta 3 es invalido', -11),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidAccountType,
+        ),
+        (
+            _desc_error(
+                'La cuenta CLABE {6461801570} no coincide para la '
+                'institucion operante {40072}',
+                -22,
+            ),
+            ORDEN_PAGO_ENDPOINT,
+            BankCodeClabeMismatch,
+        ),
+        (
+            _desc_error('Cuenta {646180157000000000} - {MISMA_CUENTA}', -24),
+            ORDEN_PAGO_ENDPOINT,
+            SameAccount,
+        ),
+        (
+            _desc_error('Clave rastreo invalida : ABC123', -34),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidTrackingKey,
+        ),
+        (
+            _desc_error(
+                'Orden sin cuenta ordenante. Se rechaza por PLD', -200
+            ),
+            ORDEN_PAGO_ENDPOINT,
+            PldRejected,
+        ),
+        (
+            _desc_error('unknown code', 9999999),
+            ORDEN_PAGO_ENDPOINT,
+            StpmexException,
+        ),
+        (
+            dict(descripcion='Cuenta Duplicada', id=1),
+            CUENTA_ENDPOINT,
+            DuplicatedAccount,
+        ),
+        (
+            dict(descripcion='El campo NOMBRE es invalido', id=1),
+            CUENTA_ENDPOINT,
+            InvalidField,
+        ),
+        (
+            dict(descripcion='rfc/curp invalido', id=1),
+            CUENTA_ENDPOINT,
+            InvalidRfcOrCurp,
+        ),
+        (
+            dict(descripcion='unknown code', id=999999),
+            CUENTA_ENDPOINT,
+            StpmexException,
+        ),
+    ],
+    indirect=['client_mock'],
+)
+def test_errors(
+    client_mock: Client, endpoint: str, expected_exc: type
+) -> None:
     with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma='{hola}'))
+        client_mock.put(endpoint, dict(firma='{hola}'))
     exc = exc_info.value
-    assert type(exc) is NoServiceResponse
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidRfcOrCurp
-    assert exc.descripcion
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is InvalidAccountType
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is SignatureValidationError
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is ClaveRastreoAlreadyInUse
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is PldRejected
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    # Excepción genérica para códigos de error desconocidos
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/ordenPago/registra', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is StpmexException
-    assert exc.descripcionError
-    assert repr(exc)
-    assert str(exc)
-
-    # Excepción genérica para códigos de error desconocidos
-    with pytest.raises(StpmexException) as exc_info:
-        client.put('/cuentaModule/fisica', dict(firma=''))
-    exc = exc_info.value
-    assert type(exc) is StpmexException
-    assert exc.descripcion
+    assert type(exc) is expected_exc
     assert repr(exc)
     assert str(exc)
