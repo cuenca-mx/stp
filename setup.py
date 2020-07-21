@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'cryptography==2.9.2',
+    'cryptography==3.0',
     'cuenca-validations==0.4.2',
     'requests==2.24.0',
 ]
