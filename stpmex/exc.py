@@ -78,3 +78,7 @@ class MandatoryField(StpmexException):
 
 class InvalidInstitution(StpmexException):
     """La Institucion no es valida"""
+
+
+class AccountDoesNotExist(StpmexException):
+    """La cuenta no existe"""

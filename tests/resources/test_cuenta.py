@@ -31,3 +31,9 @@ def test_alta_lote(client, cuenta_dict, num_cuentas):
     assert all(r['descripcion'] == '' for r in resp.values())
     for cuenta in lote:
         cuenta.baja()
+
+
+def test_cuenta_nombre_apellidos_correctos(cuenta):
+    assert cuenta.nombre == 'EDUARDO MARCO'
+    assert cuenta.apellidoMaterno == 'HERNANDEZ MUNOZ'
+    assert cuenta.apellidoPaterno == 'SALVADOR'

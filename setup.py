@@ -12,13 +12,13 @@ install_requires = [
 
 test_requires = [
     'black==19.10b0',
-    'isort[pipfile]==4.3.21',
-    'flake8==3.8.3',
+    'isort==5.1.*',
+    'flake8==3.8.*',
     'mypy==0.782',
-    'pytest==5.4.3',
-    'pytest-vcr==1.0.2',
-    'pytest-cov==2.10.0',
-    'requests-mock==1.8.0',
+    'pytest==5.4.*',
+    'pytest-vcr==1.0.*',
+    'pytest-cov==2.10.*',
+    'requests-mock==1.8.*',
 ]
 
 with open('README.md', 'r') as f:

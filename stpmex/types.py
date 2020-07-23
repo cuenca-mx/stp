@@ -27,11 +27,32 @@ class AsciiStr(ConstrainedStr):
         return unicode_to_ascii(value).strip()
 
 
+class StpStr(AsciiStr):
+    """
+    based on:
+    https://stpmex.zendesk.com/hc/es/articles/360038242071-Registro-de-Cuentas-de-Personas-f%C3%ADsicas
+    """
+
+    @classmethod
+    def validate(cls, value: str) -> str:
+        value = super().validate(value)
+        value = re.sub(r'[-,.]', ' ', value)
+        value = value.upper()
+        return value
+
+
 def truncated_str(length: int) -> Type[str]:
     namespace = dict(
         strip_whitespace=True, min_length=1, curtail_length=length
     )
     return type('TruncatedStrValue', (AsciiStr,), namespace)
+
+
+def truncated_stp_str(length: int) -> Type[str]:
+    namespace = dict(
+        strip_whitespace=True, min_length=1, curtail_length=length
+    )
+    return type('TruncatedStpStrValue', (StpStr,), namespace)
 
 
 def digits(

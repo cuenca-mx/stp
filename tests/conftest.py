@@ -77,9 +77,9 @@ def orden(client, orden_dict):
 def cuenta_dict():
     yield dict(
         cuenta=generate_new_clabes(1, '6461801570')[0],
-        nombre='Eduardo',
+        nombre='Eduardo,Marco',
         apellidoPaterno='Salvador',
-        apellidoMaterno='Hernandez',
+        apellidoMaterno='Hernandez-Muñoz',
         rfcCurp='SAHE800416HDFABC01',
         fechaNacimiento=dt.date(1980, 4, 14),
         genero='H',
