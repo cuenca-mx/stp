@@ -27,6 +27,18 @@ class AsciiStr(ConstrainedStr):
         return unicode_to_ascii(value).strip()
 
 
+# this specs are taken from STP official docs
+# https://stpmex.zendesk.com/hc/es/articles/360038242071-Registro-de-Cuentas-de-Personas-f%C3%ADsicas
+class StpStr(AsciiStr):
+    @classmethod
+    def validate(cls, value: str) -> str:
+        value = super().validate(value)
+        value = re.sub(r'[-,.]', ' ', value)
+        value = value.upper()
+        value = value[:50]
+        return value
+
+
 def truncated_str(length: int) -> Type[str]:
     namespace = dict(
         strip_whitespace=True, min_length=1, curtail_length=length

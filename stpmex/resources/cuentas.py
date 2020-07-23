@@ -12,6 +12,7 @@ from ..types import (
     Genero,
     MxPhoneNumber,
     Rfc,
+    StpStr,
     digits,
     truncated_str,
 )
@@ -74,10 +75,10 @@ class CuentaFisica(Cuenta):
     _endpoint: ClassVar[str] = Cuenta._base_endpoint + '/fisica'
     _lote_endpoint: ClassVar[str] = Cuenta._base_endpoint + '/fisicas'
 
-    nombre: truncated_str(50)
-    apellidoPaterno: truncated_str(50)
+    nombre: StpStr
+    apellidoPaterno: StpStr
 
-    apellidoMaterno: Optional[truncated_str(50)] = None
+    apellidoMaterno: Optional[StpStr] = None
     genero: Optional[Genero] = None
     fechaNacimiento: Optional[dt.date] = None
     # Esperando a que STP agregue Nacido en el Extranjero
@@ -86,16 +87,10 @@ class CuentaFisica(Cuenta):
     calle: Optional[truncated_str(60)] = None
     numeroExterior: Optional[digits(max_length=10)] = None
     numeroInterior: Optional[digits(max_length=5)] = None
-    colonia: Optional[truncated_str(50)] = None
-    alcaldiaMunicipio: Optional[truncated_str(50)] = None
+    colonia: Optional[StpStr] = None
+    alcaldiaMunicipio: Optional[StpStr] = None
     cp: Optional[digits(5, 5)] = None
     pais: Optional[conint(ge=1, le=242)] = None
     email: Optional[constr(max_length=150)] = None
     idIdentificacion: Optional[digits(max_length=20)] = None
     telefono: Optional[MxPhoneNumber] = None
-
-    def __post_init__(self) -> None:
-        self.nombre = self.nombre.upper()
-        self.apellidoPaterno = self.apellidoPaterno.upper()
-        if self.apellidoMaterno:
-            self.apellidoMaterno = self.apellidoMaterno.upper()

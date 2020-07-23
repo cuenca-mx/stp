@@ -7,6 +7,7 @@ from cryptography.hazmat.primitives import serialization
 from requests import Response, Session
 
 from .exc import (
+    AccountDoesNotExist,
     BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
     DuplicatedAccount,
@@ -129,6 +130,8 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         r'La clave de rastreo .+ ya fue utilizada', error
     ):
         raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+    elif id == -7 and re.match(r'La cuenta .+ no existe', error):
+        raise AccountDoesNotExist(**resp['resultado'])
     elif id == -9 and re.match(r'La Institucion \d+ no es valida', error):
         raise InvalidInstitution(**resp['resultado'])
     elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):

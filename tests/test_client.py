@@ -3,6 +3,7 @@ from requests import HTTPError
 
 from stpmex.client import Client
 from stpmex.exc import (
+    AccountDoesNotExist,
     BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
     DuplicatedAccount,
@@ -82,11 +83,6 @@ def test_incorrect_passphrase():
             MandatoryField,
         ),
         (
-            _desc_error('La Institucion 90679 no es valida', -9),
-            ORDEN_PAGO_ENDPOINT,
-            InvalidInstitution,
-        ),
-        (
             _desc_error(
                 'La clave de rastreo {foo123} para la fecha {20200314} de '
                 'la institucion {123} ya fue utilizada',
@@ -94,6 +90,16 @@ def test_incorrect_passphrase():
             ),
             ORDEN_PAGO_ENDPOINT,
             ClaveRastreoAlreadyInUse,
+        ),
+        (
+            _desc_error('La cuenta {646180257067226640} no existe ', -7),
+            ORDEN_PAGO_ENDPOINT,
+            AccountDoesNotExist,
+        ),
+        (
+            _desc_error('La Institucion 90679 no es valida', -9),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidInstitution,
         ),
         (
             _desc_error('El tipo de cuenta 3 es invalido', -11),
