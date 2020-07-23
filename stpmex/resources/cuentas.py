@@ -12,9 +12,8 @@ from ..types import (
     Genero,
     MxPhoneNumber,
     Rfc,
-    StpStr,
     digits,
-    truncated_str,
+    truncated_stp_str,
 )
 from .base import Resource
 
@@ -75,20 +74,20 @@ class CuentaFisica(Cuenta):
     _endpoint: ClassVar[str] = Cuenta._base_endpoint + '/fisica'
     _lote_endpoint: ClassVar[str] = Cuenta._base_endpoint + '/fisicas'
 
-    nombre: StpStr
-    apellidoPaterno: StpStr
+    nombre: truncated_stp_str(50)
+    apellidoPaterno: truncated_stp_str(50)
 
-    apellidoMaterno: Optional[StpStr] = None
+    apellidoMaterno: Optional[truncated_stp_str(50)] = None
     genero: Optional[Genero] = None
     fechaNacimiento: Optional[dt.date] = None
     # Esperando a que STP agregue Nacido en el Extranjero
     entidadFederativa: Optional[EntidadFederativa] = None
     actividadEconomica: Optional[conint(ge=28, le=74)] = None
-    calle: Optional[truncated_str(60)] = None
-    numeroExterior: Optional[digits(max_length=10)] = None
-    numeroInterior: Optional[digits(max_length=5)] = None
-    colonia: Optional[StpStr] = None
-    alcaldiaMunicipio: Optional[StpStr] = None
+    calle: Optional[truncated_stp_str(60)] = None
+    numeroExterior: Optional[truncated_stp_str(10)] = None
+    numeroInterior: Optional[truncated_stp_str(5)] = None
+    colonia: Optional[truncated_stp_str(50)] = None
+    alcaldiaMunicipio: Optional[truncated_stp_str(50)] = None
     cp: Optional[digits(5, 5)] = None
     pais: Optional[conint(ge=1, le=242)] = None
     email: Optional[constr(max_length=150)] = None
