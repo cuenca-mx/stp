@@ -5,21 +5,11 @@ from setuptools import find_packages, setup
 version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
-    'cryptography==3.0',
-    'cuenca-validations==0.4.2',
-    'requests==2.24.0',
+    'cryptography>=3.0,<3.1',
+    'cuenca-validations>=0.4,<0.5',
+    'requests>=2.24,<2.25',
 ]
 
-test_requires = [
-    'black==19.10b0',
-    'isort==5.1.*',
-    'flake8==3.8.*',
-    'mypy==0.782',
-    'pytest==5.4.*',
-    'pytest-vcr==1.0.*',
-    'pytest-cov==2.10.*',
-    'requests-mock==1.8.*',
-]
 
 with open('README.md', 'r') as f:
     long_description = f.read()
@@ -38,9 +28,6 @@ setup(
     package_data=dict(stpmex=['py.typed']),
     python_requires='>=3.6',
     install_requires=install_requires,
-    setup_requires=['pytest-runner'],
-    tests_require=test_requires,
-    extras_require=dict(test=test_requires),
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',

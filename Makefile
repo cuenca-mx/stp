@@ -14,12 +14,15 @@ venv:
 	pip install -qU pip
 
 .PHONY: install-test
-install-test:
-	pip install -q .[test]
+install:
+	pip install -qU -r requirements.txt
+
+install-test: install
+	pip install -qU -r requirements-test.txt
 
 .PHONY: test
 test: clean install-test lint
-	python setup.py test
+	pytest
 
 .PHONY: format
 format:
@@ -50,6 +53,6 @@ clean:
 	rm -rf dist
 
 .PHONY: release
-release: clean
+release: test clean
 	python setup.py sdist bdist_wheel
 	twine upload dist/*
