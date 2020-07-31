@@ -1,8 +1,21 @@
 version: 2
 updates:
-- package-ecosystem: pip
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '11:00'
-  open-pull-requests-limit: 10
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "08:00"
+      timezone: "America/Mexico_City"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "matin"
+
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: daily
+      time: "08:00"
+      timezone: "America/Mexico_City"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "matin"
