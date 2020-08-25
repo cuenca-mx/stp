@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 import pytest
 from requests import HTTPError
 
@@ -163,3 +165,17 @@ def test_errors(
     assert type(exc) is expected_exc
     assert repr(exc)
     assert str(exc)
+
+
+def test_account_registration() -> None:
+    with patch('stpmex.client.Session') as mock_session:
+        mock_session().request().json.return_value = {
+            'descripcion': 'Cuenta en revisión.',
+            'id': 0,
+        }
+        client = Client('TAMIZI', PKEY, '12345678')
+
+        response = client.put(CUENTA_ENDPOINT, dict(firma='{hola}'))
+        assert type(response) is dict
+        assert response['id'] == 0
+        assert response['descripcion'] == 'Cuenta en revisión.'

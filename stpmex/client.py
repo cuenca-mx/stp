@@ -162,6 +162,8 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
     id = resp['id']
     desc = resp['descripcion']
 
+    if id == 0 and desc == 'Cuenta en revisión.':
+        return True
     if id == 1 and desc == 'Cuenta Duplicada':
         raise DuplicatedAccount(**resp)
     elif id == 1 and desc == 'rfc/curp invalido':
