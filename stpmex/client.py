@@ -110,12 +110,8 @@ class Client:
             try:
                 _raise_description_error_exc(resp)
             except KeyError:
-                ...
-            try:
                 if 'descripcion' in resp and resp['descripcion']:
                     _raise_description_exc(resp)
-            except (AssertionError, KeyError):
-                ...
         response.raise_for_status()
 
 
