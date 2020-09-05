@@ -1,670 +1,670 @@
 interactions:
 - request:
-    body: '{"cuentasFisicas": [{"cuenta": "646180157066023481", "rfcCurp": "SAHE800416HDFABC01",
+    body: '{"cuentasFisicas": [{"cuenta": "646180157046965239", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "MkuXKUYk/Ud2OIZMWNGpmL5eAuex+OYTSvUYR03nuZSiIkzSfIdGQ6uRwOlUwi/rdcpFJV1xrBY9s4it2FUiNLvRCBtt826H8KGI5+tHnKL4aVUPxJ8bjCbL6xvq+u38hSvvInW3qpO3Mw6CBdUxdf0bFFGqrm4csIi9D58448g=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157031265779", "rfcCurp": "SAHE800416HDFABC01",
+      "mKRsvqBW5hyv+J/TzO+WzoeX6W5bSrNmPL3sD6mL8fmyTdyf0BCLaIvl/brd9u3cFVCJwdb/0Vbsqz6cZZ9kJegHZuzDOXW2l8KI62roMIDSYOBIiDHVG+REaF/Z3Fl04nGh5xao3BSFslMlZ+gJHNh55SyPoGXheTpC51hAdLU=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157051130075", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "illBFZJK2XSQGx3yA8gmTkpDhsVkwsbhNctMlhTTXrBUJaVTAsFJsQ2q7TSjS81GpIcKHgddT/HR0HfBM9tfZ7gr7JYyTsjlUGKWHw7+rRQfoGubTGxmU6Ks8z3cMQ1GkiZAN1LFnhSO2WLXNT900CH1IDc3H2m13ID4N9/76x4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157022895022", "rfcCurp": "SAHE800416HDFABC01",
+      "a1Oh+2uzIxapC9UTcUZ/nU6Z5TC8MfxH/mW4KRq0hBXIwScU0LYmfsQdMLV0M2zyR1KWMM7Ar7rNNdMLGb7YoSJUwcsVgQs6hJElAZoJbVVpqB6fAW6azuUlRAHrAYoI7mt7sQ757fSsvKtofvzTOC/beVBP0NNNbvo7KMHMnjE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157020245360", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "c8lA9WsjOl34p9RpAzgSIPNP0m3upcATBJt2dH9f3sBzJuZmeOrS0gRJI4qUNe5kK8J0IbZeUCsYGi4/anOyzkGI9yY1eHvsUENnACsBUUKBvv16gE0O49i3HzUS1qzgTjDtVsLHXbLnW6v/GvJ6eaUFE5Ka4Tmsk17Op1BuHkI=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157020816948", "rfcCurp": "SAHE800416HDFABC01",
+      "CMpyM0YzibG4FjfujtrDsqRt5GF1ljawySCvI7faXpofNlXvzhixIMAI76ggRIW8ARJsjXijFTVtlTq1kExes/OG/dJjF0oL5l9lCS5UXVo9ZCGZRnxMubQde/6qdaxVLBuopIEj9nfBCBDqFj4E9O5YPPF45YWibU2QHjxpFy0=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157051258876", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "I6XmgO7b9lHY6+SQtmnPwHBxa7kXT5p7XHak3s9BoXeOU6rVfw4/8FKlCeK1f9+JF3kCcDmadceucWFCaLD48oP+vERtZUU2+WS31OAefpk4R9G9Xpi/6Z+mLQVerpF+y9WnsdvsuRwdIxtFsmL99jq+U1cbAyvEni/fy3sVPPo=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157027800290", "rfcCurp": "SAHE800416HDFABC01",
+      "TSSTMgWB2xqNurCLVFrGE3+nNsvm8WdJsXi+RGGCH2bXfoQcSTJUPWp7NqZghrIDEnUHXh57Sp8nJTj1LHA9WHqWH0YpfCO845lPEIf6kxTpVY5HvAsMsa+pzXAAOPsFxcJyLCAWNBDWAbgDN+s0HQ470rGJv5nKstT/gAriORc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157022646585", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "vBTrvUeWK3gCojgT/CD0y3haacKyekq3Q9b/Lpsuj9VzbWIhkeBZ+sFoLBE4nbfQ+UjhQJJoFZD8e8F+VwBUERHUCsY3cKJ8H8XevoUkL0751aKUA1WLYqDeslJz97FddqztyuuLHuC47Fjt1gijik01gVzSC+atEqY5rQjBb7o=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157060072218", "rfcCurp": "SAHE800416HDFABC01",
+      "yN2r4ed318krO0T7rTxDELKiGczqNO84jYtAcWA5IHg4gkZl0dg/+xJG2ooBq6fw6ZkhSdMXFg0bSdqcFAM6e5jhicR5bPyYgTUkKG/QwVHlI/X2n7r0dDVmCAaELapTsB1QZNl/Yn8e/mXYYDYZIzaMcjgWozCttDropTdUx14=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157067483431", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "mrDjGjQdo6GCfRld+EkhnlL7eYa+RtZJ0HWmwuUyH9sJPZbIMsSAlqDdMpFIqoMzMr6AxlLqmgeT+iIpHPCP4EHj83tGpLT8eLPFg6zUnKg5bUYkDvbOgK68LW520vrvrWsFG5Ako6qPfhlHf5jvxq45fpnjZ61Ph0UOGO6Fchw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157060065733", "rfcCurp": "SAHE800416HDFABC01",
+      "jIYdTbZE27G4ypzI1u4dWGRSi8cmxq4cTQW28kkjkCtfYoYTwfibxnPJIV087TO5fogvKJxN/1CQvHBEpuOc5ubqOuUn5fbdojsrGXRTHy4QTCpcX134zHV+PbZqXJJLo9dRvALA2MGxmG5E6dDRq1IyCINem3ymZtIWaGH3lVA=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157042626682", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ThhYnXKmDEWSibDt9lqflLrASUyBUkhpbXYIV5reUz3naW0lTtosixLX1snUV3bKnic7h6UIhIfmkeNXsvEUVIlu0bSPqVpGY70toAy05DpHPwePnmbQ+CI6rTX1Q9mB3uENDpnCGeEnhXOyBAxbhmC6OJ8/VB7CpePAwsu2qRk=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157045421541", "rfcCurp": "SAHE800416HDFABC01",
+      "It/JQjbR8YboVONEbQ4BFqT1aZxky60wFXZkbmfYrQwVFENaNKbBUkoMItYJ5y2yy8Xpni+9Vj16I/2bBt1yLIWBArDSUFzsrLKqU/P444tuQfHLYN1SQei9OY4n71UBJHm4L2olVAVqAimSvBF+DAmbXYEi440Svfs3t/5luUk=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157090055771", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "YTw1zFVyiMsiEUr1F/B6tV1GU1qRNZc0nXbvlxDw8GIM/0svQpYssSmXUwQsX8qDRo3Fs32wzAVp8duuURONAbAVsPmCtQUGBLsnEWg01MJVPKIvMDOyWIe8Ggk8CpnQ+AvujtMlHYvJ1ahqxUIFuvJhhAiPKp0dx709nZpUz3U=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157029186158", "rfcCurp": "SAHE800416HDFABC01",
+      "RWz3mjeiabMpNH+YghFfHRaukClmX1nLHdtczjsL0yKcXDU935xf/Ln7XFHlSo/0alQbDYQABDzb89A7rsJvLj7ibnX3HTcJovJAsh6Mrh5RmuheI3vFMmeeZVoz0YU0aHth9WI8und/UebJ9yRAqyLJ7BzK3SYOJsRhphhXPss=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157049403264", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "L4zYKUZSxABad4bhOoSVLoYX2m3uY67JeSP/sZDlVaQL56WiOCmSnDHCYNUuOcKrk8IxB84NlZ9i/xGdPmcroKgZPdbnTAS+MzPjfBarDs6ZVqpRb6Nxia+TILE59sUS63SDb0Qly0+/+43N6ZD+gverbG2aPoMruSoM7wzPkyE=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157021782990", "rfcCurp": "SAHE800416HDFABC01",
+      "jSb4i7xAuSQGXXoxQCbBbuOSEzJGCy938rctfZYkiUrRsv6Elz+lS2b6WBFsSFCQkN95SBe99C5jfrqwS/hvexb7yQyLOI5BHL70QIGHwJQTtZcW4BYlwmKECVxxgmUnbntCg1Ku3i5kP5bSDilx8awWdwNlnyUzXQxRCvtxddk=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157018650860", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "V0Hzxxn4WLcGSnLpn7diEIoo6i+VGqbMxbyKfRpvIMi6H+eA+2+fSGHikZ74DNF4jXGvyXMee94nbMiLuuADwL3Ry2xHCRtb2sjHUMgftJU8Ro2BU5CbIRbFxzwv9iO9upC2J9UBfp93Jlc5ZfM1E55mZwKN7iiqEK/MYz6WAWM=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157082459152", "rfcCurp": "SAHE800416HDFABC01",
+      "zNt2Sjmj6bJd25IseBQ+yrAsvTL2P6KYDcLRATQjD/RbnyHwyrLNAZ8AMGTezL2+2AoI4mD/5XqUhs4TVuKojmsRioe2A/4tKVroHZXI//lUkPcIeSKoQDVz9XUkWR/HiOYMuDbEASWbc+6iTMUCgYRiQRzX1E71CNXm4bE3yKc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157057186447", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "VpC29xfosBbn+gbCXCRqfLyzxJ3f6pj5yeFVk9TBpynPtA8N5QbLatDyi8lxxipvvNxUMr9TGWmU0ONWxz2YgFFbxWVFNpVNrlkmf63+3rLkQ9hmIW6K41PzoEW49g8HwYCFEAxyy7JrNV607p/aYcLS/eXZxAu5o6ep2eUUwsE=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157055258490", "rfcCurp": "SAHE800416HDFABC01",
+      "yppj4g/eb0hTLArC4GB0CyEPQSjci6uvNw9RanC73t5J2B/sd78RvAuQqW3WmfKyzw5sHUNovjRm2XIo+NO2UM702GPuXtdFBcFnnEJKoRd/OcB0q5ua/8CJS6gKFKVkC+5UVg46GCcMK11JXsiLZ+dpgFBH/VKGijWjJujRlDU=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157051262367", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "VUzqjDWScWXSw7K984URqOYVkIuHJlS9xcKaGbT68Jhmr/YGOUAucfMvUYwlscCj53HtebFyZxaXa46doF4T1gjhLsKHtUhO8REZMDBcI9k9FXljAOg0/1rcXBL1agm4dxGZJecJCXM2R5YmOUOibqXDaZf7AzuJ/3y9ZLWEZyI=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157048066097", "rfcCurp": "SAHE800416HDFABC01",
+      "INEBSFPcKSRcto6QQTBNDJ1I7UZpCIXBegu8S0UX0fIDmHcZyKHabnss8kD5uF+8D1Lgb3lv6L59Leff+5HHasEkgizOzk73Ey//m+Ve/A0qLuq6GJjknVT0dzonY7mIvEkXXJ8VO36fHE/9gsnEivXK0M3c8VKKLDVHgF8axEI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157072471111", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "R27oJguMiZCbtgRm5PMyUBsCAA8wt1fXhZ2QthE9StkgflVsDt/eeTCISpejUYDWkevNr2grmLc21QQcvQ1Ywob68ihvHmNXTVZBw9J3AXn3cbpxkUU6YYDMgCxF/QvMC6ZOJf95HSybZ423DVitDMUrF2U+MUsQaviqlqpJH8Y=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157015609791", "rfcCurp": "SAHE800416HDFABC01",
+      "NP22b1PpZ0yQOnzDDc+qVdSsJ5XA/x4n9HI9ERBdKH2k/Kn1nD49wp+H4y+LYVe8km55sJpLvBXEbFLslJdigFIBFXRH31/FAPafT183YaWXzZhCiGeINZWOTM8tl0ZzecpVQKOqGUMz+ANPO2OU1MfTekTgLwNvjEQdYYKWia8=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157099075943", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "wyLQzoB2L52DC5ZPOiClsC4d51uXOV8SmYUZRBmYocTq8AqlBkcnAS41rRJ5PvH4xBW53WlKbzm22PMX79mq1XdHb40yMt+e3CoMQ0RfxzVkJJYe3gRZC9wshS8RyDmXp+Y2mz8Gp25CRL2ADvUAeW5lS29v8AOJXbNJj0EpUyI=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157048848671", "rfcCurp": "SAHE800416HDFABC01",
+      "nLWBG1GB4QN3S9i+ZLvCSgnTdmiionujaYENPMwJ11ALdKPh+mEGMJ/4D4CHywEY79Ds5ikbSZvVATifIdrItZn2zzvw7xWE3qjV8i+eGt1sV0wBFzmPxmaI1w/Uo9n/FjfY2o97KPiYVCn0EAlQZHRzG3UG2Ic5M0riu8ZtT24=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157042362218", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "JwI9cpw89UdhgYGI+lrDPsIOJxubQKDBucO3lA7fNnMJBhldWLKzCCXF8S3Ta8PZWpUCj56d8tGKt8VhfoF9TSsjSlXQYH+FF0JueH5Aorim8ZRQOPwjT283gLn1xFf/SkIyuRcOW3w/+DUGhX7KjV8Klo0IA0ND4RD9W3C6ae4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157019154488", "rfcCurp": "SAHE800416HDFABC01",
+      "UtX85o5iXNGjseCsikFisSCY11iaAXKUoUOrkdy8TfynAYNxLiHeUICiHqoOHV75YR/A7Qi/ghKeq8lni394gwuPWeW5IHScpmvf84t3oop6jsXOmBnw79EI88zUrx3MVm4H3i1zvNz/YSE0VG1bRoVKeWQMZbIa+Ibsuq/fd9k=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157053185138", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "hG3lYxN0SKhPJ+OeuM6m1dQIPabi27jnWh1YnM0Bo6OJlvVVdH+v0pWHDAr0HQ9JUZ53QslVnRC5REvcErB0OU7aKYTelEpEB39cxXdjxhKlz1RWeAGnDwHQ+Ju4XR72BjRpA+GIWg193rP2JSEElpMey4J0CL1ELdxqsMJKMw0=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157081274781", "rfcCurp": "SAHE800416HDFABC01",
+      "bS5m9kVcqCWFoc5TxzHWVpy+3pBmz+5PeDWu77IkE9X1jfT+LZDPa7X0/oFw+OpDhW91ZZdE/ttIEcDJ7d/kSiGdv98C2zyGv2AkiKk4QM5peA0MzBKMtf8H7p/Diek64TMxyBKEY0iEnkXzI0yln1riH/aVXxXSooHzjucJzDI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157039041571", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "RMHEGPU+Jgp7uTvRWP1XqsNJ5E008wTgdZJb4vT56lxtdyk3dFPQPLJuSbzu5Pe/YrEp7Vc6hZIZEkKWgtCXO7bxYkJBgXOaIkW5/Zr/Gqcowc5AGpqGyyV/+rOIYM2c7u9sZKKKqi/R8aEQx+767Ag3j3B3/XPXrU8RFFDf8SU=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157035882174", "rfcCurp": "SAHE800416HDFABC01",
+      "zcwgZWQF/zz7DzvVWcW1noQGa/WhW8XpyvYFazThWW1VJuEqxFwGy/Nka7rN8453B87aH875k974L2oCSDzkBmUVlD5TX8PuFMUgS0RTkPFfTNf/qBLMZTwdAEeytD5z/+o3Zh6GejcI/kavS2my43ZcG27Sbny30wiYMUxKY/Q=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157062271606", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "RgMbP1JnzEgvbx/3X4r7lNyhYqTcKQLm4tDKeKps8TGdKFhnrxc+IF2rrR774o3dJ1CnQN2JoFiLK/prLbZ8xTkgXS3yZVvufrtTAmiMLrSD1MmBJDZhwXVSVpG7dj6MeQ05V0boqu+OoYZFmG0d9HUwXdaVUgqhVj3Rw1GLX84=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157022271840", "rfcCurp": "SAHE800416HDFABC01",
+      "cxoZxS2xG9hz0EFfu7oc+AGxDtxtCcdV5TeScrlmBhv14rC1Z69ycMiygab+WJ1z/3ciJsq3uij68NHUTykcqvkV6/ZYidgW6dk0XQXMaYfo4zil2UCq/Ve8f2KNv6B0QZG9RqPNEOrx+03+/s0Wbm+YCR3F71MWDh/PTfuGMGs=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157099433679", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "dzh3rQvC+a0xjlp2ZOJfxPiV5JOR5pQYpJdArmpBHk6YvGzSTeyZekH0wj4d9WMTb1AnRu6b1p1u2w7X1Cbfj+b2XMYHnfALGFJOGX/VA/UfYqzDLg6w+Kqlu+u/lhqVtaCAqybNgDHK+BnBBn+lOUa5juRNh6a0dC1li+ef1Bw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157096888049", "rfcCurp": "SAHE800416HDFABC01",
+      "o348x7CkwbE5hQPbDrWfxrUpHCghLYoBrqhQwFW3WaXVum/BIG7EhZl7j73s5AEksLHbkI4dqUtfNVeMNJaf5UpWZAdVPS3hMWc8BVOe0RKW3P4VhEW7mulI3twa35F5daUrr/ywCbEzt7RSyUGdEQ8DqqLMxqMaOVKh/C1cqWM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157082485346", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "tD2vsmaPovJJhH2iEZFHgqf9AHO46BgXhuF4OuqrTtdVie9PQNswFOpsq2eNywiL2C2sRq3C6IYltp5UENRUp1LqUa3gsncZp++/O+7ZzHDsjYwz6PeoHhKTwlMol3blLB+PcXmrIc2UCR55duLXBm3cA5GhNpe4g8YFZAP4RGM=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157078393413", "rfcCurp": "SAHE800416HDFABC01",
+      "a4uhYgpVNDEOaulPm971X3aUhwq39n7JBldF5vj+0EULlnbQfvrPt4mXloPkrTOqoR0lk52OysouyUDUE0IbrAnjxYvSxz/qwbCbrR5z1L8rFQtqeTr+9ufsC1YkC2t2mSuOPBVqEps1n7kvSez3ZWWsqXQ1sAFyTn3Nr/EWAZg=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157062735566", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "v5gm7ZS0G99xKRrHvVHWUiIspZgsT53aHGe2xLDvfqlZ92pasELKO3hV5DaL8G2wU03GvTAZVXgAQep/ce8Jr+17zeq8+kmR061CCZ4MFNKij8MwSnsZpU3EqhQXnK1ESzHSWZOQYqoTwdKi1R1+DkQ0KbI3GN/gMra4Ghg6o38=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157037967194", "rfcCurp": "SAHE800416HDFABC01",
+      "hl7lq4i/TYJqCh97SxICNu4toA2nw/AJzXK4amAacIaEy0NmX8ZlRnfwJjCLOKUIuYws5uwCLy2kl57EAzkRxWIPkAvV5NbVnulG/Ci1RkqHcasp29yKkJzg+yIl5+uOulhejcaVVgOFCD/x13jm2QncDUK6uS1lWyymQ9OmVKo=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157019054368", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "AR9+l6SY9rG5MF4v+fvGbiUVDboLsB/3Y6X4cNucYK6XSU8+6DmgYiqg3srfKEVkwvdQKuCByScFoGBbLHmn3Y5tX8K0V98Dq4h8jg9BRcWCQN9uAaZIvvg44EhEHGxn0lroHnkjVUEkfat0j8Uj16qsfrqD/gNjPKBBe1M4Z6M=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157073960249", "rfcCurp": "SAHE800416HDFABC01",
+      "uCVW3LDSql/qeDBGTV2peXjuuA2BY7lAANkz6qzfOmPlapLoeiqJY4sf8mMuSJuI6qfCf/2OfclvUBHk5CvV3VPPEcgrJ54AwnGjdmerPnKPpVyhkNBvcMdGOYPpYDHB1IgDZB7iprR5IUKgbRLm74ItQnfMPxt9qX7CKIjTAjw=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157043096622", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ETfiNSLHYyxpY2Z2BKw51Ht3i1bVS7VrInL54XxRDOTWAbZorl5gIjDDpWz18Rp1HI1RP069E3aE6PMkNqdHXxCyLZPPqGzwSecfV0iQTI2QhRFC3I8KSYhf+3SCohWVBuJtVc9qsmogNQYcD61dd85EIpUtCiBCjKZYWn55+tg=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157055265108", "rfcCurp": "SAHE800416HDFABC01",
+      "LDrxvnP+gtzpMN0K5uIymWxuhIcpppT49fKK68DKBTMLJL/SRAilSIp/KQsupDLVTURVGM2zWMXXZaSwwz0PaKnuXkYzZdxjaBB+fA6uVM2j8XH8ynJ88sK2wLgU1d8eZUGmXMIDWBTk+uJqj/h/9RBGeYxLLDpsjJ5H8vzcAVs=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157025506978", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "c7SuV1JWD+YvMK3aOZ5Uvp+4u99MHwwHX7F/qi3myg63/FNmke8dlowzJSq3KjJKd2LDQ2FrWhL2L9fW1Ws45wO0Sf5eUeIW65LAVQGIU1YJfz+OkqKwA6LMF/XfhaIj9BHUUo4DUaQBICVFTUjKGw+f5/oZqHuQUVHrGKHW4ZM=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157050268430", "rfcCurp": "SAHE800416HDFABC01",
+      "FKF3oyrxhOBCVPgSi3q5wYLrFIslXle+T81lvE2sDvXV6tjtdSBiaYqiF6fRddR1pvEvmMXeM42icsjzR2T/0R49tIcjiCV8NtokpYIHPOkpulayfSvGwBVo89d58xKfpNBtIREiI3PuJbwyQzNKKlErJbOEjaQYLLUaMyTYmyE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157089875315", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "Hl4QsvnkujN/KIVX2MXtiQARx+Up6zuJDeTn0qVPuv8cROdWU5hktDuHYzxbs/Kv8mssbL06NcYLJtXL2ZhextZmn2/wtc6j25RiBjx8K1J2LApW1hfqAxoF6XuvpWtIFLqbl5Bgvv0fgWhfjoFa1vxqo0s5Gm4nMLhAN+K/JK0=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157011844505", "rfcCurp": "SAHE800416HDFABC01",
+      "rg7L1W4Tp3vHV0XrXQxeb46P3EXUgYRWeKNQwe/tVSVkiFK3FmYjWbiVe7R7GDUr+kaQyVZSyXXxCU3KS/96NFkrvj31RMrteQj8FbzpRi5peKr0ycahJ1DavPNezvwURKhUKAlcTCvy4IULwGvFNenj/Lk1wgHVqnska3bo5es=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157058981117", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "GQHFVzeEauX4HKpAruOSz0ZXKplj1rm5u17var34rEzvnEbm3up/kOp0Rmk9bHEkFXVmTGmEkIB4dr7BAStExZ4cRvxzOzPeaZnu4orX8IDtGw+5Vt+V4C9MnLBt2OxyBk0EzAR/XMPYL+P+Qfu2qYft2dFK77al/inDpEjdFEU=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157092901289", "rfcCurp": "SAHE800416HDFABC01",
+      "TC2mfKJ1wPqjI9WiLbRqBf7/qR1IkR4LELoDCWP0jXhZbNrz8NHgwAuDmcAa1m4contfE6dJIWi7L8RRqjrfax59Z1KfU9CHtJBndpDQFvaTVdD+n4F78gDyRbGGUjkg+m8VM42oFUMAFa+wDNvH4CXi6MPB+bYs77AKjnqTe9c=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157017893615", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "zTfVRYxh39H/kx2091NVgkESKOsLHIl1WlbdvFPnYmARC//ORTZl/LAlRZ2Kw9vqYAsOLRlVTcGOtoH/aaU0HH2Ku+lcDPQkaqji/KKIM4M5X5ZKjiASbhws38MmzOjcGtGaoej6Pgno5xnmK56C3odnqV8viVaP9cyXb34tigU=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157054669637", "rfcCurp": "SAHE800416HDFABC01",
+      "EIGkt9uqsKKK4A+sGMmaMd9dluMgupLcs5l6yAt+q6W6GhE9PdnS56o8WfHyi7D9qugTcMgvFh0FCjF1TQcWggs7wHOHDA0VxajbD/FyYOclnVezAJVxLxwWBfnLb+wMJbmmo4TGnCQHVibsREttm705kQP+NIkMlQ6ld0IrW04=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157093831293", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "PFtDe+ij7ZWOInGbmnt9vCtQYeCLn8Wa7HZrTPpyXDJVQis3spS2qaK9XES7p4z3MQbqLQEUKoCRddWecKHUSJwczXhMgVpDbUncukMyPpB0H6ISFLuwI7yvJLXT3+CJZoHMMOVqR5p+Y/o/jweQFZcEjOHRf5hYlB0YHcorDSQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157028875075", "rfcCurp": "SAHE800416HDFABC01",
+      "CSW/F5bdQ/WReLj9+e4sGdUf2VxjqjXUQPVKcdHXfBpH6QR4F/5LDzfGYQmHWJTMmFn4DhiEY8uIUqOuCbFAqTV0cYTJ73HYAGjeLMUNlm7wbLAQVcumaYSk7rIL9aawI6D8ZBvfM95ZcCB/e4orfcy81qdoZsErlV8sjsFW/BA=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157045766251", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "FoGcVisMdieLDcH8ozJ2MMU8Ns4cGjjZmLHCL7ljftFkpsGaBDL3fcc9sCco36N1Sq4zZYE+3XwTlrcnNgyS8Gwvgo5EFWcEq/GHyCnaQETv8TEIlUuTdS/RZqsWWKCFxh5ozyDDifGFkV0Vs9C4ANXBnEhIX8JaNaLBzoa6HhE=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157043790067", "rfcCurp": "SAHE800416HDFABC01",
+      "TBDWDEFo1d3Iezq+EEUVL5sCq4eK5Vq8RzKUZ1RiFlN+Lv99PhPSYaNMKydmMOGatU12i1ornS3HF0VnwsPS0yQEQa2htN0p1gqtrtRrIjUTBw2tETcPO43mgx46tF6a494I8YvchZhI3IMErTvaNUTlbRp5jmUipTDid5l1NdM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157082409115", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "JjOZVqUYBuqRGcShVimDjMJtvZxHK/A2Ni1fqk4lXucCFCbqzhdKLuxD3sGEBhtIOxiXy2hFIXzPDrKwYnUjWeXXWJdJieuV3MUCp9XSvT9oakYpmQFj0t6bLmDXCYD1bnKoPTYqyYP1GrqVSgMlEv14dTyTHuXtSE3Mo4s30D4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157096022368", "rfcCurp": "SAHE800416HDFABC01",
+      "t1/dfyHCw0qYwuI186B/SCkG7vAHlBnoVSexL774248GNHNCodv/P/vEEMwQVG4swZBfEH9+PqvD0aNhOqHZZk/jMmUwGfOeIGQmCTAlhA2snu7J+omdrsCl+68hndYgKTVghVvh2HuEnzkPfPEzP1AdN+Mwgtk2yqlwe2ueurY=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157035373764", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "UTtEUD6EHf+jXjFKEUUUtUoUPVQkW+hAjp9CMx8wi41f4MtC84epUSfcupOQ1iJlweVgslQjtrQvk5OKMMSrewfDlBFAB7NfZ2eKQB9LvgMMZJIqler1S4AG6eKuq7cr1cj4KYlpWUh2xNemMpK4LB/5adQ09ZZ1Rg6YGtRyB5Y=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157039039321", "rfcCurp": "SAHE800416HDFABC01",
+      "ZpuhsSQfhJmHwVsEgw8qXojvEDDEgxbFzVC1r110j2b4zzeZVIeEi24zuC79OjXBJV3WfqpSMUTptTluVa4TM1mZo9+k+nwB0EPFZKnspRCxjY8ywyN7KtLQKBNdUY8EAF0H4j+OfPnEJQKPv+zbEThmgpJSXJNx/81+MA2ltr4=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157036877544", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "M5+++UlWfd2HfENutmHJhYc0mlg43axJ0lDksTkHENCwTmraBhs7FbX5ODDwtMJ19Q+2BvdPWZN/JG52KoxQ21x/XF6yVYIxKq+FIWQSGSBgyyq31I8jApCrFrsK7Kuk81n3MS5jB086SMzbpINQk1LMzrWSgw5DKOBD87gpc6Q=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157010043886", "rfcCurp": "SAHE800416HDFABC01",
+      "Vqe6bwIC2/3VKJUD2N5xK01jYSfkFnq2SVwauQis25HELJYjsXZJM/6OABqNYHKoSlx6nA3aSRgFWgzchEdLvNF9ebdM3+LSiXAhCYjo/ZvIv4OwwA2LPI8OEkOfmohlj9l8U9puXvDDKakMsf8xHnKFCT6ZiB+UGFE9oDEGYuM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157050735413", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "wu5FSCODPjzvVzNmOTVRP1Vwyg0WvwD0Qqf7/djvZQzwy0lreHc7KuO+LyZbfi/epsXr8/+61NRZwTDbj44ZTXthHqniDqrjsAx0E6OrnBFNau4z3yltfPf9ekAGaBw/6KmiOlTKIIcnRMJa48jZhDsNDU8twe/b7rSxD0k/gBA=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157062453369", "rfcCurp": "SAHE800416HDFABC01",
+      "Dks7pk4PW6BGHP+wVuWiKYG5xBxtqVSG7rjKNbk+x8y8z0jq60XVLcP055Xik6aQidUnzhBlwyMV6j2TZSJsYXZut1Q626gJ9519Vogw4YuPkfGknznrvamSttp6qcy9A9bE/e2f9N/KAJB9I39vAMgLpF7bvxWmdFB4u/LhgAM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157047529179", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "RFXfZKJmcDO7SeAqKfwDNS/QDOu+yuOQN7AhDEzR/JPOEQCGEwv9dFdB/w6hxPM6ug3wdtdYYmvEPpsci1avBLc6jDusIOPX6PlyWU6cWNqIObK3fZ5cIGbSbro+fCBiX5noiDAkjrdscNHW5c+/fGxprLxpjEGRTeaPvzZl4K8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157035073718", "rfcCurp": "SAHE800416HDFABC01",
+      "jys40eO6KeC18lG/uWylIigyD6geV1WxdzmhLoMqROuoOXmFrceMyzHJInzG2eicF2Glqwuo7KSa0rX9/Ju3HjXVN7kt55mMPtsXbz1ISctqNH7kQ/O2ZLG8C6srqFzxa8Whd1ElHWxtB6XvfysMRxAZNYxld86ouTQZi5vlo7U=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157090959903", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "tGlNKNdQvMWtgDwzVpWswX8bJDuVn6bVBi9QIZDxDs2A8eAgsVwVfiZesbh+Jn/XT14pCvNmKkVXbAdV7Bz3OdrSP4kGTd3cwiwmhI2NLM07lW5qIVxRQw8LOS8Emea1sOstxUEFJWwejVxEgaQC98z5I60FKbEkpWzz7Qo3B2o=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157073947181", "rfcCurp": "SAHE800416HDFABC01",
+      "NiPIVoYav7hPeRcxhrjUX7aW+Rv1b3zn4BlEtTBHnIh0V9fuH/97hM8chpsDDk/CaquyRR8/NrFbpFQP/FaAHGSoqmVKHv878BC+E5x3YDYmdVWNLWAzjE+0z1x3E2h0nAvesgH6WY3LFR2sJ2NsFnXvjtujmyVWnHCE2sXKiVY=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157048671372", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ikaFQ/nXaXiEOY35BL6qmWx3dtkN1sMg6vEennQsXY4m0tFaakYsHq36/meTX/RGy10aTluHXvvk3RiUhNhbsN+i/bVm25OdGg1A8Kw2IqGRwPhrOC4WwU3m39rNba6/L8TMrBN+5qFKs12viGdn4ZKvBHfW66iC1Sqoc135Ubw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157064219718", "rfcCurp": "SAHE800416HDFABC01",
+      "OpYd5IsqfkHmBZuqKZjB1aXgZbeVa44cPoz7OwJYyJCa/CiDvcwdMtELWM8NdORqQ1Zml5qG97GXPBqmPxV+l2dV3Hvr/IOdyG+RUukxsIc2Q3jZYUqpwtVDCecMkgst49CnNeIlyYa780gGg+ND9B5wGQ7/i5Axiddheh4cXsQ=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157031779854", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "eu/4/GT/FyprKVKm6GXeuPMxfbqJRrbMCB0l8BUi3/GXXMcuU9+7b1FYKotbNku1jpEsZ7/AG+Yaa3C4exz7rD+p2OMVOtTNLYWrWwC3CGEjvlqkgogUyXuxwAC1+1rxtOiPX0KTKkjwuDSBYTwnPCnzdTXODYONJvWx7i8B+KQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157021226579", "rfcCurp": "SAHE800416HDFABC01",
+      "a4raGMbaOYBKNRH8xulF16Jdx775YYuHpX3+eR6PIsrSAuSWlR5LhklZnm7quoRrTJyYimbnHJlcBYUkE7VapvtsfU0d06kJjvNbfflXXlcBRPpx5p1C91urDK3TDogN1bseO2N8N3oAl97kYjrrmvuWP2GD0ao/ncCdlD10vzg=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157035140492", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "f3sPihxs0Lh5uyluDC9SJe7W9vMu5O4tUlbaAttQW5gcw8jMGEuMrPNeaT7P9dXA3jfmisZaVaoQ6nDuH6yq3ZHr803e0TIl/rRtq4PyzNtg/b/upTXx2sv9ZhrRTh3v1FPjzM4lNK4vuosnU+hrVG57r9OLxHxVWpgXH9m4YNY=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157093838827", "rfcCurp": "SAHE800416HDFABC01",
+      "KqiqD+upQXoML298yTvSemj/pEhAUEK6+izt9Zcz/hNvn2JKkwqiUBWYIwzi+yG4w6yYn3xPR0iVEdpvzpqD/PUZ+ekn0js8jo6lV0SxlBsHqHpC0X3zsKF9sPt5/NXdBWS8TCUCGcFUr2WWgIOwjnZzyj6Au17qc+XkLBrz3As=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157056532335", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "DSfkmPSm8FecfU7/crHqnRQ5aO6OIeYzPQd5OIMvUoq6bkjica1CwQqByWzw+tu140m8s0erfPbB86sggovFvpAWjYnkxYkC9mgx+MB7WaIKCHCNUIIjTce3UXZFrQWq+sVkQzbNBE1Qo8hYcZvRq4qduW/l6s+uBoIMCJL2OG0=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157043729203", "rfcCurp": "SAHE800416HDFABC01",
+      "W/47dJUBXED5/ZUnPm2GhRDD2hme6+cFAMz2vL4eyDZtTerVJJ52ui/UfdddjuaBIPRrV9TunjpzC5At7m2XLSZG3af4MzWE+DxhQXYsYEZfE06N09jikhl2CnPmJCExhmEhH+CxvqwfCYOW4oXGsZwpivb7XEhn26TPUjSBh2w=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157097022765", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "v8fz4bG45QmPQ/L31G3bo72sgjg/0+KWR6+lIielq0N6R0h9eU397jkZj8JVa1+4wayoiM+Gfr7Rq1+WsGyVdpUaU1/GGfOj2kMcjZBSV7EhTGsey+Dt2Zati85EuC2Y4nM7AwQ+8welulOBXaFU/XmUqs0KGQQP8RD9Y4pWv54=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157028698993", "rfcCurp": "SAHE800416HDFABC01",
+      "PRSyNc7peCpP32j9c1lVd5AMOlvzRWMn6YH9MQjhr3YTdaUL5MwmvJS8VkU9Q3KnHF9ZG+KFXsi1dH2QSwy+SQdaoVE6jHDQhVMbANdhsbo8Re018WklNHlmMDh810hFGzMJDRzNy9QXHEyRU0pKQlD1Eb27CKnMmRlOFwQ9NlM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157032640322", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "dEYefRAukChjIMkYhpB6cY4P+MD5uJ/ZAGPdx7KPMPI7GC3uWOncBx5mMYuGxaD228RGw8eDljt4TBfx/EyRIV4lk9yWtdgXjcbe/6fRXMLWR+syMw57aq/+FppqrvA+hzAYKGkDaBiz0jdisZvsbcENHqKzlWujPSrTvfaMnSk=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157096369885", "rfcCurp": "SAHE800416HDFABC01",
+      "xFUsNkkgoeV4/zpMJeBC51v7jDc81WEaGPLo3rjHyDcRH1PHylwHQOleCpzjSCA/70B0aYrKqYJOlwRqwdAJSNWhG1KM884QByNRqA0W2kMxqa0C+tbI1JSmEGQNvQQ9QIy3JAdzF7+6RYZPvVE1L7Nm6ER2Lya9QPnSMPwit9c=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157053424556", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "QfWrtsMsuB2W7/NEk7u0NVSR3hxm2s+hlNoLjarHT0GmRa0ykzEWHeBsICFMunxVkPvkkO7+eQiyi15dQJmFFZD5SpSLNQsO64aYnvb66/A0hv7IPLZq0FEMxh4NIcO21VMnUO3j1703SO+Vuizu6u2gS1JFIVWD0UCW/jwCi3s=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157091411644", "rfcCurp": "SAHE800416HDFABC01",
+      "fOo6CGmFk2lBEFXzXQLFGqMzvqKgGJ6s+k43LsHVEGq+DbydMeJnFlBLGfiu0BmIhpejoILqz3LsuTFzC+tuLWHh6Zot20pX+zcMsZogDmHLGAqXcV3Jm56N+bMxK+AIi2M0z9mAaGeQ6LBp1/mxbDpLRFaRC5QNFyrM0biIcnQ=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157095975681", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "p6xCcCmsPHgopJKAl/2NeZiqqPDARUsaqnWK7ZtSIBhbxC+XTEPe4fcfdVkCcib/6esL0OLTMNqfKubE0eSDFcfCTtfpYq/S+T3iS5sUV9D62/QmsLTl7EL5eFFq3MgUe8PEk+xzCH16cocx50xVbeJlvKcF9ZjUw4O+Uipa+zo=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157032150443", "rfcCurp": "SAHE800416HDFABC01",
+      "dOnhyQBFKvcPSim6ofzCeRab55HbLJOAqRXybMZvgYHL2/GfEGNsvTf+Z38+YdCbXKEyK1H90szuOCoYCl5vA2sed8N0DjOI59+FdNRssgw+4frarUe1FdbQEZCGlKQcUIqmRbk4yo8Vk2MDPL62E7rMFKZj4hGO7jwDcYyI3rk=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157010741971", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "raqLqc9O8LUJGP5hFPqP5qoaVQULaXD/vudxWZl+8aGE2rXs9oE/hD72o6YkZ/+5Fa/yqGRMph1RsvyRXekEDvtwo6sBCRDJ0q6bqR+kfDYFnQD4vyRHc8FKyCoDzJcMLltQMEFsKqD7uKYrW+vURXr29j+w5wou/bqAWXUqofc=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157068519566", "rfcCurp": "SAHE800416HDFABC01",
+      "CR7yR9N/EuO3F0HYLK48USyz3xKivFSmNjje0K2dp9z4IDwe317O2ToKqtgytqvUSGTFbu7S4/xYncfoxAlWzzcfrGywxhRhL3jkTCAF1PyYOjXXGVvaWBq+kvXTVyGQYp84CDPe38WqnSX6SkRPZGCJUN68EexO40WR4FBdgZA=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157048823557", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ucGje+1mnMUf5mETUuDBtO2mOf7Xpwqlj7ZRd7eM9uOTComUBWgYOMjOFhIjJDDc7rc2/q3fWzR4XIZZPUj+gaVoe1uLL/wGB/Q9IQfBcIZGcHevxVvaxV1rzTWHuszsZrbWzI7h8DIovlmvI063li83ONSkqpXdjJ/c7Yqr8a4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157012679274", "rfcCurp": "SAHE800416HDFABC01",
+      "pC2FaHSLUY9zgvjDbtd3rm64GQP2pgtSVbFcPVE1AVrXrEjh8eJo56p7ngF2r6L+k0HhA1nfVZWjmGXf9S4hOSVOVmh4Lc7PgZrB/5WDCO/0jq9g7KqEpYSbotdNXH/o5BTuMdDTFQQoj2umMDVd8/Cih3mB4liiufq7T2MOyyc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157028729529", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "exuswywvT4luANLolTbIckUZ+7lGdx4x4cjMGc/HlFsKD5d2iqrTuAT2VoNuA5gKg3EVLe+UMCt7cRK6pZjc9a0IxqxOYQVPAVeAyTBNzo83HwYu5dEjqLn1djxIk4z8q+RISPl9U054l+kHg3nYmE8EwMRCsku1KJw+I7l6DMs=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157037917539", "rfcCurp": "SAHE800416HDFABC01",
+      "zsN76r6LqeexIs2bIbWV85ou3ACxnQRpttqlrvHqwxaFtXbuS7JQGjEzmt/2Tcghvv5cbZ0FVfBoycq9YmCPTIm70Gw4g2P1eN78o3nwGosF7TlFeofQvemw45Octwln4LHzHxiZaXVXyxLTuAbwuEYS6n//6sy4b1FVGiiIR5Y=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157044813325", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "YHnzjW29Hy3zdcB14iUsMNRHUoaUhqZuFa+jKXz3r8IZ391e0fxQYWFv4goSxLE0+xmA/ktcSdydhQZ6rCFpmf68YwtA26LIwzP1McaTFkGCXEMrI05vuTShY6LWAclnd/2xPWMwVluvRTWKUL2IxRkc4LxmWQMYzZDEoSf8/H4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157060456957", "rfcCurp": "SAHE800416HDFABC01",
+      "YJ8XaMY47z9eS5iPMUGlwNHydo+cndc0jJjKhShjzCNsBVCcYLkj802RMiKtpvHFBRYmEFHi8vWeOPBl14GDj7S4tfCOLWV1vJQyRtIHKe3lIbAO852lmAMo9W3a61uZ6AkqXPIm/Z1ah9LnEK/NkUy0h7uWY8M/xHc+ReHSpjI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157057453727", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "rqgRVDa4OLcM05c518numM24oWbmUY7rFdhOktXEWPf9T3uPoXyvXfjkLVQtpfymK87JirtjUnMT2bSIKL7JDYUJkwBhYXjiH6ULrsD25y2e1HPI3u6PxVDjtTnUuCp4t5lpFrpQ0LyFPbBqd+8mQRY7fgmhO4IheDUoBejuiqw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157092220944", "rfcCurp": "SAHE800416HDFABC01",
+      "Zjq4BF5gpqFlhg4gBsCn3tzQPpVreJ/uhndvFR9DZBt9RqujOIoYW6cYJT6Gyq50IZIcuaBXznMswWG7iQuiNeZP+5ziYGkynU2jA19131sbFpsNn3Sl/oIQrjybSHG/dYiQ8IA5k5T+uc3D95oZd3FqrG/6cNcLTALizIolmOI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157091193043", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "zCXtMpJ3OHxmHc9sPYofFUXrZCLzlilz+V8q9hdipW0iwvEG5yNgETkFt35fBvjF7fgeEed7C5BRK8bqW1LQLOhKJwr4OymUh4ft6ThzEodV5GqPHSmzubuF7mtaKQlBnbc9NVgGIcU8GYKkQs1sTmaMAZ6tZ2ohUSwZVUgibLc=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157038580334", "rfcCurp": "SAHE800416HDFABC01",
+      "cNCDRC4HD/KMErgtZHb+ZVNFtpWmNQMV3hH94d6Yfje8ylmIv6ybndsmmggHBH6MfsEIkhkj4cqe6U9LSzKMoCmdZiGc0rG3eKBMEuw6BnoODusnOlSCjD51wKElzMh3eTtOSecE9o/6fmfXHitMMBGYzuV1Dz7CU4s8zC0Kny8=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157022537021", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "N/Lzf4ZXHOANGpIryfGMAwGKvQrYb+CmmjrE6RtNinrLOYA1y1jdKxfduwTIZDk2NKbCMLChBTwmnHYHynrJRIvCLMqbJti7frlmL6nNeO/79LbEn4R3BHFQZ+O1vIO6TRTq+vDGUbm28mJsnt5STGJ7+WhK7/tpYj4edqx3ymA=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157042611464", "rfcCurp": "SAHE800416HDFABC01",
+      "CVvgtBPeYpoA9lmjjslKrpKmg24+/OBylA53jALaT6v3wkit7m8C/3N/RX3lh026iOf6OXVhD3QImdq1YyBJ57vUS68dtAza/Jry5fdPjeyXl9Jb5V8Mo8XjT8/j995vPZJYE/dFR0Y0i4nsMAzhbdMCcj+7wUfHdgt3JGSA7Ps=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157055320836", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "FZMBIPisiEfgULDZxgcqeINRxUf5hIOe3/RPkmEa6ByZIzZKe1b5aAvaB7CBZbWqKDRAZc7QMvGjApETtCv3ljRd+CnWjElT2VI/j05LXshJUdxyiLSAZL39S1DasLSnET/MQ4aQHM5pWxKjA0zK0cWwg8dASgXt7CZXMno048w=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157069018529", "rfcCurp": "SAHE800416HDFABC01",
+      "Cafd5NJTJjVSZfiTXMLtUOCvKlgo4Mqv7eqobQ1RWTbDZ+z8soxR7JeOddJgdEdmL8hakx0HkQDCerfz0S7qnIut5Q7fVL5EuqfD7vdtzJ9QI1S+NUvWi9zJKGiDeh/c9mH5FOJFTP0Cm9lQd6zLgTQMv7SbQpuH1F2sp69S1jM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157070689109", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "c8JBThazsHMEisWL7k9m3sZHl1BNTUeXKLEeRq6Sv6cuwyVd6In5eF1rzwIrporfDrAK2hN6e4pyy8Smr9nzjMBOy6QeJlLEM3JjJv7swtQByPJ70BSZFmJbaOqS1Gb2ItzH8GL43e0UichuXaW0NuKKfJuJJA2IAMhsCuTLR/E=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157035544412", "rfcCurp": "SAHE800416HDFABC01",
+      "nt7PsUvB581tVpm7LCWZjfdKMmRdPvZBG6L1QY4dd0nGLzgz2hfuKEHbCmC+JFpHzouahap+l/LjxNddGph0mrmn1482T1/Nksy/EJRdwkd6AoH5UqNEaIcNE+t0/XdCa8yjegX/86CwgAAxvkMG10ZWmnX+AAwaRaMQNNTleqY=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157051844112", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "BldhgzjOwmZFFQuW+cXsXi/iyLvfkWftUxnoK4/f/V1WbtQxiNo22ra3PZat/kMmjyLKkIm3ef7AfSnioYP1M2bmv+iFPR7bxz6GMJEcd+W34QU1lRS3f3ivL4nv2PrJbBKWcSaP1AZwoptfMRdEDIFlMrJXabkwJB8SujdogbU=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157018226168", "rfcCurp": "SAHE800416HDFABC01",
+      "PYvPGvMhUDTB6IF9Y5Ee3iV0LSihio5YVGKMWnp/Hu/ebdWoYJ90KODRRsVFbdAz5nyvfVDuL00mcGZj6+4Yf/6eFEH6+CAMWkeRg8ktCYDwskTYXtst93eOzHXamtpSpoQ5za96Q4mtkI7C0rMffc+a2iFemUkKQqUc2LQZUfc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157075489663", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "TedF0vW4P6S66UjQ2kPPnineRT2Ppni2dG69UT0vkQbKlmlKmvOfOymFUgEtObEJhddFCm2dr2GSdylDnwcKDXkO6JCNjikiOodC0XN3k+X433ywFNJyGANzJfSohfM370kRDFAOFOAvvOWmWrkLGQVFJChdZeonPsJmxOnDA70=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157019972657", "rfcCurp": "SAHE800416HDFABC01",
+      "p8U8NQiU+YYkN1jnIcrA4ILwXgSKYE7ctqiYl/9mmuEHiZj8Zw5GOhyn3yx0lCXGL9If4rCW47NJQSKcsUfxp6xt48yp9nXSM6CDhxrSVAZO1KYAn04ZK8tYk14jQNlfaYix+xyJ/d7XKcUTw9Z3TpHctOcsMRBuDVALn1q8rd0=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157098620564", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "txmzTOHFcayb/PCtZCJUjG1En7s/Aya56UdNr0WFovKW26xYBa26qSeTuEi6QEvhkvt2IgPpPyjo1WhhVdpgf43PMLkPkUXvEzLmyy+bKnFj6RTp6byyEWXRwi88/ivzSKP4E7O/NRA6Kqd/sTPjbWeY9iOCfWi5RDx7o6eD1d8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157083133833", "rfcCurp": "SAHE800416HDFABC01",
+      "ukXDazUms3yjlBObcxX1XREhp8MfOPGlX9SlHya4W+Pas/nKZ3T+71AZOVIC35MIFYw/d31pITTPtO4paupVCx2y/sA9L5BxUafny4XN5qDzZoIHKGoq53h1U+UNaS2C450KzwftocV1mAbSwaMEP12+40jDK4pe2pFt9LKgdRc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157086208338", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "M+PQeCc5y0Np9ASHyLi+Lp8wcVXczy2RVLz+p8iHTX/oDVZWZRAFyoiA5KkpIsfyIRgc8iFRxHtc+tcgFtsDJ2/kSChgJZAVsmilor0JaMcaCCEpb0z0vInCqG8cjYtWSTtBpYh+q8fK9S6rT0CCjkaaQLgvJVmHQxf+C5VbStE=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157098821486", "rfcCurp": "SAHE800416HDFABC01",
+      "zWNvvoheBTLZX8+RbhggFMxwSUsLt4hnpGQqeDamsSzcsctDw3vsVvr6dd5QO4l9l5J92Q/KriKa5qE8VteYEjFpIXo4otXo8CxKCoo6RfoGZysqyLjqo0y+zWM/HhyIEZHGljevKelODJ6xEYZ77o87PEvH3yV1gCAJpiWIfGw=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157098186493", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "gQu4YgbmOM4QzPplfNTSUEo+KO28NpbjSGyBGltZ/uJtiyjGIdreJlmwo6f1l6cECOQDvSGMMv1hA6o6yd76GHrJ7hXhZItW3whkHyYhncl8PzKRuMF3IJuYoYtjulF/qAvGJsp+EwibxByEk+Jy1KSZUp3xxTHtgwZaxFHxuuo=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157050525416", "rfcCurp": "SAHE800416HDFABC01",
+      "PfzWMJpWbetLnp3uSlUwcTYDI7k3NJH+nk35x9TKgflhQQB/0JqoB+Hxc4+F8vEDBNhPblRa+cy+q5U5ZZbxyq4EaIVVaB9Vo2Eh3iYqLwfxzyZilmXU89Xjy09BsFIV41DbrN2adRdalT2oQbwU9pAkbTXkO3mlKYOuLZavrfU=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157095917445", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ynv1Degu7qbyBrUAiXxWEq3e2RGCuNVueIGvg7G+1yhoL0jlOwWyrseIHy6VpcM8fMimxGZp9MfjKzMUWig9LcwrOCsqeRzgLaf8/y+37bGFuba5uABL43Vcp4P1YL+Y34J9XZnr5T8XqcotLOqLcb7zrd0JEoUY591hklfsE8s=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157017679253", "rfcCurp": "SAHE800416HDFABC01",
+      "U0vE51mXrQVpVmqyzN4+lm0FQ99V+DJ+V+LGDgGQi44UsKKcC1CAyZ1M63W+P6Y0zEgF/jRiF8+Hokl8KfrX7YX25FNmaZnkgmuKzyfLzU8zuxfDnHjYo5Vh5zW+ZJcH4uN5ulSvKd+IlHbhLYz8zgwT4Ef5qwyfsYw6DZ5n+Ec=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157010615667", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "f6kOyEYs4tzouRgGRwyzwkC8O3h0cxh9gDsPxgT8BUuQUDFP/WgpG0Tujuz3uqHCqoeGBd5q8hu1Gqtmat7bHtVtWj3abXAiIZncMU8nC0HXRN1DoGLHelpsWHOr/xxTbrUW/XrljKj5XZuEhKk8HLaz61/lK6B8vyuJhoubxcI=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157025776038", "rfcCurp": "SAHE800416HDFABC01",
+      "w/9glWDqXe5jhjHOpopfVM6k+3PW1PFrZTf+D+2i/zQL6UA7NZzHuFS0uxGBTs86+gR3BIj9zTliZm7Kw898x9kmLwss5pjpiSqaoshEm0FPOcEGF1fsUxgYFGUM+KmgxnS862gyAx9c1hsC0E8udlNwJ+5vheKpvspbqP99Brg=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157049025642", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "JCuZ5nmpvkr/FibWjws+56rDUkyxRSPPXh5H0U74kU8xxrZp+mcQloBQtAsYzMUmSxxan1foO6h5MFBAly14KMadNAejv/bw5pqYh+a6WmoGKuUHgK6DmfrgrFtcXWXbXlBK6Lvr/rcULa424h4REcyHXQE7nORdxyAep+xfe5Y=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157040144098", "rfcCurp": "SAHE800416HDFABC01",
+      "B1NcJgr71Dxr5h2jJHzyX3ubw9wENAtcFHg+QrgPU8zRzJA/yDtXFR514D70knoSPh0k3sjbwG2q45ArY1CQ7iivcoPRgooc/liemeZZC8kKds31MGgJucZi2GqN804/ItdZ90OHTCnLxCG5hAl/UKib3jSofgiaaYRfO4M8GQk=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157084542300", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "lTLFGD5WkpOyrkyrlgPHntAwXIBEsH4t3iUbRCNzC0M81wW5GkW2QDrbrBfods1lwTEt6tyQKc5C3tQkBzSynXwF9UZtcgV4JZBiohqxw5KsMbPzknDqH8SoSlXUtus6Cts+s01ErwbQq3WRi++DRfexsztHjFX/52sZILRX4TA=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157086745079", "rfcCurp": "SAHE800416HDFABC01",
+      "kqDKa+2H4qHBzyQmEOIhcLCyZPuOhH/auAmC5TtA8/NuTPAE+IUwMWxa8N0pie+x8Vogz42nInaGZvKMrTULndmfZWge0mEBMem6MCFPozaWIlSo+oQmfU9Yk7KZg5j22rimt2AwKtEhwpx3ySkTNbj1FM8KkOgRCHIf/z8jMqA=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157063330643", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "L5Le8xm4QBuBXDG1gM0ebhzrTGCI2TPsvqzDSFq2udUbgT8uSr/AFU4IwE7uf+uhx3fQ5ygcNcr88BWm5j9GFGf6Vhd2I+R9qPZOgf84MfE1NA7ytDiTQ5RnokDy8Pgo7gslECMtgk+tJn8qInU4muqikrexQHSVLh3vT2+PyHY=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157022448356", "rfcCurp": "SAHE800416HDFABC01",
+      "HOuMf2dH3FRY0jRMPSpQ4ws6kdnoBviwFDDAlRncyJtvKmprQFqOoaPKKBwwVoAl/vtZBm0ZAWSI4li3ufem//iMhbnPDa0ZgkGvxumpqoT4rNvcFHmpNalgiALJP24NfKupWxGT5/1KBECzTRugls9gX/It7TOYclV9VKYJ2jU=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157053791030", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "mWsy47UG9gIRSNyZEmsZXqEI1iDCkPntvfnhAMqm/yflIrUPkRCsm9t6QcnXW7qdyn1hMIqjPkZZUzuMHQYKx0FGrQbPKGjL+FzH8scobkDQ3CZheqzqTilfEOOHP9nLUAadL/5nh9bBbWofXVWZaQT5W/WBCtivskD8pd0mXP8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157040437310", "rfcCurp": "SAHE800416HDFABC01",
+      "kU6iYg4QcNzC/clb0B2oeu/30czzigdP6wCsg3BUTdT2Ont0c8PleIX9RMMOprP+vIiBDXsGPlARUlu0+UWyK7hh1gk6wuM6e5zDhJXeuVHPhONh8b7GxLTVgd7BhD2u/QkxCeTH7oA/ugTs2XzmYe44gKDbIkMiR+cOAoz7wvs=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157038061264", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "aU5TN5KOmBZxgDlCrI3F/WQxa1W9hpYHMZUv8UgR37G95YCP3HPsNa8CJ83OEMJGLwmSgwNzb+ZpGLwI1oMBukNy61Ez1ecOh+Iq31cyl7JM3NxWfRwv4URTMxoG67QcXAxeo2vOo3/HC1oTXDTomZvoqJ4Gl1KPYR8GDqp7Hs8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157077861700", "rfcCurp": "SAHE800416HDFABC01",
+      "aeiLr0Zb1f7FVinB1IqK8gFEo7kzbxF6Cbw3k6YrY1IyIgOkkxOsYgXG5ghUYYGJaaTrgEjMJKswWSRw70P1/4/rQlfeGHxfZgxPvFGRU6CSjA2XNPp9wfKZ42ELua8CeB8k56cqtBMsb4uUlVE4ZrHf/9wZtr3DX+e/G766blE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157018130908", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "I6xCS6iTGk5NaT4OcPkgAdmN5xhM+2fc59xKXg+Lxhxm7726PvYyk8gdkGK5LaMAKyr82Z92/LMGFTglOPMMenYLG8pik3lfhy4r38JE9x+bamt8Xj30z5JhEsDYfD+vF048uxbio0BSTW9IwHrBoDbn9qy2y2E1QzpVqEUULjQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157050253982", "rfcCurp": "SAHE800416HDFABC01",
+      "rF4mDd8lxqr9fAXtyMDHwYKn6lWBertDWS83hiOMvfZEV6c3vH3410KcP6b8/ejboAH0pieKFCZL2dj5L+hLEUtM+UwQdWnLA0ZtG24N8ZB44K6X1Ap8LoIY4FRZNlQxQQvOgzdPcs7Y6yPwFne6xFu8xBpy2mwZkIZWXZujsAQ=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157017489993", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "fjAHMHvP10kLHFYBvrPRcM4ldJ4shWc/zp5THejwqsOCTFNFE94F41FALG5vvCvkM5ULHsnw56Cm/nyyJPoiIoWzIi+dqkhKFtTbv/hjV9z9o0GizCFHE6yGp6PLTyhtQoA4ROlAbItf3+L318PLBKIg3OxdGvfv/nYXhSkCfCg=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157057514064", "rfcCurp": "SAHE800416HDFABC01",
+      "LY6+oDKBln9QozjeN43XlKJP2u3iDCF4bS6czFwv8i3mqUesMMu2751P4PV+0HYqT5wtJQk1MUdJj4VdaHSgEbIAO2i4alrMLhjysEHEs+tCMuCEnX/GXaNpzCc9YK+TaDucA0h898n+paguo/SB1oGbYcIbHioD7cebYnmrydE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157050712203", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "WzqMLH5yriysWZuL0rS3Ados1F6sQKU1i7R7/OHXF9NzGrexzhLHJEUvNGs8wpIlTmUwkoFx533xSVAh2nQzWYePIQhUVqKHdiVBwsCH9BB6Ss1mf/RKIg3+bLyhWKKiIZKEzxXLJZAqEZFNyvpmX//lfsLl3/9hQFQG4ZvmzD0=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157043869260", "rfcCurp": "SAHE800416HDFABC01",
+      "yDLjjarDA9g4PR7fvC/6O3NrH27OTBtv9RspRRAdlWaDMfagxjCbslvEc5HOys1634dRKL4CF7USt8F6BMM1YXm1OBruB8JYRtnA9mLv7m/J9jrFQtNA5EkzW0nRrljZ4msuVCABMldcgJ8MuScAOPhcp82eBkUZOfYJfdvXbuU=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157048887658", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "aAqQjRT/jzjOS1tGBV/6QFvTR/fbq7X+Z0rbOZbugRR6Cb6IfMzp/Vrnn67GNwGxD/QniNjp6fpJC2CrRiVhDw77aQEbzIj+L+KSUYRKP47gK74GYTyJ57wM5w9eh5c8eeKU3c3MxNy7kxWVQPjU19il1yBYRNDCkbCUsoI0KmQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157026401027", "rfcCurp": "SAHE800416HDFABC01",
+      "gXamxTfEvPPiTKrh6uB1kWF2tlX5LnAc2ojiCT4DvMP3Jtv/zqHuVvfBlDeDS0G+k1aFFL4BK0mP5QlwFMsdKTWcpUt5zIXeKTQOBuD9L06MPOmrBbvEa4j4252KodCssj9jvF8CYs2RvsiJF7AVeCGbJdgjqDBY49wn6rXE4qo=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157073799575", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "CcMcfgsNzaevhX1AGetFchlfeeUe/52R1me3Bx3M+5YiypPtsnuOOPVhENqoeUu48ko+v+9WP2nFtjB5uXf3iA7CeIt88aoPMrQz5Z4WpqMQaZhFQjmxRicn0mgOyU1zkJaWk42oADdJCdMhXYPL/gncmS0iRAXHASIJKq5rlmk=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157023037106", "rfcCurp": "SAHE800416HDFABC01",
+      "BZlLfPAf6EKSy9nJPCJmGXL/wuiJcZaZzXh7knYJbt4DzP26kVvauLUcw0n9C/dZNJXGeHscOFoe12kaS3aSPU1jWe84R/8+YeF0f++XxsFpLl+tOql1/fndSPMpsz3bYasyLBz+zMQUKd1apc8vwcnql6FkVytR9wIqLQp99Is=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157027775477", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "W8c5qyu+wcd5nyQiU+ii3LyLf+WaEjXXGjy1OOu3IFsnRGwAeTv3xggXVQJ7PXTRpRRrIhn08owG8hznE7/OH7RkHQ0bxFBWt/3Ye9W25PXh7dLNx8uwnanVjwLmPYsp3VrNEzzgpauNaP81IWqb2kaXPytoJGE/Q31RCdAVyW4=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157093902096", "rfcCurp": "SAHE800416HDFABC01",
+      "Agjlz+5tfnn1jVV8BryzXCOnu9OnxT4VKvr5hJJfJdDrqJC48I+UP8RxwuTxx1HeV8NFc1iJnrlajtol3nRDiCPef2sjIgg1NVTP03FWvbdIRZGRt0AyBd6XWWF1Rx/ep4UaBnELg8CTqmSQgfGyMt8xdbHdJtsHdLRkdcSQWLk=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157011688680", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "yT2EIkH+dGBX2BZ6e6nZaTXEvB2wlvzaq5DmDXlRTEkDnzlO5VSpbKfIlL+X8VoqsIPAf/WZTUdS9rC8X30V+1h0KIn5W3PVDoOjPJzAilUfvpwJbmBX8XoHpVo4POZZ2PUm/jLb2cWzU1rtEFe6K+y4zFJjvZ3cewqp34EavZQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157094781533", "rfcCurp": "SAHE800416HDFABC01",
+      "ePc/Ady3v1/hY9Ri1WlgrKNU8rMGhYopM8ZzZRl1IOC33rEmc139O/7O74ACnDIp0BaIphEXWpcfO6Vvy37xnTQwWK2+sqOrEMyLh100epEaaxPXzOhCpBEHLDwe7+0Xp/DqnSQ2GZsktXJYW52O5RQ2hi2/iWmUYOSZsD/tfCE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157023412747", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "Fw8YZgpYIAqmsAA9DkkyWozNscs/M2nXJ0agRIplQBImwe0JEEy4n0GLo+VQnFN2hkJzTshGQpy4K+alIqXiO57yTtIDPWAZXUTjQ7NtrnDFgMFlkYWRm1q7hFn+byWus8MYKQD03tLdHPQcS8SnMslkRkmwUJFpUOH5at2GKDw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157085037827", "rfcCurp": "SAHE800416HDFABC01",
+      "qFgkp3G5QVa9nv2lkZXoW/ghDo+bPdJ7c9bZPevNmz6eoBtbahA2Bu8rMmrVRsX4HaEq/eQyfu1+CulZe4MtAgfzyV49G56RisuvYyf9e9grsdNvAPxI3i8bhEwEi2010tQH0bycoJIS2WC7ZQ6KMwkhv15AvZzVd2to8Q+k3fs=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157061404759", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "CJ3G6eWll25Vvm3xx1dk75XBqJB5nfiRpFw+K0mKTFv5VnVsadoYfia9MZR5HElmh6A0YZX8+I807InCAUtTaXAzkPt0vEiM3fk/TtNgvw9MIedgi7XRKC7d3c2WVgob6UsA9LCcbc5CXyxqeGZmKNQGauFu7kpa6s5o7zZGhkA=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157022935827", "rfcCurp": "SAHE800416HDFABC01",
+      "J+eRxVhjP+hFpy9mbTC8KovcbetuSXq1GX8S8qbQjgxAjn+2NLkDWYjmtQHJeofapd5V/j82VgxL5ccb2TXzaRKqsptGlVF3hUAORHvTCiakJuOTBrzICa1gWg/2Z2f4B1HIbvArsc8hukcpdegO5tmw2v7cnr9cDmEMcDy99N4=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157041703328", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "VwUTFO+lFWm+1DfAiYtlkLkb3aTU3regTgtrnU4P5fXPrNUd1MPC0wfD69W7mpmVZ1Ecj3XRCLq7amtGuBMiLxZDdKdI6BRW3VJ/iSoHxzV9pSCD9KMVfGcQK4lLVrCX5IDYVF97pl5Ev6AsmXEjIw81m9s6NHI4BnmzNgP5/lY=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157095898551", "rfcCurp": "SAHE800416HDFABC01",
+      "ZmBnbGSizcNHvVRPqifZLh2y1sup9Oe86reNUNMQ2k8XLED/cjnGmaMbb+nz8CmLjHrPacVHuePsI/xO62fhO0hFxwwfpBoYLzFyGIrGwdpJONUIO2SRke0dRmNx0DZjFJaSF2/Z5+BxtkV0T7vRyZM0O+qhq/2X7bQX9lRxkZo=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157044376215", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "H15D3d9s+RR2fspFYGkFr/J4JMfLZ5kp15MwzpTSPuWYDPy7g+figWhrFFNlrMihtiZ5yPWCdpcSzhp70lwRKjfXzOAwJn3TNOZreoFuKiVMCBxTmCQxtCLoowlyvGQUm6iDmHHMpqdmvakJ+QDmR2w7WvsZM+0Mww5nzoBYyng=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157070897551", "rfcCurp": "SAHE800416HDFABC01",
+      "T0mf3/QZ+ZJN4pt+jfJw0WCWIHgQTTOLdUyZhChZUl3cQjtbV0zB9dgUsfZETJxybfrbbHubkNgTjCavYIIMXzklDryaCzL/ckZ+gsajSKjCJkxOPQ02aTR9a69esYYkL+gF1yW+Zea0MQ5APMINeEmPihqn3wZlQCVpS9xRiAQ=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157082915748", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ixjyzrNmL58RlvNxGmAJ8WolPrcbqXqbSiqpCfOoGcRkuATGflT+ZYdA4gc08mJEHNXjqYz8YbjR3cjTmcdZwWtHYRrCYsd7LR1wKQ3iJmtRR/ArmYSG/tf6Xho8Ze4reLTTdEwjWzodxLGldCbaoBRvZjlgbuEtQ6Rk88WZdsU=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157012131932", "rfcCurp": "SAHE800416HDFABC01",
+      "uuQojTp3OtpS1kgOxgIi48IvFjw7igYJ2FyiArMFBQMf20H0kQ6GYBVUlTKf9Fpe1JYcaVo2wENDmu/m1GUZJqog6tHJPzBxJKvANudh0OXLkFqs9z84tIQS60tjhAKjWDWCn/Uwh4wMnOWeSz6X3BRJkzfD0YPGhNCebSGnTPg=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157093491219", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "FGrpYr1U11/+9o5zEldkOBhypPDsNBg7q98LpRMUf0F/0XBMbcVhPNvQor0SlMHciGYie7u1bqeqmTk5jlZaXpmFo3pEtk8pB6AnwMincbky6O0kkcIC/Yq3pb7jhtXsB19o407QmDDtD/6bKTTA21t9bBX0bsvoaogt7fkDuD8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157083140525", "rfcCurp": "SAHE800416HDFABC01",
+      "WNQMt4UPzRyn4eK4D98KFWJ7swkdepjxNRtSEjhcnFD9Z++plj1Otouww0O1PXdWvGJW3vHmmuIiZqZRCfM+kF7wDxRLAR9+KrNS86YIflAkEvfUw5h9EH7SSalQkM0Urhwaj3wcx4940XV1h3BAbD0STg34v5xV7OX2cVHEEr8=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157022050647", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "iUGFQ/UVfXv6WODID5441S+9E4HRzK8HwsMzSfmYOC+W4tolZf53capqTd2liLP59DWl3lS/Kw+dIuxPQ4eHGQsf/SDqG4co2Ns1Sgxqyeo9Olx+2w9IZaM1MPYDqZvcdBtP3gm9zs9YI86VB1RluoYt8ariFfexL8vQDA/ID/w=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157096279603", "rfcCurp": "SAHE800416HDFABC01",
+      "hgkcLgZ4c3d5w/JiIWdGfgjksR7bxZJyzjAdFXBLMdEt1yyZ3h1oEVDdocI5SxSTRZfvhdDo+xrPXE78jCQEXErraZEhq9Uck3usr68WyxGVvYoOm0WjIQs5gSpNr2hn2RUj4rbbWUOUcrQWJsO9FCeL6QVbrgBR085c+tr+xRM=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157027744767", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "DIllOzv4vRPsV22s+Rk1MfxC0HqsQWa8SDkri4uc6N4BBaaHBOOvThQ/QFVCKyp8kVoA8X9OQJha4wqQ4KqcSZoqT06DvpWei9goQNy6bC93qP5mJt1t8c9fTKE7/Xl7+g3LrF5xw9yjq2uqqwusIkE9iQq43dBUSZ1X56BcoRk=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157046225092", "rfcCurp": "SAHE800416HDFABC01",
+      "XMcvzuvFiof9YVeuMVGedpTpFefkTQnrtModG067JnE3xHgpMbNh2yEcNCB/wRTjjdprY84NDehehLdEw5z9YuXhFUMN65C0+1gJhLtnNT2G1HEUyh3HcITh2DdS6ojmshVns2z8m6DaaEp1ImJIOqcbWmGJPaDik7ck6rIjNZg=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157083261336", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "jVfCv8BOtijACoAMYgTQlg6WIbGjTqg6RM7sOK6dvn7XBXHYgfF84+9Kb/CRUrTG4QKUd5LuTLjYdSz3fMXA7g4AO9U3R6VScD14/pRLVKp1BG45bc0YbqScGQIZGEkF7zh3C3G7Son7+viv5H1uj33c77jbMXBQsLeTVSyrAME=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157096624782", "rfcCurp": "SAHE800416HDFABC01",
+      "T4ZIin3DYmba3YDLEWN5IGxPGSaXiniHU43hrm3peTPOB/ULcI7vAf7bsx5oMspOjVGAnceONkKOR5fsIVC0nGvqQHRpEyEzFUET9eXxTrtBc1K8rv5hgUlyeVcg7lDideTrZfmFIaxtEMh23LH/BHGU3mSgNINlYez3TTMsKI8=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157031461120", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "ucoQkh99SHu+8IKeWh3O52EcsIi2FL+ShVmwFe3x0f8juUE9ToTrYUHAtIWAvkpODLHNPNP9Xgu4uCc6LYFJBCtZn95gQi6TjseunoH4n8ouPO9U+pzRxWT6LISllaO0brvjkGASJEXAdzYlMAZxSL0XD+WJ1nGGj8+DCRYR9UQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157027702194", "rfcCurp": "SAHE800416HDFABC01",
+      "PNsqzWzZyfT4YUwEerkCDe23a7wi2j06QR9K+ihRp/Na0Ph9louByVeQ8sY5SXceZNoY8GoAa5qW35M4bBFhjFiot+z+Cozean8YqdDbqQOdDLnqs+CA1YK7Way5lMqNRDDEUev69HkHS7ifSALPe67qgO/IDOeivZKYX9CLwtc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157054386729", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "qkWrrqmUnjs23j+snSGplAjrvX+C2TKcJol9VOYmj1MmPBV7TYQUwpJmkJTHQl2YdfUfFrJfkiityuvnTtMEUm5ePdF9XYcN8w1vjTNlQ9Coo8HKisYITuyQNaRg3Pf23kDVUPCtunrr6aLUrWnfIKlzOjGrjvMI7MbJdSrHVXA=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157064828947", "rfcCurp": "SAHE800416HDFABC01",
+      "puVvrlMZc5RAMzGHT4B6ysSKkLGZQOONyFef8ehRmUxb45ws0I7T3TJBBBoIbbeVqQ4cGjL3zowMcao66Z5WCREEvcZftYPQ7Wr6gumaoN7TNmSxwpssdc01I6QDpwrlAvpk/g5Np+33EL5nLZ0idZpHrV1pl7GWL9mBFoCfc/Q=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157040373306", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "HyCH6pxVerK3ZVU18Za5y9QFgkH+Y/SJfShzdjam3Rx3FtTjeADIv1ZJobbKz4P+av6l9LvcF0szAtSzqMLWMHBAN7TIgQLmmFapISSGkiwMy2AabGkbEdWeCmPS9C1k6yXYEYsQzXNbL87jYhoo9jdlAprZ2p1P7wrqtV8+aU8=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157087620135", "rfcCurp": "SAHE800416HDFABC01",
+      "Sl9Q4goHUxcdRJfIqe863/6gKKUXNI8itsvPTP+/g9y5D4AnA7JB34he3pJ2Q9w+Fidh0MfYd82pmTDjFSYlfvIBNhafFijL6k6vN/4WTqBCqAs6pT9z5crTTMj9EGc/vZflZjDcQqXx+wn4kcFS8EIsVyQFQw4MS8vvWZx/4AI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157090491607", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "Dpczbe8J4w0/5MV75fUxrr407f5NQgoeaqwsWIp4DbDu4kCrwRYpZf4Nn0w7/90a48ajp3vnXUYYp4RcvYR/QywoHo5c/I9ZIsWO3hS5PryFxqDrnM7bbWXpzts3/1fb6V7e9V/drA/ilzy2I+IFmFLQduSsjRGgugsFNz70Y8A=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157012591365", "rfcCurp": "SAHE800416HDFABC01",
+      "yG8PjVj1dd4HAcM1P4/6GbMU8jO0zmnDItpm/XWg6hL0DJBRWjvWq77sanoPQSyHLggmth3P7Z8+rSkjJbAPjjGZYftTsmzgaSS88M/51SdiU1UWJtlfad5hqn2PR/2yZQVc6EmiMbV6JqFsvhtCJITqkUispCBrH64Jrv6e2Kc=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157087495315", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "NOmEWX+0ix/ohDdZux0ICOws7KplgDaqL8c2ZF+058Nh4atJdR8DNPKju7GGQL4Uqn6HKOn8PWZQlMQlilE+MHWmea2USll2Ysk43QZrz4G/CPf4qnPAwu09NEl0oQjtJVDCPawLey11rRoin9aUNCnSYkaQZ9HiUOZ8O/TGv1E=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157014179277", "rfcCurp": "SAHE800416HDFABC01",
+      "gi77MlaH1nVL4CNKnOVfHQyAt17VGbD/gAi1uv/csuT4r2BAY/1hRtyDBlfHO64uCuI1w441hKLzZ5LvOQfIeWjtWdmN0miTIiku4l8gu75i9xU4toou1oh9Sku+a4f1mClfDoWm2jTb4SBqn4V21/zz5DnGZ4OQnmW7QgB+tSI=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157085210288", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "Sn5RsQk6m6wh6xN9eFQLHvxWqJokJ21uSbq6rnKeVtMZj4dyaz6/xTXxq2oTAj03bddr5gkDbJZN/vJaZMGU+34WDzG52hcuGts17J8+a0+XDx8T5aOo3taoFQKSvsRc9rnU/zzb3p6z/5hV2ZoJROFtatRc+uoOww8/ES96i7U=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157076725180", "rfcCurp": "SAHE800416HDFABC01",
+      "TYK5K9gi8iyDjt8tN9vAOsPNQfM1aDxan5kmuZcnfh4LnRCchEJm7BETtpYZVQ6Jwzqcx1KY2gJMkzI98xOlVo+zVdYo76+wvllaj7AjUOOiLUDj46SZHoZwBh1l3+rx9ACOePjThZhsYrwODRFrAM4oWrR+PAL+kxIjbGpvolE=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157032160284", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "r5VRHD3Rq7SNTxBOjdo7A+IOxsCZ9iakgqoRPMPlZCUjX1ggQyWXIKfi4vCdswLEP5RjkWpqBRwAG0X/OdxSdBx1NK0GZAgTrwYAx9oszN9FnOhDYS3MD2Ug3ftXGfiiM2DaRmnGMvD1xAg9jiVCQulkde6GWdWfBIBmgRIXllY=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157048087283", "rfcCurp": "SAHE800416HDFABC01",
+      "EbaC8dzvaHd1fyr+73OkFrCmao1e3LVSCuS7mxvPJIvBAHBV87a59iSFLD6CppeYg6LragMAAiwP5XIvqCA9FTZ0xE+ynVymD2uT1BkxmtzWPsG/AOMe8Mx45SWD0j3XAYX+poz2/PZl7QO5zVDLea+PHPyonRlWNVLuYOV3hfs=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157020198527", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "pvvjrii0f3TPtAjnKDmP1vI75JsrXxUCV454k3cHFugzBD5814d5xIod6Qj8XuPsyUJoM+KE57s6d5zyB0j2ICVdnx1iMokg9D6bVl/vUY6V11A6jUpsGS0LDOuwtT3FuAjcLx7g1Bc7ouGBR5leVHeWaXwFnhOvRjNvYw7Dygw=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157051314406", "rfcCurp": "SAHE800416HDFABC01",
+      "elp4phlRLRGrtad584/wveTf7k616OgQAvi1FkFrDBto8k1AH3t89iNfLfkjH/43KVkzPABLqtv/ZhIlmFk2bpyzmcGh1pMax3ZwhyiFjIqKOHX9dvviIW/1AYZ9T+d7UYgO+2zCmqrZw23A10WujlqQNDbDtpbBgMVFXINNZU4=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157021360147", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "BguOeevRgJOcnPIt+kn/N4D2kyQsbnPZCXlhp2GvpMXQQyz7JpuBVUNX6rohlbfsNTB8DCSbfeWgM/vfp6tux7g+Nr7hg0SbRe+XV40JH4HxZo79eRBUtNSMvgJn3CG/BnKYUV8NNc0JOsXnngFE02yubms0s4oN7oCBr/b+VCg=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157021157855", "rfcCurp": "SAHE800416HDFABC01",
+      "qPEv2KtAQ/VlxyMDI7iZGt8d4LUVnjqGsaqnN2VujPiy/YSeiOkWf9Wg61Bs3Bwq3mpHL92mrIYAfrGvlJ9VmoDzKFzXYWrf2yGUCOhZXtczWRieULtaBZxjRSFA1qp6cCluUCwxOT4Sq4IvJpzjsmBCZZcjmFCiAKPEDaqswoo=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157093768722", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "G0iJ+AK97eYdV6IV0Pz2ADxeCfaeDzH0ucKhBhjEHA6Moorbs49UG6JkeyNkk8vY3mKWWMh7z6ceyGc3O5WCuuvsukYrNpPeOyoqoIIE4YVgDFLm4RBGMFV1WBtUvp1FW2LHfxnf7L/9aFYMNSMnKm6xnmbiSOWYyZ2jbJ6RQuQ=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157060067317", "rfcCurp": "SAHE800416HDFABC01",
+      "rmUiSgKSKLF9l4Q2PvHahokvJNewZyiRCAhQihw5Mqx9rC7C7p6oX39urOnaFAbjpmWRKfo56lMmhOjKRXGBeAM0YbLR0k9h9jxb+NlZEMcuGf8lTjqCIqXq5FzPIOBLa2uxdezu5UC1Hq07qUCr9ukMzWMRpirQCqziYLn7Dy0=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157090407772", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "SYRVRweo1v51UmcidoHp1C7F3QzVhv+NWYvcQLbQZ2uorvf0fupef9KYv45UIQM318rS4IKNg6y/JCkXJ5l5hObzWe9T5wd2vjuv2mYo6X4Zh+qJlgFt+GPQD1pI4jwrLzBknva/KjIBrIing2xISp42VEIinzZ7mGk3ytuEuds=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157038207918", "rfcCurp": "SAHE800416HDFABC01",
+      "ZTcW3ixJUWcSFCgALJRfPmqk28yM+X2uzy55lZXyljxME1K20YSOdHRNCr7RWlajiGADFszp73GkAzkN6Z9h6bErr09j/VRTkMWQe65RCfRdRvKxKYb4IE8N6akZob3/wrEAciXmpAdhkOk/undEzDn5bT488+PfqQss2JT/jao=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157053719465", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "AfdSZcb69atHjQmcWyZk3G6oOXARXt2WLzbA/YuEh0anA2QigsiSb9hnxWffvbVfao/o2pAoyDW9oEMTH+wpymkXZx2Tbyo8EIjhnf/XtR1yo0BFzL1Xt1pnhysTpLPoGFsXaYmRul0K6rbIoyPBJfb1O/F51sywN+aeUwmG/wg=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157019843841", "rfcCurp": "SAHE800416HDFABC01",
+      "BFNpCnln491EMQPl1YL1iExw0noQMPqcCavaL5L4nszhb2rCMtdkKRqxhuWCsH7/7qZI29NL/qNiwuHOPX2ol2IZi85dgKGoCgdVv5kbdG/k0Ac1imQD1EPonErOUKj9i5Vgm4S+hVPzmNjthpSWT6XVszVgylHiG8BES13RtaY=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157086552657", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "nr08aQ6VeHM4VjAPt5GgIpAXLqQyoouMUahssIL/tpwukAQtTkKjeC2KT2CVpgQNpLQsS2FhjpQA9PAv2K134CWpvBrTkI5T11sP2jOOzv4qSu6p8wg2RnDnKfvXXoVAD+C7qM91utSkTXMmZ9HWqTrzCBYaoo9Owz+eBrgnJ2I=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157097262156", "rfcCurp": "SAHE800416HDFABC01",
+      "YPeGvpGcOBVypktrkdnuhR+0w6rdi0OumeBjkJrMsSC+9v0sBPohw7OhEfeRZ0ua6aOB7vWUxfPXIDG3va6bDDqrtW9KDa5p6a9Rd5or6OmkbNawQ7O6HS+C3k/u7qjKC9nrhwiyyEabEDcE774SSUsKZWv1B+MEqPS1UFVhkvQ=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157089314096", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "k7H7zAPp8U5Si6Y0sr4GxRGSNBKbQbQ39qq7uW6gS2iGk/IH/w126xc9gzsl5W9KcDjsUc2Lj2ntzFaDfyJxvh0v2BcQ7/6B/XkpZvE2Qmrq1zo+vowvc3s7SmY7Y+SI5IR4BwGeHfaEAfq+3Xk1QrQ7T8bYHuRMzJUozVoJRRs=",
-      "empresa": "TAMIZI"}, {"cuenta": "646180157023743319", "rfcCurp": "SAHE800416HDFABC01",
+      "IrdM9UaffQmS4lRZPZpZw/VTJ4OnIiP+7uOsC5/cVh3YzTkVE3WiIfs5wO2O9FD/KrmOV/JwiCj/1w9LS4qxEG9E7PSS0i/pE4zKaRzJEQJTZlvB8ZBkRbxg5EWn4OkcpfEBi3KssE0MOydBJMDAGxwOLJhLjcxUyrkTyl1X8Fw=",
+      "empresa": "TAMIZI"}, {"cuenta": "646180157045271542", "rfcCurp": "SAHE800416HDFABC01",
       "nombre": "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno":
       "HERNANDEZ MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa":
       1, "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
       "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
       "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
-      "O68iBdBMJQru7cJEaTw6W67/Lk1Wm37feekq2qCmvMWl2ALZlbIw9yLhpmaonNbR9ipwwu4gWOs+dmfGz2o/hB8dMa0kNteTiNYuVi9J5RbpMx66cafQorSEfwOxP+cmjluj8jaA4WbXUfk1YocciyAuYTr37vS8VridmbDIpkk=",
+      "Wmr4s6fSs7nQpe+s4od00A7fBYBhAo2tjtQOdylrQc/bgqyP+mELTF+DhSkmVKuokzfxHCXOWMkN1VnUOWBn2Ni+wGkg7ffEGrm5J/e8/2gKHRHlYJ85KXogWUCNfn6uuW18mHjYsk5yjA7J16hO1FW6YES1azXPHiMOzFhkQN0=",
       "empresa": "TAMIZI"}]}'
     headers:
       Accept:
@@ -737,7 +737,2952 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Sat, 05 Sep 2020 17:18:49 GMT
+      - Sat, 05 Sep 2020 19:43:55 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157046965239", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "mKRsvqBW5hyv+J/TzO+WzoeX6W5bSrNmPL3sD6mL8fmyTdyf0BCLaIvl/brd9u3cFVCJwdb/0Vbsqz6cZZ9kJegHZuzDOXW2l8KI62roMIDSYOBIiDHVG+REaF/Z3Fl04nGh5xao3BSFslMlZ+gJHNh55SyPoGXheTpC51hAdLU="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:58 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157051130075", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "a1Oh+2uzIxapC9UTcUZ/nU6Z5TC8MfxH/mW4KRq0hBXIwScU0LYmfsQdMLV0M2zyR1KWMM7Ar7rNNdMLGb7YoSJUwcsVgQs6hJElAZoJbVVpqB6fAW6azuUlRAHrAYoI7mt7sQ757fSsvKtofvzTOC/beVBP0NNNbvo7KMHMnjE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:58 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157020245360", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "CMpyM0YzibG4FjfujtrDsqRt5GF1ljawySCvI7faXpofNlXvzhixIMAI76ggRIW8ARJsjXijFTVtlTq1kExes/OG/dJjF0oL5l9lCS5UXVo9ZCGZRnxMubQde/6qdaxVLBuopIEj9nfBCBDqFj4E9O5YPPF45YWibU2QHjxpFy0="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:58 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157051258876", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "TSSTMgWB2xqNurCLVFrGE3+nNsvm8WdJsXi+RGGCH2bXfoQcSTJUPWp7NqZghrIDEnUHXh57Sp8nJTj1LHA9WHqWH0YpfCO845lPEIf6kxTpVY5HvAsMsa+pzXAAOPsFxcJyLCAWNBDWAbgDN+s0HQ470rGJv5nKstT/gAriORc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:59 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157022646585", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "yN2r4ed318krO0T7rTxDELKiGczqNO84jYtAcWA5IHg4gkZl0dg/+xJG2ooBq6fw6ZkhSdMXFg0bSdqcFAM6e5jhicR5bPyYgTUkKG/QwVHlI/X2n7r0dDVmCAaELapTsB1QZNl/Yn8e/mXYYDYZIzaMcjgWozCttDropTdUx14="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:59 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157067483431", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "jIYdTbZE27G4ypzI1u4dWGRSi8cmxq4cTQW28kkjkCtfYoYTwfibxnPJIV087TO5fogvKJxN/1CQvHBEpuOc5ubqOuUn5fbdojsrGXRTHy4QTCpcX134zHV+PbZqXJJLo9dRvALA2MGxmG5E6dDRq1IyCINem3ymZtIWaGH3lVA="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:59 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157042626682", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "It/JQjbR8YboVONEbQ4BFqT1aZxky60wFXZkbmfYrQwVFENaNKbBUkoMItYJ5y2yy8Xpni+9Vj16I/2bBt1yLIWBArDSUFzsrLKqU/P444tuQfHLYN1SQei9OY4n71UBJHm4L2olVAVqAimSvBF+DAmbXYEi440Svfs3t/5luUk="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:59 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157090055771", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "RWz3mjeiabMpNH+YghFfHRaukClmX1nLHdtczjsL0yKcXDU935xf/Ln7XFHlSo/0alQbDYQABDzb89A7rsJvLj7ibnX3HTcJovJAsh6Mrh5RmuheI3vFMmeeZVoz0YU0aHth9WI8und/UebJ9yRAqyLJ7BzK3SYOJsRhphhXPss="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:43:59 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157049403264", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "jSb4i7xAuSQGXXoxQCbBbuOSEzJGCy938rctfZYkiUrRsv6Elz+lS2b6WBFsSFCQkN95SBe99C5jfrqwS/hvexb7yQyLOI5BHL70QIGHwJQTtZcW4BYlwmKECVxxgmUnbntCg1Ku3i5kP5bSDilx8awWdwNlnyUzXQxRCvtxddk="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157018650860", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "zNt2Sjmj6bJd25IseBQ+yrAsvTL2P6KYDcLRATQjD/RbnyHwyrLNAZ8AMGTezL2+2AoI4mD/5XqUhs4TVuKojmsRioe2A/4tKVroHZXI//lUkPcIeSKoQDVz9XUkWR/HiOYMuDbEASWbc+6iTMUCgYRiQRzX1E71CNXm4bE3yKc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157057186447", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "yppj4g/eb0hTLArC4GB0CyEPQSjci6uvNw9RanC73t5J2B/sd78RvAuQqW3WmfKyzw5sHUNovjRm2XIo+NO2UM702GPuXtdFBcFnnEJKoRd/OcB0q5ua/8CJS6gKFKVkC+5UVg46GCcMK11JXsiLZ+dpgFBH/VKGijWjJujRlDU="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157051262367", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "INEBSFPcKSRcto6QQTBNDJ1I7UZpCIXBegu8S0UX0fIDmHcZyKHabnss8kD5uF+8D1Lgb3lv6L59Leff+5HHasEkgizOzk73Ey//m+Ve/A0qLuq6GJjknVT0dzonY7mIvEkXXJ8VO36fHE/9gsnEivXK0M3c8VKKLDVHgF8axEI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157072471111", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "NP22b1PpZ0yQOnzDDc+qVdSsJ5XA/x4n9HI9ERBdKH2k/Kn1nD49wp+H4y+LYVe8km55sJpLvBXEbFLslJdigFIBFXRH31/FAPafT183YaWXzZhCiGeINZWOTM8tl0ZzecpVQKOqGUMz+ANPO2OU1MfTekTgLwNvjEQdYYKWia8="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157099075943", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "nLWBG1GB4QN3S9i+ZLvCSgnTdmiionujaYENPMwJ11ALdKPh+mEGMJ/4D4CHywEY79Ds5ikbSZvVATifIdrItZn2zzvw7xWE3qjV8i+eGt1sV0wBFzmPxmaI1w/Uo9n/FjfY2o97KPiYVCn0EAlQZHRzG3UG2Ic5M0riu8ZtT24="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157042362218", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "UtX85o5iXNGjseCsikFisSCY11iaAXKUoUOrkdy8TfynAYNxLiHeUICiHqoOHV75YR/A7Qi/ghKeq8lni394gwuPWeW5IHScpmvf84t3oop6jsXOmBnw79EI88zUrx3MVm4H3i1zvNz/YSE0VG1bRoVKeWQMZbIa+Ibsuq/fd9k="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:00 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157053185138", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "bS5m9kVcqCWFoc5TxzHWVpy+3pBmz+5PeDWu77IkE9X1jfT+LZDPa7X0/oFw+OpDhW91ZZdE/ttIEcDJ7d/kSiGdv98C2zyGv2AkiKk4QM5peA0MzBKMtf8H7p/Diek64TMxyBKEY0iEnkXzI0yln1riH/aVXxXSooHzjucJzDI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157039041571", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "zcwgZWQF/zz7DzvVWcW1noQGa/WhW8XpyvYFazThWW1VJuEqxFwGy/Nka7rN8453B87aH875k974L2oCSDzkBmUVlD5TX8PuFMUgS0RTkPFfTNf/qBLMZTwdAEeytD5z/+o3Zh6GejcI/kavS2my43ZcG27Sbny30wiYMUxKY/Q="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157062271606", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "cxoZxS2xG9hz0EFfu7oc+AGxDtxtCcdV5TeScrlmBhv14rC1Z69ycMiygab+WJ1z/3ciJsq3uij68NHUTykcqvkV6/ZYidgW6dk0XQXMaYfo4zil2UCq/Ve8f2KNv6B0QZG9RqPNEOrx+03+/s0Wbm+YCR3F71MWDh/PTfuGMGs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157099433679", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "o348x7CkwbE5hQPbDrWfxrUpHCghLYoBrqhQwFW3WaXVum/BIG7EhZl7j73s5AEksLHbkI4dqUtfNVeMNJaf5UpWZAdVPS3hMWc8BVOe0RKW3P4VhEW7mulI3twa35F5daUrr/ywCbEzt7RSyUGdEQ8DqqLMxqMaOVKh/C1cqWM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157082485346", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "a4uhYgpVNDEOaulPm971X3aUhwq39n7JBldF5vj+0EULlnbQfvrPt4mXloPkrTOqoR0lk52OysouyUDUE0IbrAnjxYvSxz/qwbCbrR5z1L8rFQtqeTr+9ufsC1YkC2t2mSuOPBVqEps1n7kvSez3ZWWsqXQ1sAFyTn3Nr/EWAZg="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157062735566", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "hl7lq4i/TYJqCh97SxICNu4toA2nw/AJzXK4amAacIaEy0NmX8ZlRnfwJjCLOKUIuYws5uwCLy2kl57EAzkRxWIPkAvV5NbVnulG/Ci1RkqHcasp29yKkJzg+yIl5+uOulhejcaVVgOFCD/x13jm2QncDUK6uS1lWyymQ9OmVKo="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:01 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157019054368", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "uCVW3LDSql/qeDBGTV2peXjuuA2BY7lAANkz6qzfOmPlapLoeiqJY4sf8mMuSJuI6qfCf/2OfclvUBHk5CvV3VPPEcgrJ54AwnGjdmerPnKPpVyhkNBvcMdGOYPpYDHB1IgDZB7iprR5IUKgbRLm74ItQnfMPxt9qX7CKIjTAjw="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157043096622", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "LDrxvnP+gtzpMN0K5uIymWxuhIcpppT49fKK68DKBTMLJL/SRAilSIp/KQsupDLVTURVGM2zWMXXZaSwwz0PaKnuXkYzZdxjaBB+fA6uVM2j8XH8ynJ88sK2wLgU1d8eZUGmXMIDWBTk+uJqj/h/9RBGeYxLLDpsjJ5H8vzcAVs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157025506978", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "FKF3oyrxhOBCVPgSi3q5wYLrFIslXle+T81lvE2sDvXV6tjtdSBiaYqiF6fRddR1pvEvmMXeM42icsjzR2T/0R49tIcjiCV8NtokpYIHPOkpulayfSvGwBVo89d58xKfpNBtIREiI3PuJbwyQzNKKlErJbOEjaQYLLUaMyTYmyE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157089875315", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "rg7L1W4Tp3vHV0XrXQxeb46P3EXUgYRWeKNQwe/tVSVkiFK3FmYjWbiVe7R7GDUr+kaQyVZSyXXxCU3KS/96NFkrvj31RMrteQj8FbzpRi5peKr0ycahJ1DavPNezvwURKhUKAlcTCvy4IULwGvFNenj/Lk1wgHVqnska3bo5es="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157058981117", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "TC2mfKJ1wPqjI9WiLbRqBf7/qR1IkR4LELoDCWP0jXhZbNrz8NHgwAuDmcAa1m4contfE6dJIWi7L8RRqjrfax59Z1KfU9CHtJBndpDQFvaTVdD+n4F78gDyRbGGUjkg+m8VM42oFUMAFa+wDNvH4CXi6MPB+bYs77AKjnqTe9c="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157017893615", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "EIGkt9uqsKKK4A+sGMmaMd9dluMgupLcs5l6yAt+q6W6GhE9PdnS56o8WfHyi7D9qugTcMgvFh0FCjF1TQcWggs7wHOHDA0VxajbD/FyYOclnVezAJVxLxwWBfnLb+wMJbmmo4TGnCQHVibsREttm705kQP+NIkMlQ6ld0IrW04="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:02 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157093831293", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "CSW/F5bdQ/WReLj9+e4sGdUf2VxjqjXUQPVKcdHXfBpH6QR4F/5LDzfGYQmHWJTMmFn4DhiEY8uIUqOuCbFAqTV0cYTJ73HYAGjeLMUNlm7wbLAQVcumaYSk7rIL9aawI6D8ZBvfM95ZcCB/e4orfcy81qdoZsErlV8sjsFW/BA="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157045766251", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "TBDWDEFo1d3Iezq+EEUVL5sCq4eK5Vq8RzKUZ1RiFlN+Lv99PhPSYaNMKydmMOGatU12i1ornS3HF0VnwsPS0yQEQa2htN0p1gqtrtRrIjUTBw2tETcPO43mgx46tF6a494I8YvchZhI3IMErTvaNUTlbRp5jmUipTDid5l1NdM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157082409115", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "t1/dfyHCw0qYwuI186B/SCkG7vAHlBnoVSexL774248GNHNCodv/P/vEEMwQVG4swZBfEH9+PqvD0aNhOqHZZk/jMmUwGfOeIGQmCTAlhA2snu7J+omdrsCl+68hndYgKTVghVvh2HuEnzkPfPEzP1AdN+Mwgtk2yqlwe2ueurY="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157035373764", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "ZpuhsSQfhJmHwVsEgw8qXojvEDDEgxbFzVC1r110j2b4zzeZVIeEi24zuC79OjXBJV3WfqpSMUTptTluVa4TM1mZo9+k+nwB0EPFZKnspRCxjY8ywyN7KtLQKBNdUY8EAF0H4j+OfPnEJQKPv+zbEThmgpJSXJNx/81+MA2ltr4="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157036877544", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Vqe6bwIC2/3VKJUD2N5xK01jYSfkFnq2SVwauQis25HELJYjsXZJM/6OABqNYHKoSlx6nA3aSRgFWgzchEdLvNF9ebdM3+LSiXAhCYjo/ZvIv4OwwA2LPI8OEkOfmohlj9l8U9puXvDDKakMsf8xHnKFCT6ZiB+UGFE9oDEGYuM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157050735413", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Dks7pk4PW6BGHP+wVuWiKYG5xBxtqVSG7rjKNbk+x8y8z0jq60XVLcP055Xik6aQidUnzhBlwyMV6j2TZSJsYXZut1Q626gJ9519Vogw4YuPkfGknznrvamSttp6qcy9A9bE/e2f9N/KAJB9I39vAMgLpF7bvxWmdFB4u/LhgAM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157047529179", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "jys40eO6KeC18lG/uWylIigyD6geV1WxdzmhLoMqROuoOXmFrceMyzHJInzG2eicF2Glqwuo7KSa0rX9/Ju3HjXVN7kt55mMPtsXbz1ISctqNH7kQ/O2ZLG8C6srqFzxa8Whd1ElHWxtB6XvfysMRxAZNYxld86ouTQZi5vlo7U="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:03 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157090959903", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "NiPIVoYav7hPeRcxhrjUX7aW+Rv1b3zn4BlEtTBHnIh0V9fuH/97hM8chpsDDk/CaquyRR8/NrFbpFQP/FaAHGSoqmVKHv878BC+E5x3YDYmdVWNLWAzjE+0z1x3E2h0nAvesgH6WY3LFR2sJ2NsFnXvjtujmyVWnHCE2sXKiVY="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157048671372", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "OpYd5IsqfkHmBZuqKZjB1aXgZbeVa44cPoz7OwJYyJCa/CiDvcwdMtELWM8NdORqQ1Zml5qG97GXPBqmPxV+l2dV3Hvr/IOdyG+RUukxsIc2Q3jZYUqpwtVDCecMkgst49CnNeIlyYa780gGg+ND9B5wGQ7/i5Axiddheh4cXsQ="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157031779854", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "a4raGMbaOYBKNRH8xulF16Jdx775YYuHpX3+eR6PIsrSAuSWlR5LhklZnm7quoRrTJyYimbnHJlcBYUkE7VapvtsfU0d06kJjvNbfflXXlcBRPpx5p1C91urDK3TDogN1bseO2N8N3oAl97kYjrrmvuWP2GD0ao/ncCdlD10vzg="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157035140492", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "KqiqD+upQXoML298yTvSemj/pEhAUEK6+izt9Zcz/hNvn2JKkwqiUBWYIwzi+yG4w6yYn3xPR0iVEdpvzpqD/PUZ+ekn0js8jo6lV0SxlBsHqHpC0X3zsKF9sPt5/NXdBWS8TCUCGcFUr2WWgIOwjnZzyj6Au17qc+XkLBrz3As="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157056532335", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "W/47dJUBXED5/ZUnPm2GhRDD2hme6+cFAMz2vL4eyDZtTerVJJ52ui/UfdddjuaBIPRrV9TunjpzC5At7m2XLSZG3af4MzWE+DxhQXYsYEZfE06N09jikhl2CnPmJCExhmEhH+CxvqwfCYOW4oXGsZwpivb7XEhn26TPUjSBh2w="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157097022765", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "PRSyNc7peCpP32j9c1lVd5AMOlvzRWMn6YH9MQjhr3YTdaUL5MwmvJS8VkU9Q3KnHF9ZG+KFXsi1dH2QSwy+SQdaoVE6jHDQhVMbANdhsbo8Re018WklNHlmMDh810hFGzMJDRzNy9QXHEyRU0pKQlD1Eb27CKnMmRlOFwQ9NlM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:04 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157032640322", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "xFUsNkkgoeV4/zpMJeBC51v7jDc81WEaGPLo3rjHyDcRH1PHylwHQOleCpzjSCA/70B0aYrKqYJOlwRqwdAJSNWhG1KM884QByNRqA0W2kMxqa0C+tbI1JSmEGQNvQQ9QIy3JAdzF7+6RYZPvVE1L7Nm6ER2Lya9QPnSMPwit9c="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157053424556", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "fOo6CGmFk2lBEFXzXQLFGqMzvqKgGJ6s+k43LsHVEGq+DbydMeJnFlBLGfiu0BmIhpejoILqz3LsuTFzC+tuLWHh6Zot20pX+zcMsZogDmHLGAqXcV3Jm56N+bMxK+AIi2M0z9mAaGeQ6LBp1/mxbDpLRFaRC5QNFyrM0biIcnQ="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157095975681", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "dOnhyQBFKvcPSim6ofzCeRab55HbLJOAqRXybMZvgYHL2/GfEGNsvTf+Z38+YdCbXKEyK1H90szuOCoYCl5vA2sed8N0DjOI59+FdNRssgw+4frarUe1FdbQEZCGlKQcUIqmRbk4yo8Vk2MDPL62E7rMFKZj4hGO7jwDcYyI3rk="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157010741971", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "CR7yR9N/EuO3F0HYLK48USyz3xKivFSmNjje0K2dp9z4IDwe317O2ToKqtgytqvUSGTFbu7S4/xYncfoxAlWzzcfrGywxhRhL3jkTCAF1PyYOjXXGVvaWBq+kvXTVyGQYp84CDPe38WqnSX6SkRPZGCJUN68EexO40WR4FBdgZA="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157048823557", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "pC2FaHSLUY9zgvjDbtd3rm64GQP2pgtSVbFcPVE1AVrXrEjh8eJo56p7ngF2r6L+k0HhA1nfVZWjmGXf9S4hOSVOVmh4Lc7PgZrB/5WDCO/0jq9g7KqEpYSbotdNXH/o5BTuMdDTFQQoj2umMDVd8/Cih3mB4liiufq7T2MOyyc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157028729529", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "zsN76r6LqeexIs2bIbWV85ou3ACxnQRpttqlrvHqwxaFtXbuS7JQGjEzmt/2Tcghvv5cbZ0FVfBoycq9YmCPTIm70Gw4g2P1eN78o3nwGosF7TlFeofQvemw45Octwln4LHzHxiZaXVXyxLTuAbwuEYS6n//6sy4b1FVGiiIR5Y="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:05 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157044813325", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "YJ8XaMY47z9eS5iPMUGlwNHydo+cndc0jJjKhShjzCNsBVCcYLkj802RMiKtpvHFBRYmEFHi8vWeOPBl14GDj7S4tfCOLWV1vJQyRtIHKe3lIbAO852lmAMo9W3a61uZ6AkqXPIm/Z1ah9LnEK/NkUy0h7uWY8M/xHc+ReHSpjI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157057453727", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Zjq4BF5gpqFlhg4gBsCn3tzQPpVreJ/uhndvFR9DZBt9RqujOIoYW6cYJT6Gyq50IZIcuaBXznMswWG7iQuiNeZP+5ziYGkynU2jA19131sbFpsNn3Sl/oIQrjybSHG/dYiQ8IA5k5T+uc3D95oZd3FqrG/6cNcLTALizIolmOI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157091193043", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "cNCDRC4HD/KMErgtZHb+ZVNFtpWmNQMV3hH94d6Yfje8ylmIv6ybndsmmggHBH6MfsEIkhkj4cqe6U9LSzKMoCmdZiGc0rG3eKBMEuw6BnoODusnOlSCjD51wKElzMh3eTtOSecE9o/6fmfXHitMMBGYzuV1Dz7CU4s8zC0Kny8="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157022537021", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "CVvgtBPeYpoA9lmjjslKrpKmg24+/OBylA53jALaT6v3wkit7m8C/3N/RX3lh026iOf6OXVhD3QImdq1YyBJ57vUS68dtAza/Jry5fdPjeyXl9Jb5V8Mo8XjT8/j995vPZJYE/dFR0Y0i4nsMAzhbdMCcj+7wUfHdgt3JGSA7Ps="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157055320836", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Cafd5NJTJjVSZfiTXMLtUOCvKlgo4Mqv7eqobQ1RWTbDZ+z8soxR7JeOddJgdEdmL8hakx0HkQDCerfz0S7qnIut5Q7fVL5EuqfD7vdtzJ9QI1S+NUvWi9zJKGiDeh/c9mH5FOJFTP0Cm9lQd6zLgTQMv7SbQpuH1F2sp69S1jM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157070689109", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "nt7PsUvB581tVpm7LCWZjfdKMmRdPvZBG6L1QY4dd0nGLzgz2hfuKEHbCmC+JFpHzouahap+l/LjxNddGph0mrmn1482T1/Nksy/EJRdwkd6AoH5UqNEaIcNE+t0/XdCa8yjegX/86CwgAAxvkMG10ZWmnX+AAwaRaMQNNTleqY="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:06 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157051844112", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "PYvPGvMhUDTB6IF9Y5Ee3iV0LSihio5YVGKMWnp/Hu/ebdWoYJ90KODRRsVFbdAz5nyvfVDuL00mcGZj6+4Yf/6eFEH6+CAMWkeRg8ktCYDwskTYXtst93eOzHXamtpSpoQ5za96Q4mtkI7C0rMffc+a2iFemUkKQqUc2LQZUfc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157075489663", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "p8U8NQiU+YYkN1jnIcrA4ILwXgSKYE7ctqiYl/9mmuEHiZj8Zw5GOhyn3yx0lCXGL9If4rCW47NJQSKcsUfxp6xt48yp9nXSM6CDhxrSVAZO1KYAn04ZK8tYk14jQNlfaYix+xyJ/d7XKcUTw9Z3TpHctOcsMRBuDVALn1q8rd0="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157098620564", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "ukXDazUms3yjlBObcxX1XREhp8MfOPGlX9SlHya4W+Pas/nKZ3T+71AZOVIC35MIFYw/d31pITTPtO4paupVCx2y/sA9L5BxUafny4XN5qDzZoIHKGoq53h1U+UNaS2C450KzwftocV1mAbSwaMEP12+40jDK4pe2pFt9LKgdRc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157086208338", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "zWNvvoheBTLZX8+RbhggFMxwSUsLt4hnpGQqeDamsSzcsctDw3vsVvr6dd5QO4l9l5J92Q/KriKa5qE8VteYEjFpIXo4otXo8CxKCoo6RfoGZysqyLjqo0y+zWM/HhyIEZHGljevKelODJ6xEYZ77o87PEvH3yV1gCAJpiWIfGw="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157098186493", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "PfzWMJpWbetLnp3uSlUwcTYDI7k3NJH+nk35x9TKgflhQQB/0JqoB+Hxc4+F8vEDBNhPblRa+cy+q5U5ZZbxyq4EaIVVaB9Vo2Eh3iYqLwfxzyZilmXU89Xjy09BsFIV41DbrN2adRdalT2oQbwU9pAkbTXkO3mlKYOuLZavrfU="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157095917445", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "U0vE51mXrQVpVmqyzN4+lm0FQ99V+DJ+V+LGDgGQi44UsKKcC1CAyZ1M63W+P6Y0zEgF/jRiF8+Hokl8KfrX7YX25FNmaZnkgmuKzyfLzU8zuxfDnHjYo5Vh5zW+ZJcH4uN5ulSvKd+IlHbhLYz8zgwT4Ef5qwyfsYw6DZ5n+Ec="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:07 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157010615667", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "w/9glWDqXe5jhjHOpopfVM6k+3PW1PFrZTf+D+2i/zQL6UA7NZzHuFS0uxGBTs86+gR3BIj9zTliZm7Kw898x9kmLwss5pjpiSqaoshEm0FPOcEGF1fsUxgYFGUM+KmgxnS862gyAx9c1hsC0E8udlNwJ+5vheKpvspbqP99Brg="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157049025642", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "B1NcJgr71Dxr5h2jJHzyX3ubw9wENAtcFHg+QrgPU8zRzJA/yDtXFR514D70knoSPh0k3sjbwG2q45ArY1CQ7iivcoPRgooc/liemeZZC8kKds31MGgJucZi2GqN804/ItdZ90OHTCnLxCG5hAl/UKib3jSofgiaaYRfO4M8GQk="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157084542300", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "kqDKa+2H4qHBzyQmEOIhcLCyZPuOhH/auAmC5TtA8/NuTPAE+IUwMWxa8N0pie+x8Vogz42nInaGZvKMrTULndmfZWge0mEBMem6MCFPozaWIlSo+oQmfU9Yk7KZg5j22rimt2AwKtEhwpx3ySkTNbj1FM8KkOgRCHIf/z8jMqA="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157063330643", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "HOuMf2dH3FRY0jRMPSpQ4ws6kdnoBviwFDDAlRncyJtvKmprQFqOoaPKKBwwVoAl/vtZBm0ZAWSI4li3ufem//iMhbnPDa0ZgkGvxumpqoT4rNvcFHmpNalgiALJP24NfKupWxGT5/1KBECzTRugls9gX/It7TOYclV9VKYJ2jU="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157053791030", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "kU6iYg4QcNzC/clb0B2oeu/30czzigdP6wCsg3BUTdT2Ont0c8PleIX9RMMOprP+vIiBDXsGPlARUlu0+UWyK7hh1gk6wuM6e5zDhJXeuVHPhONh8b7GxLTVgd7BhD2u/QkxCeTH7oA/ugTs2XzmYe44gKDbIkMiR+cOAoz7wvs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157038061264", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "aeiLr0Zb1f7FVinB1IqK8gFEo7kzbxF6Cbw3k6YrY1IyIgOkkxOsYgXG5ghUYYGJaaTrgEjMJKswWSRw70P1/4/rQlfeGHxfZgxPvFGRU6CSjA2XNPp9wfKZ42ELua8CeB8k56cqtBMsb4uUlVE4ZrHf/9wZtr3DX+e/G766blE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157018130908", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "rF4mDd8lxqr9fAXtyMDHwYKn6lWBertDWS83hiOMvfZEV6c3vH3410KcP6b8/ejboAH0pieKFCZL2dj5L+hLEUtM+UwQdWnLA0ZtG24N8ZB44K6X1Ap8LoIY4FRZNlQxQQvOgzdPcs7Y6yPwFne6xFu8xBpy2mwZkIZWXZujsAQ="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:08 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157017489993", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "LY6+oDKBln9QozjeN43XlKJP2u3iDCF4bS6czFwv8i3mqUesMMu2751P4PV+0HYqT5wtJQk1MUdJj4VdaHSgEbIAO2i4alrMLhjysEHEs+tCMuCEnX/GXaNpzCc9YK+TaDucA0h898n+paguo/SB1oGbYcIbHioD7cebYnmrydE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157050712203", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "yDLjjarDA9g4PR7fvC/6O3NrH27OTBtv9RspRRAdlWaDMfagxjCbslvEc5HOys1634dRKL4CF7USt8F6BMM1YXm1OBruB8JYRtnA9mLv7m/J9jrFQtNA5EkzW0nRrljZ4msuVCABMldcgJ8MuScAOPhcp82eBkUZOfYJfdvXbuU="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157048887658", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "gXamxTfEvPPiTKrh6uB1kWF2tlX5LnAc2ojiCT4DvMP3Jtv/zqHuVvfBlDeDS0G+k1aFFL4BK0mP5QlwFMsdKTWcpUt5zIXeKTQOBuD9L06MPOmrBbvEa4j4252KodCssj9jvF8CYs2RvsiJF7AVeCGbJdgjqDBY49wn6rXE4qo="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157073799575", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "BZlLfPAf6EKSy9nJPCJmGXL/wuiJcZaZzXh7knYJbt4DzP26kVvauLUcw0n9C/dZNJXGeHscOFoe12kaS3aSPU1jWe84R/8+YeF0f++XxsFpLl+tOql1/fndSPMpsz3bYasyLBz+zMQUKd1apc8vwcnql6FkVytR9wIqLQp99Is="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157027775477", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Agjlz+5tfnn1jVV8BryzXCOnu9OnxT4VKvr5hJJfJdDrqJC48I+UP8RxwuTxx1HeV8NFc1iJnrlajtol3nRDiCPef2sjIgg1NVTP03FWvbdIRZGRt0AyBd6XWWF1Rx/ep4UaBnELg8CTqmSQgfGyMt8xdbHdJtsHdLRkdcSQWLk="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157011688680", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "ePc/Ady3v1/hY9Ri1WlgrKNU8rMGhYopM8ZzZRl1IOC33rEmc139O/7O74ACnDIp0BaIphEXWpcfO6Vvy37xnTQwWK2+sqOrEMyLh100epEaaxPXzOhCpBEHLDwe7+0Xp/DqnSQ2GZsktXJYW52O5RQ2hi2/iWmUYOSZsD/tfCE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:09 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157023412747", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "qFgkp3G5QVa9nv2lkZXoW/ghDo+bPdJ7c9bZPevNmz6eoBtbahA2Bu8rMmrVRsX4HaEq/eQyfu1+CulZe4MtAgfzyV49G56RisuvYyf9e9grsdNvAPxI3i8bhEwEi2010tQH0bycoJIS2WC7ZQ6KMwkhv15AvZzVd2to8Q+k3fs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157061404759", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "J+eRxVhjP+hFpy9mbTC8KovcbetuSXq1GX8S8qbQjgxAjn+2NLkDWYjmtQHJeofapd5V/j82VgxL5ccb2TXzaRKqsptGlVF3hUAORHvTCiakJuOTBrzICa1gWg/2Z2f4B1HIbvArsc8hukcpdegO5tmw2v7cnr9cDmEMcDy99N4="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157041703328", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "ZmBnbGSizcNHvVRPqifZLh2y1sup9Oe86reNUNMQ2k8XLED/cjnGmaMbb+nz8CmLjHrPacVHuePsI/xO62fhO0hFxwwfpBoYLzFyGIrGwdpJONUIO2SRke0dRmNx0DZjFJaSF2/Z5+BxtkV0T7vRyZM0O+qhq/2X7bQX9lRxkZo="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157044376215", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "T0mf3/QZ+ZJN4pt+jfJw0WCWIHgQTTOLdUyZhChZUl3cQjtbV0zB9dgUsfZETJxybfrbbHubkNgTjCavYIIMXzklDryaCzL/ckZ+gsajSKjCJkxOPQ02aTR9a69esYYkL+gF1yW+Zea0MQ5APMINeEmPihqn3wZlQCVpS9xRiAQ="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157082915748", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "uuQojTp3OtpS1kgOxgIi48IvFjw7igYJ2FyiArMFBQMf20H0kQ6GYBVUlTKf9Fpe1JYcaVo2wENDmu/m1GUZJqog6tHJPzBxJKvANudh0OXLkFqs9z84tIQS60tjhAKjWDWCn/Uwh4wMnOWeSz6X3BRJkzfD0YPGhNCebSGnTPg="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157093491219", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "WNQMt4UPzRyn4eK4D98KFWJ7swkdepjxNRtSEjhcnFD9Z++plj1Otouww0O1PXdWvGJW3vHmmuIiZqZRCfM+kF7wDxRLAR9+KrNS86YIflAkEvfUw5h9EH7SSalQkM0Urhwaj3wcx4940XV1h3BAbD0STg34v5xV7OX2cVHEEr8="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157022050647", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "hgkcLgZ4c3d5w/JiIWdGfgjksR7bxZJyzjAdFXBLMdEt1yyZ3h1oEVDdocI5SxSTRZfvhdDo+xrPXE78jCQEXErraZEhq9Uck3usr68WyxGVvYoOm0WjIQs5gSpNr2hn2RUj4rbbWUOUcrQWJsO9FCeL6QVbrgBR085c+tr+xRM="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:10 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157027744767", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "XMcvzuvFiof9YVeuMVGedpTpFefkTQnrtModG067JnE3xHgpMbNh2yEcNCB/wRTjjdprY84NDehehLdEw5z9YuXhFUMN65C0+1gJhLtnNT2G1HEUyh3HcITh2DdS6ojmshVns2z8m6DaaEp1ImJIOqcbWmGJPaDik7ck6rIjNZg="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157083261336", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "T4ZIin3DYmba3YDLEWN5IGxPGSaXiniHU43hrm3peTPOB/ULcI7vAf7bsx5oMspOjVGAnceONkKOR5fsIVC0nGvqQHRpEyEzFUET9eXxTrtBc1K8rv5hgUlyeVcg7lDideTrZfmFIaxtEMh23LH/BHGU3mSgNINlYez3TTMsKI8="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157031461120", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "PNsqzWzZyfT4YUwEerkCDe23a7wi2j06QR9K+ihRp/Na0Ph9louByVeQ8sY5SXceZNoY8GoAa5qW35M4bBFhjFiot+z+Cozean8YqdDbqQOdDLnqs+CA1YK7Way5lMqNRDDEUev69HkHS7ifSALPe67qgO/IDOeivZKYX9CLwtc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157054386729", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "puVvrlMZc5RAMzGHT4B6ysSKkLGZQOONyFef8ehRmUxb45ws0I7T3TJBBBoIbbeVqQ4cGjL3zowMcao66Z5WCREEvcZftYPQ7Wr6gumaoN7TNmSxwpssdc01I6QDpwrlAvpk/g5Np+33EL5nLZ0idZpHrV1pl7GWL9mBFoCfc/Q="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157040373306", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Sl9Q4goHUxcdRJfIqe863/6gKKUXNI8itsvPTP+/g9y5D4AnA7JB34he3pJ2Q9w+Fidh0MfYd82pmTDjFSYlfvIBNhafFijL6k6vN/4WTqBCqAs6pT9z5crTTMj9EGc/vZflZjDcQqXx+wn4kcFS8EIsVyQFQw4MS8vvWZx/4AI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157090491607", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "yG8PjVj1dd4HAcM1P4/6GbMU8jO0zmnDItpm/XWg6hL0DJBRWjvWq77sanoPQSyHLggmth3P7Z8+rSkjJbAPjjGZYftTsmzgaSS88M/51SdiU1UWJtlfad5hqn2PR/2yZQVc6EmiMbV6JqFsvhtCJITqkUispCBrH64Jrv6e2Kc="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:11 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157087495315", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "gi77MlaH1nVL4CNKnOVfHQyAt17VGbD/gAi1uv/csuT4r2BAY/1hRtyDBlfHO64uCuI1w441hKLzZ5LvOQfIeWjtWdmN0miTIiku4l8gu75i9xU4toou1oh9Sku+a4f1mClfDoWm2jTb4SBqn4V21/zz5DnGZ4OQnmW7QgB+tSI="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157085210288", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "TYK5K9gi8iyDjt8tN9vAOsPNQfM1aDxan5kmuZcnfh4LnRCchEJm7BETtpYZVQ6Jwzqcx1KY2gJMkzI98xOlVo+zVdYo76+wvllaj7AjUOOiLUDj46SZHoZwBh1l3+rx9ACOePjThZhsYrwODRFrAM4oWrR+PAL+kxIjbGpvolE="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157032160284", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "EbaC8dzvaHd1fyr+73OkFrCmao1e3LVSCuS7mxvPJIvBAHBV87a59iSFLD6CppeYg6LragMAAiwP5XIvqCA9FTZ0xE+ynVymD2uT1BkxmtzWPsG/AOMe8Mx45SWD0j3XAYX+poz2/PZl7QO5zVDLea+PHPyonRlWNVLuYOV3hfs="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157020198527", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "elp4phlRLRGrtad584/wveTf7k616OgQAvi1FkFrDBto8k1AH3t89iNfLfkjH/43KVkzPABLqtv/ZhIlmFk2bpyzmcGh1pMax3ZwhyiFjIqKOHX9dvviIW/1AYZ9T+d7UYgO+2zCmqrZw23A10WujlqQNDbDtpbBgMVFXINNZU4="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157021360147", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "qPEv2KtAQ/VlxyMDI7iZGt8d4LUVnjqGsaqnN2VujPiy/YSeiOkWf9Wg61Bs3Bwq3mpHL92mrIYAfrGvlJ9VmoDzKFzXYWrf2yGUCOhZXtczWRieULtaBZxjRSFA1qp6cCluUCwxOT4Sq4IvJpzjsmBCZZcjmFCiAKPEDaqswoo="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157093768722", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "rmUiSgKSKLF9l4Q2PvHahokvJNewZyiRCAhQihw5Mqx9rC7C7p6oX39urOnaFAbjpmWRKfo56lMmhOjKRXGBeAM0YbLR0k9h9jxb+NlZEMcuGf8lTjqCIqXq5FzPIOBLa2uxdezu5UC1Hq07qUCr9ukMzWMRpirQCqziYLn7Dy0="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:12 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157090407772", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "ZTcW3ixJUWcSFCgALJRfPmqk28yM+X2uzy55lZXyljxME1K20YSOdHRNCr7RWlajiGADFszp73GkAzkN6Z9h6bErr09j/VRTkMWQe65RCfRdRvKxKYb4IE8N6akZob3/wrEAciXmpAdhkOk/undEzDn5bT488+PfqQss2JT/jao="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:13 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157053719465", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "BFNpCnln491EMQPl1YL1iExw0noQMPqcCavaL5L4nszhb2rCMtdkKRqxhuWCsH7/7qZI29NL/qNiwuHOPX2ol2IZi85dgKGoCgdVv5kbdG/k0Ac1imQD1EPonErOUKj9i5Vgm4S+hVPzmNjthpSWT6XVszVgylHiG8BES13RtaY="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:13 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157086552657", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "YPeGvpGcOBVypktrkdnuhR+0w6rdi0OumeBjkJrMsSC+9v0sBPohw7OhEfeRZ0ua6aOB7vWUxfPXIDG3va6bDDqrtW9KDa5p6a9Rd5or6OmkbNawQ7O6HS+C3k/u7qjKC9nrhwiyyEabEDcE774SSUsKZWv1B+MEqPS1UFVhkvQ="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:13 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157089314096", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "IrdM9UaffQmS4lRZPZpZw/VTJ4OnIiP+7uOsC5/cVh3YzTkVE3WiIfs5wO2O9FD/KrmOV/JwiCj/1w9LS4qxEG9E7PSS0i/pE4zKaRzJEQJTZlvB8ZBkRbxg5EWn4OkcpfEBi3KssE0MOydBJMDAGxwOLJhLjcxUyrkTyl1X8Fw="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:13 GMT
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"cuenta": "646180157045271542", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "Wmr4s6fSs7nQpe+s4od00A7fBYBhAo2tjtQOdylrQc/bgqyP+mELTF+DhSkmVKuokzfxHCXOWMkN1VnUOWBn2Ni+wGkg7ffEGrm5J/e8/2gKHRHlYJ85KXogWUCNfn6uuW18mHjYsk5yjA7J16hO1FW6YES1azXPHiMOzFhkQN0="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '271'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.5.7
+    method: DELETE
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 05 Sep 2020 19:44:13 GMT
     status:
       code: 200
       message: OK

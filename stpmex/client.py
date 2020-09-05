@@ -112,6 +112,8 @@ class Client:
                     _raise_description_error_exc(resp)
             except KeyError:
                 if 'descripcion' in resp and resp['descripcion']:
+                    if 'Cuenta en revisión.' in resp['descripcion']:
+                        return
                     _raise_description_exc(resp)
         response.raise_for_status()
 
