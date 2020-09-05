@@ -1,6 +1,6 @@
 SHELL := bash
 PATH := ./venv/bin:${PATH}
-PYTHON = python3.7
+PYTHON = python3.8
 PROJECT = stpmex
 isort = isort $(PROJECT) tests setup.py
 black = black -S -l 79 --target-version py37 $(PROJECT) tests setup.py
