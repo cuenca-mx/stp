@@ -29,12 +29,7 @@ from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_HOST = 'https://demo.stpmex.com:7024'
-DEMO_BASE_URL = f'{DEMO_HOST}/speiws/rest'
-DEMO_SOAP_URL = f'{DEMO_HOST}/spei/webservices/SpeiConsultaServices'
-
 PROD_HOST = 'https://prod.stpmex.com'
-PROD_BASE_URL = f'{PROD_HOST}/speiws/rest'
-PROD_SOAP_URL = f'{PROD_HOST}/spei/webservices/SpeiConsultaServices'
 
 
 class Client:
@@ -57,13 +52,13 @@ class Client:
         self.session = Session()
         self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
-            self.base_url = DEMO_BASE_URL
-            self.soap_url = DEMO_SOAP_URL
+            host_url = DEMO_HOST
             self.session.verify = False
         else:
-            self.base_url = PROD_BASE_URL
-            self.soap_url = PROD_SOAP_URL
+            host_url = PROD_HOST
             self.session.verify = True
+        self.base_url = f'{host_url}/speiws/rest'
+        self.soap_url = f'{host_url}/spei/webservices/SpeiConsultaServices'
         try:
             self.pkey = serialization.load_pem_private_key(
                 priv_key.encode('utf-8'),
