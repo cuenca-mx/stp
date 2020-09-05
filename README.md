@@ -16,7 +16,7 @@ Python v3.6 o superior.
 ## Documentación de API
 
 [General](https://stpmex.zendesk.com/hc/es) y
-[WADL](https://demo.stpmex.com:7024/speidemows/rest/application.wadl?metadata=true&detail=true)
+[WADL](https://demo.stpmex.com:7024/speiws/rest/application.wadl?metadata=true&detail=true)
 
 ## Instalación
 

@@ -17,7 +17,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.3.0
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
+    uri: https://demo.stpmex.com:7024/spei/webservices/SpeiConsultaServices
   response:
     body:
       string: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns0:consultaSaldoCuentaResponse

@@ -21,7 +21,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.dev3
     method: PUT
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/registra
   response:
     body:
       string: '{"resultado":{"id":3}}'

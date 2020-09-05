@@ -16,7 +16,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.3.0.dev2
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdEnvRastreo
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdEnvRastreo
   response:
     body:
       string: "{\"resultado\":{\"descripcionError\":\"No se encontr\xF3 la orden con

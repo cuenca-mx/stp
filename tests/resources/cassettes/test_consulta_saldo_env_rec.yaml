@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.3.0.dev3
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consSaldoEnvRec
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consSaldoEnvRec
   response:
     body:
       string: '{"resultado":{"id":1,"saldos":[{"empresa":"TAMIZI","montoTotal":"2.40","tipoOperacion":"E","totalOperaciones":2},{"empresa":"TAMIZI","montoTotal":"2.40","tipoOperacion":"R","totalOperaciones":2}]}}'

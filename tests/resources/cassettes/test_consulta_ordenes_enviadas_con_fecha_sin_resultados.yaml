@@ -16,7 +16,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.3.0.dev3
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdenesFech
   response:
     body:
       string: '{"resultado":{"descripcionError":"No se encontraron ordenes","id":-100}}'

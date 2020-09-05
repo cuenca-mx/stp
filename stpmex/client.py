@@ -29,8 +29,8 @@ from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_HOST = 'https://demo.stpmex.com:7024'
-DEMO_BASE_URL = f'{DEMO_HOST}/speidemows/rest'
-DEMO_SOAP_URL = f'{DEMO_HOST}/speidemo/webservices/SpeiConsultaServices'
+DEMO_BASE_URL = f'{DEMO_HOST}/speiws/rest'
+DEMO_SOAP_URL = f'{DEMO_HOST}/spei/webservices/SpeiConsultaServices'
 
 PROD_HOST = 'https://prod.stpmex.com'
 PROD_BASE_URL = f'{PROD_HOST}/speiws/rest'

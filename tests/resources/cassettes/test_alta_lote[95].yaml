@@ -586,7 +586,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: PUT
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisicas
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisicas
   response:
     body:
       string: '[{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0},{"descripcion":"","id":0}]'
@@ -617,7 +617,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -648,7 +648,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -679,7 +679,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -710,7 +710,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -741,7 +741,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -772,7 +772,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -803,7 +803,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -834,7 +834,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -865,7 +865,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -896,7 +896,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -927,7 +927,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -958,7 +958,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -989,7 +989,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1020,7 +1020,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1051,7 +1051,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1082,7 +1082,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1113,7 +1113,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1144,7 +1144,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1175,7 +1175,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1206,7 +1206,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1237,7 +1237,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1268,7 +1268,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1299,7 +1299,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1330,7 +1330,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1361,7 +1361,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1392,7 +1392,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1423,7 +1423,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1454,7 +1454,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1485,7 +1485,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1516,7 +1516,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1547,7 +1547,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1578,7 +1578,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1609,7 +1609,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1640,7 +1640,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1671,7 +1671,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1702,7 +1702,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1733,7 +1733,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1764,7 +1764,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1795,7 +1795,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1826,7 +1826,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1857,7 +1857,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1888,7 +1888,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1919,7 +1919,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1950,7 +1950,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -1981,7 +1981,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2012,7 +2012,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2043,7 +2043,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2074,7 +2074,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2105,7 +2105,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2136,7 +2136,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2167,7 +2167,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2198,7 +2198,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2229,7 +2229,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2260,7 +2260,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2291,7 +2291,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2322,7 +2322,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2353,7 +2353,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2384,7 +2384,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2415,7 +2415,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2446,7 +2446,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2477,7 +2477,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2508,7 +2508,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2539,7 +2539,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2570,7 +2570,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2601,7 +2601,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2632,7 +2632,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2663,7 +2663,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2694,7 +2694,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2725,7 +2725,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2756,7 +2756,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2787,7 +2787,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2818,7 +2818,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2849,7 +2849,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2880,7 +2880,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2911,7 +2911,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2942,7 +2942,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -2973,7 +2973,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3004,7 +3004,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3035,7 +3035,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3066,7 +3066,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3097,7 +3097,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3128,7 +3128,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3159,7 +3159,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3190,7 +3190,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3221,7 +3221,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3252,7 +3252,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3283,7 +3283,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3314,7 +3314,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3345,7 +3345,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3376,7 +3376,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3407,7 +3407,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3438,7 +3438,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3469,7 +3469,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3500,7 +3500,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'
@@ -3531,7 +3531,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.0.0.rc1
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"descripcion":"","id":0}'

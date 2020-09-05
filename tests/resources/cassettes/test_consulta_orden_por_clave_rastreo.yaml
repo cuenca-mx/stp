@@ -16,7 +16,7 @@ interactions:
       User-Agent:
       - stpmex-python/3.3.0.dev2
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdEnvRastreo
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdEnvRastreo
   response:
     body:
       string: '{"resultado":{"id":1,"ordenPago":{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"folioOrigen":"CR1564969083","idCliente":"CR1564969083","idEF":7838161,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
