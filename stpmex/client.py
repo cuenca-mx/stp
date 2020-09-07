@@ -110,8 +110,12 @@ class Client:
             try:
                 _raise_description_error_exc(resp)
             except KeyError:
-                if 'descripcion' in resp and resp['descripcion']:
-                    _raise_description_exc(resp)
+                ...
+            try:
+                assert resp['descripcion']
+                _raise_description_exc(resp)
+            except (AssertionError, KeyError):
+                ...
         response.raise_for_status()
 
 
@@ -154,6 +158,9 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
     desc = resp['descripcion']
 
     if id == 0 and 'Cuenta en revisión' in desc:
+        # STP regresa esta respuesta cuando se registra
+        # una cuenta. No se levanta excepción porque
+        # todas las cuentas pasan por este status.
         ...
     elif id == 1 and desc == 'Cuenta Duplicada':
         raise DuplicatedAccount(**resp)
