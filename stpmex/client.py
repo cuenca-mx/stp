@@ -162,11 +162,11 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
         # una cuenta. No se levanta excepción porque
         # todas las cuentas pasan por este status.
         ...
-    elif id == 1 and desc == 'Cuenta Duplicada':
-        raise DuplicatedAccount(**resp)
     elif id == 1 and desc == 'rfc/curp invalido':
         raise InvalidRfcOrCurp(**resp)
     elif id == 1 and re.match(r'El campo \w+ es invalido', desc):
         raise InvalidField(**resp)
+    elif id == 3 and desc == 'Cuenta Duplicada':
+        raise DuplicatedAccount(**resp)
     else:
         raise StpmexException(**resp)
