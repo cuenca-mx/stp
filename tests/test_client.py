@@ -138,7 +138,7 @@ def test_incorrect_passphrase():
             StpmexException,
         ),
         (
-            dict(descripcion='Cuenta Duplicada', id=1),
+            dict(descripcion='Cuenta Duplicada', id=3),
             CUENTA_ENDPOINT,
             DuplicatedAccount,
         ),
