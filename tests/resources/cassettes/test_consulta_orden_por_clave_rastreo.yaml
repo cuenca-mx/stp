@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"empresa": "TAMIZI", "fechaOperacion": "20200420", "claveRastreo": "CR1564969083",
-      "institucionOperante": 90646, "firma": "pj3+C3iAwjXFsjBEeS0gSO0SMhV8T1PnmHEB4EmZHliKI/KY7TJ7DySj6JqkAVny1gddOiX8whBPutn/KpxR9kMf6FbNssRiy2ystppIKq7jcGZ0yEyCF8ZqWAMuEOWnF5sQ4Zb3tyAyMh0iEaaU/8nFf5yzs7UQiTgeinWWjvo="}'
+    body: '{"empresa": "TAMIZI", "claveRastreo": "CR1564969083", "institucionOperante":
+      90646, "fechaOperacion": "20200420", "firma": "pj3+C3iAwjXFsjBEeS0gSO0SMhV8T1PnmHEB4EmZHliKI/KY7TJ7DySj6JqkAVny1gddOiX8whBPutn/KpxR9kMf6FbNssRiy2ystppIKq7jcGZ0yEyCF8ZqWAMuEOWnF5sQ4Zb3tyAyMh0iEaaU/8nFf5yzs7UQiTgeinWWjvo="}'
     headers:
       Accept:
       - '*/*'
@@ -14,20 +14,20 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.3.0.dev2
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdEnvRastreo
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdEnvRastreo
   response:
     body:
       string: '{"resultado":{"id":1,"ordenPago":{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"folioOrigen":"CR1564969083","idCliente":"CR1564969083","idEF":7838161,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
-        Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197043942,"tsCaptura":1587197039698,"tsDevolucion":4524,"tsDevolucionRecibida":1587197049464,"tsEntrega":5242,"tsLiquidacion":1587197044940,"usuario":"tamizi"}}}'
+      Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197043942,"tsCaptura":1587197039698,"tsDevolucion":4524,"tsDevolucionRecibida":1587197049464,"tsEntrega":5242,"tsLiquidacion":1587197044940,"usuario":"tamizi"}}}'
     headers:
       Content-Length:
       - '1037'
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2020 16:15:06 GMT
+      - Sat, 05 Sep 2020 17:11:39 GMT
     status:
       code: 200
       message: OK

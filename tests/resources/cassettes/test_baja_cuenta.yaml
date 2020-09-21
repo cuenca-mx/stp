@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"cuenta": "646180110400000007", "empresa": "TAMIZI", "rfcCurp": "rfcrfc",
-      "firma": "XVp3uFtcbpAV7569wj8BZfecG4JSU1ajTLKgE5+Kct6gVPUaBXjxkaH1iY2er/MDolWPOmWbQME+9HU0v3St1fimXRI5GXgecU/zkECsK0QR7EwAGD3UPe9fcVvSOFv1qSqB7OWkejd9NF/HrKTLVMLfHHmI+XzT3pjvV7vjazo="}'
+    body: '{"cuenta": "646180157039283656", "empresa": "TAMIZI", "rfcCurp": "SAHE800416HDFABC01",
+      "firma": "UW6JfwlVX7Dyrq+0m7YoZ65Lbmh+jYckKgau2O4d6jEVa9Tdg2PbE0gXOYhA6w8yq4dFqYaD/SwSddAfrZQ1EqXB81iEvG1HQHSiDowL2CG8OMTvw4DPALI/2db6iqXv3Xdi1KN7j1cSd/ZPJPuolSUKebPThB/cL0aloGAAZl0="}'
     headers:
       Accept:
       - '*/*'
@@ -10,23 +10,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '259'
+      - '271'
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.0.0.dev3
+      - stpmex-python/3.5.7
     method: DELETE
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
-      string: '{"descripcion":"","id":0}'
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
     headers:
       Content-Length:
-      - '25'
+      - '45'
       Content-Type:
       - application/json
       Date:
-      - Fri, 27 Dec 2019 22:56:07 GMT
+      - Sat, 05 Sep 2020 17:18:48 GMT
     status:
       code: 200
       message: OK

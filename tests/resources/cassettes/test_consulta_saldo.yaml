@@ -15,13 +15,13 @@ interactions:
       Content-Length:
       - '529'
       User-Agent:
-      - stpmex-python/3.3.0
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
+    uri: https://demo.stpmex.com:7024/spei/webservices/SpeiConsultaServices
   response:
     body:
       string: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns0:consultaSaldoCuentaResponse
-        xmlns:ns0="http://h2h.integration.spei.enlacefi.lgec.com/"><return><cargosPendientes>0.00</cargosPendientes><saldo>20479.69</saldo></return></ns0:consultaSaldoCuentaResponse></S:Body></S:Envelope>
+        xmlns:ns0="http://h2h.integration.spei.enlacefi.lgec.com/"><return><cargosPendientes>0.00</cargosPendientes><saldo>10000.00</saldo></return></ns0:consultaSaldoCuentaResponse></S:Body></S:Envelope>
     headers:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0, max-age=0,
@@ -32,13 +32,13 @@ interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Date:
-      - Wed, 22 Apr 2020 21:41:33 GMT
+      - Sat, 05 Sep 2020 17:11:42 GMT
       Expires:
       - '0'
       Pragma:
       - no-cache
       Set-Cookie:
-      - JSESSIONID=d42j1sRxLSjaZPooK-9znBTHgj99tIPitFIp3298sNjf2WGgH7PO!1890083885;
+      - JSESSIONID=2PdfQJZ-Mt6CstaH1g8bLj0tXaUU5c9ofAuhPmC_tOrxAp_I9iqv!900324847;
         path=/; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains

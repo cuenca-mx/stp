@@ -28,7 +28,9 @@ def test_alta_lote(client, cuenta_dict, num_cuentas):
     resp = client.cuentas.alta_lote(lote)
     assert list(resp.keys()) == clabes
     assert all(r['id'] == 0 for r in resp.values())
-    assert all(r['descripcion'] == '' for r in resp.values())
+    assert all(
+        r['descripcion'] == 'Cuenta en revisión.' for r in resp.values()
+    )
     for cuenta in lote:
         cuenta.baja()
 

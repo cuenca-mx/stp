@@ -14,9 +14,9 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.3.0
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdenesFech
   response:
     body:
       string: '{"resultado":{"id":1,"lst":[{"causaDevolucion":1,"claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","cuentaBeneficiario":"646180157075068123","empresa":"TAMIZI","estado":"LQ","fechaOperacion":20200420,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":1,"monto":1.20,"prioridad":0,"tipoPago":0,"topologia":"V","tsCaptura":1587197049464,"tsDevolucion":4524,"tsDevolucionRecibida":4524,"tsLiquidacion":1587197049464},{"causaDevolucion":1,"claveRastreo":"CR1564969084","claveRastreoDevolucion":"19013551","cuentaBeneficiario":"646180157075068123","empresa":"TAMIZI","estado":"LQ","fechaOperacion":20200420,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":1,"monto":1.20,"prioridad":0,"tipoPago":0,"topologia":"V","tsCaptura":1587197118452,"tsDevolucion":2287,"tsDevolucionRecibida":2287,"tsLiquidacion":1587197118452},null]}}'
@@ -26,7 +26,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Thu, 23 Apr 2020 18:59:05 GMT
+      - Sat, 05 Sep 2020 17:11:40 GMT
     status:
       code: 200
       message: OK
