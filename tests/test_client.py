@@ -108,7 +108,7 @@ def test_incorrect_passphrase():
             InvalidAccountType,
         ),
         (
-            _desc_error('El monto {500.0} no es válido', -21),
+            _desc_error('El monto {500.0} no es válido', -20),
             ORDEN_PAGO_ENDPOINT,
             InvalidAmount,
         ),
