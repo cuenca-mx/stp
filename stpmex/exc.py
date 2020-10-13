@@ -82,3 +82,7 @@ class InvalidInstitution(StpmexException):
 
 class AccountDoesNotExist(StpmexException):
     """La cuenta no existe"""
+
+
+class InvalidAmount(StpmexException):
+    """El monto es inválido para una de las instituciones"""

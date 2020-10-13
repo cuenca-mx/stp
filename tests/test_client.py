@@ -10,6 +10,7 @@ from stpmex.exc import (
     ClaveRastreoAlreadyInUse,
     DuplicatedAccount,
     InvalidAccountType,
+    InvalidAmount,
     InvalidField,
     InvalidInstitution,
     InvalidPassphrase,
@@ -107,6 +108,11 @@ def test_incorrect_passphrase():
             _desc_error('El tipo de cuenta 3 es invalido', -11),
             ORDEN_PAGO_ENDPOINT,
             InvalidAccountType,
+        ),
+        (
+            _desc_error('El monto {500.0} no es válido', -20),
+            ORDEN_PAGO_ENDPOINT,
+            InvalidAmount,
         ),
         (
             _desc_error(
