@@ -101,14 +101,7 @@ class Client:
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
         response = self.session.request(
-<<<<<<< HEAD
             method, url, json=data, timeout=self.timeout, **kwargs
-=======
-            method,
-            url,
-            json=data,
-            **kwargs,
->>>>>>> Changing demo host (#115)
         )
         self._check_response(response)
         resultado = response.json()
@@ -174,18 +167,11 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
     id = resp['id']
     desc = resp['descripcion']
 
-<<<<<<< HEAD
-    if id == 0 and desc == 'Cuenta en revisión.':
-        return True
-    if id == 1 and desc == 'Cuenta Duplicada':
-        raise DuplicatedAccount(**resp)
-=======
     if id == 0 and 'Cuenta en revisión' in desc:
         # STP regresa esta respuesta cuando se registra
         # una cuenta. No se levanta excepción porque
         # todas las cuentas pasan por este status.
         ...
->>>>>>> Changing demo host (#115)
     elif id == 1 and desc == 'rfc/curp invalido':
         raise InvalidRfcOrCurp(**resp)
     elif id == 1 and re.match(r'El campo \w+ es invalido', desc):
