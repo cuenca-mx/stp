@@ -1,11 +1,11 @@
 interactions:
 - request:
-    body: '{"monto": 1.2, "conceptoPago": "Prueba", "nombreBeneficiario": "Ricardo
-      Sanchez", "cuentaBeneficiario": "072691004495711499", "institucionContraparte":
-      "40072", "tipoCuentaBeneficiario": 40, "cuentaOrdenante": "646180110400000007",
-      "institucionOperante": "90646", "claveRastreo": "CR1577487449", "referenciaNumerica":
-      5273144, "rfcCurpBeneficiario": "ND", "medioEntrega": 3, "prioridad": 1, "tipoPago":
-      1, "topologia": "T", "firma": "O//wteBk+TiqbJX3e+SSv/aytiggr63pCGuiAn6EcWmQC8eFVD+/tTLGxUL4kv7g7lV4Y+TpWM5MfGgZVUvJqkrSZDkXJs70JCB1cwMNgYWahyTpTpLZTI+XMhHFur/dB5sPfbjggdOunY8YBlITygOcjFsWXv/SE5yNda0+mBQ=",
+    body: '{"monto": 1.2, "conceptoPago": "Prueba", "cuentaBeneficiario": "072691004495711499",
+      "nombreBeneficiario": "Ricardo Sanchez", "institucionContraparte": "40072",
+      "cuentaOrdenante": "646180110400000007", "institucionOperante": "90646", "tipoCuentaBeneficiario":
+      40, "tipoCuentaOrdenante": 40, "claveRastreo": "CR1599325802", "referenciaNumerica":
+      5273144, "rfcCurpBeneficiario": "ND", "medioEntrega": 3, "tipoPago": 1, "topologia":
+      "T", "firma": O//wteBk+TiqbJX3e+SSv/aytiggr63pCGuiAn6EcWmQC8eFVD+/tTLGxUL4kv7g7lV4Y+TpWM5MfGgZVUvJqkrSZDkXJs70JCB1cwMNgYWahyTpTpLZTI+XMhHFur/dB5sPfbjggdOunY8YBlITygOcjFsWXv/SE5yNda0+mBQ=",
       "empresa": "TAMIZI"}'
     headers:
       Accept:
@@ -19,9 +19,9 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.0.0.dev3
+      - stpmex-python/3.5.7
     method: PUT
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/registra
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/registra
   response:
     body:
       string: '{"resultado":{"id":3}}'
@@ -31,7 +31,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 27 Dec 2019 22:57:31 GMT
+      - Sat, 05 Sep 2020 17:11:37 GMT
     status:
       code: 200
       message: OK

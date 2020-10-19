@@ -67,5 +67,9 @@ def join_fields(obj: 'Resource', fieldnames: List[str]) -> bytes:  # noqa: F821
 
 
 def compute_signature(pkey: RSAPrivateKey, text: str) -> str:
-    signature = pkey.sign(text.encode('utf-8'), padding.PKCS1v15(), SHA256(),)
+    signature = pkey.sign(
+        text.encode('utf-8'),
+        padding.PKCS1v15(),
+        SHA256(),
+    )
     return b64encode(signature).decode('ascii')

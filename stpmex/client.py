@@ -7,10 +7,12 @@ from cryptography.hazmat.primitives import serialization
 from requests import Response, Session
 
 from .exc import (
+    AccountDoesNotExist,
     BankCodeClabeMismatch,
     ClaveRastreoAlreadyInUse,
     DuplicatedAccount,
     InvalidAccountType,
+    InvalidAmount,
     InvalidField,
     InvalidInstitution,
     InvalidPassphrase,
@@ -28,12 +30,7 @@ from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_HOST = 'https://demo.stpmex.com:7024'
-DEMO_BASE_URL = f'{DEMO_HOST}/speidemows/rest'
-DEMO_SOAP_URL = f'{DEMO_HOST}/speidemo/webservices/SpeiConsultaServices'
-
 PROD_HOST = 'https://prod.stpmex.com'
-PROD_BASE_URL = f'{PROD_HOST}/speiws/rest'
-PROD_SOAP_URL = f'{PROD_HOST}/spei/webservices/SpeiConsultaServices'
 
 
 class Client:
@@ -61,13 +58,14 @@ class Client:
         self.session.verify = False
         self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
         if demo:
-            self.base_url = DEMO_BASE_URL
-            self.soap_url = DEMO_SOAP_URL
+            host_url = DEMO_HOST
             self.session.verify = False
         else:
-            self.base_url = PROD_BASE_URL
-            self.soap_url = PROD_SOAP_URL
+            host_url = PROD_HOST
             self.session.verify = True
+        self.base_url = f'{host_url}/speiws/rest'
+        self.soap_url = f'{host_url}/spei/webservices/SpeiConsultaServices'
+
         if base_url:
             self.base_url = base_url
         if soap_url:
@@ -118,11 +116,14 @@ class Client:
         resp = response.json()
         if isinstance(resp, dict):
             try:
-                if 'descripcionError' in resp['resultado']:
-                    _raise_description_error_exc(resp)
+                _raise_description_error_exc(resp)
             except KeyError:
-                if 'descripcion' in resp and resp['descripcion']:
-                    _raise_description_exc(resp)
+                ...
+            try:
+                assert resp['descripcion']
+                _raise_description_exc(resp)
+            except (AssertionError, KeyError):
+                ...
         response.raise_for_status()
 
 
@@ -140,10 +141,14 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         r'La clave de rastreo .+ ya fue utilizada', error
     ):
         raise ClaveRastreoAlreadyInUse(**resp['resultado'])
+    elif id == -7 and re.match(r'La cuenta .+ no existe', error):
+        raise AccountDoesNotExist(**resp['resultado'])
     elif id == -9 and re.match(r'La Institucion \d+ no es valida', error):
         raise InvalidInstitution(**resp['resultado'])
     elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):
         raise InvalidAccountType(**resp['resultado'])
+    elif id == -20 and re.match(r'El monto {.+} no es válido', error):
+        raise InvalidAmount(**resp['resultado'])
     elif id == -22 and 'no coincide para la institucion operante' in error:
         raise BankCodeClabeMismatch(**resp['resultado'])
     elif id == -24 and re.match(r'Cuenta {\d+} - {MISMA_CUENTA}', error):
@@ -162,13 +167,16 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
     id = resp['id']
     desc = resp['descripcion']
 
-    if id == 0 and desc == 'Cuenta en revisión.':
-        return True
-    if id == 1 and desc == 'Cuenta Duplicada':
-        raise DuplicatedAccount(**resp)
+    if id == 0 and 'Cuenta en revisión' in desc:
+        # STP regresa esta respuesta cuando se registra
+        # una cuenta. No se levanta excepción porque
+        # todas las cuentas pasan por este status.
+        ...
     elif id == 1 and desc == 'rfc/curp invalido':
         raise InvalidRfcOrCurp(**resp)
     elif id == 1 and re.match(r'El campo \w+ es invalido', desc):
         raise InvalidField(**resp)
+    elif id == 3 and desc == 'Cuenta Duplicada':
+        raise DuplicatedAccount(**resp)
     else:
         raise StpmexException(**resp)

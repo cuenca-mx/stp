@@ -1,7 +1,6 @@
 interactions:
 - request:
-    body: '{"empresa": "TAMIZI", "firma": "fRcllVARrFz+4XNhgKAGMKqTeHYdErcTmTiUC9IM6Nb3tASEl9xcfeUGohu6/CCDurP8/jHeWYwa3cKWNcRNsngDjoPdt/YZfpgcFYsdveYrpy8XGgGY+AEUtdwDdC3BBfZMysRxRNVtnZO0wYCcPsOf9u2sPSeVGWU4CbtAEKs=",
-      "estado": "E"}'
+    body: '{"empresa": "TAMIZI", "estado": "E", "firma": "fRcllVARrFz+4XNhgKAGMKqTeHYdErcTmTiUC9IM6Nb3tASEl9xcfeUGohu6/CCDurP8/jHeWYwa3cKWNcRNsngDjoPdt/YZfpgcFYsdveYrpy8XGgGY+AEUtdwDdC3BBfZMysRxRNVtnZO0wYCcPsOf9u2sPSeVGWU4CbtAEKs="}'
     headers:
       Accept:
       - '*/*'
@@ -14,21 +13,23 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.2.0
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdenesFech
   response:
     body:
-      string: '{"resultado":{"id":1,"lst":[{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"folioOrigen":"CR1564969083","idCliente":"CR1564969083","institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
-        Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197043942,"tsCaptura":1587197039698,"tsDevolucion":4524,"tsDevolucionRecibida":1587197049464,"tsEntrega":5242,"tsLiquidacion":1587197044940,"usuario":"tamizi"},{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969084","claveRastreoDevolucion":"19013551","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"folioOrigen":"CR1564969084","idCliente":"CR1564969084","institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
-        Sanchez","nombreBeneficiario2":"","nombreOrdenante":"EDUARDO SALVADOR HERNANDEZ","prioridad":1,"referenciaCobranza":"","referenciaNumerica":5273144,"rfcCurpBeneficiario":"ND","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"SAHE800416HDFABC01","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsAcuseBanxico":1587197113935,"tsCaptura":1587197110061,"tsDevolucion":2287,"tsDevolucionRecibida":1587197118452,"tsEntrega":6104,"tsLiquidacion":1587197116165,"usuario":"tamizi"},null]}}'
+      string: '{"resultado":{"id":1,"lst":[{"clavePago":"","claveRastreo":"000435414377354285915413","conceptoPago":"Transferencia
+        FISA","conceptoPago2":"","cuentaBeneficiario":"021180063738941801","cuentaBeneficiario2":"","cuentaOrdenante":"646180102607000012","empresa":"TAMIZI","estado":"L","fechaOperacion":20200907,"folioOrigen":"000435414377354285915413","idCliente":"000435414377354285915413","institucionContraparte":40021,"institucionOperante":90646,"medioEntrega":3,"monto":1.00,"nombreBeneficiario":"Gustavo
+        Bartolo Trujillo","nombreBeneficiario2":"","nombreOrdenante":"TAMIZI","prioridad":0,"referenciaCobranza":"","referenciaNumerica":6879256,"rfcCurpBeneficiario":"","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"ND","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsCaptura":1599268894178,"usuario":"tamizi"},{"clavePago":"","claveRastreo":"000836856375538761031816","conceptoPago":"Transferencia
+        FISA","conceptoPago2":"","cuentaBeneficiario":"021180063738941801","cuentaBeneficiario2":"","cuentaOrdenante":"646180102607000012","empresa":"TAMIZI","estado":"L","fechaOperacion":20200907,"folioOrigen":"000836856375538761031816","idCliente":"000836856375538761031816","institucionContraparte":40021,"institucionOperante":90646,"medioEntrega":3,"monto":1.00,"nombreBeneficiario":"Gustavo
+        Bartolo Trujillo","nombreBeneficiario2":"","nombreOrdenante":"TAMIZI","prioridad":0,"referenciaCobranza":"","referenciaNumerica":5488655,"rfcCurpBeneficiario":"","rfcCurpBeneficiario2":"","rfcCurpOrdenante":"ND","tipoCuentaBeneficiario":40,"tipoCuentaOrdenante":40,"tipoPago":1,"topologia":"V","tsCaptura":1599271758417,"usuario":"tamizi"},null]}}'
     headers:
       Content-Length:
-      - '2011'
+      - '1667'
       Content-Type:
       - application/json
       Date:
-      - Sun, 19 Apr 2020 18:35:14 GMT
+      - Sat, 05 Sep 2020 17:11:37 GMT
     status:
       code: 200
       message: OK

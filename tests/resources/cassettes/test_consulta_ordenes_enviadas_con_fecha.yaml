@@ -14,9 +14,9 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.3.0.dev3
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdenesFech
   response:
     body:
       string: '{"resultado":{"id":1,"lst":[{"causaDevolucion":1,"clavePago":"","claveRastreo":"CR1564969083","claveRastreoDevolucion":"19013550","conceptoPago":"Prueba","conceptoPago2":"","cuentaBeneficiario":"072691004495711499","cuentaBeneficiario2":"","cuentaOrdenante":"646180157075068123","empresa":"TAMIZI","estado":"D","fechaOperacion":20200420,"institucionContraparte":40072,"institucionOperante":90646,"medioEntrega":3,"monto":1.20,"nombreBeneficiario":"Ricardo
@@ -28,7 +28,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 22 Apr 2020 18:27:30 GMT
+      - Sat, 05 Sep 2020 17:11:38 GMT
     status:
       code: 200
       message: OK

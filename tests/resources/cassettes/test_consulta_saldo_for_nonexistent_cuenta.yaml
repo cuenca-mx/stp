@@ -15,9 +15,9 @@ interactions:
       Content-Length:
       - '529'
       User-Agent:
-      - stpmex-python/3.3.0
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemo/webservices/SpeiConsultaServices
+    uri: https://demo.stpmex.com:7024/spei/webservices/SpeiConsultaServices
   response:
     body:
       string: <?xml version='1.0' encoding='UTF-8'?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns0:Fault
@@ -33,13 +33,13 @@ interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Date:
-      - Fri, 24 Apr 2020 14:33:09 GMT
+      - Sat, 05 Sep 2020 17:11:42 GMT
       Expires:
       - '0'
       Pragma:
       - no-cache
       Set-Cookie:
-      - JSESSIONID=u_usm0VZe28MuAKn081K8Tcc7Jvw3CF4Ev7NdL8JlJGZw7MA901r!311456585;
+      - JSESSIONID=S5RfQJhkiJVXI3fpodGPGWzCBh9nvjvISjVk3CS2bGMEa9WhhR9m!900324847;
         path=/; secure; HttpOnly
       Strict-Transport-Security:
       - max-age=31536000; includeSubdomains
@@ -50,7 +50,7 @@ interactions:
       X-Frame-Options:
       - DENY
       X-ORACLE-DMS-ECID:
-      - 5d173cc1-4978-426d-9d58-0dc36f91111b-000001f5
+      - bbb5ef59-aabc-48e3-bfa1-ae32ea4777a3-000009c8
       X-ORACLE-DMS-RID:
       - '0'
       X-Xss-Protection:

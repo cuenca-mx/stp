@@ -1,7 +1,7 @@
 interactions:
 - request:
-    body: '{"empresa": "TAMIZI", "fechaOperacion": "20200420", "claveRastreo": "does
-      not exist", "institucionOperante": 90646, "firma": "Q6cLbFy5t6VfiPtxN5702zpyXpnGr2eAG3T6CqMvTbU5998KlQmXiiyNhWR4vON1T6/LAXQqYgeQfD530mEkO2dBCYw5eWQyDhNOO7AoM0njM/jjLwYlf6MSvOMxcJ6ceeYBvCkyq5y1vl9VlvxKqAeYr3XRzkX52FaGcgZNxKQ="}'
+    body: '{"empresa": "TAMIZI", "claveRastreo": "does not exist", "institucionOperante":
+      90646, "fechaOperacion": "20200420", "firma": "Q6cLbFy5t6VfiPtxN5702zpyXpnGr2eAG3T6CqMvTbU5998KlQmXiiyNhWR4vON1T6/LAXQqYgeQfD530mEkO2dBCYw5eWQyDhNOO7AoM0njM/jjLwYlf6MSvOMxcJ6ceeYBvCkyq5y1vl9VlvxKqAeYr3XRzkX52FaGcgZNxKQ="}'
     headers:
       Accept:
       - '*/*'
@@ -14,9 +14,9 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.3.0.dev2
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdEnvRastreo
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdEnvRastreo
   response:
     body:
       string: "{\"resultado\":{\"descripcionError\":\"No se encontr\xF3 la orden con
@@ -27,7 +27,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Mon, 20 Apr 2020 16:26:03 GMT
+      - Sat, 05 Sep 2020 17:11:40 GMT
     status:
       code: 200
       message: OK

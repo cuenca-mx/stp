@@ -6,8 +6,8 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
-from cuenca_validations.types import PaymentCardNumber
-from pydantic import PositiveFloat, conint, constr, validator
+from cuenca_validations.types import PaymentCardNumber, StrictPositiveFloat
+from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
@@ -37,7 +37,7 @@ class Orden(Resource):
     _endpoint: ClassVar[str] = '/ordenPago'
     _firma_fieldnames: ClassVar[List[str]] = ORDEN_FIELDNAMES
 
-    monto: PositiveFloat
+    monto: StrictPositiveFloat
     conceptoPago: truncated_str(39)
 
     cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MxPhoneNumber]
@@ -69,9 +69,6 @@ class Orden(Resource):
     id: Optional[int] = None
 
     def __post_init__(self):
-        # Test before Pydantic coerces it to a float
-        if not isinstance(self.monto, float):
-            raise ValueError('monto must be a float')
         cb = self.cuentaBeneficiario
         self.tipoCuentaBeneficiario = self.get_tipo_cuenta(cb)
 

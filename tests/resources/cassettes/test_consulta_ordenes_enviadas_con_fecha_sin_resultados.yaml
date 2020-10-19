@@ -14,9 +14,9 @@ interactions:
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.3.0.dev3
+      - stpmex-python/3.5.7
     method: POST
-    uri: https://demo.stpmex.com:7024/speidemows/rest/ordenPago/consOrdenesFech
+    uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/consOrdenesFech
   response:
     body:
       string: '{"resultado":{"descripcionError":"No se encontraron ordenes","id":-100}}'
@@ -26,7 +26,7 @@ interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 22 Apr 2020 18:29:31 GMT
+      - Sat, 05 Sep 2020 17:11:39 GMT
     status:
       code: 200
       message: OK

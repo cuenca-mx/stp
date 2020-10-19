@@ -1,11 +1,12 @@
 interactions:
 - request:
-    body: '{"nombre": "EDUARDO", "apellidoPaterno": "SALVADOR", "cuenta": "646180157017318462",
-      "rfcCurp": "SAHE800416HDFABC01", "apellidoMaterno": "HERNANDEZ", "genero": "H",
-      "fechaNacimiento": "19800414", "entidadFederativa": 1, "actividadEconomica":
-      30, "calle": "mi calle", "numeroExterior": "2", "numeroInterior": "1", "colonia":
-      "mi colonia", "alcaldiaMunicipio": "mi alcaldia", "cp": "12345", "pais": 1,
-      "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma": "f4lP1teXKOijJL+P3kag6Goo0jbmW47JTuJ3tjFxqCJN12IHFBx5yP+DIxouAWSGgwC8uF6Ujx2GDLAntosEsvMk5v+9dl1OQ+2kjKDBEsRNZsgGzpnKyVa8qBvh4/Vs+T8kpoClY7OlRMwO0tZUe9fnS67hlXDQrw7gHuVjiCk=",
+    body: '{"cuenta": "646180157018613700", "rfcCurp": "SAHE800416HDFABC01", "nombre":
+      "EDUARDO MARCO", "apellidoPaterno": "SALVADOR", "apellidoMaterno": "HERNANDEZ
+      MUNOZ", "genero": "H", "fechaNacimiento": "19800414", "entidadFederativa": 1,
+      "actividadEconomica": 30, "calle": "MI CALLE", "numeroExterior": "2", "numeroInterior":
+      "1", "colonia": "MI COLONIA", "alcaldiaMunicipio": "MI ALCALDIA", "cp": "12345",
+      "pais": 1, "email": "asdasd@domain.com", "idIdentificacion": "123123123", "firma":
+      "j0aKfUr/ZpSz0WaFZc3aPjUuF3ZUpJWBKnALRqwGM0tlyAgMI5yaw2s6tbII4OiE4irJKeQqhniljzHdlVoyVCpMZOmFkV24AStayqVdNZ/hLtJDpcAxjwlBcwYM74oG5Qcl0+rBAY+UA7eRsLVtiVJzMy4/nxlt9+uoqoqchkk=",
       "empresa": "TAMIZI"}'
     headers:
       Accept:
@@ -15,23 +16,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '668'
+      - '680'
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.0.0.rc1
+      - stpmex-python/3.5.7
     method: PUT
-    uri: https://demo.stpmex.com:7024/speidemows/rest/cuentaModule/fisica
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/fisica
   response:
     body:
-      string: '{"descripcion":"","id":0}'
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
     headers:
       Content-Length:
-      - '25'
+      - '45'
       Content-Type:
       - application/json
       Date:
-      - Tue, 31 Dec 2019 00:36:16 GMT
+      - Sat, 05 Sep 2020 19:37:48 GMT
     status:
       code: 200
       message: OK
