@@ -6,7 +6,7 @@ version = SourceFileLoader('version', 'stpmex/version.py').load_module()
 
 install_requires = [
     'cryptography==2.9.2',
-    'cuenca-validations==0.5.8',
+    'cuenca-validations==0.6.2',
     'requests==2.24.0',
 ]
 
