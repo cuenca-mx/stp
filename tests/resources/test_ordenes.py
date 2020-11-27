@@ -3,6 +3,7 @@ import time
 from typing import Any, Dict
 
 import pytest
+from pydantic.error_wrappers import ValidationError
 
 from stpmex import Client
 from stpmex.exc import NoOrdenesEncontradas
@@ -28,6 +29,22 @@ def test_registra_orden(client: Client, orden_dict: Dict[str, Any]):
 )
 def test_tipoCuentaBeneficiario(cuenta: str, tipo: TipoCuenta):
     assert Orden.get_tipo_cuenta(cuenta) == tipo
+
+
+@pytest.mark.parametrize(
+    'monto, msg',
+    [
+        (-1.3, 'ensure this value is greater than 0'),
+        (1, 'value is not a valid float'),
+    ],
+)
+def test_strict_pos_float(monto, msg: str, orden_dict: Dict[str, Any]):
+    orden_dict['claveRastreo'] = f'CR{int(time.time())}'
+    orden_dict['monto'] = monto
+
+    with pytest.raises(ValidationError) as exc:
+        Orden(**orden_dict)
+    assert msg in str(exc.value)
 
 
 @pytest.mark.vcr
