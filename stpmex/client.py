@@ -12,6 +12,7 @@ from .exc import (
     ClaveRastreoAlreadyInUse,
     DuplicatedAccount,
     InvalidAccountType,
+    InvalidAmount,
     InvalidField,
     InvalidInstitution,
     InvalidPassphrase,
@@ -139,6 +140,8 @@ def _raise_description_error_exc(resp: Dict) -> NoReturn:
         raise InvalidInstitution(**resp['resultado'])
     elif id == -11 and re.match(r'El tipo de cuenta \d+ es invalido', error):
         raise InvalidAccountType(**resp['resultado'])
+    elif id == -20 and re.match(r'El monto {.+} no es válido', error):
+        raise InvalidAmount(**resp['resultado'])
     elif id == -22 and 'no coincide para la institucion operante' in error:
         raise BankCodeClabeMismatch(**resp['resultado'])
     elif id == -24 and re.match(r'Cuenta {\d+} - {MISMA_CUENTA}', error):
