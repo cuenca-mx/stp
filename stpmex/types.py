@@ -3,7 +3,7 @@ import unicodedata
 from enum import Enum
 from typing import TYPE_CHECKING, ClassVar, Type
 
-from clabe.types import validate_digits
+from cuenca_validations.validators import validate_digits
 from pydantic import ConstrainedStr, StrictStr
 from pydantic.validators import (
     constr_length_validator,
