@@ -1,10 +1,10 @@
 import re
 import unicodedata
 from enum import Enum
-from typing import TYPE_CHECKING, ClassVar, Optional, Type
+from typing import TYPE_CHECKING, ClassVar, Type
 
 from clabe.types import validate_digits
-from pydantic import ConstrainedStr, StrictStr, constr
+from pydantic import ConstrainedStr, StrictStr
 from pydantic.validators import (
     constr_length_validator,
     constr_strip_whitespace,
