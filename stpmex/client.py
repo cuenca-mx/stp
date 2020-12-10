@@ -90,7 +90,12 @@ class Client:
         self, method: str, endpoint: str, data: Dict[str, Any], **kwargs: Any
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
-        response = self.session.request(method, url, json=data, **kwargs,)
+        response = self.session.request(
+            method,
+            url,
+            json=data,
+            **kwargs,
+        )
         self._check_response(response)
         resultado = response.json()
         if 'resultado' in resultado:  # Some responses are enveloped

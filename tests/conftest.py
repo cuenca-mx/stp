@@ -91,7 +91,7 @@ def cuenta_dict():
         colonia='mi colonia',
         alcaldiaMunicipio='mi alcaldia',
         cp='12345',
-        paisNacimiento='187',
+        paisNacimiento=187,
         email='asdasd@domain.com',
         idIdentificacion='123123123',
     )

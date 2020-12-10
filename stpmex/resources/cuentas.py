@@ -11,6 +11,7 @@ from ..types import (
     EntidadFederativa,
     Genero,
     MxPhoneNumber,
+    Pais,
     Rfc,
     digits,
     truncated_stp_str,
@@ -76,7 +77,7 @@ class CuentaFisica(Cuenta):
 
     nombre: truncated_stp_str(50)
     apellidoPaterno: truncated_stp_str(50)
-    paisNacimiento: conint(ge=0, le=275)
+    paisNacimiento: Pais
     fechaNacimiento: dt.date
 
     apellidoMaterno: Optional[truncated_stp_str(50)] = None
