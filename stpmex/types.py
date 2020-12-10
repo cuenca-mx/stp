@@ -165,6 +165,9 @@ class EntidadFederativa(int, Enum):
 
 
 class Pais(int, Enum):
+    """
+    Based on https://stpmex.zendesk.com/hc/es/articles/360037876272
+    """
     SE_DESCONOCE = 0
     AF = 1  #  REPUBLICA ISLAMICA DE AFGANISTAN
     AL = 2  #  REPUBLICA DE ALBANIA
