@@ -55,12 +55,6 @@ def truncated_stp_str(length: int) -> Type[str]:
     return type('TruncatedStpStrValue', (StpStr,), namespace)
 
 
-def digits(
-    min_length: Optional[int] = None, max_length: Optional[int] = None
-) -> Type[str]:
-    return constr(regex=r'^\d+$', min_length=min_length, max_length=max_length)
-
-
 class Estado(str, Enum):
     """
     Based on: https://stpmex.zendesk.com/hc/es/articles/360040200791

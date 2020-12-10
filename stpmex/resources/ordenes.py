@@ -6,7 +6,11 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
-from cuenca_validations.types import PaymentCardNumber, StrictPositiveFloat
+from cuenca_validations.types import (
+    PaymentCardNumber,
+    StrictPositiveFloat,
+    digits,
+)
 from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
@@ -18,7 +22,6 @@ from ..types import (
     Prioridad,
     TipoCuenta,
     TipoOperacion,
-    digits,
     truncated_str,
 )
 from ..utils import strftime, strptime

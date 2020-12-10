@@ -2,6 +2,7 @@ import datetime as dt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 
 from clabe.types import Clabe
+from cuenca_validations.types import digits
 from pydantic import conint, constr
 from pydantic.dataclasses import dataclass
 
@@ -13,7 +14,6 @@ from ..types import (
     MxPhoneNumber,
     Pais,
     Rfc,
-    digits,
     truncated_stp_str,
 )
 from .base import Resource
