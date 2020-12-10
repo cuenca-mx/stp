@@ -76,7 +76,7 @@ class CuentaFisica(Cuenta):
 
     nombre: truncated_stp_str(50)
     apellidoPaterno: truncated_stp_str(50)
-    paisNacimiento: conint(ge=0, le=242)
+    paisNacimiento: conint(ge=0, le=275)
     fechaNacimiento: dt.date
 
     apellidoMaterno: Optional[truncated_stp_str(50)] = None
