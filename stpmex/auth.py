@@ -60,7 +60,7 @@ def join_fields(obj: 'Resource', fieldnames: List[str]) -> bytes:  # noqa: F821
             value = f'{value:.2f}'
         elif isinstance(value, Enum) and value:
             value = value.value
-        elif value is None:
+        elif not value:
             value = ''
         joined_fields.append(str(value))
     return '||' + '|'.join(joined_fields) + '||'
