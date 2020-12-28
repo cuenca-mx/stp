@@ -18,16 +18,6 @@ def test_registra_orden(client: Client, orden_dict: Dict[str, Any]):
     assert isinstance(orden.id, int)
 
 
-@pytest.mark.vcr
-def test_registra_orden_with_prioridad_0(
-    client: Client, orden_dict: Dict[str, Any]
-):
-    orden_dict['claveRastreo'] = f'CR{int(time.time())}'
-    orden_dict['prioridad'] = 0
-    orden = client.ordenes.registra(**orden_dict)
-    assert isinstance(orden.id, int)
-
-
 @pytest.mark.parametrize(
     'cuenta, tipo',
     [

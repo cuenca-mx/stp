@@ -38,6 +38,6 @@ class Resource:
         for k, v in asdict(self).items():
             if isinstance(v, dt.date):
                 base[k] = strftime(v)
-            elif v:
+            elif v is not None:
                 base[k] = v
         return {**base, **dict(firma=self.firma, empresa=self.empresa)}
