@@ -28,6 +28,7 @@ from ..utils import strftime, strptime
 from .base import Resource
 
 STP_BANK_CODE = 90646
+# STP doesn't allow transfers to ASP Integra and Reforma
 BLOCKED_INSTITUTIONS = ['90659', '90642']
 
 
