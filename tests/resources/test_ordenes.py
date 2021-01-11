@@ -1,12 +1,14 @@
 import datetime as dt
 import time
 from typing import Any, Dict
+from unittest.mock import patch
 
 import pytest
+from cuenca_validations.typing import DictStrAny
 from pydantic.error_wrappers import ValidationError
 
 from stpmex import Client
-from stpmex.exc import NoOrdenesEncontradas
+from stpmex.exc import BlockedInstitution, NoOrdenesEncontradas
 from stpmex.resources import Orden
 from stpmex.types import TipoCuenta
 
@@ -101,3 +103,11 @@ def test_consulta_orden_sin_resultado_recibida(client):
         client.ordenes.consulta_clave_rastreo(
             'does not exist', 40072, dt.date(2020, 4, 20)
         )
+
+
+@patch('stpmex.resources.ordenes.BLOCKED_INSTITUTIONS', {'40072', '90659'})
+def test_institucion_bloqueada_no_permite_registrar_orden(
+    client: Client, orden_dict: DictStrAny
+):
+    with pytest.raises(BlockedInstitution):
+        client.ordenes.registra(**orden_dict)

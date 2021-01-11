@@ -1,4 +1,5 @@
 import datetime as dt
+import os
 import random
 import time
 from dataclasses import field, make_dataclass
@@ -15,7 +16,7 @@ from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
-from ..exc import NoOrdenesEncontradas
+from ..exc import BlockedInstitution, NoOrdenesEncontradas
 from ..types import (
     Estado,
     MxPhoneNumber,
@@ -28,6 +29,11 @@ from ..utils import strftime, strptime
 from .base import Resource
 
 STP_BANK_CODE = 90646
+BLOCKED_INSTITUTIONS = {
+    item
+    for item in os.environ.get('BLOCKED_INSTITUTIONS', '').split(',')
+    if item
+}
 
 
 @dataclass
@@ -78,6 +84,9 @@ class Orden(Resource):
     @classmethod
     def registra(cls, **kwargs) -> 'Orden':
         orden = cls(**kwargs)
+        breakpoint()
+        if orden.institucionContraparte in BLOCKED_INSTITUTIONS:
+            raise BlockedInstitution(orden.institucionContraparte)
         endpoint = orden._endpoint + '/registra'
         resp = orden._client.put(endpoint, orden.to_dict())
         orden.id = resp['id']

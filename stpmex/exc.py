@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+
 class StpmexException(Exception):
     def __init__(self, **kwargs):
         for attr, value in kwargs.items():
@@ -86,3 +89,10 @@ class AccountDoesNotExist(StpmexException):
 
 class InvalidAmount(StpmexException):
     """El monto es inválido para una de las instituciones"""
+
+
+@dataclass
+class BlockedInstitution(StpmexException):
+    """Institución bloqueada"""
+
+    bank_code: str
