@@ -109,5 +109,7 @@ def test_consulta_orden_sin_resultado_recibida(client):
 def test_institucion_bloqueada_no_permite_registrar_orden(
     client: Client, orden_dict: DictStrAny
 ):
-    with pytest.raises(BlockedInstitution):
+    with pytest.raises(BlockedInstitution) as exc:
         client.ordenes.registra(**orden_dict)
+
+    assert exc.value.bank_code == orden_dict['institucionContraparte']

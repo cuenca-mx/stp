@@ -84,7 +84,6 @@ class Orden(Resource):
     @classmethod
     def registra(cls, **kwargs) -> 'Orden':
         orden = cls(**kwargs)
-        breakpoint()
         if orden.institucionContraparte in BLOCKED_INSTITUTIONS:
             raise BlockedInstitution(orden.institucionContraparte)
         endpoint = orden._endpoint + '/registra'
