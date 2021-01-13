@@ -12,7 +12,7 @@ from pydantic.validators import (
     str_validator,
 )
 
-from stpmex.exc import BlockedInstitution
+from stpmex.exc import BlockedInstitutionError
 
 if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
@@ -55,7 +55,7 @@ class BeneficiarioClabe(Clabe):
     @classmethod
     def validate_blocked_institution(cls, clabe: Clabe) -> Clabe:
         if clabe.bank_code_banxico in BLOCKED_INSTITUTIONS:
-            raise BlockedInstitution
+            raise BlockedInstitutionError
         return clabe
 
 

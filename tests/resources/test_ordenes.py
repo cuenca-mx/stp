@@ -4,10 +4,10 @@ from typing import Any, Dict
 
 import pytest
 from cuenca_validations.typing import DictStrAny
-from pydantic.error_wrappers import ValidationError
+from pydantic import ValidationError
 
 from stpmex import Client
-from stpmex.exc import BlockedInstitution, NoOrdenesEncontradas
+from stpmex.exc import NoOrdenesEncontradas
 from stpmex.resources import Orden
 from stpmex.types import TipoCuenta
 
@@ -108,5 +108,5 @@ def test_institucion_bloqueada_no_permite_registrar_orden(
     client: Client, orden_dict: DictStrAny
 ):
     orden_dict['cuentaBeneficiario'] = '659802025000339321'
-    with pytest.raises(BlockedInstitution):
+    with pytest.raises(ValidationError):
         client.ordenes.registra(**orden_dict)
