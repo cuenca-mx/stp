@@ -17,6 +17,7 @@ from stpmex.exc import BlockedInstitutionError
 if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
 
+# STP does not allow make tranfers to this banks codes.
 BLOCKED_INSTITUTIONS = {'90659', '90642'}
 
 
