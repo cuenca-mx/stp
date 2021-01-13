@@ -17,7 +17,7 @@ from stpmex.exc import BlockedInstitutionError
 if TYPE_CHECKING:
     from pydantic.typing import CallableGenerator  # pragma: no cover
 
-# STP does not allow make tranfers to this banks codes.
+# STP does not allow to make tranfers to this banks codes.
 BLOCKED_INSTITUTIONS = {'90659', '90642'}
 
 
@@ -56,7 +56,7 @@ class BeneficiarioClabe(Clabe):
     @classmethod
     def validate_blocked_institution(cls, clabe: Clabe) -> Clabe:
         if clabe.bank_code_banxico in BLOCKED_INSTITUTIONS:
-            raise BlockedInstitutionError
+            raise BlockedInstitutionError(bank_name=clabe.bank_name)
         return clabe
 
 

@@ -95,4 +95,4 @@ class BlockedInstitutionError(PydanticValueError):
     """Institución bloqueada"""
 
     code = 'clabe.bank_code'
-    msg_template = 'código de banco bloqueado'
+    msg_template = '{bank_name} has been blocked by STP.'

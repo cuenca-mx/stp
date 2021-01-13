@@ -108,5 +108,13 @@ def test_institucion_bloqueada_no_permite_registrar_orden(
     client: Client, orden_dict: DictStrAny
 ):
     orden_dict['cuentaBeneficiario'] = '659802025000339321'
-    with pytest.raises(ValidationError):
+    expected_error_dict = {
+        'loc': ('cuentaBeneficiario',),
+        'msg': 'Asp Integra Opc has been blocked by STP.',
+        'type': 'value_error.clabe.bank_code',
+        'ctx': {'bank_name': 'Asp Integra Opc'},
+    }
+    with pytest.raises(ValidationError) as exc:
         client.ordenes.registra(**orden_dict)
+
+    assert any(error == expected_error_dict for error in exc.value.errors())
