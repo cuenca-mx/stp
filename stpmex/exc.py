@@ -1,6 +1,3 @@
-from pydantic import PydanticValueError
-
-
 class StpmexException(Exception):
     def __init__(self, **kwargs):
         for attr, value in kwargs.items():
@@ -91,8 +88,5 @@ class InvalidAmount(StpmexException):
     """El monto es inválido para una de las instituciones"""
 
 
-class BlockedInstitution(PydanticValueError):
+class BlockedInstitution(StpmexException):
     """Institución bloqueada"""
-
-    code = 'clabe.bank_code'
-    msg_template = 'código de banco bloqueado'
