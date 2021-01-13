@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from pydantic import PydanticValueError
 
 
 class StpmexException(Exception):
@@ -91,8 +91,8 @@ class InvalidAmount(StpmexException):
     """El monto es inválido para una de las instituciones"""
 
 
-@dataclass
-class BlockedInstitution(StpmexException):
+class BlockedInstitution(PydanticValueError):
     """Institución bloqueada"""
 
-    bank_code: str
+    code = 'clabe.bank_code'
+    msg_template = 'código de banco bloqueado'

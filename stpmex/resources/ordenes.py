@@ -15,8 +15,9 @@ from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
-from ..exc import BlockedInstitution, NoOrdenesEncontradas
+from ..exc import NoOrdenesEncontradas
 from ..types import (
+    BeneficiarioClabe,
     Estado,
     MxPhoneNumber,
     Prioridad,
@@ -28,8 +29,6 @@ from ..utils import strftime, strptime
 from .base import Resource
 
 STP_BANK_CODE = 90646
-# STP doesn't allow transfers to ASP Integra and Reforma
-BLOCKED_INSTITUTIONS = ['90659', '90642']
 
 
 @dataclass
@@ -45,7 +44,9 @@ class Orden(Resource):
     monto: StrictPositiveFloat
     conceptoPago: truncated_str(39)
 
-    cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MxPhoneNumber]
+    cuentaBeneficiario: Union[
+        BeneficiarioClabe, PaymentCardNumber, MxPhoneNumber
+    ]
     nombreBeneficiario: truncated_str(39)
     institucionContraparte: digits(5, 5)
 
@@ -80,8 +81,6 @@ class Orden(Resource):
     @classmethod
     def registra(cls, **kwargs) -> 'Orden':
         orden = cls(**kwargs)
-        if orden.institucionContraparte in BLOCKED_INSTITUTIONS:
-            raise BlockedInstitution(orden.institucionContraparte)
         endpoint = orden._endpoint + '/registra'
         resp = orden._client.put(endpoint, orden.to_dict())
         orden.id = resp['id']
