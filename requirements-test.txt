@@ -4,5 +4,5 @@ flake8==3.8.*
 mypy==0.790
 pytest==6.2.*
 pytest-vcr==1.0.*
-pytest-cov==2.10.*
+pytest-cov==2.11.*
 requests-mock==1.8.*
