@@ -7,6 +7,8 @@ updates:
       time: "08:00"
       timezone: "America/Mexico_City"
     open-pull-requests-limit: 5
+    reviewers:
+      - "cuenca-mx/admin"
 
   - package-ecosystem: pip
     directory: "/"
@@ -15,3 +17,5 @@ updates:
       time: "08:00"
       timezone: "America/Mexico_City"
     open-pull-requests-limit: 5
+    reviewers:
+      - "cuenca-mx/admin"

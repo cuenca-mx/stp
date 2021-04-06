@@ -3,7 +3,8 @@ import time
 from typing import Any, Dict
 
 import pytest
-from pydantic.error_wrappers import ValidationError
+from cuenca_validations.typing import DictStrAny
+from pydantic import ValidationError
 
 from stpmex import Client
 from stpmex.exc import NoOrdenesEncontradas
@@ -101,3 +102,19 @@ def test_consulta_orden_sin_resultado_recibida(client):
         client.ordenes.consulta_clave_rastreo(
             'does not exist', 40072, dt.date(2020, 4, 20)
         )
+
+
+def test_institucion_bloqueada_no_permite_registrar_orden(
+    client: Client, orden_dict: DictStrAny
+):
+    orden_dict['cuentaBeneficiario'] = '659802025000339321'
+    expected_error_dict = dict(
+        loc=('cuentaBeneficiario',),
+        msg='Asp Integra Opc has been blocked by STP.',
+        type='value_error.clabe.bank_code',
+        ctx=dict(bank_name='Asp Integra Opc'),
+    )
+    with pytest.raises(ValidationError) as exc:
+        client.ordenes.registra(**orden_dict)
+
+    assert any(error == expected_error_dict for error in exc.value.errors())

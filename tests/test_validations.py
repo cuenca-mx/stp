@@ -77,16 +77,6 @@ def test_wrong_length_cuentaBeneficiario():
         assert error['loc'][0] == 'cuentaBeneficiario'
 
 
-def test_digits():
-    with pytest.raises(ValidationError) as exc_info:
-        create_orden(institucionContraparte='9üey0')
-    errors = exc_info.value.errors()
-    assert len(errors) == 1
-    error = errors[0]
-    assert error['loc'][0] == 'institucionContraparte'
-    assert error['type'] == 'value_error.str.regex'
-
-
 def test_invalid_bank():
     with pytest.raises(ValidationError) as exc_info:
         create_orden(institucionContraparte='11111')

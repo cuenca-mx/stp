@@ -55,8 +55,7 @@ class Client:
     ):
         self.timeout = timeout
         self.session = Session()
-        self.session.verify = False
-        self.headers = {'User-Agent': f'stpmex-python/{client_version}'}
+        self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
             host_url = DEMO_HOST
             self.session.verify = False
@@ -101,7 +100,11 @@ class Client:
     ) -> Union[Dict[str, Any], List[Any]]:
         url = self.base_url + endpoint
         response = self.session.request(
-            method, url, json=data, timeout=self.timeout, **kwargs
+            method,
+            url,
+            json=data,
+            timeout=self.timeout,
+            **kwargs,
         )
         self._check_response(response)
         resultado = response.json()

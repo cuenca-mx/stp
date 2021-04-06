@@ -112,9 +112,6 @@ venv.bak/
 # environment variables
 .env
 
-# envrc
-.envrc
-
 # others
 .DS_Store
 

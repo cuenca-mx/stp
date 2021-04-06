@@ -6,6 +6,7 @@ from clabe import generate_new_clabes
 
 from stpmex import Client
 from stpmex.resources import CuentaFisica, Orden
+from stpmex.types import Pais
 
 PKEY = """Bag Attributes
     friendlyName: prueba
@@ -91,7 +92,7 @@ def cuenta_dict():
         colonia='mi colonia',
         alcaldiaMunicipio='mi alcaldia',
         cp='12345',
-        paisNacimiento='1',
+        paisNacimiento=Pais.MX,
         email='asdasd@domain.com',
         idIdentificacion='123123123',
     )
