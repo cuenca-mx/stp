@@ -3,9 +3,9 @@ interactions:
     body: '{"monto": 1.2, "conceptoPago": "Prueba", "cuentaBeneficiario": "072691004495711499",
       "nombreBeneficiario": "Ricardo Sanchez", "institucionContraparte": "40072",
       "cuentaOrdenante": "646180110400000007", "institucionOperante": "90646", "tipoCuentaBeneficiario":
-      40, "tipoCuentaOrdenante": 40, "claveRastreo": "CR1599325802", "referenciaNumerica":
-      5273144, "rfcCurpBeneficiario": "ND", "medioEntrega": 3, "tipoPago": 1, "topologia":
-      "T", "firma": O//wteBk+TiqbJX3e+SSv/aytiggr63pCGuiAn6EcWmQC8eFVD+/tTLGxUL4kv7g7lV4Y+TpWM5MfGgZVUvJqkrSZDkXJs70JCB1cwMNgYWahyTpTpLZTI+XMhHFur/dB5sPfbjggdOunY8YBlITygOcjFsWXv/SE5yNda0+mBQ=",
+      40, "tipoCuentaOrdenante": 40, "claveRastreo": "CR1609257595", "referenciaNumerica":
+      5273144, "rfcCurpBeneficiario": "ND", "prioridad": 0, "medioEntrega": 3, "tipoPago":
+      1, "topologia": "T", "firma": "L1ABpeih5nwIuFQPZoqjAjaWk9+vslRevKH6XcY169/GJhosoYkL6RtrStaHVUbMvjii11IcQkhN+25qjQQJ+CUTb3dQjATb4uVBxtebJIPFoITztR1fI6ZMdTab7zt13p5SAvPpuLowjl3yV5B7zBX8Ud+AlB3/9JBUCVVyOmc=",
       "empresa": "TAMIZI"}'
     headers:
       Accept:
@@ -15,23 +15,23 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '629'
+      - '656'
       Content-Type:
       - application/json
       User-Agent:
-      - stpmex-python/3.5.7
+      - stpmex-python/3.7.3
     method: PUT
     uri: https://demo.stpmex.com:7024/speiws/rest/ordenPago/registra
   response:
     body:
-      string: '{"resultado":{"id":3}}'
+      string: '{"resultado":{"id":9349827}}'
     headers:
       Content-Length:
-      - '22'
+      - '122'
       Content-Type:
       - application/json
       Date:
-      - Sat, 05 Sep 2020 17:11:37 GMT
+      - Tue, 29 Dec 2020 15:58:00 GMT
     status:
       code: 200
       message: OK

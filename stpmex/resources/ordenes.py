@@ -6,19 +6,23 @@ from typing import Any, ClassVar, Dict, List, Optional, Union
 
 import clabe
 from clabe.types import Clabe
-from cuenca_validations.types import PaymentCardNumber, StrictPositiveFloat
+from cuenca_validations.types import (
+    PaymentCardNumber,
+    StrictPositiveFloat,
+    digits,
+)
 from pydantic import conint, constr, validator
 from pydantic.dataclasses import dataclass
 
 from ..auth import ORDEN_FIELDNAMES
 from ..exc import NoOrdenesEncontradas
 from ..types import (
+    BeneficiarioClabe,
     Estado,
     MxPhoneNumber,
     Prioridad,
     TipoCuenta,
     TipoOperacion,
-    digits,
     truncated_str,
 )
 from ..utils import strftime, strptime
@@ -40,7 +44,9 @@ class Orden(Resource):
     monto: StrictPositiveFloat
     conceptoPago: truncated_str(39)
 
-    cuentaBeneficiario: Union[Clabe, PaymentCardNumber, MxPhoneNumber]
+    cuentaBeneficiario: Union[
+        BeneficiarioClabe, PaymentCardNumber, MxPhoneNumber
+    ]
     nombreBeneficiario: truncated_str(39)
     institucionContraparte: digits(5, 5)
 
