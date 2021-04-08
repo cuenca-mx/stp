@@ -1,0 +1,36 @@
+interactions:
+- request:
+    body: '{"firma": "{hola}"}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.22.0
+    method: PUT
+    uri: https://prod.stpmex.com/speiws/rest/cuentaModule/fisica
+  response:
+    body:
+      string: '{"id": 0, "descripcion": "Cuenta en revisión."}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '153'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 26 Dec 2019 07:03:15 GMT
+      Server:
+      - nginx/1.16.1
+    status:
+      code: 200
+      message: OK
+version: 1
