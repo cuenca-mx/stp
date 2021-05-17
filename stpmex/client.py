@@ -1,3 +1,4 @@
+import os
 import re
 from typing import Any, ClassVar, Dict, List, NoReturn, Union
 
@@ -29,8 +30,8 @@ from .exc import (
 from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
-DEMO_HOST = 'https://demo.stpmex.com:7024'
-PROD_HOST = 'https://prod.stpmex.com:7002'
+STP_DEMO_HOST = os.getenv('STP_DEMO_HOST', 'https://demo.stpmex.com:7024')
+STP_PROD_HOST = os.getenv('STP_PROD_HOST', 'https://prod.stpmex.com:7002')
 
 
 class Client:
@@ -57,10 +58,10 @@ class Client:
         self.session = Session()
         self.session.headers['User-Agent'] = f'stpmex-python/{client_version}'
         if demo:
-            host_url = DEMO_HOST
+            host_url = STP_DEMO_HOST
             self.session.verify = False
         else:
-            host_url = PROD_HOST
+            host_url = STP_PROD_HOST
             self.session.verify = True
         self.base_url = base_url or f'{host_url}/speiws/rest'
         self.soap_url = (

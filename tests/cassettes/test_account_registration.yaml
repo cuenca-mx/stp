@@ -15,7 +15,7 @@ interactions:
       User-Agent:
       - python-requests/2.22.0
     method: PUT
-    uri: https://prod.stpmex.com/speiws/rest/cuentaModule/fisica
+    uri: https://prod.stpmex.com:7002/speiws/rest/cuentaModule/fisica
   response:
     body:
       string: '{"id": 0, "descripcion": "Cuenta en revisión."}'
