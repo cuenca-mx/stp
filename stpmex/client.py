@@ -30,7 +30,7 @@ from .resources import CuentaFisica, Orden, Resource, Saldo
 from .version import __version__ as client_version
 
 DEMO_HOST = 'https://demo.stpmex.com:7024'
-PROD_HOST = 'https://prod.stpmex.com'
+PROD_HOST = 'https://prod.stpmex.com:7002'
 
 
 class Client:
