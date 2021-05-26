@@ -163,6 +163,15 @@ def test_incorrect_passphrase():
             CUENTA_ENDPOINT,
             StpmexException,
         ),
+        (
+            dict(
+                descripcion='El campo Apellido materno '
+                'obligatorio 6461801500000000',
+                id=5,
+            ),
+            CUENTA_ENDPOINT,
+            MandatoryField,
+        ),
     ],
     indirect=['client_mock'],
 )

@@ -95,6 +95,11 @@ def test_replace_unicode():
     assert orden.conceptoPago == 'esta bien, guey'
 
 
+def test_raises_validation_error_concepto_only_emojies():
+    with pytest.raises(ValidationError):
+        create_orden(nombreBeneficiario='Ricardo Sánchez', conceptoPago='😁✌️')
+
+
 def test_defaults():
     orden_kwargs = ORDEN_KWARGS.copy()
     orden_kwargs.pop('claveRastreo')

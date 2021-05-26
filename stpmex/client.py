@@ -179,5 +179,7 @@ def _raise_description_exc(resp: Dict) -> NoReturn:
         raise InvalidField(**resp)
     elif id == 3 and desc == 'Cuenta Duplicada':
         raise DuplicatedAccount(**resp)
+    elif id == 5 and re.match(r'El campo .* obligatorio \w+', desc):
+        raise MandatoryField(**resp)
     else:
         raise StpmexException(**resp)

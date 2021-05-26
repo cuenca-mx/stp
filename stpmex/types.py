@@ -28,9 +28,9 @@ def unicode_to_ascii(unicode: str) -> str:
 
 class AsciiStr(ConstrainedStr):
     @classmethod
-    def validate(cls, value: str) -> str:
-        value = super().validate(value)
-        return unicode_to_ascii(value).strip()
+    def __get_validators__(cls) -> 'CallableGenerator':
+        yield lambda value: unicode_to_ascii(value).strip()
+        yield from ConstrainedStr.__get_validators__()
 
 
 class StpStr(AsciiStr):
