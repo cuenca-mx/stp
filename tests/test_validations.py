@@ -104,6 +104,7 @@ def test_raises_validation_error_concepto_only_emojies():
     assert errors[0]['loc'] == ('conceptoPago',)
     assert errors[0]['type'] == 'value_error.any_str.min_length'
 
+
 def test_defaults():
     orden_kwargs = ORDEN_KWARGS.copy()
     orden_kwargs.pop('claveRastreo')
