@@ -96,9 +96,13 @@ def test_replace_unicode():
 
 
 def test_raises_validation_error_concepto_only_emojies():
-    with pytest.raises(ValidationError):
+    with pytest.raises(ValidationError) as exc_info:
         create_orden(nombreBeneficiario='Ricardo Sánchez', conceptoPago='😁✌️')
 
+    errors = exc_info.value.errors()
+    assert len(errors) == 1
+    assert errors[0]['loc'] == ('conceptoPago',)
+    assert errors[0]['type'] == 'value_error.any_str.min_length'
 
 def test_defaults():
     orden_kwargs = ORDEN_KWARGS.copy()
