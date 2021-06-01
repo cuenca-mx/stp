@@ -62,13 +62,11 @@ class Client:
         else:
             host_url = PROD_HOST
             self.session.verify = True
-        self.base_url = f'{host_url}/speiws/rest'
-        self.soap_url = f'{host_url}/spei/webservices/SpeiConsultaServices'
+        self.base_url = base_url or f'{host_url}/speiws/rest'
+        self.soap_url = (
+            soap_url or f'{host_url}/spei/webservices/SpeiConsultaServices'
+        )
 
-        if base_url:
-            self.base_url = base_url
-        if soap_url:
-            self.soap_url = soap_url
         try:
             self.pkey = serialization.load_pem_private_key(
                 priv_key.encode('utf-8'),
