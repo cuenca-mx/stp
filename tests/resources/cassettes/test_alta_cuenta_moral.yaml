@@ -1,7 +1,7 @@
 interactions:
 - request:
     body: '{"cuenta": "646180157084842042", "rfcCurp": "ABC12345678", "nombre": "JOHN
-      DOE", "empresa": "EMPRESA PERSONA", "paisNacimiento": 187, "fechaConstitucion":
+      DOE" "pais": 187, "fechaConstitucion":
       "20000820", "entidadFederativa": 1, "firma": "OJD3g0+uwvRz9el/iCVJCr8Rvi4mkNUg9WFR1wF2taUkZFDvfoaZMXuYkpLHYA4PuNMbxPjkNjJ4+6RtqNN2lgJyllrS/kIJ9lFFgtPQX4Gx3pUxMSjyqxKUqF5Z+yZ9XvKvp1+RLExHl6TIJPaXS1bB2kKkOfHW7UGGiP2tFu4="}'
     headers:
       Accept:
