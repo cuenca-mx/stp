@@ -1,0 +1,34 @@
+interactions:
+- request:
+    body: '{"cuenta": "646180157084842042", "rfcCurp": "ABC12345678", "nombre": "JOHN
+      DOE", "empresa": "EMPRESA PERSONA", "paisNacimiento": 187, "fechaConstitucion":
+      "20000820", "entidadFederativa": 1, "firma": "OJD3g0+uwvRz9el/iCVJCr8Rvi4mkNUg9WFR1wF2taUkZFDvfoaZMXuYkpLHYA4PuNMbxPjkNjJ4+6RtqNN2lgJyllrS/kIJ9lFFgtPQX4Gx3pUxMSjyqxKUqF5Z+yZ9XvKvp1+RLExHl6TIJPaXS1bB2kKkOfHW7UGGiP2tFu4="}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '375'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - stpmex-python/3.7.4
+    method: PUT
+    uri: https://demo.stpmex.com:7024/speiws/rest/cuentaModule/moral
+  response:
+    body:
+      string: "{\"descripcion\":\"Cuenta en revisi\xF3n.\",\"id\":0}"
+    headers:
+      Content-Length:
+      - '67'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 03 May 2021 19:53:57 GMT
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -39,3 +39,9 @@ def test_cuenta_nombre_apellidos_correctos(cuenta):
     assert cuenta.nombre == 'EDUARDO MARCO'
     assert cuenta.apellidoMaterno == 'HERNANDEZ MUNOZ'
     assert cuenta.apellidoPaterno == 'SALVADOR'
+
+
+@pytest.mark.vcr
+def test_alta_cuenta_moral(client, cuenta_moral_dict):
+    cuenta = client.cuentas_morales.alta(**cuenta_moral_dict)
+    assert cuenta

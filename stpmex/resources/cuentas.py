@@ -94,3 +94,22 @@ class CuentaFisica(Cuenta):
     email: Optional[constr(max_length=150)] = None
     idIdentificacion: Optional[digits(max_length=20)] = None
     telefono: Optional[MxPhoneNumber] = None
+
+
+@dataclass
+class CuentaMoral(Cuenta):
+    """
+    Based on:
+    https://stpmex.zendesk.com/hc/es/articles/360054436671-Registro-de-Cuentas-de-Personas-Morales
+    """
+
+    _endpoint: ClassVar[str] = Cuenta._base_endpoint + '/moral'
+    _lote_endpoint: ClassVar[str] = Cuenta._base_endpoint + '/morales'
+
+    nombre: truncated_stp_str(50)
+    pais: Pais
+    rfcCurp: truncated_stp_str(18)
+    fechaConstitucion: dt.date
+
+    entidadFederativa: Optional[EntidadFederativa] = None
+    actividadEconomica: Optional[conint(ge=28, le=74)] = None

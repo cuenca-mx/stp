@@ -5,7 +5,7 @@ import requests_mock
 from clabe import generate_new_clabes
 
 from stpmex import Client
-from stpmex.resources import CuentaFisica, Orden
+from stpmex.resources import CuentaFisica, CuentaMoral, Orden
 from stpmex.types import Pais
 
 PKEY = """Bag Attributes
@@ -101,3 +101,20 @@ def cuenta_dict():
 @pytest.fixture
 def cuenta(client, cuenta_dict):
     yield CuentaFisica(**cuenta_dict)
+
+
+@pytest.fixture
+def cuenta_moral_dict():
+    yield dict(
+        cuenta=generate_new_clabes(1, '6461801570')[0],
+        nombre="empresa persona moral",
+        paisNacimiento=Pais.MX,
+        rfcCurp="ABC12345678",
+        fechaConstitucion=dt.date(2000, 8, 20),
+        entidadFederativa=1,
+    )
+
+
+@pytest.fixture
+def cuenta_moral(client, cuenta_moral_dict):
+    yield CuentaMoral(**cuenta_moral_dict)
